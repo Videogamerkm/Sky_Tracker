@@ -1591,91 +1591,48 @@ layout_mode = 2
 size_flags_horizontal = 3
 script = ExtResource("2_6cr1o")
 
-[node name="Current" type="HBoxContainer" parent="Tabs/Current Season/Margin/VBox"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Tabs/Current Season/Margin/VBox/Current"]
+[node name="Name" type="Label" parent="Tabs/Current Season/Margin/VBox"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 20
-text = "The current season is:"
-
-[node name="Val" type="Label" parent="Tabs/Current Season/Margin/VBox/Current"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 24
 text = "Season of the Nine-Colored Deer"
-horizontal_alignment = 1
-
-[node name="Start" type="HBoxContainer" parent="Tabs/Current Season/Margin/VBox"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Tabs/Current Season/Margin/VBox/Start"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 20
-text = "Season started on:"
-
-[node name="Val" type="Label" parent="Tabs/Current Season/Margin/VBox/Start"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 20
-text = "January 15th, 2024"
-horizontal_alignment = 1
-
-[node name="End" type="HBoxContainer" parent="Tabs/Current Season/Margin/VBox"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Tabs/Current Season/Margin/VBox/End"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 20
-text = "Season ends on:"
-
-[node name="Val" type="Label" parent="Tabs/Current Season/Margin/VBox/End"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 20
-text = "March 31st, 2024"
 horizontal_alignment = 1
 
 [node name="Time" type="HBoxContainer" parent="Tabs/Current Season/Margin/VBox"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Tabs/Current Season/Margin/VBox/Time"]
+[node name="Start" type="Label" parent="Tabs/Current Season/Margin/VBox/Time"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 20
-text = "Days left in the season:"
+theme_override_font_sizes/font_size = 16
+text = "January 1st, 2024"
+horizontal_alignment = 2
 
-[node name="Val" type="Label" parent="Tabs/Current Season/Margin/VBox/Time"]
+[node name="Label" type="Label" parent="Tabs/Current Season/Margin/VBox/Time"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 16
+text = " - "
+horizontal_alignment = 1
+
+[node name="End" type="Label" parent="Tabs/Current Season/Margin/VBox/Time"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "January 15th, 2024"
+
+[node name="Days" type="Label" parent="Tabs/Current Season/Margin/VBox"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 20
 text = "43"
 horizontal_alignment = 1
 
-[node name="Pass" type="HBoxContainer" parent="Tabs/Current Season/Margin/VBox"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Tabs/Current Season/Margin/VBox/Pass"]
+[node name="place4" type="Label" parent="Tabs/Current Season/Margin/VBox"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 20
-
-[node name="Check" type="CheckBox" parent="Tabs/Current Season/Margin/VBox/Pass"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 2.0
-focus_mode = 0
-theme_override_font_sizes/font_size = 20
-text = "I have the season pass"
-alignment = 1
-
-[node name="Label2" type="Label" parent="Tabs/Current Season/Margin/VBox/Pass"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
 
 [node name="Have" type="HBoxContainer" parent="Tabs/Current Season/Margin/VBox"]
 layout_mode = 2
@@ -1699,6 +1656,34 @@ allow_greater = true
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 20
+
+[node name="Pass" type="HBoxContainer" parent="Tabs/Current Season/Margin/VBox"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Current Season/Margin/VBox/Pass"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+
+[node name="Check" type="CheckBox" parent="Tabs/Current Season/Margin/VBox/Pass"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+theme_override_font_sizes/font_size = 20
+text = "Season Pass"
+alignment = 1
+
+[node name="Label2" type="Label" parent="Tabs/Current Season/Margin/VBox/Pass"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+
+[node name="place3" type="Label" parent="Tabs/Current Season/Margin/VBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+autowrap_mode = 3
 
 [node name="Per Day" type="HBoxContainer" parent="Tabs/Current Season/Margin/VBox"]
 layout_mode = 2
@@ -1763,6 +1748,13 @@ size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 20
 text = "0"
 horizontal_alignment = 1
+
+[node name="place2" type="Label" parent="Tabs/Current Season/Margin/VBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+autowrap_mode = 3
 
 [node name="Complete" type="Label" parent="Tabs/Current Season/Margin/VBox"]
 layout_mode = 2
@@ -3740,8 +3732,8 @@ size_flags_horizontal = 3
 [connection signal="bought" from="Tabs/Regular Spirits/Margin/VBox/Tree" to="Tabs/Regular Spirits/Margin/VBox" method="_on_tree_bought"]
 [connection signal="pressed" from="Tabs/Regular Spirits/Margin/VBox/Clear" to="Tabs/Regular Spirits/Margin/VBox" method="_on_clear_pressed"]
 [connection signal="confirmed" from="Tabs/Regular Spirits/Margin/VBox/Confirm" to="Tabs/Regular Spirits/Margin/VBox" method="_on_confirm_confirmed"]
-[connection signal="toggled" from="Tabs/Current Season/Margin/VBox/Pass/Check" to="Tabs/Current Season/Margin/VBox" method="_on_check_toggled"]
 [connection signal="value_changed" from="Tabs/Current Season/Margin/VBox/Have/Candles" to="Tabs/Current Season/Margin/VBox" method="_on_check_toggled"]
+[connection signal="toggled" from="Tabs/Current Season/Margin/VBox/Pass/Check" to="Tabs/Current Season/Margin/VBox" method="_on_check_toggled"]
 [connection signal="item_selected" from="Tabs/Seasonal Spirits/Margin/VBox/SeasonSelect" to="Tabs/Seasonal Spirits/Margin/VBox" method="_on_area_select_item_selected"]
 [connection signal="item_selected" from="Tabs/Seasonal Spirits/Margin/VBox/SpiritSelect" to="Tabs/Seasonal Spirits/Margin/VBox" method="_on_spirit_select_item_selected"]
 [connection signal="bought" from="Tabs/Seasonal Spirits/Margin/VBox/Tree" to="Tabs/Seasonal Spirits/Margin/VBox" method="_on_tree_bought"]
