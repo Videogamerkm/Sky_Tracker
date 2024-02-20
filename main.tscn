@@ -1,0 +1,3623 @@
+[gd_scene load_steps=9 format=3 uid="uid://b04gr0a605mxh"]
+
+[ext_resource type="PackedScene" uid="uid://bap3aptv3y1dw" path="res://collapsible.tscn" id="1_au16a"]
+[ext_resource type="Script" path="res://main.gd" id="1_se3df"]
+[ext_resource type="Script" path="res://Current Season.gd" id="2_6cr1o"]
+[ext_resource type="Script" path="res://Stats.gd" id="2_gvlqv"]
+[ext_resource type="Script" path="res://Spirits.gd" id="3_ttfa3"]
+[ext_resource type="PackedScene" uid="uid://be03ohlum8yr2" path="res://friendship_tree.tscn" id="4_t1mtd"]
+[ext_resource type="Script" path="res://Seasons.gd" id="5_o6qgh"]
+[ext_resource type="Script" path="res://Light.gd" id="8_ukwu8"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_se3df")
+
+[node name="Tabs" type="TabContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+tab_alignment = 1
+
+[node name="Stats" type="ScrollContainer" parent="Tabs"]
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="Stats" type="MarginContainer" parent="Tabs/Stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBox" type="VBoxContainer" parent="Tabs/Stats/Stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("2_gvlqv")
+
+[node name="Main" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox"]
+layout_mode = 2
+
+[node name="Expand" type="Button" parent="Tabs/Stats/Stats/VBox/Main"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Expand All"
+
+[node name="Collapse" type="Button" parent="Tabs/Stats/Stats/VBox/Main"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Collapse All"
+
+[node name="Current Season" parent="Tabs/Stats/Stats/VBox" instance=ExtResource("1_au16a")]
+visible = false
+layout_mode = 2
+
+[node name="Spent" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Current Season"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Current Season/Spent"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Seasonal Candles Spent:"
+
+[node name="Season Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Current Season/Spent"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0
+"
+horizontal_alignment = 2
+
+[node name="Needed" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Current Season"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Current Season/Needed"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Seasonal Candles Needed for Completion:"
+
+[node name="Season Need" type="Label" parent="Tabs/Stats/Stats/VBox/Current Season/Needed"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0
+"
+horizontal_alignment = 2
+
+[node name="Avail" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Current Season"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Current Season/Avail"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Seasonal Candles Still Available:"
+
+[node name="Season Avail" type="Label" parent="Tabs/Stats/Stats/VBox/Current Season/Avail"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0
+"
+horizontal_alignment = 2
+
+[node name="Completion" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Current Season"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Current Season/Completion"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Season Completion:"
+
+[node name="Season Avail" type="Label" parent="Tabs/Stats/Stats/VBox/Current Season/Completion"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 2
+
+[node name="Regular Spirits" parent="Tabs/Stats/Stats/VBox" instance=ExtResource("1_au16a")]
+layout_mode = 2
+
+[node name="Isle of Dawn" parent="Tabs/Stats/Stats/VBox/Regular Spirits" instance=ExtResource("1_au16a")]
+layout_mode = 2
+sub = true
+
+[node name="Grid" type="GridContainer" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn"]
+layout_mode = 2
+columns = 4
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+
+[node name="Label2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Spent"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Needed"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "% Complete"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Candles:"
+
+[node name="C Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="C Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="C Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Hearts:"
+
+[node name="H Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="H Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="H Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 1
+
+[node name="Label7" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Ascended:"
+
+[node name="A Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="A Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="A Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 1
+
+[node name="Completion" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn/Completion"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Overall Completion:"
+
+[node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn/Completion"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 2
+
+[node name="Daylight Prairie" parent="Tabs/Stats/Stats/VBox/Regular Spirits" instance=ExtResource("1_au16a")]
+layout_mode = 2
+sub = true
+
+[node name="Grid" type="GridContainer" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie"]
+layout_mode = 2
+columns = 5
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+
+[node name="Label2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Spent"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Needed"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "% Complete"
+horizontal_alignment = 1
+
+[node name="Label8" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Tier 2"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Candles:"
+
+[node name="C Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="C Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="C Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 1
+
+[node name="C T2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Hearts:"
+
+[node name="H Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="H Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="H Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 1
+
+[node name="H T2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Label7" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Ascended:"
+
+[node name="A Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="A Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="A Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 1
+
+[node name="A T2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Completion" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie/Completion"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Overall Completion:"
+
+[node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie/Completion"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 2
+
+[node name="Hidden Forest" parent="Tabs/Stats/Stats/VBox/Regular Spirits" instance=ExtResource("1_au16a")]
+layout_mode = 2
+sub = true
+
+[node name="Grid" type="GridContainer" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest"]
+layout_mode = 2
+columns = 5
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+
+[node name="Label2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Spent"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Needed"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "% Complete"
+horizontal_alignment = 1
+
+[node name="Label8" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Tier 2"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Candles:"
+
+[node name="C Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="C Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="C Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 1
+
+[node name="C T2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Hearts:"
+
+[node name="H Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="H Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="H Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 1
+
+[node name="H T2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Label7" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Ascended:"
+
+[node name="A Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="A Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="A Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 1
+
+[node name="A T2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Completion" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest/Completion"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Overall Completion:"
+
+[node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest/Completion"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 2
+
+[node name="Valley of Triumph" parent="Tabs/Stats/Stats/VBox/Regular Spirits" instance=ExtResource("1_au16a")]
+layout_mode = 2
+sub = true
+
+[node name="Grid" type="GridContainer" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph"]
+layout_mode = 2
+columns = 5
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+
+[node name="Label2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Spent"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Needed"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "% Complete"
+horizontal_alignment = 1
+
+[node name="Label8" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Tier 2"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Candles:"
+
+[node name="C Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="C Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="C Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 1
+
+[node name="C T2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Hearts:"
+
+[node name="H Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="H Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="H Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 1
+
+[node name="H T2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Label7" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Ascended:"
+
+[node name="A Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="A Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="A Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 1
+
+[node name="A T2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Completion" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph/Completion"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Overall Completion:"
+
+[node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph/Completion"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 2
+
+[node name="Golden Wasteland" parent="Tabs/Stats/Stats/VBox/Regular Spirits" instance=ExtResource("1_au16a")]
+layout_mode = 2
+sub = true
+
+[node name="Grid" type="GridContainer" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland"]
+layout_mode = 2
+columns = 5
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+
+[node name="Label2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Spent"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Needed"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "% Complete"
+horizontal_alignment = 1
+
+[node name="Label8" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Tier 2"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Candles:"
+
+[node name="C Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="C Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="C Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 1
+
+[node name="C T2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Hearts:"
+
+[node name="H Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="H Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="H Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 1
+
+[node name="H T2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Label7" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Ascended:"
+
+[node name="A Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="A Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="A Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 1
+
+[node name="A T2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Completion" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland/Completion"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Overall Completion:"
+
+[node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland/Completion"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 2
+
+[node name="Vault of Knowledge" parent="Tabs/Stats/Stats/VBox/Regular Spirits" instance=ExtResource("1_au16a")]
+layout_mode = 2
+sub = true
+
+[node name="Grid" type="GridContainer" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge"]
+layout_mode = 2
+columns = 5
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+
+[node name="Label2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Spent"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Needed"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "% Complete"
+horizontal_alignment = 1
+
+[node name="Label8" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Tier 2"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Candles:"
+
+[node name="C Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="C Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="C Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 1
+
+[node name="C T2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Hearts:"
+
+[node name="H Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="H Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="H Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 1
+
+[node name="H T2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Label7" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Ascended:"
+
+[node name="A Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="A Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="A Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 1
+
+[node name="A T2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Completion" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge/Completion"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Overall Completion:"
+
+[node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge/Completion"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 2
+
+[node name="HSeparator" type="HSeparator" parent="Tabs/Stats/Stats/VBox/Regular Spirits"]
+layout_mode = 2
+
+[node name="Grid" type="GridContainer" parent="Tabs/Stats/Stats/VBox/Regular Spirits"]
+layout_mode = 2
+columns = 5
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+
+[node name="Label2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Spent"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Needed"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "% Complete"
+horizontal_alignment = 1
+
+[node name="Label8" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Tier 2"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Candles:"
+
+[node name="C Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="C Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="C Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 1
+
+[node name="C T2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Hearts:"
+
+[node name="H Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="H Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="H Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 1
+
+[node name="H T2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Label7" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Ascended:"
+
+[node name="A Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="A Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="A Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 1
+
+[node name="A T2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Completion" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Regular Spirits"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Completion"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Overall Completion:"
+
+[node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Completion"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 2
+
+[node name="Seasonal Spirits" parent="Tabs/Stats/Stats/VBox" instance=ExtResource("1_au16a")]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Seasonal Spirits"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "This section is currently incomplete"
+
+[node name="Winged Light" parent="Tabs/Stats/Stats/VBox" instance=ExtResource("1_au16a")]
+visible = false
+layout_mode = 2
+
+[node name="Grid" type="GridContainer" parent="Tabs/Stats/Stats/VBox/Winged Light"]
+layout_mode = 2
+columns = 3
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+
+[node name="Label2" type="Label" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Collected"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Missing"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Isle of Dawn"
+
+[node name="Isle of Dawn Coll" type="Label" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Isle of Dawn Avail" type="Label" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Daylight Prairie"
+
+[node name="Daylight Prairie Coll" type="Label" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Daylight Prairie Avail" type="Label" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Label7" type="Label" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Hidden Forest"
+
+[node name="Hidden Forest Coll" type="Label" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Hidden Forest Avail" type="Label" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Label8" type="Label" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Valley of Triumph"
+
+[node name="Valley of Triumph Coll" type="Label" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Valley of Triumph Avail" type="Label" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Label9" type="Label" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Golden Wasteland"
+
+[node name="Golden Wasteland Coll" type="Label" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Golden Wasteland Avail" type="Label" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Label10" type="Label" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Vault of Knowledge"
+
+[node name="Vault of Knowledge Coll" type="Label" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Vault of Knowledge Avail" type="Label" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Label11" type="Label" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Eye of Eden"
+
+[node name="Eye of Eden Coll" type="Label" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Eye of Eden Avail" type="Label" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Label12" type="Label" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Shattered Memories"
+
+[node name="Shattered Memories Coll" type="Label" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Shattered Memories Avail" type="Label" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+
+[node name="HSeparator2" type="HSeparator" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+
+[node name="HSeparator3" type="HSeparator" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+
+[node name="Label13" type="Label" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "Total"
+
+[node name="Total Coll" type="Label" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "0"
+horizontal_alignment = 1
+
+[node name="Total Avail" type="Label" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "0"
+horizontal_alignment = 1
+
+[node name="Current Season" type="ScrollContainer" parent="Tabs"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="Margin" type="MarginContainer" parent="Tabs/Current Season"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBox" type="VBoxContainer" parent="Tabs/Current Season/Margin"]
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("2_6cr1o")
+
+[node name="Current" type="HBoxContainer" parent="Tabs/Current Season/Margin/VBox"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Current Season/Margin/VBox/Current"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "The current season is:"
+
+[node name="Val" type="Label" parent="Tabs/Current Season/Margin/VBox/Current"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "Season of the Nine-Colored Deer"
+horizontal_alignment = 1
+
+[node name="Start" type="HBoxContainer" parent="Tabs/Current Season/Margin/VBox"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Current Season/Margin/VBox/Start"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "Season started on:"
+
+[node name="Val" type="Label" parent="Tabs/Current Season/Margin/VBox/Start"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "January 15th, 2024"
+horizontal_alignment = 1
+
+[node name="End" type="HBoxContainer" parent="Tabs/Current Season/Margin/VBox"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Current Season/Margin/VBox/End"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "Season ends on:"
+
+[node name="Val" type="Label" parent="Tabs/Current Season/Margin/VBox/End"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "March 31st, 2024"
+horizontal_alignment = 1
+
+[node name="Time" type="HBoxContainer" parent="Tabs/Current Season/Margin/VBox"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Current Season/Margin/VBox/Time"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "Days left in the season:"
+
+[node name="Val" type="Label" parent="Tabs/Current Season/Margin/VBox/Time"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "43"
+horizontal_alignment = 1
+
+[node name="Pass" type="HBoxContainer" parent="Tabs/Current Season/Margin/VBox"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Current Season/Margin/VBox/Pass"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+
+[node name="Check" type="CheckBox" parent="Tabs/Current Season/Margin/VBox/Pass"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+focus_mode = 0
+theme_override_font_sizes/font_size = 20
+text = "I have the season pass"
+alignment = 1
+
+[node name="Label2" type="Label" parent="Tabs/Current Season/Margin/VBox/Pass"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+
+[node name="Have" type="HBoxContainer" parent="Tabs/Current Season/Margin/VBox"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Current Season/Margin/VBox/Have"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+
+[node name="Label3" type="Label" parent="Tabs/Current Season/Margin/VBox/Have"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "Current Candles:"
+
+[node name="Candles" type="SpinBox" parent="Tabs/Current Season/Margin/VBox/Have"]
+layout_mode = 2
+allow_greater = true
+
+[node name="Label2" type="Label" parent="Tabs/Current Season/Margin/VBox/Have"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+
+[node name="Candles" type="HBoxContainer" parent="Tabs/Current Season/Margin/VBox"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Current Season/Margin/VBox/Candles"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "Remaining collectable candles:"
+
+[node name="Val" type="Label" parent="Tabs/Current Season/Margin/VBox/Candles"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "0"
+horizontal_alignment = 1
+
+[node name="Spent" type="HBoxContainer" parent="Tabs/Current Season/Margin/VBox"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Current Season/Margin/VBox/Spent"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "Spent candles:"
+
+[node name="Val" type="Label" parent="Tabs/Current Season/Margin/VBox/Spent"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "0"
+horizontal_alignment = 1
+
+[node name="Total" type="HBoxContainer" parent="Tabs/Current Season/Margin/VBox"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Current Season/Margin/VBox/Total"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "Total collected candles:"
+
+[node name="Val" type="Label" parent="Tabs/Current Season/Margin/VBox/Total"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "0"
+horizontal_alignment = 1
+
+[node name="Complete" type="Label" parent="Tabs/Current Season/Margin/VBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "You have missed too many candles to buy all the cosmetics."
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="place" type="Label" parent="Tabs/Current Season/Margin/VBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Tip" type="Label" parent="Tabs/Current Season/Margin/VBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 12
+text = "Tip: Go to the Seasonal Spirits tab to update how many candles you've spent."
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Regular Spirits" type="ScrollContainer" parent="Tabs"]
+visible = false
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="Tabs/Regular Spirits"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBox" type="VBoxContainer" parent="Tabs/Regular Spirits/Margin"]
+layout_mode = 2
+script = ExtResource("3_ttfa3")
+
+[node name="AreaSelect" type="OptionButton" parent="Tabs/Regular Spirits/Margin/VBox"]
+layout_mode = 2
+focus_mode = 0
+item_count = 6
+selected = 0
+popup/item_0/text = "Isle of Dawn"
+popup/item_0/id = 0
+popup/item_1/text = "Daylight Prairie"
+popup/item_1/id = 1
+popup/item_2/text = "Hidden Forest"
+popup/item_2/id = 2
+popup/item_3/text = "Valley of Triumph"
+popup/item_3/id = 3
+popup/item_4/text = "Golden Wasteland"
+popup/item_4/id = 4
+popup/item_5/text = "Vault of Knowledge"
+popup/item_5/id = 5
+
+[node name="SpiritSelect" type="OptionButton" parent="Tabs/Regular Spirits/Margin/VBox"]
+layout_mode = 2
+focus_mode = 0
+item_count = 1
+selected = 0
+popup/item_0/text = "Stats"
+popup/item_0/id = 0
+
+[node name="Label" type="Label" parent="Tabs/Regular Spirits/Margin/VBox"]
+layout_mode = 2
+
+[node name="Tree" parent="Tabs/Regular Spirits/Margin/VBox" instance=ExtResource("4_t1mtd")]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Stats" type="VBoxContainer" parent="Tabs/Regular Spirits/Margin/VBox"]
+layout_mode = 2
+
+[node name="Titles" type="HBoxContainer" parent="Tabs/Regular Spirits/Margin/VBox/Stats"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Regular Spirits/Margin/VBox/Stats/Titles"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+
+[node name="Label2" type="Label" parent="Tabs/Regular Spirits/Margin/VBox/Stats/Titles"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Candles"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Tabs/Regular Spirits/Margin/VBox/Stats/Titles"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Hearts"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="Tabs/Regular Spirits/Margin/VBox/Stats/Titles"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Ascended"
+horizontal_alignment = 1
+
+[node name="Spirit" type="HBoxContainer" parent="Tabs/Regular Spirits/Margin/VBox/Stats"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Tabs/Regular Spirits/Margin/VBox/Stats/Spirit"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Spirit Name"
+
+[node name="Candles" type="Label" parent="Tabs/Regular Spirits/Margin/VBox/Stats/Spirit"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Hearts" type="Label" parent="Tabs/Regular Spirits/Margin/VBox/Stats/Spirit"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Ascended" type="Label" parent="Tabs/Regular Spirits/Margin/VBox/Stats/Spirit"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Clear" type="Button" parent="Tabs/Regular Spirits/Margin/VBox"]
+layout_mode = 2
+focus_mode = 0
+text = "Clear Spirit Data"
+
+[node name="Confirm" type="ConfirmationDialog" parent="Tabs/Regular Spirits/Margin/VBox"]
+initial_position = 2
+size = Vector2i(300, 187)
+dialog_text = "Are you sure you want to clear purchase data?
+
+This cannot be undone."
+dialog_autowrap = true
+
+[node name="Seasonal Spirits" type="ScrollContainer" parent="Tabs"]
+visible = false
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="Tabs/Seasonal Spirits"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBox" type="VBoxContainer" parent="Tabs/Seasonal Spirits/Margin"]
+layout_mode = 2
+script = ExtResource("5_o6qgh")
+
+[node name="SeasonSelect" type="OptionButton" parent="Tabs/Seasonal Spirits/Margin/VBox"]
+layout_mode = 2
+focus_mode = 0
+item_count = 1
+selected = 0
+popup/item_0/text = "All Seasons"
+popup/item_0/id = 0
+
+[node name="SpiritSelect" type="OptionButton" parent="Tabs/Seasonal Spirits/Margin/VBox"]
+layout_mode = 2
+focus_mode = 0
+item_count = 1
+selected = 0
+popup/item_0/text = "Stats"
+popup/item_0/id = 0
+
+[node name="Label" type="Label" parent="Tabs/Seasonal Spirits/Margin/VBox"]
+layout_mode = 2
+
+[node name="Tree" parent="Tabs/Seasonal Spirits/Margin/VBox" instance=ExtResource("4_t1mtd")]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Stats" type="VBoxContainer" parent="Tabs/Seasonal Spirits/Margin/VBox"]
+layout_mode = 2
+
+[node name="Titles" type="HBoxContainer" parent="Tabs/Seasonal Spirits/Margin/VBox/Stats"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Seasonal Spirits/Margin/VBox/Stats/Titles"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+
+[node name="Label5" type="Label" parent="Tabs/Seasonal Spirits/Margin/VBox/Stats/Titles"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Seasonal"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Tabs/Seasonal Spirits/Margin/VBox/Stats/Titles"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Candles"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Tabs/Seasonal Spirits/Margin/VBox/Stats/Titles"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Hearts"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="Tabs/Seasonal Spirits/Margin/VBox/Stats/Titles"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Ascended"
+horizontal_alignment = 1
+
+[node name="Spirit" type="HBoxContainer" parent="Tabs/Seasonal Spirits/Margin/VBox/Stats"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Tabs/Seasonal Spirits/Margin/VBox/Stats/Spirit"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Spirit Name"
+
+[node name="Seasonal" type="Label" parent="Tabs/Seasonal Spirits/Margin/VBox/Stats/Spirit"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Candles" type="Label" parent="Tabs/Seasonal Spirits/Margin/VBox/Stats/Spirit"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Hearts" type="Label" parent="Tabs/Seasonal Spirits/Margin/VBox/Stats/Spirit"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Ascended" type="Label" parent="Tabs/Seasonal Spirits/Margin/VBox/Stats/Spirit"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Clear" type="Button" parent="Tabs/Seasonal Spirits/Margin/VBox"]
+layout_mode = 2
+focus_mode = 0
+text = "Clear Spirit Data"
+
+[node name="Confirm" type="ConfirmationDialog" parent="Tabs/Seasonal Spirits/Margin/VBox"]
+initial_position = 2
+size = Vector2i(300, 187)
+dialog_text = "Are you sure you want to clear purchase data?
+
+This cannot be undone."
+dialog_autowrap = true
+
+[node name="Winged Light Tracker" type="ScrollContainer" parent="Tabs"]
+visible = false
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="Tabs/Winged Light Tracker"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBox" type="VBoxContainer" parent="Tabs/Winged Light Tracker/Margin"]
+layout_mode = 2
+script = ExtResource("8_ukwu8")
+
+[node name="Main" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox"]
+layout_mode = 2
+
+[node name="Expand" type="Button" parent="Tabs/Winged Light Tracker/Margin/VBox/Main"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Expand All"
+
+[node name="Collapse" type="Button" parent="Tabs/Winged Light Tracker/Margin/VBox/Main"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Collapse All"
+
+[node name="Check" type="Button" parent="Tabs/Winged Light Tracker/Margin/VBox/Main"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Check All"
+
+[node name="Uncheck" type="Button" parent="Tabs/Winged Light Tracker/Margin/VBox/Main"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Uncheck All"
+
+[node name="Isle of Dawn" parent="Tabs/Winged Light Tracker/Margin/VBox" instance=ExtResource("1_au16a")]
+layout_mode = 2
+
+[node name="Main" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Isle of Dawn"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Isle of Dawn/Main"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Main area"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Isle of Dawn/Main"]
+layout_mode = 2
+
+[node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Isle of Dawn/Main"]
+layout_mode = 2
+
+[node name="CheckBox3" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Isle of Dawn/Main"]
+layout_mode = 2
+
+[node name="CheckBox4" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Isle of Dawn/Main"]
+layout_mode = 2
+
+[node name="CheckBox5" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Isle of Dawn/Main"]
+layout_mode = 2
+
+[node name="Cave" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Isle of Dawn"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Isle of Dawn/Cave"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Cave of Prophecies/Trials"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Isle of Dawn/Cave"]
+layout_mode = 2
+
+[node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Isle of Dawn/Cave"]
+layout_mode = 2
+
+[node name="CheckBox3" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Isle of Dawn/Cave"]
+layout_mode = 2
+
+[node name="CheckBox4" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Isle of Dawn/Cave"]
+layout_mode = 2
+
+[node name="Check All" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Isle of Dawn"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Isle of Dawn/Check All"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Check All" type="Button" parent="Tabs/Winged Light Tracker/Margin/VBox/Isle of Dawn/Check All"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Check All"
+
+[node name="Uncheck All" type="Button" parent="Tabs/Winged Light Tracker/Margin/VBox/Isle of Dawn/Check All"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Uncheck All"
+
+[node name="Label3" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Isle of Dawn/Check All"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Daylight Prairie" parent="Tabs/Winged Light Tracker/Margin/VBox" instance=ExtResource("1_au16a")]
+layout_mode = 2
+
+[node name="Butterfly" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Butterfly"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Butterfly Fields"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Butterfly"]
+layout_mode = 2
+
+[node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Butterfly"]
+layout_mode = 2
+
+[node name="CheckBox3" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Butterfly"]
+layout_mode = 2
+
+[node name="Cave" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Cave"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Prairie Caves"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Cave"]
+layout_mode = 2
+
+[node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Cave"]
+layout_mode = 2
+
+[node name="Villages" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Villages"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Villages"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Villages"]
+layout_mode = 2
+
+[node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Villages"]
+layout_mode = 2
+
+[node name="CheckBox3" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Villages"]
+layout_mode = 2
+
+[node name="8-Player" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/8-Player"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "8-Player Puzzle Area"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/8-Player"]
+layout_mode = 2
+
+[node name="Bird Nest" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Bird Nest"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Bird Nest"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Bird Nest"]
+layout_mode = 2
+
+[node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Bird Nest"]
+layout_mode = 2
+
+[node name="Sanctuary Islands" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Sanctuary Islands"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Sanctuary Islands"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Sanctuary Islands"]
+layout_mode = 2
+
+[node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Sanctuary Islands"]
+layout_mode = 2
+
+[node name="CheckBox3" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Sanctuary Islands"]
+layout_mode = 2
+
+[node name="CheckBox4" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Sanctuary Islands"]
+layout_mode = 2
+
+[node name="CheckBox5" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Sanctuary Islands"]
+layout_mode = 2
+
+[node name="CheckBox6" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Sanctuary Islands"]
+layout_mode = 2
+
+[node name="CheckBox7" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Sanctuary Islands"]
+layout_mode = 2
+
+[node name="CheckBox8" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Sanctuary Islands"]
+layout_mode = 2
+
+[node name="Prairie Peaks" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Prairie Peaks"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Prairie Peaks"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Prairie Peaks"]
+layout_mode = 2
+
+[node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Prairie Peaks"]
+layout_mode = 2
+
+[node name="CheckBox3" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Prairie Peaks"]
+layout_mode = 2
+
+[node name="Temple" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Temple"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Temple"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Temple"]
+layout_mode = 2
+
+[node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Temple"]
+layout_mode = 2
+
+[node name="Check All" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Check All"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Check All" type="Button" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Check All"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Check All"
+
+[node name="Uncheck All" type="Button" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Check All"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Uncheck All"
+
+[node name="Label3" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Check All"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Hidden Forest" parent="Tabs/Winged Light Tracker/Margin/VBox" instance=ExtResource("1_au16a")]
+layout_mode = 2
+
+[node name="Entrance" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest/Entrance"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Forest Clearing/Entrance"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest/Entrance"]
+layout_mode = 2
+
+[node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest/Entrance"]
+layout_mode = 2
+
+[node name="Brook" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest/Brook"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Forest's Brook"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest/Brook"]
+layout_mode = 2
+
+[node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest/Brook"]
+layout_mode = 2
+
+[node name="CheckBox3" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest/Brook"]
+layout_mode = 2
+
+[node name="CheckBox4" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest/Brook"]
+layout_mode = 2
+
+[node name="Tunnels" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest/Tunnels"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Wind Tunnels"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest/Tunnels"]
+layout_mode = 2
+
+[node name="Treehouse" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest/Treehouse"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Treehouse"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest/Treehouse"]
+layout_mode = 2
+
+[node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest/Treehouse"]
+layout_mode = 2
+
+[node name="Elevated" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest/Elevated"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Elevated Clearing (Picnic)"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest/Elevated"]
+layout_mode = 2
+
+[node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest/Elevated"]
+layout_mode = 2
+
+[node name="Underground" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest/Underground"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Underground Cavern (Deep Woods)"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest/Underground"]
+layout_mode = 2
+
+[node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest/Underground"]
+layout_mode = 2
+
+[node name="CheckBox3" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest/Underground"]
+layout_mode = 2
+
+[node name="CheckBox4" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest/Underground"]
+layout_mode = 2
+
+[node name="Boneyard" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest/Boneyard"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Boneyard"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest/Boneyard"]
+layout_mode = 2
+
+[node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest/Boneyard"]
+layout_mode = 2
+
+[node name="CheckBox3" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest/Boneyard"]
+layout_mode = 2
+
+[node name="End" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest/End"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Forest's End"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest/End"]
+layout_mode = 2
+
+[node name="Check All" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest/Check All"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Check All" type="Button" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest/Check All"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Check All"
+
+[node name="Uncheck All" type="Button" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest/Check All"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Uncheck All"
+
+[node name="Label3" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest/Check All"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Valley of Triumph" parent="Tabs/Winged Light Tracker/Margin/VBox" instance=ExtResource("1_au16a")]
+layout_mode = 2
+
+[node name="Slope" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph/Slope"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Slope"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph/Slope"]
+layout_mode = 2
+
+[node name="Rink" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph/Rink"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Ice Rink"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph/Rink"]
+layout_mode = 2
+
+[node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph/Rink"]
+layout_mode = 2
+
+[node name="Citadel" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph/Citadel"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Citadel"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph/Citadel"]
+layout_mode = 2
+
+[node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph/Citadel"]
+layout_mode = 2
+
+[node name="Flying" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph/Flying"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Flying Race"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph/Flying"]
+layout_mode = 2
+
+[node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph/Flying"]
+layout_mode = 2
+
+[node name="Sliding" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph/Sliding"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Sliding Race"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph/Sliding"]
+layout_mode = 2
+
+[node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph/Sliding"]
+layout_mode = 2
+
+[node name="Village" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph/Village"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Village of Dreams"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph/Village"]
+layout_mode = 2
+
+[node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph/Village"]
+layout_mode = 2
+
+[node name="CheckBox3" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph/Village"]
+layout_mode = 2
+
+[node name="Hermit" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph/Hermit"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Hermit Valley"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph/Hermit"]
+layout_mode = 2
+
+[node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph/Hermit"]
+layout_mode = 2
+
+[node name="Theater" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph/Theater"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Village Theater"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph/Theater"]
+layout_mode = 2
+
+[node name="Coliseum" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph/Coliseum"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Coliseum"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph/Coliseum"]
+layout_mode = 2
+
+[node name="Temple" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph/Temple"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Temple"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph/Temple"]
+layout_mode = 2
+
+[node name="Check All" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph/Check All"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Check All" type="Button" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph/Check All"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Check All"
+
+[node name="Uncheck All" type="Button" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph/Check All"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Uncheck All"
+
+[node name="Label3" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph/Check All"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Golden Wasteland" parent="Tabs/Winged Light Tracker/Margin/VBox" instance=ExtResource("1_au16a")]
+layout_mode = 2
+
+[node name="Broken" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland/Broken"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Broken Temple"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland/Broken"]
+layout_mode = 2
+
+[node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland/Broken"]
+layout_mode = 2
+
+[node name="Reef" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland/Reef"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "The Treasure Reef"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland/Reef"]
+layout_mode = 2
+
+[node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland/Reef"]
+layout_mode = 2
+
+[node name="Ark" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland/Ark"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Forgotten Ark"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland/Ark"]
+layout_mode = 2
+
+[node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland/Ark"]
+layout_mode = 2
+
+[node name="Krill" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland/Krill"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "First Krill Area"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland/Krill"]
+layout_mode = 2
+
+[node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland/Krill"]
+layout_mode = 2
+
+[node name="Graveyard" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland/Graveyard"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Graveyard (The Krill Zone)"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland/Graveyard"]
+layout_mode = 2
+
+[node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland/Graveyard"]
+layout_mode = 2
+
+[node name="CheckBox3" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland/Graveyard"]
+layout_mode = 2
+
+[node name="CheckBox4" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland/Graveyard"]
+layout_mode = 2
+
+[node name="Crab" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland/Crab"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Shipwreck (Crab Fields)"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland/Crab"]
+layout_mode = 2
+
+[node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland/Crab"]
+layout_mode = 2
+
+[node name="CheckBox3" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland/Crab"]
+layout_mode = 2
+
+[node name="Battlefield" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland/Battlefield"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Battlefield"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland/Battlefield"]
+layout_mode = 2
+
+[node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland/Battlefield"]
+layout_mode = 2
+
+[node name="Temple" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland/Temple"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Temple"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland/Temple"]
+layout_mode = 2
+
+[node name="Check All" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland/Check All"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Check All" type="Button" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland/Check All"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Check All"
+
+[node name="Uncheck All" type="Button" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland/Check All"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Uncheck All"
+
+[node name="Label3" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland/Check All"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Vault of Knowledge" parent="Tabs/Winged Light Tracker/Margin/VBox" instance=ExtResource("1_au16a")]
+layout_mode = 2
+
+[node name="Social" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge/Social"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Social Space"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge/Social"]
+layout_mode = 2
+
+[node name="Archives" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge/Archives"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Archives (The Cube)"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge/Archives"]
+layout_mode = 2
+
+[node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge/Archives"]
+layout_mode = 2
+
+[node name="Repository" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge/Repository"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Repository of Refuge"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge/Repository"]
+layout_mode = 2
+
+[node name="Desert" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge/Desert"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Starlight Desert (Little Prince)"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge/Desert"]
+layout_mode = 2
+
+[node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge/Desert"]
+layout_mode = 2
+
+[node name="CheckBox3" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge/Desert"]
+layout_mode = 2
+
+[node name="Oasis" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge/Oasis"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Crescent Oasis (Nine-Colored Deer)"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge/Oasis"]
+layout_mode = 2
+
+[node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge/Oasis"]
+layout_mode = 2
+
+[node name="Third Floor" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge/Third Floor"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Third Floor"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge/Third Floor"]
+layout_mode = 2
+
+[node name="Fourth Floor" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge/Fourth Floor"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Fourth Floor"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge/Fourth Floor"]
+layout_mode = 2
+
+[node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge/Fourth Floor"]
+layout_mode = 2
+
+[node name="Fifth Floor" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge/Fifth Floor"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Fifth Floor"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge/Fifth Floor"]
+layout_mode = 2
+
+[node name="Top Floor" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge/Top Floor"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Top Floor"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge/Top Floor"]
+layout_mode = 2
+
+[node name="Check All" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge/Check All"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Check All" type="Button" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge/Check All"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Check All"
+
+[node name="Uncheck All" type="Button" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge/Check All"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Uncheck All"
+
+[node name="Label3" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge/Check All"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Eye of Eden" parent="Tabs/Winged Light Tracker/Margin/VBox" instance=ExtResource("1_au16a")]
+layout_mode = 2
+
+[node name="First" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Eye of Eden"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Eye of Eden/First"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "First Slope"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Eye of Eden/First"]
+layout_mode = 2
+
+[node name="Gate" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Eye of Eden"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Eye of Eden/Gate"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "The Gate"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Eye of Eden/Gate"]
+layout_mode = 2
+
+[node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Eye of Eden/Gate"]
+layout_mode = 2
+
+[node name="CheckBox3" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Eye of Eden/Gate"]
+layout_mode = 2
+
+[node name="CheckBox4" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Eye of Eden/Gate"]
+layout_mode = 2
+
+[node name="CheckBox5" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Eye of Eden/Gate"]
+layout_mode = 2
+
+[node name="CheckBox6" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Eye of Eden/Gate"]
+layout_mode = 2
+
+[node name="CheckBox7" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Eye of Eden/Gate"]
+layout_mode = 2
+
+[node name="CheckBox8" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Eye of Eden/Gate"]
+layout_mode = 2
+
+[node name="CheckBox9" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Eye of Eden/Gate"]
+layout_mode = 2
+
+[node name="Orbit" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Eye of Eden"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Eye of Eden/Orbit"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Orbit"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Eye of Eden/Orbit"]
+layout_mode = 2
+
+[node name="Check All" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Eye of Eden"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Eye of Eden/Check All"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Check All" type="Button" parent="Tabs/Winged Light Tracker/Margin/VBox/Eye of Eden/Check All"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Check All"
+
+[node name="Uncheck All" type="Button" parent="Tabs/Winged Light Tracker/Margin/VBox/Eye of Eden/Check All"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Uncheck All"
+
+[node name="Label3" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Eye of Eden/Check All"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Shattered Memories" parent="Tabs/Winged Light Tracker/Margin/VBox" instance=ExtResource("1_au16a")]
+layout_mode = 2
+
+[node name="Jellyfish" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Shattered Memories"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Shattered Memories/Jellyfish"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Jellyfish"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Shattered Memories/Jellyfish"]
+layout_mode = 2
+
+[node name="Crabs" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Shattered Memories"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Shattered Memories/Crabs"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Crabs"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Shattered Memories/Crabs"]
+layout_mode = 2
+
+[node name="Mantas" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Shattered Memories"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Shattered Memories/Mantas"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Mantas"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Shattered Memories/Mantas"]
+layout_mode = 2
+
+[node name="Krill" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Shattered Memories"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Shattered Memories/Krill"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Dark Dragons (Krill)"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Shattered Memories/Krill"]
+layout_mode = 2
+
+[node name="Whales" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Shattered Memories"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Shattered Memories/Whales"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Whales"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Shattered Memories/Whales"]
+layout_mode = 2
+
+[node name="Elders" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Shattered Memories"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Shattered Memories/Elders"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Elders"
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Shattered Memories/Elders"]
+layout_mode = 2
+
+[node name="Check All" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Shattered Memories"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Shattered Memories/Check All"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Check All" type="Button" parent="Tabs/Winged Light Tracker/Margin/VBox/Shattered Memories/Check All"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Check All"
+
+[node name="Uncheck All" type="Button" parent="Tabs/Winged Light Tracker/Margin/VBox/Shattered Memories/Check All"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Uncheck All"
+
+[node name="Label3" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Shattered Memories/Check All"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Candle Tracker" type="ScrollContainer" parent="."]
+visible = false
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 31.0
+
+[node name="Margin" type="MarginContainer" parent="Candle Tracker"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBox" type="VBoxContainer" parent="Candle Tracker/Margin"]
+layout_mode = 2
+
+[node name="Main" type="HBoxContainer" parent="Candle Tracker/Margin/VBox"]
+layout_mode = 2
+
+[node name="Expand" type="Button" parent="Candle Tracker/Margin/VBox/Main"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Expand All"
+
+[node name="Collapse" type="Button" parent="Candle Tracker/Margin/VBox/Main"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Collapse All"
+
+[node name="Check" type="Button" parent="Candle Tracker/Margin/VBox/Main"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Check All"
+
+[node name="Uncheck" type="Button" parent="Candle Tracker/Margin/VBox/Main"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Uncheck All"
+
+[node name="Aviary Village (23)" parent="Candle Tracker/Margin/VBox" instance=ExtResource("1_au16a")]
+layout_mode = 2
+
+[node name="Main" type="HBoxContainer" parent="Candle Tracker/Margin/VBox/Aviary Village (23)"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Candle Tracker/Margin/VBox/Aviary Village (23)/Main"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Aviary Village (23)"
+
+[node name="CheckBox" type="CheckBox" parent="Candle Tracker/Margin/VBox/Aviary Village (23)/Main"]
+layout_mode = 2
+text = "3"
+
+[node name="CheckBox2" type="CheckBox" parent="Candle Tracker/Margin/VBox/Aviary Village (23)/Main"]
+layout_mode = 2
+text = "4"
+
+[node name="CheckBox3" type="CheckBox" parent="Candle Tracker/Margin/VBox/Aviary Village (23)/Main"]
+layout_mode = 2
+text = "4"
+
+[node name="CheckBox4" type="CheckBox" parent="Candle Tracker/Margin/VBox/Aviary Village (23)/Main"]
+layout_mode = 2
+text = "4"
+
+[node name="CheckBox5" type="CheckBox" parent="Candle Tracker/Margin/VBox/Aviary Village (23)/Main"]
+layout_mode = 2
+text = "4"
+
+[node name="CheckBox6" type="CheckBox" parent="Candle Tracker/Margin/VBox/Aviary Village (23)/Main"]
+layout_mode = 2
+text = "4"
+
+[node name="Check All" type="HBoxContainer" parent="Candle Tracker/Margin/VBox/Aviary Village (23)"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Candle Tracker/Margin/VBox/Aviary Village (23)/Check All"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Check All" type="Button" parent="Candle Tracker/Margin/VBox/Aviary Village (23)/Check All"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Check All"
+
+[node name="Uncheck All" type="Button" parent="Candle Tracker/Margin/VBox/Aviary Village (23)/Check All"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Uncheck All"
+
+[node name="Label3" type="Label" parent="Candle Tracker/Margin/VBox/Aviary Village (23)/Check All"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Isle of Dawn (885)" parent="Candle Tracker/Margin/VBox" instance=ExtResource("1_au16a")]
+layout_mode = 2
+
+[node name="Main" type="HBoxContainer" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Main"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Sand Dunes (80)"
+
+[node name="CheckBox" type="CheckBox" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Main"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+text = "50"
+
+[node name="CheckBox4" type="CheckBox" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Main"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+text = "5"
+
+[node name="CheckBox2" type="CheckBox" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Main"]
+layout_mode = 2
+text = "10"
+
+[node name="CheckBox3" type="CheckBox" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Main"]
+layout_mode = 2
+text = "15"
+
+[node name="Temple" type="HBoxContainer" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Temple"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Temple (37)"
+
+[node name="CheckBox" type="CheckBox" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Temple"]
+layout_mode = 2
+text = "12"
+
+[node name="CheckBox2" type="CheckBox" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Temple"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+text = "8"
+
+[node name="CheckBox3" type="CheckBox" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Temple"]
+layout_mode = 2
+text = "17"
+
+[node name="Cave" type="HBoxContainer" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Cave"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Butterfly Cave (89)"
+
+[node name="CheckBox" type="CheckBox" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Cave"]
+layout_mode = 2
+text = "8"
+
+[node name="CheckBox4" type="CheckBox" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Cave"]
+layout_mode = 2
+text = "21"
+
+[node name="CheckBox5" type="CheckBox" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Cave"]
+layout_mode = 2
+text = "10"
+
+[node name="CheckBox2" type="CheckBox" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Cave"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+text = "50"
+
+[node name="Cave2" type="HBoxContainer" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Cave2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Cave of Prophecies (58)"
+
+[node name="CheckBox2" type="CheckBox" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Cave2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+text = "50"
+
+[node name="CheckBox" type="CheckBox" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Cave2"]
+layout_mode = 2
+text = "8"
+
+[node name="Trial1" type="HBoxContainer" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Trial1"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Trial of Water (106)"
+
+[node name="CheckBox2" type="CheckBox" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Trial1"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+text = "50"
+
+[node name="CheckBox" type="CheckBox" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Trial1"]
+layout_mode = 2
+text = "6"
+
+[node name="CheckBox3" type="CheckBox" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Trial1"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+text = "50"
+
+[node name="Trial2" type="HBoxContainer" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Trial2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Trial of Earth (106)"
+
+[node name="CheckBox" type="CheckBox" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Trial2"]
+layout_mode = 2
+text = "2"
+
+[node name="CheckBox4" type="CheckBox" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Trial2"]
+layout_mode = 2
+text = "2"
+
+[node name="CheckBox5" type="CheckBox" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Trial2"]
+layout_mode = 2
+text = "2"
+
+[node name="CheckBox6" type="CheckBox" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Trial2"]
+layout_mode = 2
+text = "4"
+
+[node name="CheckBox7" type="CheckBox" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Trial2"]
+layout_mode = 2
+text = "2"
+
+[node name="CheckBox8" type="CheckBox" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Trial2"]
+layout_mode = 2
+text = "3"
+
+[node name="CheckBox3" type="CheckBox" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Trial2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+text = "100"
+
+[node name="Trial3" type="HBoxContainer" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Trial3"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Trial of Air (200)"
+
+[node name="CheckBox3" type="CheckBox" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Trial3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+text = "200"
+
+[node name="Trial4" type="HBoxContainer" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Trial4"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Trial of Fire (200)"
+
+[node name="CheckBox3" type="CheckBox" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Trial4"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+text = "200"
+
+[node name="Check All" type="HBoxContainer" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Check All"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Check All" type="Button" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Check All"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Check All"
+
+[node name="Uncheck All" type="Button" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Check All"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Uncheck All"
+
+[node name="Label3" type="Label" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Check All"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Daylight Prairie (691)" parent="Candle Tracker/Margin/VBox" instance=ExtResource("1_au16a")]
+layout_mode = 2
+
+[node name="Social" type="HBoxContainer" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Social"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Social Space (10)"
+
+[node name="CheckBox3" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Social"]
+layout_mode = 2
+text = "4"
+
+[node name="CheckBox4" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Social"]
+layout_mode = 2
+text = "3"
+
+[node name="CheckBox5" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Social"]
+layout_mode = 2
+text = "3"
+
+[node name="Fields" type="HBoxContainer" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Fields"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Butterfly Fields (45)"
+
+[node name="CheckBox3" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Fields"]
+layout_mode = 2
+text = "5"
+
+[node name="CheckBox4" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Fields"]
+layout_mode = 2
+text = "20"
+
+[node name="CheckBox5" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Fields"]
+layout_mode = 2
+text = "5"
+
+[node name="CheckBox6" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Fields"]
+layout_mode = 2
+text = "5"
+
+[node name="CheckBox7" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Fields"]
+layout_mode = 2
+text = "5"
+
+[node name="CheckBox8" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Fields"]
+layout_mode = 2
+text = "5"
+
+[node name="Villages" type="HBoxContainer" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Villages"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Villages (109)"
+
+[node name="CheckBox3" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Villages"]
+layout_mode = 2
+text = "5"
+
+[node name="CheckBox9" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Villages"]
+layout_mode = 2
+text = "5"
+
+[node name="CheckBox10" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Villages"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+text = "20"
+
+[node name="CheckBox4" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Villages"]
+layout_mode = 2
+text = "5"
+
+[node name="CheckBox11" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Villages"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+text = "23"
+
+[node name="CheckBox12" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Villages"]
+layout_mode = 2
+text = "5"
+
+[node name="CheckBox13" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Villages"]
+layout_mode = 2
+text = "5"
+
+[node name="CheckBox14" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Villages"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+text = "6"
+
+[node name="CheckBox5" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Villages"]
+layout_mode = 2
+text = "5"
+
+[node name="CheckBox6" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Villages"]
+layout_mode = 2
+text = "5"
+
+[node name="CheckBox7" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Villages"]
+layout_mode = 2
+text = "5"
+
+[node name="CheckBox15" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Villages"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+text = "15"
+
+[node name="CheckBox8" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Villages"]
+layout_mode = 2
+text = "5"
+
+[node name="8-Player" type="HBoxContainer" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/8-Player"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "8-Player Puzzle Area (99)"
+
+[node name="CheckBox3" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/8-Player"]
+layout_mode = 2
+text = "3"
+
+[node name="CheckBox4" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/8-Player"]
+layout_mode = 2
+text = "3"
+
+[node name="CheckBox5" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/8-Player"]
+layout_mode = 2
+text = "3"
+
+[node name="CheckBox6" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/8-Player"]
+layout_mode = 2
+text = "3"
+
+[node name="CheckBox7" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/8-Player"]
+layout_mode = 2
+text = "80"
+
+[node name="CheckBox8" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/8-Player"]
+layout_mode = 2
+text = "7"
+
+[node name="Temple" type="HBoxContainer" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Temple"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Temple (34)"
+
+[node name="CheckBox3" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Temple"]
+layout_mode = 2
+text = "5"
+
+[node name="CheckBox4" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Temple"]
+layout_mode = 2
+text = "5"
+
+[node name="CheckBox5" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Temple"]
+layout_mode = 2
+text = "15"
+
+[node name="CheckBox6" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Temple"]
+layout_mode = 2
+text = "9"
+
+[node name="Caves" type="HBoxContainer" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Caves"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Caves (45)"
+
+[node name="CheckBox3" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Caves"]
+layout_mode = 2
+text = "5"
+
+[node name="CheckBox4" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Caves"]
+layout_mode = 2
+text = "5"
+
+[node name="CheckBox5" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Caves"]
+layout_mode = 2
+text = "5"
+
+[node name="CheckBox6" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Caves"]
+layout_mode = 2
+text = "5"
+
+[node name="CheckBox7" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Caves"]
+layout_mode = 2
+text = "5"
+
+[node name="CheckBox8" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Caves"]
+layout_mode = 2
+text = "5"
+
+[node name="CheckBox9" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Caves"]
+layout_mode = 2
+text = "5"
+
+[node name="CheckBox10" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Caves"]
+layout_mode = 2
+text = "5"
+
+[node name="CheckBox11" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Caves"]
+layout_mode = 2
+text = "5"
+
+[node name="Nest" type="HBoxContainer" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Nest"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Bird nest (50)"
+
+[node name="CheckBox3" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Nest"]
+layout_mode = 2
+text = "5"
+
+[node name="CheckBox4" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Nest"]
+layout_mode = 2
+text = "5"
+
+[node name="CheckBox5" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Nest"]
+layout_mode = 2
+text = "5"
+
+[node name="CheckBox6" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Nest"]
+layout_mode = 2
+text = "5"
+
+[node name="CheckBox7" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Nest"]
+layout_mode = 2
+text = "5"
+
+[node name="CheckBox8" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Nest"]
+layout_mode = 2
+text = "5"
+
+[node name="CheckBox9" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Nest"]
+layout_mode = 2
+text = "5"
+
+[node name="CheckBox10" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Nest"]
+layout_mode = 2
+text = "5"
+
+[node name="CheckBox11" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Nest"]
+layout_mode = 2
+text = "5"
+
+[node name="CheckBox12" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Nest"]
+layout_mode = 2
+text = "5"
+
+[node name="Sanctuary" type="HBoxContainer" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Sanctuary"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Sanctuary Islands (299)"
+
+[node name="CheckBox2" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Sanctuary"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+text = "50"
+
+[node name="CheckBox3" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Sanctuary"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+text = "6"
+
+[node name="CheckBox4" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Sanctuary"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+text = "6"
+
+[node name="CheckBox6" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Sanctuary"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+text = "66"
+
+[node name="CheckBox10" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Sanctuary"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+text = "6"
+
+[node name="CheckBox11" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Sanctuary"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+text = "50"
+
+[node name="CheckBox12" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Sanctuary"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+text = "6"
+
+[node name="CheckBox13" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Sanctuary"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+text = "12"
+
+[node name="CheckBox14" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Sanctuary"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+text = "6"
+
+[node name="CheckBox15" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Sanctuary"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+text = "50"
+
+[node name="CheckBox16" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Sanctuary"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+text = "41"
+
+[node name="Check All" type="HBoxContainer" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Check All"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Check All" type="Button" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Check All"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Check All"
+
+[node name="Uncheck All" type="Button" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Check All"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Uncheck All"
+
+[node name="Label3" type="Label" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Check All"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[connection signal="tree_entered" from="." to="." method="_on_tree_entered"]
+[connection signal="tree_exiting" from="." to="." method="_on_tree_exiting"]
+[connection signal="tab_changed" from="Tabs" to="." method="_on_tabs_tab_changed"]
+[connection signal="pressed" from="Tabs/Stats/Stats/VBox/Main/Expand" to="Tabs/Stats/Stats/VBox" method="_on_expand_pressed"]
+[connection signal="pressed" from="Tabs/Stats/Stats/VBox/Main/Collapse" to="Tabs/Stats/Stats/VBox" method="_on_collapse_pressed"]
+[connection signal="toggled" from="Tabs/Current Season/Margin/VBox/Pass/Check" to="Tabs/Current Season/Margin/VBox" method="_on_check_toggled"]
+[connection signal="value_changed" from="Tabs/Current Season/Margin/VBox/Have/Candles" to="Tabs/Current Season/Margin/VBox" method="_on_check_toggled"]
+[connection signal="item_selected" from="Tabs/Regular Spirits/Margin/VBox/AreaSelect" to="Tabs/Regular Spirits/Margin/VBox" method="_on_area_select_item_selected"]
+[connection signal="item_selected" from="Tabs/Regular Spirits/Margin/VBox/SpiritSelect" to="Tabs/Regular Spirits/Margin/VBox" method="_on_spirit_select_item_selected"]
+[connection signal="bought" from="Tabs/Regular Spirits/Margin/VBox/Tree" to="Tabs/Regular Spirits/Margin/VBox" method="_on_tree_bought"]
+[connection signal="pressed" from="Tabs/Regular Spirits/Margin/VBox/Clear" to="Tabs/Regular Spirits/Margin/VBox" method="_on_clear_pressed"]
+[connection signal="confirmed" from="Tabs/Regular Spirits/Margin/VBox/Confirm" to="Tabs/Regular Spirits/Margin/VBox" method="_on_confirm_confirmed"]
+[connection signal="item_selected" from="Tabs/Seasonal Spirits/Margin/VBox/SeasonSelect" to="Tabs/Seasonal Spirits/Margin/VBox" method="_on_area_select_item_selected"]
+[connection signal="item_selected" from="Tabs/Seasonal Spirits/Margin/VBox/SpiritSelect" to="Tabs/Seasonal Spirits/Margin/VBox" method="_on_spirit_select_item_selected"]
+[connection signal="bought" from="Tabs/Seasonal Spirits/Margin/VBox/Tree" to="Tabs/Seasonal Spirits/Margin/VBox" method="_on_tree_bought"]
+[connection signal="pressed" from="Tabs/Seasonal Spirits/Margin/VBox/Clear" to="Tabs/Seasonal Spirits/Margin/VBox" method="_on_clear_pressed"]
+[connection signal="confirmed" from="Tabs/Seasonal Spirits/Margin/VBox/Confirm" to="Tabs/Seasonal Spirits/Margin/VBox" method="_on_confirm_confirmed"]
+[connection signal="pressed" from="Tabs/Winged Light Tracker/Margin/VBox/Main/Expand" to="Tabs/Winged Light Tracker/Margin/VBox" method="_on_expand_pressed"]
+[connection signal="pressed" from="Tabs/Winged Light Tracker/Margin/VBox/Main/Collapse" to="Tabs/Winged Light Tracker/Margin/VBox" method="_on_collapse_pressed"]
+[connection signal="pressed" from="Tabs/Winged Light Tracker/Margin/VBox/Main/Check" to="Tabs/Winged Light Tracker/Margin/VBox" method="_on_check_pressed"]
+[connection signal="pressed" from="Tabs/Winged Light Tracker/Margin/VBox/Main/Uncheck" to="Tabs/Winged Light Tracker/Margin/VBox" method="_on_uncheck_pressed"]
+[connection signal="pressed" from="Candle Tracker/Margin/VBox/Main/Expand" to="Candle Tracker/Margin/VBox" method="_on_expand_pressed"]
+[connection signal="pressed" from="Candle Tracker/Margin/VBox/Main/Collapse" to="Candle Tracker/Margin/VBox" method="_on_collapse_pressed"]
+[connection signal="pressed" from="Candle Tracker/Margin/VBox/Main/Check" to="Candle Tracker/Margin/VBox" method="_on_check_pressed"]
+[connection signal="pressed" from="Candle Tracker/Margin/VBox/Main/Uncheck" to="Candle Tracker/Margin/VBox" method="_on_uncheck_pressed"]

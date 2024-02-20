@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://bap3aptv3y1dw"]
+
+[ext_resource type="Script" path="res://collapsible.gd" id="1_e03ki"]
+[ext_resource type="StyleBox" uid="uid://co4qobwq7clp5" path="res://collapsible.tres" id="2_yj2x6"]
+
+[node name="Collapsible" type="VBoxContainer"]
+custom_minimum_size = Vector2(0, 48)
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+script = ExtResource("1_e03ki")
+
+[node name="Title" type="Button" parent="."]
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = ExtResource("2_yj2x6")
+theme_override_styles/hover = ExtResource("2_yj2x6")
+theme_override_styles/pressed = ExtResource("2_yj2x6")
+toggle_mode = true
+text = "Title"
+
+[node name="Label" type="Label" parent="Title"]
+layout_mode = 0
+offset_right = 34.0
+offset_bottom = 34.0
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "^"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="toggled" from="Title" to="." method="_on_collapse_toggled"]
