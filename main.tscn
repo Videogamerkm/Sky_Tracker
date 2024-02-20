@@ -1445,6 +1445,132 @@ theme_override_font_sizes/font_size = 20
 text = "0"
 horizontal_alignment = 1
 
+[node name="Regular Spirits" type="ScrollContainer" parent="Tabs"]
+visible = false
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="Tabs/Regular Spirits"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBox" type="VBoxContainer" parent="Tabs/Regular Spirits/Margin"]
+layout_mode = 2
+script = ExtResource("3_ttfa3")
+
+[node name="AreaSelect" type="OptionButton" parent="Tabs/Regular Spirits/Margin/VBox"]
+layout_mode = 2
+focus_mode = 0
+item_count = 6
+selected = 0
+popup/item_0/text = "Isle of Dawn"
+popup/item_0/id = 0
+popup/item_1/text = "Daylight Prairie"
+popup/item_1/id = 1
+popup/item_2/text = "Hidden Forest"
+popup/item_2/id = 2
+popup/item_3/text = "Valley of Triumph"
+popup/item_3/id = 3
+popup/item_4/text = "Golden Wasteland"
+popup/item_4/id = 4
+popup/item_5/text = "Vault of Knowledge"
+popup/item_5/id = 5
+
+[node name="SpiritSelect" type="OptionButton" parent="Tabs/Regular Spirits/Margin/VBox"]
+layout_mode = 2
+focus_mode = 0
+item_count = 1
+selected = 0
+popup/item_0/text = "Stats"
+popup/item_0/id = 0
+
+[node name="Label" type="Label" parent="Tabs/Regular Spirits/Margin/VBox"]
+layout_mode = 2
+
+[node name="Tree" parent="Tabs/Regular Spirits/Margin/VBox" instance=ExtResource("4_t1mtd")]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Stats" type="VBoxContainer" parent="Tabs/Regular Spirits/Margin/VBox"]
+layout_mode = 2
+
+[node name="Titles" type="HBoxContainer" parent="Tabs/Regular Spirits/Margin/VBox/Stats"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Regular Spirits/Margin/VBox/Stats/Titles"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+
+[node name="Label2" type="Label" parent="Tabs/Regular Spirits/Margin/VBox/Stats/Titles"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Candles"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Tabs/Regular Spirits/Margin/VBox/Stats/Titles"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Hearts"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="Tabs/Regular Spirits/Margin/VBox/Stats/Titles"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Ascended"
+horizontal_alignment = 1
+
+[node name="Spirit" type="HBoxContainer" parent="Tabs/Regular Spirits/Margin/VBox/Stats"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Tabs/Regular Spirits/Margin/VBox/Stats/Spirit"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Spirit Name"
+
+[node name="Candles" type="Label" parent="Tabs/Regular Spirits/Margin/VBox/Stats/Spirit"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Hearts" type="Label" parent="Tabs/Regular Spirits/Margin/VBox/Stats/Spirit"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Ascended" type="Label" parent="Tabs/Regular Spirits/Margin/VBox/Stats/Spirit"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Clear" type="Button" parent="Tabs/Regular Spirits/Margin/VBox"]
+layout_mode = 2
+focus_mode = 0
+text = "Clear Spirit Data"
+
+[node name="Confirm" type="ConfirmationDialog" parent="Tabs/Regular Spirits/Margin/VBox"]
+initial_position = 2
+size = Vector2i(300, 187)
+dialog_text = "Are you sure you want to clear purchase data?
+
+This cannot be undone."
+dialog_autowrap = true
+
 [node name="Current Season" type="ScrollContainer" parent="Tabs"]
 visible = false
 layout_mode = 2
@@ -1644,132 +1770,6 @@ theme_override_font_sizes/font_size = 12
 text = "Tip: Go to the Seasonal Spirits tab to update how many candles you've spent."
 horizontal_alignment = 1
 autowrap_mode = 3
-
-[node name="Regular Spirits" type="ScrollContainer" parent="Tabs"]
-visible = false
-layout_mode = 2
-
-[node name="Margin" type="MarginContainer" parent="Tabs/Regular Spirits"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_constants/margin_left = 24
-theme_override_constants/margin_top = 24
-theme_override_constants/margin_right = 24
-theme_override_constants/margin_bottom = 24
-
-[node name="VBox" type="VBoxContainer" parent="Tabs/Regular Spirits/Margin"]
-layout_mode = 2
-script = ExtResource("3_ttfa3")
-
-[node name="AreaSelect" type="OptionButton" parent="Tabs/Regular Spirits/Margin/VBox"]
-layout_mode = 2
-focus_mode = 0
-item_count = 6
-selected = 0
-popup/item_0/text = "Isle of Dawn"
-popup/item_0/id = 0
-popup/item_1/text = "Daylight Prairie"
-popup/item_1/id = 1
-popup/item_2/text = "Hidden Forest"
-popup/item_2/id = 2
-popup/item_3/text = "Valley of Triumph"
-popup/item_3/id = 3
-popup/item_4/text = "Golden Wasteland"
-popup/item_4/id = 4
-popup/item_5/text = "Vault of Knowledge"
-popup/item_5/id = 5
-
-[node name="SpiritSelect" type="OptionButton" parent="Tabs/Regular Spirits/Margin/VBox"]
-layout_mode = 2
-focus_mode = 0
-item_count = 1
-selected = 0
-popup/item_0/text = "Stats"
-popup/item_0/id = 0
-
-[node name="Label" type="Label" parent="Tabs/Regular Spirits/Margin/VBox"]
-layout_mode = 2
-
-[node name="Tree" parent="Tabs/Regular Spirits/Margin/VBox" instance=ExtResource("4_t1mtd")]
-visible = false
-layout_mode = 2
-size_flags_horizontal = 4
-
-[node name="Stats" type="VBoxContainer" parent="Tabs/Regular Spirits/Margin/VBox"]
-layout_mode = 2
-
-[node name="Titles" type="HBoxContainer" parent="Tabs/Regular Spirits/Margin/VBox/Stats"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Tabs/Regular Spirits/Margin/VBox/Stats/Titles"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-
-[node name="Label2" type="Label" parent="Tabs/Regular Spirits/Margin/VBox/Stats/Titles"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Candles"
-horizontal_alignment = 1
-
-[node name="Label3" type="Label" parent="Tabs/Regular Spirits/Margin/VBox/Stats/Titles"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Hearts"
-horizontal_alignment = 1
-
-[node name="Label4" type="Label" parent="Tabs/Regular Spirits/Margin/VBox/Stats/Titles"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Ascended"
-horizontal_alignment = 1
-
-[node name="Spirit" type="HBoxContainer" parent="Tabs/Regular Spirits/Margin/VBox/Stats"]
-layout_mode = 2
-
-[node name="Name" type="Label" parent="Tabs/Regular Spirits/Margin/VBox/Stats/Spirit"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Spirit Name"
-
-[node name="Candles" type="Label" parent="Tabs/Regular Spirits/Margin/VBox/Stats/Spirit"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="Hearts" type="Label" parent="Tabs/Regular Spirits/Margin/VBox/Stats/Spirit"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="Ascended" type="Label" parent="Tabs/Regular Spirits/Margin/VBox/Stats/Spirit"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="Clear" type="Button" parent="Tabs/Regular Spirits/Margin/VBox"]
-layout_mode = 2
-focus_mode = 0
-text = "Clear Spirit Data"
-
-[node name="Confirm" type="ConfirmationDialog" parent="Tabs/Regular Spirits/Margin/VBox"]
-initial_position = 2
-size = Vector2i(300, 187)
-dialog_text = "Are you sure you want to clear purchase data?
-
-This cannot be undone."
-dialog_autowrap = true
 
 [node name="Seasonal Spirits" type="ScrollContainer" parent="Tabs"]
 visible = false
@@ -3601,13 +3601,13 @@ size_flags_horizontal = 3
 [connection signal="tab_changed" from="Tabs" to="." method="_on_tabs_tab_changed"]
 [connection signal="pressed" from="Tabs/Stats/Stats/VBox/Main/Expand" to="Tabs/Stats/Stats/VBox" method="_on_expand_pressed"]
 [connection signal="pressed" from="Tabs/Stats/Stats/VBox/Main/Collapse" to="Tabs/Stats/Stats/VBox" method="_on_collapse_pressed"]
-[connection signal="toggled" from="Tabs/Current Season/Margin/VBox/Pass/Check" to="Tabs/Current Season/Margin/VBox" method="_on_check_toggled"]
-[connection signal="value_changed" from="Tabs/Current Season/Margin/VBox/Have/Candles" to="Tabs/Current Season/Margin/VBox" method="_on_check_toggled"]
 [connection signal="item_selected" from="Tabs/Regular Spirits/Margin/VBox/AreaSelect" to="Tabs/Regular Spirits/Margin/VBox" method="_on_area_select_item_selected"]
 [connection signal="item_selected" from="Tabs/Regular Spirits/Margin/VBox/SpiritSelect" to="Tabs/Regular Spirits/Margin/VBox" method="_on_spirit_select_item_selected"]
 [connection signal="bought" from="Tabs/Regular Spirits/Margin/VBox/Tree" to="Tabs/Regular Spirits/Margin/VBox" method="_on_tree_bought"]
 [connection signal="pressed" from="Tabs/Regular Spirits/Margin/VBox/Clear" to="Tabs/Regular Spirits/Margin/VBox" method="_on_clear_pressed"]
 [connection signal="confirmed" from="Tabs/Regular Spirits/Margin/VBox/Confirm" to="Tabs/Regular Spirits/Margin/VBox" method="_on_confirm_confirmed"]
+[connection signal="toggled" from="Tabs/Current Season/Margin/VBox/Pass/Check" to="Tabs/Current Season/Margin/VBox" method="_on_check_toggled"]
+[connection signal="value_changed" from="Tabs/Current Season/Margin/VBox/Have/Candles" to="Tabs/Current Season/Margin/VBox" method="_on_check_toggled"]
 [connection signal="item_selected" from="Tabs/Seasonal Spirits/Margin/VBox/SeasonSelect" to="Tabs/Seasonal Spirits/Margin/VBox" method="_on_area_select_item_selected"]
 [connection signal="item_selected" from="Tabs/Seasonal Spirits/Margin/VBox/SpiritSelect" to="Tabs/Seasonal Spirits/Margin/VBox" method="_on_spirit_select_item_selected"]
 [connection signal="bought" from="Tabs/Seasonal Spirits/Margin/VBox/Tree" to="Tabs/Seasonal Spirits/Margin/VBox" method="_on_tree_bought"]
