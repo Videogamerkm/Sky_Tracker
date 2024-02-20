@@ -17,6 +17,7 @@ func _ready():
 	$Time/Val.text = str(days)
 	update_candles()
 	var candles = days*(6 if $Pass/Check.button_pressed else 5)
+	$"Per Day/Val".text = str(6 if $Pass/Check.button_pressed else 5)
 	$Candles/Val.text = str(candles)
 	$Total/Val.text = str(int($Spent/Val.text)+$Have/Candles.value)
 	var total = candles + int($Spent/Val.text) + $Have/Candles.value

@@ -1573,7 +1573,6 @@ This cannot be undone."
 dialog_autowrap = true
 
 [node name="Current Season" type="ScrollContainer" parent="Tabs"]
-visible = false
 layout_mode = 2
 size_flags_vertical = 3
 horizontal_scroll_mode = 0
@@ -1700,6 +1699,22 @@ allow_greater = true
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 20
+
+[node name="Per Day" type="HBoxContainer" parent="Tabs/Current Season/Margin/VBox"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Current Season/Margin/VBox/Per Day"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "Candles collectable per day:"
+
+[node name="Val" type="Label" parent="Tabs/Current Season/Margin/VBox/Per Day"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "5"
+horizontal_alignment = 1
 
 [node name="Candles" type="HBoxContainer" parent="Tabs/Current Season/Margin/VBox"]
 layout_mode = 2
@@ -1903,6 +1918,7 @@ This cannot be undone."
 dialog_autowrap = true
 
 [node name="Winged Light Tracker" type="ScrollContainer" parent="Tabs"]
+visible = false
 layout_mode = 2
 
 [node name="Margin" type="MarginContainer" parent="Tabs/Winged Light Tracker"]
