@@ -30,6 +30,7 @@ grow_vertical = 2
 tab_alignment = 1
 
 [node name="Stats" type="ScrollContainer" parent="Tabs"]
+visible = false
 layout_mode = 2
 horizontal_scroll_mode = 0
 
@@ -1902,7 +1903,6 @@ This cannot be undone."
 dialog_autowrap = true
 
 [node name="Winged Light Tracker" type="ScrollContainer" parent="Tabs"]
-visible = false
 layout_mode = 2
 
 [node name="Margin" type="MarginContainer" parent="Tabs/Winged Light Tracker"]
@@ -1958,18 +1958,23 @@ text = "Main area"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Isle of Dawn/Main"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Isle of Dawn/Main"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox3" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Isle of Dawn/Main"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox4" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Isle of Dawn/Main"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox5" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Isle of Dawn/Main"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="Cave" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Isle of Dawn"]
 layout_mode = 2
@@ -1981,15 +1986,19 @@ text = "Cave of Prophecies/Trials"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Isle of Dawn/Cave"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Isle of Dawn/Cave"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox3" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Isle of Dawn/Cave"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox4" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Isle of Dawn/Cave"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="Check All" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Isle of Dawn"]
 layout_mode = 2
@@ -2027,12 +2036,15 @@ text = "Butterfly Fields"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Butterfly"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Butterfly"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox3" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Butterfly"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="Cave" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie"]
 layout_mode = 2
@@ -2044,9 +2056,11 @@ text = "Prairie Caves"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Cave"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Cave"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="Villages" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie"]
 layout_mode = 2
@@ -2058,12 +2072,15 @@ text = "Villages"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Villages"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Villages"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox3" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Villages"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="8-Player" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie"]
 layout_mode = 2
@@ -2075,6 +2092,7 @@ text = "8-Player Puzzle Area"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/8-Player"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="Bird Nest" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie"]
 layout_mode = 2
@@ -2086,9 +2104,11 @@ text = "Bird Nest"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Bird Nest"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Bird Nest"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="Sanctuary Islands" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie"]
 layout_mode = 2
@@ -2100,27 +2120,35 @@ text = "Sanctuary Islands"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Sanctuary Islands"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Sanctuary Islands"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox3" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Sanctuary Islands"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox4" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Sanctuary Islands"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox5" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Sanctuary Islands"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox6" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Sanctuary Islands"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox7" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Sanctuary Islands"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox8" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Sanctuary Islands"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="Prairie Peaks" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie"]
 layout_mode = 2
@@ -2132,12 +2160,15 @@ text = "Prairie Peaks"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Prairie Peaks"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Prairie Peaks"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox3" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Prairie Peaks"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="Temple" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie"]
 layout_mode = 2
@@ -2149,9 +2180,11 @@ text = "Temple"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Temple"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie/Temple"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="Check All" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Daylight Prairie"]
 layout_mode = 2
@@ -2189,9 +2222,11 @@ text = "Forest Clearing/Entrance"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest/Entrance"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest/Entrance"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="Brook" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest"]
 layout_mode = 2
@@ -2203,15 +2238,19 @@ text = "Forest's Brook"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest/Brook"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest/Brook"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox3" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest/Brook"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox4" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest/Brook"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="Tunnels" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest"]
 layout_mode = 2
@@ -2223,6 +2262,7 @@ text = "Wind Tunnels"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest/Tunnels"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="Treehouse" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest"]
 layout_mode = 2
@@ -2234,9 +2274,11 @@ text = "Treehouse"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest/Treehouse"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest/Treehouse"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="Elevated" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest"]
 layout_mode = 2
@@ -2248,9 +2290,11 @@ text = "Elevated Clearing (Picnic)"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest/Elevated"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest/Elevated"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="Underground" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest"]
 layout_mode = 2
@@ -2262,15 +2306,19 @@ text = "Underground Cavern (Deep Woods)"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest/Underground"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest/Underground"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox3" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest/Underground"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox4" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest/Underground"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="Boneyard" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest"]
 layout_mode = 2
@@ -2282,12 +2330,15 @@ text = "Boneyard"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest/Boneyard"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest/Boneyard"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox3" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest/Boneyard"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="End" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest"]
 layout_mode = 2
@@ -2299,6 +2350,7 @@ text = "Forest's End"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest/End"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="Check All" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest"]
 layout_mode = 2
@@ -2336,6 +2388,7 @@ text = "Slope"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph/Slope"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="Rink" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph"]
 layout_mode = 2
@@ -2347,9 +2400,11 @@ text = "Ice Rink"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph/Rink"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph/Rink"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="Citadel" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph"]
 layout_mode = 2
@@ -2361,9 +2416,11 @@ text = "Citadel"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph/Citadel"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph/Citadel"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="Flying" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph"]
 layout_mode = 2
@@ -2375,9 +2432,11 @@ text = "Flying Race"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph/Flying"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph/Flying"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="Sliding" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph"]
 layout_mode = 2
@@ -2389,9 +2448,11 @@ text = "Sliding Race"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph/Sliding"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph/Sliding"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="Village" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph"]
 layout_mode = 2
@@ -2403,12 +2464,15 @@ text = "Village of Dreams"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph/Village"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph/Village"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox3" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph/Village"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="Hermit" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph"]
 layout_mode = 2
@@ -2420,9 +2484,11 @@ text = "Hermit Valley"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph/Hermit"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph/Hermit"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="Theater" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph"]
 layout_mode = 2
@@ -2434,6 +2500,7 @@ text = "Village Theater"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph/Theater"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="Coliseum" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph"]
 layout_mode = 2
@@ -2445,6 +2512,7 @@ text = "Coliseum"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph/Coliseum"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="Temple" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph"]
 layout_mode = 2
@@ -2456,6 +2524,7 @@ text = "Temple"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph/Temple"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="Check All" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Valley of Triumph"]
 layout_mode = 2
@@ -2493,9 +2562,11 @@ text = "Broken Temple"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland/Broken"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland/Broken"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="Reef" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland"]
 layout_mode = 2
@@ -2507,9 +2578,11 @@ text = "The Treasure Reef"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland/Reef"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland/Reef"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="Ark" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland"]
 layout_mode = 2
@@ -2521,9 +2594,11 @@ text = "Forgotten Ark"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland/Ark"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland/Ark"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="Krill" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland"]
 layout_mode = 2
@@ -2535,9 +2610,11 @@ text = "First Krill Area"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland/Krill"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland/Krill"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="Graveyard" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland"]
 layout_mode = 2
@@ -2549,15 +2626,19 @@ text = "Graveyard (The Krill Zone)"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland/Graveyard"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland/Graveyard"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox3" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland/Graveyard"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox4" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland/Graveyard"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="Crab" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland"]
 layout_mode = 2
@@ -2569,12 +2650,15 @@ text = "Shipwreck (Crab Fields)"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland/Crab"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland/Crab"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox3" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland/Crab"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="Battlefield" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland"]
 layout_mode = 2
@@ -2586,9 +2670,11 @@ text = "Battlefield"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland/Battlefield"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland/Battlefield"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="Temple" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland"]
 layout_mode = 2
@@ -2600,6 +2686,7 @@ text = "Temple"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland/Temple"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="Check All" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Golden Wasteland"]
 layout_mode = 2
@@ -2637,6 +2724,7 @@ text = "Social Space"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge/Social"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="Archives" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge"]
 layout_mode = 2
@@ -2648,9 +2736,11 @@ text = "Archives (The Cube)"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge/Archives"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge/Archives"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="Repository" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge"]
 layout_mode = 2
@@ -2662,6 +2752,7 @@ text = "Repository of Refuge"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge/Repository"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="Desert" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge"]
 layout_mode = 2
@@ -2673,12 +2764,15 @@ text = "Starlight Desert (Little Prince)"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge/Desert"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge/Desert"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox3" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge/Desert"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="Oasis" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge"]
 layout_mode = 2
@@ -2690,9 +2784,11 @@ text = "Crescent Oasis (Nine-Colored Deer)"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge/Oasis"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge/Oasis"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="Third Floor" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge"]
 layout_mode = 2
@@ -2704,6 +2800,7 @@ text = "Third Floor"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge/Third Floor"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="Fourth Floor" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge"]
 layout_mode = 2
@@ -2715,9 +2812,11 @@ text = "Fourth Floor"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge/Fourth Floor"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge/Fourth Floor"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="Fifth Floor" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge"]
 layout_mode = 2
@@ -2729,6 +2828,7 @@ text = "Fifth Floor"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge/Fifth Floor"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="Top Floor" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge"]
 layout_mode = 2
@@ -2740,6 +2840,7 @@ text = "Top Floor"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge/Top Floor"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="Check All" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge"]
 layout_mode = 2
@@ -2777,6 +2878,7 @@ text = "First Slope"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Eye of Eden/First"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="Gate" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Eye of Eden"]
 layout_mode = 2
@@ -2788,30 +2890,39 @@ text = "The Gate"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Eye of Eden/Gate"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Eye of Eden/Gate"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox3" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Eye of Eden/Gate"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox4" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Eye of Eden/Gate"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox5" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Eye of Eden/Gate"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox6" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Eye of Eden/Gate"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox7" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Eye of Eden/Gate"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox8" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Eye of Eden/Gate"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="CheckBox9" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Eye of Eden/Gate"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="Orbit" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Eye of Eden"]
 layout_mode = 2
@@ -2823,6 +2934,7 @@ text = "Orbit"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Eye of Eden/Orbit"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="Check All" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Eye of Eden"]
 layout_mode = 2
@@ -2860,6 +2972,7 @@ text = "Jellyfish"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Shattered Memories/Jellyfish"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="Crabs" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Shattered Memories"]
 layout_mode = 2
@@ -2871,6 +2984,7 @@ text = "Crabs"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Shattered Memories/Crabs"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="Mantas" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Shattered Memories"]
 layout_mode = 2
@@ -2882,6 +2996,7 @@ text = "Mantas"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Shattered Memories/Mantas"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="Krill" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Shattered Memories"]
 layout_mode = 2
@@ -2893,6 +3008,7 @@ text = "Dark Dragons (Krill)"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Shattered Memories/Krill"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="Whales" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Shattered Memories"]
 layout_mode = 2
@@ -2904,6 +3020,7 @@ text = "Whales"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Shattered Memories/Whales"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="Elders" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Shattered Memories"]
 layout_mode = 2
@@ -2915,6 +3032,7 @@ text = "Elders"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Shattered Memories/Elders"]
 layout_mode = 2
+focus_mode = 0
 
 [node name="Check All" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Shattered Memories"]
 layout_mode = 2
