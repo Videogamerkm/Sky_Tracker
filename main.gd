@@ -22,3 +22,4 @@ func _on_tree_entered():
 
 func _on_tabs_tab_changed(tab):
 	if tab == 0: $Tabs/Stats/Stats/VBox.set_values()
+	if tab == 2: $"Tabs/Current Season/Margin/VBox"._ready()
