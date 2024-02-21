@@ -2,12 +2,6 @@ extends Control
 
 var saveFile = "user://save.dat"
 
-func _process(_delta):
-	if Input.is_action_pressed("Rainbow") && not $AnimationPlayer.is_playing():
-		$AnimationPlayer.play("rainbow")
-	elif Input.is_action_pressed("Rainbow"):
-		$AnimationPlayer.play("RESET")
-
 func _on_tree_exiting():
 	var file = FileAccess.open(saveFile, FileAccess.WRITE)
 	file.store_var($"Tabs/Regular Spirits/Margin/VBox".bought)
@@ -36,3 +30,10 @@ func _on_pick_color_changed(color):
 func _on_check_button_toggled(button_pressed):
 	if button_pressed: theme = preload("res://black.tres")
 	else: theme = preload("res://white.tres")
+
+func _input(event):
+	if event.is_action_pressed("Rainbow") && not $AnimationPlayer.is_playing():
+		$AnimationPlayer.play("rainbow")
+	elif event.is_action_pressed("Rainbow"):
+		$AnimationPlayer.play("RESET")
+	get_tree().root.set_input_as_handled()
