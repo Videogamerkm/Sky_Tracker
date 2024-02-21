@@ -202,9 +202,25 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
-text = "Season Completion:"
+text = "Season Completion (by candles):"
 
 [node name="Season" type="Label" parent="Tabs/Stats/Stats/VBox/Current Season/Completion"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 2
+
+[node name="Completion2" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Current Season"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Current Season/Completion2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Season Completion (by purchases):"
+
+[node name="Season" type="Label" parent="Tabs/Stats/Stats/VBox/Current Season/Completion2"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
@@ -359,9 +375,25 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
-text = "Overall Completion:"
+text = "Completion by Currency:"
 
 [node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn/Completion"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 2
+
+[node name="Completion2" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn/Completion2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Completion by Purchases:"
+
+[node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn/Completion2"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
@@ -518,9 +550,25 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
-text = "Overall Completion:"
+text = "Completion by Currency:"
 
 [node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie/Completion"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 2
+
+[node name="Completion2" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie/Completion2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Completion by Purchases:"
+
+[node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie/Completion2"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
@@ -677,9 +725,25 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
-text = "Overall Completion:"
+text = "Completion by Currency:"
 
 [node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest/Completion"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 2
+
+[node name="Completion2" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest/Completion2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Completion by Purchases:"
+
+[node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest/Completion2"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
@@ -836,9 +900,25 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
-text = "Overall Completion:"
+text = "Completion by Currency:"
 
 [node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph/Completion"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 2
+
+[node name="Completion2" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph/Completion2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Completion by Purchases:"
+
+[node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph/Completion2"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
@@ -995,9 +1075,25 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
-text = "Overall Completion:"
+text = "Completion by Currency:"
 
 [node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland/Completion"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 2
+
+[node name="Completion2" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland/Completion2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Completion by Purchases:"
+
+[node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland/Completion2"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
@@ -1154,9 +1250,25 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
-text = "Overall Completion:"
+text = "Completion by Currency:"
 
 [node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge/Completion"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 2
+
+[node name="Completion2" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge/Completion2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Completion by Purchases:"
+
+[node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge/Completion2"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
@@ -1313,9 +1425,25 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
-text = "Overall Completion:"
+text = "Completion by Currency:"
 
 [node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total/Completion"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 2
+
+[node name="Completion2" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total/Completion2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Completion by Purchases:"
+
+[node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total/Completion2"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16

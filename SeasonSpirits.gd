@@ -39,7 +39,7 @@ static var data = {"Bearhug Hermit":{"loc":"Season of Dreams",
 	["seas/exp/cradle;0;0;sp","base/5C;6;sp",""],["","seas/exp/cradle;0;0",""]]},
 	"Princess":{"loc":"Season of the Nine-Colored Deer",
 	"tree":[["seas/cos/princess sp2;0;0;sp","base/season_heart;3;sp;sp",""],["base/5C;0;0;sp","base/5C;32;sp",""],
-	["seas/exp/princess;0;0;sp","seas/cos/princess 2;25;sp",""],["seas/cos/princess sp1;0;0;sp","seas/exp/princess;22;sp",""],
+	["seas/exp/princess;0;0;sp","seas/cos/princess 2;26;sp",""],["seas/cos/princess sp1;0;0;sp","seas/exp/princess;22;sp",""],
 	["base/5C;0;0;sp","base/5C;18;sp",""],["seas/exp/princess;0;0;sp","seas/cos/princess 1;8;sp",""],["","seas/exp/princess;0;0",""]]}}
 
 static func get_cost(name) -> Dictionary:
@@ -105,6 +105,19 @@ static func get_spent(name,bought) -> int:
 			y += 1
 		x += 1
 	return c
+
+static func get_completion(name,bought) -> int:
+	var b = 0
+	var t = 0
+	var x = 0
+	for row in data[name]["tree"]:
+		var y = 0
+		for item in row:
+			if item != "" && bought[x][y]: b += 1
+			if item != "": t += 1
+			y += 1
+		x += 1
+	return floor(b*100.0/t)
 
 static func get_all_wings() -> int:
 	var w = 0

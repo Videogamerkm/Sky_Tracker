@@ -208,17 +208,17 @@ static func get_unspent(name,bought) -> Dictionary:
 	return {"c":c,"h":h,"a":a,"c2":c2,"h2":h2,"a2":a2}
 
 static func get_completion(name,bought) -> int:
-	var b = 0.0
-	var t = 0.0
+	var b = 0
+	var t = 0
 	var x = 0
 	for row in data[name]["tree"]:
 		var y = 0
 		for item in row:
 			if item != "" && bought[x][y]: b += 1
-			t += 1
+			if item != "": t += 1
 			y += 1
 		x += 1
-	return floor(b/t)
+	return floor(b*100.0/t)
 
 static func get_all_wings() -> int:
 	var w = 0

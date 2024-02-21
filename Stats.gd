@@ -13,23 +13,37 @@ func _ready():
 
 func set_values():
 	# Current season values
-	$"Current Season/Spent/Season Spent".text = current.get_node("Spent/Val").text
+	if current.get_node("Spent/Val").text == "0": current._ready()
+	var spent = current.get_node("Spent/Val").text
+	$"Current Season/Spent/Season Spent".text = spent
+	spent = int(spent)
 	var coll = int(current.get_node("Total/Val").text)
 	var need = (current.needPass if current.get_node("Pass/Check").button_pressed else current.needNoPass)
-	$"Current Season/Needed/Season Need".text = str(need - coll)
+	$"Current Season/Needed/Season Need".text = str(max(need - coll,0))
 	$"Current Season/Avail/Season Avail".text = current.get_node("Candles/Val").text
-	$"Current Season/Completion/Season".text = "0%" # TODO: Get season completion %
+	$"Current Season/Completion/Season".text = str(floor(spent*100/need))+"%"
+	var comp = 0
+	for s in seas_spirits.data:
+		if seas_spirits.data[s]["loc"] == current.seasonName && seasonal.bought.has(s):
+			comp += seas_spirits.get_completion(s,seasonal.bought[s])
+	$"Current Season/Completion2/Season".text = str(floor(comp/4.0))+"%"
 	
 	# Regular spirit values
 	var spentTotal = {"c":0,"h":0,"a":0,"c2":0,"h2":0,"a2":0}
 	var neededTotal = {"c":0,"h":0,"a":0,"c2":0,"h2":0,"a2":0}
+	var spiritTotal = 0
+	var compTotal = 0
 	for a in areas:
 		var costsSpent = {"c":0,"h":0,"a":0,"c2":0,"h2":0,"a2":0}
 		var costsNeeded = {"c":0,"h":0,"a":0,"c2":0,"h2":0,"a2":0}
+		var spiritCount = 0
+		var compPercent = 0
 		for s in spirits.data:
 			if spirits.data[s]["loc"] == a:
+				spiritCount += 1
 				var sCost = spirits.get_cost(s)
 				if regular.bought.has(s):
+					compPercent += spirits.get_completion(s,regular.bought[s])
 					var sUnspent = spirits.get_unspent(s,regular.bought[s])
 					for key in costsNeeded.keys():
 						costsNeeded[key] += sUnspent[key]
@@ -37,29 +51,37 @@ func set_values():
 				else:
 					for key in costsNeeded.keys():
 						costsNeeded[key] += sCost[key]
-		var overall = 0
+		var overall_spent = 0
+		var overall_need = 0
 		for type in ["c","h","a"]:
 			var tCap = type.capitalize()
 			get_node("Regular Spirits/"+a+"/Grid/"+tCap+" Spent").text = str(costsSpent[type])
 			get_node("Regular Spirits/"+a+"/Grid/"+tCap+" Needed").text = str(costsNeeded[type])
-			overall += costsSpent[type]*100/(costsSpent[type]+costsNeeded[type])
+			overall_spent += costsSpent[type]
+			overall_need += costsNeeded[type]
 			get_node("Regular Spirits/"+a+"/Grid/"+tCap+" Comp").text = str(floor(costsSpent[type]*100.0/(costsSpent[type]+costsNeeded[type])))+"%"
 			if has_node("Regular Spirits/"+a+"/Grid/"+tCap+" T2"):
 				get_node("Regular Spirits/"+a+"/Grid/"+tCap+" T2").text = str(costsNeeded[type+"2"])
-		get_node("Regular Spirits/"+a+"/Completion/Need").text = str(floor(overall/3.0))+"%"
+		get_node("Regular Spirits/"+a+"/Completion/Need").text = str(floor(overall_spent*100.0/(overall_spent+overall_need)))+"%"
+		get_node("Regular Spirits/"+a+"/Completion2/Need").text = str(floor(compPercent/spiritCount))+"%"
 		for key in costsNeeded.keys():
 			spentTotal[key] += costsSpent[key]
 			neededTotal[key] += costsNeeded[key]
-	var overall = 0
+		spiritTotal += spiritCount
+		compTotal += compPercent
+	var overall_spent = 0
+	var overall_need = 0
 	for type in ["c","h","a"]:
 		var tCap = type.capitalize()
 		get_node("Regular Spirits/Total/Grid/"+tCap+" Spent").text = str(spentTotal[type])
 		get_node("Regular Spirits/Total/Grid/"+tCap+" Needed").text = str(neededTotal[type])
-		overall += spentTotal[type]*100/(spentTotal[type]+neededTotal[type])
+		overall_spent += spentTotal[type]
+		overall_need += neededTotal[type]
 		get_node("Regular Spirits/Total/Grid/"+tCap+" Comp").text = str(floor(spentTotal[type]*100.0/(spentTotal[type]+neededTotal[type])))+"%"
 		if has_node("Regular Spirits/Total/Grid/"+tCap+" T2"):
 			get_node("Regular Spirits/Total/Grid/"+tCap+" T2").text = str(neededTotal[type+"2"])
-	get_node("Regular Spirits/Total/Completion/Need").text = str(floor(overall/3.0))+"%"
+	get_node("Regular Spirits/Total/Completion/Need").text = str(floor(overall_spent*100.0/(overall_spent+overall_need)))+"%"
+	get_node("Regular Spirits/Total/Completion2/Need").text = str(floor(compTotal/spiritTotal))+"%"
 	
 	# Seasonal spirit values
 	# TODO: Seasonal spirits
