@@ -34,6 +34,7 @@ func _on_check_button_toggled(button_pressed):
 func _input(event):
 	if event.is_action_pressed("Rainbow") && not $AnimationPlayer.is_playing():
 		$AnimationPlayer.play("rainbow")
+		get_tree().root.set_input_as_handled()
 	elif event.is_action_pressed("Rainbow"):
 		$AnimationPlayer.play("RESET")
-	get_tree().root.set_input_as_handled()
+		get_tree().root.set_input_as_handled()
