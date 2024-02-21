@@ -70,6 +70,7 @@ func export_checked() -> Dictionary:
 		if c == $Main: continue
 		for a in c.get_children():
 			if a.name == "Check All": continue
+			if a.name == "Margin" || a.name == "Title": continue
 			var checks = []
 			for cb in a.get_children():
 				if cb is Label: continue
@@ -79,6 +80,7 @@ func export_checked() -> Dictionary:
 
 func import_checked(map):
 	for entry in map:
+		if entry.ends_with("/Title"): continue
 		var checks = map[entry]
 		for cb in get_node(entry).get_children():
 			if cb is Label: continue

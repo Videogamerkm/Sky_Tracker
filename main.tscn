@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://b04gr0a605mxh"]
+[gd_scene load_steps=16 format=3 uid="uid://b04gr0a605mxh"]
 
 [ext_resource type="PackedScene" uid="uid://bap3aptv3y1dw" path="res://collapsible.tscn" id="1_au16a"]
+[ext_resource type="Theme" uid="uid://cqobwtkqodo0r" path="res://white.tres" id="1_q23n0"]
 [ext_resource type="Script" path="res://main.gd" id="1_se3df"]
 [ext_resource type="Script" path="res://Current Season.gd" id="2_6cr1o"]
 [ext_resource type="Script" path="res://Stats.gd" id="2_gvlqv"]
@@ -9,7 +10,83 @@
 [ext_resource type="Script" path="res://Seasons.gd" id="5_o6qgh"]
 [ext_resource type="Script" path="res://Light.gd" id="8_ukwu8"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g8ulf"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.588235, 0.4, 0.4, 0.294118)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ohe4u"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.486275, 0.329412, 0.329412, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d7tig"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.588235, 0.4, 0.4, 0.294118)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="Animation" id="Animation_h7fm0"]
+resource_name = "RESET"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_6hqhi"]
+resource_name = "test"
+length = 6.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 4, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(0, 1, 0, 1), Color(0, 0, 1, 1), Color(1, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lasoq"]
+_data = {
+"RESET": SubResource("Animation_h7fm0"),
+"rainbow": SubResource("Animation_6hqhi")
+}
+
 [node name="Main" type="Control"]
+self_modulate = Color(1, 0, 0, 1)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -18,6 +95,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme = ExtResource("1_q23n0")
 script = ExtResource("1_se3df")
 
 [node name="Tabs" type="TabContainer" parent="."]
@@ -30,7 +108,6 @@ grow_vertical = 2
 tab_alignment = 1
 
 [node name="Stats" type="ScrollContainer" parent="Tabs"]
-visible = false
 layout_mode = 2
 horizontal_scroll_mode = 0
 
@@ -64,7 +141,6 @@ focus_mode = 0
 text = "Collapse All"
 
 [node name="Current Season" parent="Tabs/Stats/Stats/VBox" instance=ExtResource("1_au16a")]
-visible = false
 layout_mode = 2
 
 [node name="Spent" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Current Season"]
@@ -136,6 +212,29 @@ horizontal_alignment = 2
 
 [node name="Regular Spirits" parent="Tabs/Stats/Stats/VBox" instance=ExtResource("1_au16a")]
 layout_mode = 2
+
+[node name="Main" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Regular Spirits"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Main"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Expand" type="Button" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Main"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Expand All"
+
+[node name="Collapse" type="Button" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Main"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Collapse All"
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Main"]
+layout_mode = 2
+size_flags_horizontal = 3
 
 [node name="Isle of Dawn" parent="Tabs/Stats/Stats/VBox/Regular Spirits" instance=ExtResource("1_au16a")]
 layout_mode = 2
@@ -1063,158 +1162,159 @@ theme_override_font_sizes/font_size = 16
 text = "0%"
 horizontal_alignment = 2
 
-[node name="HSeparator" type="HSeparator" parent="Tabs/Stats/Stats/VBox/Regular Spirits"]
+[node name="Total" parent="Tabs/Stats/Stats/VBox/Regular Spirits" instance=ExtResource("1_au16a")]
 layout_mode = 2
+sub = true
 
-[node name="Grid" type="GridContainer" parent="Tabs/Stats/Stats/VBox/Regular Spirits"]
+[node name="Grid" type="GridContainer" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total"]
 layout_mode = 2
 columns = 5
 
-[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Grid"]
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 
-[node name="Label2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Grid"]
+[node name="Label2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "Spent"
 horizontal_alignment = 1
 
-[node name="Label3" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Grid"]
+[node name="Label3" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "Needed"
 horizontal_alignment = 1
 
-[node name="Label4" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Grid"]
+[node name="Label4" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "% Complete"
 horizontal_alignment = 1
 
-[node name="Label8" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Grid"]
+[node name="Label8" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "Tier 2"
 horizontal_alignment = 1
 
-[node name="Label5" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Grid"]
+[node name="Label5" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "Candles:"
 
-[node name="C Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Grid"]
+[node name="C Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "0"
 horizontal_alignment = 1
 
-[node name="C Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Grid"]
+[node name="C Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "0"
 horizontal_alignment = 1
 
-[node name="C Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Grid"]
+[node name="C Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "0%"
 horizontal_alignment = 1
 
-[node name="C T2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Grid"]
+[node name="C T2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "0"
 horizontal_alignment = 1
 
-[node name="Label6" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Grid"]
+[node name="Label6" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "Hearts:"
 
-[node name="H Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Grid"]
+[node name="H Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "0"
 horizontal_alignment = 1
 
-[node name="H Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Grid"]
+[node name="H Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "0"
 horizontal_alignment = 1
 
-[node name="H Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Grid"]
+[node name="H Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "0%"
 horizontal_alignment = 1
 
-[node name="H T2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Grid"]
+[node name="H T2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "0"
 horizontal_alignment = 1
 
-[node name="Label7" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Grid"]
+[node name="Label7" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "Ascended:"
 
-[node name="A Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Grid"]
+[node name="A Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "0"
 horizontal_alignment = 1
 
-[node name="A Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Grid"]
+[node name="A Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "0"
 horizontal_alignment = 1
 
-[node name="A Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Grid"]
+[node name="A Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "0%"
 horizontal_alignment = 1
 
-[node name="A T2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Grid"]
+[node name="A T2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "0"
 horizontal_alignment = 1
 
-[node name="Completion" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Regular Spirits"]
+[node name="Completion" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Completion"]
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total/Completion"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "Overall Completion:"
 
-[node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Completion"]
+[node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total/Completion"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
@@ -1231,7 +1331,6 @@ theme_override_font_sizes/font_size = 16
 text = "This section is currently incomplete"
 
 [node name="Winged Light" parent="Tabs/Stats/Stats/VBox" instance=ExtResource("1_au16a")]
-visible = false
 layout_mode = 2
 
 [node name="Grid" type="GridContainer" parent="Tabs/Stats/Stats/VBox/Winged Light"]
@@ -1562,6 +1661,8 @@ horizontal_alignment = 1
 [node name="Clear" type="Button" parent="Tabs/Regular Spirits/Margin/VBox"]
 layout_mode = 2
 focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_g8ulf")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ohe4u")
 text = "Clear Spirit Data"
 
 [node name="Confirm" type="ConfirmationDialog" parent="Tabs/Regular Spirits/Margin/VBox"]
@@ -1573,6 +1674,7 @@ This cannot be undone."
 dialog_autowrap = true
 
 [node name="Current Season" type="ScrollContainer" parent="Tabs"]
+visible = false
 layout_mode = 2
 size_flags_vertical = 3
 horizontal_scroll_mode = 0
@@ -1899,6 +2001,8 @@ horizontal_alignment = 1
 [node name="Clear" type="Button" parent="Tabs/Seasonal Spirits/Margin/VBox"]
 layout_mode = 2
 focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_d7tig")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ohe4u")
 text = "Clear Spirit Data"
 
 [node name="Confirm" type="ConfirmationDialog" parent="Tabs/Seasonal Spirits/Margin/VBox"]
@@ -3722,11 +3826,62 @@ text = "Uncheck All"
 layout_mode = 2
 size_flags_horizontal = 3
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_lasoq")
+}
+
+[node name="Settings" type="ScrollContainer" parent="."]
+visible = false
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 31.0
+
+[node name="Margin" type="MarginContainer" parent="Settings"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBox" type="VBoxContainer" parent="Settings/Margin"]
+layout_mode = 2
+
+[node name="CheckButton" type="CheckButton" parent="Settings/Margin/VBox"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+focus_mode = 0
+text = "Use black instead of white for fonts"
+
+[node name="Background" type="HBoxContainer" parent="Settings/Margin/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="Settings/Margin/VBox/Background"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Background Colour"
+horizontal_alignment = 1
+
+[node name="Pick" type="ColorPickerButton" parent="Settings/Margin/VBox/Background"]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+text = "Background Colour"
+color = Color(1, 1, 1, 1)
+edit_alpha = false
+
 [connection signal="tree_entered" from="." to="." method="_on_tree_entered"]
 [connection signal="tree_exiting" from="." to="." method="_on_tree_exiting"]
 [connection signal="tab_changed" from="Tabs" to="." method="_on_tabs_tab_changed"]
 [connection signal="pressed" from="Tabs/Stats/Stats/VBox/Main/Expand" to="Tabs/Stats/Stats/VBox" method="_on_expand_pressed"]
 [connection signal="pressed" from="Tabs/Stats/Stats/VBox/Main/Collapse" to="Tabs/Stats/Stats/VBox" method="_on_collapse_pressed"]
+[connection signal="pressed" from="Tabs/Stats/Stats/VBox/Regular Spirits/Main/Expand" to="Tabs/Stats/Stats/VBox" method="_on_expand_reg_pressed"]
+[connection signal="pressed" from="Tabs/Stats/Stats/VBox/Regular Spirits/Main/Collapse" to="Tabs/Stats/Stats/VBox" method="_on_collapse_reg_pressed"]
 [connection signal="item_selected" from="Tabs/Regular Spirits/Margin/VBox/AreaSelect" to="Tabs/Regular Spirits/Margin/VBox" method="_on_area_select_item_selected"]
 [connection signal="item_selected" from="Tabs/Regular Spirits/Margin/VBox/SpiritSelect" to="Tabs/Regular Spirits/Margin/VBox" method="_on_spirit_select_item_selected"]
 [connection signal="bought" from="Tabs/Regular Spirits/Margin/VBox/Tree" to="Tabs/Regular Spirits/Margin/VBox" method="_on_tree_bought"]
@@ -3747,3 +3902,5 @@ size_flags_horizontal = 3
 [connection signal="pressed" from="Candle Tracker/Margin/VBox/Main/Collapse" to="Candle Tracker/Margin/VBox" method="_on_collapse_pressed"]
 [connection signal="pressed" from="Candle Tracker/Margin/VBox/Main/Check" to="Candle Tracker/Margin/VBox" method="_on_check_pressed"]
 [connection signal="pressed" from="Candle Tracker/Margin/VBox/Main/Uncheck" to="Candle Tracker/Margin/VBox" method="_on_uncheck_pressed"]
+[connection signal="toggled" from="Settings/Margin/VBox/CheckButton" to="." method="_on_check_button_toggled"]
+[connection signal="color_changed" from="Settings/Margin/VBox/Background/Pick" to="." method="_on_pick_color_changed"]

@@ -1,0 +1,130 @@
+[gd_resource type="Theme" load_steps=15 format=3 uid="uid://cqobwtkqodo0r"]
+
+[ext_resource type="Texture2D" uid="uid://degwa45pv8pjo" path="res://icons/base/check.bmp" id="1_uyum6"]
+[ext_resource type="Texture2D" uid="uid://4mjdpa0jeya3" path="res://icons/base/uncheck.bmp" id="2_hjq38"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1rjlt"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.4, 0.4, 0.4, 0.301961)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_luc4r"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vf8va"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.33, 0.33, 0.33, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gview"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.4, 0.4, 0.4, 0.294118)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1h6q4"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dmdl5"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jnxv8"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iuwmx"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0defy"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nom53"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mxrt6"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.25, 0.25, 0.25, 0.6)
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x2xbg"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.2, 0.2, 0.2, 0.509804)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[resource]
+Button/styles/disabled = SubResource("StyleBoxFlat_1rjlt")
+Button/styles/focus = SubResource("StyleBoxFlat_luc4r")
+Button/styles/hover = SubResource("StyleBoxFlat_vf8va")
+Button/styles/normal = SubResource("StyleBoxFlat_gview")
+Button/styles/pressed = SubResource("StyleBoxFlat_1h6q4")
+CheckBox/icons/checked = ExtResource("1_uyum6")
+CheckBox/icons/unchecked = ExtResource("2_hjq38")
+CheckBox/styles/disabled = SubResource("StyleBoxFlat_dmdl5")
+CheckBox/styles/hover = SubResource("StyleBoxFlat_jnxv8")
+CheckBox/styles/hover_pressed = SubResource("StyleBoxFlat_iuwmx")
+CheckBox/styles/normal = SubResource("StyleBoxFlat_0defy")
+CheckBox/styles/pressed = SubResource("StyleBoxFlat_nom53")
+LineEdit/styles/normal = SubResource("StyleBoxFlat_mxrt6")
+TabContainer/styles/panel = SubResource("StyleBoxFlat_x2xbg")

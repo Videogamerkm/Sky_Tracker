@@ -51,13 +51,13 @@ func set_values():
 	var overall = 0
 	for type in ["c","h","a"]:
 		var tCap = type.capitalize()
-		get_node("Regular Spirits/Grid/"+tCap+" Spent").text = str(spentTotal[type])
-		get_node("Regular Spirits/Grid/"+tCap+" Needed").text = str(neededTotal[type])
+		get_node("Regular Spirits/Total/Grid/"+tCap+" Spent").text = str(spentTotal[type])
+		get_node("Regular Spirits/Total/Grid/"+tCap+" Needed").text = str(neededTotal[type])
 		overall += spentTotal[type]*100/(spentTotal[type]+neededTotal[type])
-		get_node("Regular Spirits/Grid/"+tCap+" Comp").text = str(floor(spentTotal[type]*100.0/(spentTotal[type]+neededTotal[type])))+"%"
-		if has_node("Regular Spirits/Grid/"+tCap+" T2"):
-			get_node("Regular Spirits/Grid/"+tCap+" T2").text = str(neededTotal[type+"2"])
-	get_node("Regular Spirits/Completion/Need").text = str(floor(overall/3.0))+"%"
+		get_node("Regular Spirits/Total/Grid/"+tCap+" Comp").text = str(floor(spentTotal[type]*100.0/(spentTotal[type]+neededTotal[type])))+"%"
+		if has_node("Regular Spirits/Total/Grid/"+tCap+" T2"):
+			get_node("Regular Spirits/Total/Grid/"+tCap+" T2").text = str(neededTotal[type+"2"])
+	get_node("Regular Spirits/Total/Completion/Need").text = str(floor(overall/3.0))+"%"
 	
 	# Seasonal spirit values
 	# TODO: Seasonal spirits
@@ -80,9 +80,21 @@ func set_values():
 func _on_expand_pressed():
 	for c in get_children():
 		if c == $Main: continue
-		if c.get_node("Title/Label").text == "v": c.get_node("Title").set_pressed(false)
+		if c.get_node("Margin/Title/Label").text == "v": c.get_node("Margin/Title").set_pressed(false)
 
 func _on_collapse_pressed():
 	for c in get_children():
 		if c == $Main: continue
-		if c.get_node("Title/Label").text == "^": c.get_node("Title").set_pressed(true)
+		if c.get_node("Margin/Title/Label").text == "^": c.get_node("Margin/Title").set_pressed(true)
+
+func _on_expand_reg_pressed():
+	for c in $"Regular Spirits".get_children():
+		if c == $"Regular Spirits/Main": continue
+		if c.name == "Margin": continue
+		if c.get_node("Margin/Title/Label").text == "v": c.get_node("Margin/Title").set_pressed(false)
+
+func _on_collapse_reg_pressed():
+	for c in $"Regular Spirits".get_children():
+		if c == $"Regular Spirits/Main": continue
+		if c.name == "Margin": continue
+		if c.get_node("Margin/Title/Label").text == "^": c.get_node("Margin/Title").set_pressed(true)

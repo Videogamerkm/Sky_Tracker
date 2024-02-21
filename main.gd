@@ -2,6 +2,12 @@ extends Control
 
 var saveFile = "user://save.dat"
 
+func _process(_delta):
+	if Input.is_action_pressed("Rainbow") && not $AnimationPlayer.is_playing():
+		$AnimationPlayer.play("rainbow")
+	elif Input.is_action_pressed("Rainbow"):
+		$AnimationPlayer.play("RESET")
+
 func _on_tree_exiting():
 	var file = FileAccess.open(saveFile, FileAccess.WRITE)
 	file.store_var($"Tabs/Regular Spirits/Margin/VBox".bought)
@@ -23,3 +29,10 @@ func _on_tree_entered():
 func _on_tabs_tab_changed(tab):
 	if tab == 0: $Tabs/Stats/Stats/VBox.set_values()
 	if tab == 2: $"Tabs/Current Season/Margin/VBox"._ready()
+
+func _on_pick_color_changed(color):
+	RenderingServer.set_default_clear_color(color)
+
+func _on_check_button_toggled(button_pressed):
+	if button_pressed: theme = preload("res://black.tres")
+	else: theme = preload("res://white.tres")
