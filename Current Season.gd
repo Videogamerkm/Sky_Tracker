@@ -10,7 +10,6 @@ const left = " day(s) left in the season"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Name.text = seasonName
 	$Time/Start.text = convert_time(start)
 	$Time/End.text = convert_time(end)
 	var curr = Time.get_unix_time_from_system()

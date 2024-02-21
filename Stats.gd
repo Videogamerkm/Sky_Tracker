@@ -2,9 +2,11 @@ extends VBoxContainer
 
 @onready var current = $"../../../Current Season/Margin/VBox"
 @onready var regular = $"../../../Regular Spirits/Margin/VBox"
+@onready var seasonal = $"../../../Seasonal Spirits/Margin/VBox"
 var spirits = preload("res://RegSpirits.gd")
 var seas_spirits = preload("res://SeasonSpirits.gd")
 var areas = ["Isle of Dawn","Daylight Prairie","Hidden Forest","Valley of Triumph","Golden Wasteland","Vault of Knowledge"]
+var wedges = [1,2,5,10,20,35,55,75,100,120,150,200,250]
 
 func _ready():
 	set_values()
@@ -16,7 +18,7 @@ func set_values():
 	var need = (current.needPass if current.get_node("Pass/Check").button_pressed else current.needNoPass)
 	$"Current Season/Needed/Season Need".text = str(need - coll)
 	$"Current Season/Avail/Season Avail".text = current.get_node("Candles/Val").text
-	$"Current Season/Completion/Season Avail".text = "0%" # TODO: Get season completion %
+	$"Current Season/Completion/Season".text = "0%" # TODO: Get season completion %
 	
 	# Regular spirit values
 	var spentTotal = {"c":0,"h":0,"a":0,"c2":0,"h2":0,"a2":0}
@@ -76,6 +78,19 @@ func set_values():
 		$"Winged Light/Grid".get_node(a+" Avail").text = str(uncheck)
 	$"Winged Light/Grid".get_node("Total Coll").text = str(light_coll)
 	$"Winged Light/Grid".get_node("Total Avail").text = str(light_avail)
+	var reg_coll = spirits.get_wings(regular.bought)
+	var reg_avail = spirits.get_all_wings() - reg_coll
+	$"Winged Light/Grid".get_node("Regular Coll").text = str(reg_coll)
+	$"Winged Light/Grid".get_node("Regular Avail").text = str(reg_avail)
+	var seas_coll = seas_spirits.get_wings(seasonal.bought)
+	var seas_avail = seas_spirits.get_all_wings() - seas_coll
+	$"Winged Light/Grid".get_node("Seasonal Coll").text = str(seas_coll)
+	$"Winged Light/Grid".get_node("Seasonal Avail").text = str(seas_avail)
+	$"Winged Light/Grid".get_node("Total Coll2").text = str(light_coll + reg_coll + seas_coll)
+	$"Winged Light/Grid".get_node("Total Avail2").text = str(light_avail + reg_avail + seas_avail)
+	var w = 0
+	while light_coll + reg_coll + seas_coll >= wedges[w]: w += 1
+	$"Winged Light/Wings".text = "You should have "+str(w)+" cape wedges."
 
 func _on_expand_pressed():
 	for c in get_children():

@@ -109,7 +109,6 @@ grow_vertical = 2
 tab_alignment = 1
 
 [node name="Stats" type="ScrollContainer" parent="Tabs"]
-visible = false
 layout_mode = 2
 horizontal_scroll_mode = 0
 
@@ -205,7 +204,7 @@ size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "Season Completion:"
 
-[node name="Season Avail" type="Label" parent="Tabs/Stats/Stats/VBox/Current Season/Completion"]
+[node name="Season" type="Label" parent="Tabs/Stats/Stats/VBox/Current Season/Completion"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
@@ -1531,7 +1530,7 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 20
-text = "Total"
+text = "World Total"
 
 [node name="Total Coll" type="Label" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
 layout_mode = 2
@@ -1544,6 +1543,91 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 20
+text = "0"
+horizontal_alignment = 1
+
+[node name="HSeparator7" type="HSeparator" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+
+[node name="HSeparator8" type="HSeparator" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+
+[node name="HSeparator9" type="HSeparator" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+
+[node name="Label14" type="Label" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Regular Spirit Buffs"
+
+[node name="Regular Coll" type="Label" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Regular Avail" type="Label" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Label16" type="Label" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Seasonal Spirit Buffs"
+
+[node name="Seasonal Coll" type="Label" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Seasonal Avail" type="Label" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="HSeparator4" type="HSeparator" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+
+[node name="HSeparator5" type="HSeparator" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+
+[node name="HSeparator6" type="HSeparator" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+
+[node name="Label15" type="Label" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 24
+text = "Total"
+
+[node name="Total Coll2" type="Label" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 24
+text = "0"
+horizontal_alignment = 1
+
+[node name="Total Avail2" type="Label" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 24
+text = "0"
+horizontal_alignment = 1
+
+[node name="Wings" type="Label" parent="Tabs/Stats/Stats/VBox/Winged Light"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
 text = "0"
 horizontal_alignment = 1
 
@@ -1676,6 +1760,7 @@ This cannot be undone."
 dialog_autowrap = true
 
 [node name="Current Season" type="ScrollContainer" parent="Tabs"]
+visible = false
 layout_mode = 2
 size_flags_vertical = 3
 horizontal_scroll_mode = 0
@@ -2053,6 +2138,8 @@ text = "Check All"
 [node name="Uncheck" type="Button" parent="Tabs/Winged Light Tracker/Margin/VBox/Main"]
 layout_mode = 2
 size_flags_horizontal = 3
+tooltip_text = "Doesn't uncheck the Orbit light,
+since you can't miss it after climbing Eden."
 focus_mode = 0
 text = "Uncheck All"
 
@@ -2093,7 +2180,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Isle of Dawn/Cave"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Cave of Prophecies/Trials"
+text = "Cave of Prophecies (Trials)"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Isle of Dawn/Cave"]
 layout_mode = 2
@@ -2329,7 +2416,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest/Entrance"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Forest Clearing/Entrance"
+text = "Forest Clearing (Entrance)"
 
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Hidden Forest/Entrance"]
 layout_mode = 2
@@ -3046,6 +3133,7 @@ text = "Orbit"
 [node name="CheckBox" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Eye of Eden/Orbit"]
 layout_mode = 2
 focus_mode = 0
+button_pressed = true
 
 [node name="Check All" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Eye of Eden"]
 layout_mode = 2

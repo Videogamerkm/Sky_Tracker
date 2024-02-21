@@ -105,3 +105,23 @@ static func get_spent(name,bought) -> int:
 			y += 1
 		x += 1
 	return c
+
+static func get_all_wings() -> int:
+	var w = 0
+	for s in data:
+		for row in data[s]["tree"]:
+			for item in row:
+				if item != "" && item.split(";")[0] == "base/wing": w += 1
+	return w
+
+static func get_wings(bought) -> int:
+	var w = 0
+	for s in data:
+		var x = 0
+		for row in data[s]["tree"]:
+			var y = 0
+			for item in row:
+				if item != "" && bought.has(s) && item.split(";")[0] == "base/wing" && bought[s][x][y]: w += 1
+				y += 1
+			x += 1
+	return w

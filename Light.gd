@@ -9,6 +9,7 @@ func _ready():
 func check_section(section):
 	for c in section.get_children():
 		if c.name == "Check All": continue
+		if c.name == "Margin": continue
 		for cb in c.get_children():
 			if cb is Label: continue
 			cb.set_pressed(true)
@@ -16,8 +17,10 @@ func check_section(section):
 func uncheck_section(section):
 	for c in section.get_children():
 		if c.name == "Check All": continue
+		if c.name == "Margin": continue
 		for cb in c.get_children():
 			if cb is Label: continue
+			if cb == $"Eye of Eden/Orbit/CheckBox": continue
 			cb.set_pressed(false)
 
 func _on_expand_pressed():
@@ -34,6 +37,7 @@ func _on_check_pressed():
 	for c in get_children():
 		if c == $Main: continue
 		for a in c.get_children():
+			if a.name == "Margin": continue
 			for cb in a.get_children():
 				if cb is Label: continue
 				cb.set_pressed(true)
@@ -42,14 +46,17 @@ func _on_uncheck_pressed():
 	for c in get_children():
 		if c == $Main: continue
 		for a in c.get_children():
+			if a.name == "Margin": continue
 			for cb in a.get_children():
 				if cb is Label: continue
+				if cb == $"Eye of Eden/Orbit/CheckBox": continue
 				cb.set_pressed(false)
 
 func get_checked(area) -> int:
 	var i = 0
 	for c in get_node(area).get_children():
 		if c.name == "Check All": continue
+		if c.name == "Margin": continue
 		for cb in c.get_children():
 			if cb is Label: continue
 			if cb.is_pressed(): i += 1
@@ -59,6 +66,7 @@ func get_unchecked(area) -> int:
 	var i = 0
 	for c in get_node(area).get_children():
 		if c.name == "Check All": continue
+		if c.name == "Margin": continue
 		for cb in c.get_children():
 			if cb is Label: continue
 			if not cb.is_pressed(): i += 1
