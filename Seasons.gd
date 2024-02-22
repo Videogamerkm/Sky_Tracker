@@ -4,19 +4,20 @@ var spirits = preload("res://SeasonSpirits.gd")
 @onready var spiritIcon = $"Spirits 1/Button".duplicate()
 @onready var seasonIcon = $"Season Selection/Button".duplicate()
 var curr_spirit = ""
-var loc = ""
 var bought = {}
 
 func _ready():
 	for c in $"Season Selection".get_children(): $"Season Selection".remove_child(c)
 	for s in spirits.seasons:
 		var season = seasonIcon.duplicate()
+		season.name = s
 		season.set_button_icon(load("icons/seas/icons/"+s.replace("Season of ","")+".bmp"))
 		season.connect("pressed",_area_select.bind(s))
 		$"Season Selection".add_child(season)
 	setup()
 
 func setup():
+	$"Season Selection".get_node($"../../../Current Season/Margin/VBox".seasonName).set_pressed(true)
 	_area_select($"../../../Current Season/Margin/VBox".seasonName)
 
 func _area_select(area):
@@ -32,7 +33,7 @@ func _area_select(area):
 			if c < 4: $"Spirits 1".add_child(sp)
 			else: $"Spirits 2".add_child(sp)
 			c += 1
-	loc = area
+	$Season.text = area
 
 func _spirit_select(spirit):
 	curr_spirit = spirit
@@ -61,7 +62,7 @@ func _on_clear_pressed():
 func _on_confirm_confirmed():
 	if curr_spirit == "":
 		for s in spirits.data:
-			if spirits.data[s]["loc"] == loc && bought.has(s):
+			if spirits.data[s]["loc"] == $Season.text && bought.has(s):
 				bought.erase(s)
 	else:
 		bought.erase(curr_spirit)

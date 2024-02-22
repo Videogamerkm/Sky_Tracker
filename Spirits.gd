@@ -3,7 +3,6 @@ extends VBoxContainer
 var spirits = preload("res://RegSpirits.gd")
 @onready var spiritIcon = $"Spirits 1/Button".duplicate()
 var curr_spirit = ""
-var loc = ""
 var bought = {}
 
 func _ready():
@@ -15,6 +14,7 @@ func setup():
 	_area_select("Isle of Dawn")
 
 func _area_select(area):
+	$Area.text = area
 	for c in $"Spirits 1".get_children(): $"Spirits 1".remove_child(c)
 	for c in $"Spirits 2".get_children(): $"Spirits 2".remove_child(c)
 	var c = 0
@@ -27,7 +27,6 @@ func _area_select(area):
 			if c < 4: $"Spirits 1".add_child(sp)
 			else: $"Spirits 2".add_child(sp)
 			c += 1
-	loc = area
 
 func _spirit_select(spirit):
 	curr_spirit = spirit
@@ -56,7 +55,7 @@ func _on_clear_pressed():
 func _on_confirm_confirmed():
 	if curr_spirit == "":
 		for s in spirits.data:
-			if spirits.data[s]["loc"] == loc && bought.has(s):
+			if spirits.data[s]["loc"] == $Area.text && bought.has(s):
 				bought.erase(s)
 	else:
 		bought.erase(curr_spirit)

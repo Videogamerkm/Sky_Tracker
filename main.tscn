@@ -9,8 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://be03ohlum8yr2" path="res://friendship_tree.tscn" id="4_t1mtd"]
 [ext_resource type="Script" path="res://Seasons.gd" id="5_o6qgh"]
 [ext_resource type="Texture2D" uid="uid://2n6gfal1m7dv" path="res://icons/reg/cons/isle_norm.png" id="6_k6lfe"]
-[ext_resource type="Texture2D" uid="uid://c8a8au8p57tie" path="res://icons/reg/cons/Dawn.png" id="6_qgd6k"]
-[ext_resource type="Texture2D" uid="uid://c551t65pkf8l1" path="res://icons/reg/cons/Dawn_2.png" id="7_6p25c"]
 [ext_resource type="Texture2D" uid="uid://cqg1tihj1omeg" path="res://icons/reg/cons/isle_press.png" id="7_dtldi"]
 [ext_resource type="Texture2D" uid="uid://cht4mi0tm23jw" path="res://icons/base/season_banner.png" id="8_npf6d"]
 [ext_resource type="Script" path="res://Light.gd" id="8_ukwu8"]
@@ -33,6 +31,8 @@
 [ext_resource type="Texture2D" uid="uid://bj8i3r3dqrbog" path="res://icons/reg/exp/point.bmp" id="24_6s72r"]
 [ext_resource type="Texture2D" uid="uid://c5eblgnrna6cu" path="res://icons/seas/icons/Dreams.bmp" id="31_yldyr"]
 
+[sub_resource type="ButtonGroup" id="ButtonGroup_kei1y"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g8ulf"]
 content_margin_left = 4.0
 content_margin_top = 4.0
@@ -48,6 +48,8 @@ content_margin_right = 4.0
 content_margin_bottom = 4.0
 bg_color = Color(0.486275, 0.329412, 0.329412, 0.6)
 corner_detail = 5
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_jk0gv"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d7tig"]
 content_margin_left = 4.0
@@ -1799,71 +1801,23 @@ focus_mode = 0
 theme_override_constants/icon_max_width = 100
 text = "Back"
 
-[node name="Label" type="Label" parent="Tabs/Regular Spirits/Margin/VBox"]
+[node name="Area" type="Label" parent="Tabs/Regular Spirits/Margin/VBox"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Isle of Dawn"
+horizontal_alignment = 1
 
 [node name="Area Selection" type="HBoxContainer" parent="Tabs/Regular Spirits/Margin/VBox"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Button" type="Button" parent="Tabs/Regular Spirits/Margin/VBox/Area Selection"]
-visible = false
-layout_mode = 2
-size_flags_horizontal = 3
-focus_mode = 0
-icon = ExtResource("6_qgd6k")
-icon_alignment = 1
-expand_icon = true
-
-[node name="Button2" type="Button" parent="Tabs/Regular Spirits/Margin/VBox/Area Selection"]
-visible = false
-layout_mode = 2
-size_flags_horizontal = 3
-focus_mode = 0
-icon = ExtResource("7_6p25c")
-icon_alignment = 1
-expand_icon = true
-
-[node name="Button3" type="Button" parent="Tabs/Regular Spirits/Margin/VBox/Area Selection"]
-visible = false
-layout_mode = 2
-size_flags_horizontal = 3
-focus_mode = 0
-icon = ExtResource("6_qgd6k")
-icon_alignment = 1
-expand_icon = true
-
-[node name="Button4" type="Button" parent="Tabs/Regular Spirits/Margin/VBox/Area Selection"]
-visible = false
-layout_mode = 2
-size_flags_horizontal = 3
-focus_mode = 0
-icon = ExtResource("7_6p25c")
-icon_alignment = 1
-expand_icon = true
-
-[node name="Button5" type="Button" parent="Tabs/Regular Spirits/Margin/VBox/Area Selection"]
-visible = false
-layout_mode = 2
-size_flags_horizontal = 3
-focus_mode = 0
-icon = ExtResource("6_qgd6k")
-icon_alignment = 1
-expand_icon = true
-
-[node name="Button6" type="Button" parent="Tabs/Regular Spirits/Margin/VBox/Area Selection"]
-visible = false
-layout_mode = 2
-size_flags_horizontal = 3
-focus_mode = 0
-icon = ExtResource("7_6p25c")
-icon_alignment = 1
-expand_icon = true
-
 [node name="Isle of Dawn" type="TextureButton" parent="Tabs/Regular Spirits/Margin/VBox/Area Selection"]
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
+toggle_mode = true
+button_pressed = true
+button_group = SubResource("ButtonGroup_kei1y")
 texture_normal = ExtResource("6_k6lfe")
 texture_pressed = ExtResource("7_dtldi")
 texture_hover = ExtResource("8_y8ijf")
@@ -1874,6 +1828,8 @@ stretch_mode = 5
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
+toggle_mode = true
+button_group = SubResource("ButtonGroup_kei1y")
 texture_normal = ExtResource("9_tpqtt")
 texture_pressed = ExtResource("10_dl6j4")
 texture_hover = ExtResource("11_201mh")
@@ -1884,6 +1840,8 @@ stretch_mode = 5
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
+toggle_mode = true
+button_group = SubResource("ButtonGroup_kei1y")
 texture_normal = ExtResource("12_eong8")
 texture_pressed = ExtResource("13_3sonk")
 texture_hover = ExtResource("14_vc5qi")
@@ -1894,6 +1852,8 @@ stretch_mode = 5
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
+toggle_mode = true
+button_group = SubResource("ButtonGroup_kei1y")
 texture_normal = ExtResource("15_xn8y6")
 texture_pressed = ExtResource("16_u3oy3")
 texture_hover = ExtResource("17_q5kky")
@@ -1904,6 +1864,8 @@ stretch_mode = 5
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
+toggle_mode = true
+button_group = SubResource("ButtonGroup_kei1y")
 texture_normal = ExtResource("18_tjnwk")
 texture_pressed = ExtResource("19_8xavr")
 texture_hover = ExtResource("20_i58bv")
@@ -1914,6 +1876,8 @@ stretch_mode = 5
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
+toggle_mode = true
+button_group = SubResource("ButtonGroup_kei1y")
 texture_normal = ExtResource("21_4ejh1")
 texture_pressed = ExtResource("22_g186q")
 texture_hover = ExtResource("23_kg3hm")
@@ -2204,8 +2168,11 @@ focus_mode = 0
 theme_override_constants/icon_max_width = 100
 text = "Back"
 
-[node name="Label2" type="Label" parent="Tabs/Seasonal Spirits/Margin/VBox"]
+[node name="Season" type="Label" parent="Tabs/Seasonal Spirits/Margin/VBox"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Isle of Dawn"
+horizontal_alignment = 1
 
 [node name="Season Selection" type="GridContainer" parent="Tabs/Seasonal Spirits/Margin/VBox"]
 layout_mode = 2
@@ -2217,6 +2184,8 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 focus_mode = 0
+toggle_mode = true
+button_group = SubResource("ButtonGroup_jk0gv")
 icon = ExtResource("31_yldyr")
 icon_alignment = 1
 vertical_icon_alignment = 0
