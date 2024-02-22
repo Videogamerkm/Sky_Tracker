@@ -13,8 +13,9 @@ func _on_tree_exiting():
 func _on_tree_entered():
 	if not FileAccess.file_exists(saveFile): return
 	var file = FileAccess.open(saveFile, FileAccess.READ)
+	if not $"Tabs/Regular Spirits/Margin/VBox".is_node_ready(): await $"Tabs/Regular Spirits/Margin/VBox".ready
 	$"Tabs/Regular Spirits/Margin/VBox".bought = file.get_var()
-	$"Tabs/Regular Spirits/Margin/VBox"._ready()
+	$"Tabs/Regular Spirits/Margin/VBox".setup()
 	$"Tabs/Current Season/Margin/VBox/Pass/Check".set_pressed(file.get_var())
 	$"Tabs/Current Season/Margin/VBox/Have/Candles".value = file.get_var()
 	if file.get_position() < file.get_length(): $"Tabs/Seasonal Spirits/Margin/VBox".bought = file.get_var()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://b04gr0a605mxh"]
+[gd_scene load_steps=39 format=3 uid="uid://b04gr0a605mxh"]
 
 [ext_resource type="PackedScene" uid="uid://bap3aptv3y1dw" path="res://collapsible.tscn" id="1_au16a"]
 [ext_resource type="Theme" uid="uid://cqobwtkqodo0r" path="res://white.tres" id="1_q23n0"]
@@ -8,8 +8,30 @@
 [ext_resource type="Script" path="res://Spirits.gd" id="3_ttfa3"]
 [ext_resource type="PackedScene" uid="uid://be03ohlum8yr2" path="res://friendship_tree.tscn" id="4_t1mtd"]
 [ext_resource type="Script" path="res://Seasons.gd" id="5_o6qgh"]
+[ext_resource type="Texture2D" uid="uid://2n6gfal1m7dv" path="res://icons/reg/cons/isle_norm.png" id="6_k6lfe"]
+[ext_resource type="Texture2D" uid="uid://c8a8au8p57tie" path="res://icons/reg/cons/Dawn.png" id="6_qgd6k"]
+[ext_resource type="Texture2D" uid="uid://c551t65pkf8l1" path="res://icons/reg/cons/Dawn_2.png" id="7_6p25c"]
+[ext_resource type="Texture2D" uid="uid://cqg1tihj1omeg" path="res://icons/reg/cons/isle_press.png" id="7_dtldi"]
 [ext_resource type="Texture2D" uid="uid://cht4mi0tm23jw" path="res://icons/base/season_banner.png" id="8_npf6d"]
 [ext_resource type="Script" path="res://Light.gd" id="8_ukwu8"]
+[ext_resource type="Texture2D" uid="uid://drweyioe6olwq" path="res://icons/reg/cons/isle_hover.png" id="8_y8ijf"]
+[ext_resource type="Texture2D" uid="uid://bxhiq1yo6pdn2" path="res://icons/reg/cons/prairie_norm.png" id="9_tpqtt"]
+[ext_resource type="Texture2D" uid="uid://b5rqwxjiq1u3b" path="res://icons/reg/cons/prairie_press.png" id="10_dl6j4"]
+[ext_resource type="Texture2D" uid="uid://d1xec3yf24mnp" path="res://icons/reg/cons/prairie_hover.png" id="11_201mh"]
+[ext_resource type="Texture2D" uid="uid://rov4stwiavii" path="res://icons/reg/cons/forest_norm.png" id="12_eong8"]
+[ext_resource type="Texture2D" uid="uid://b2c6slykyqk72" path="res://icons/reg/cons/forest_press.png" id="13_3sonk"]
+[ext_resource type="Texture2D" uid="uid://c42rxt1wwxsfq" path="res://icons/reg/cons/forest_hover.png" id="14_vc5qi"]
+[ext_resource type="Texture2D" uid="uid://dsysqxepak5sx" path="res://icons/reg/cons/valley_norm.png" id="15_xn8y6"]
+[ext_resource type="Texture2D" uid="uid://ed2odx1umbyu" path="res://icons/reg/cons/valley_press.png" id="16_u3oy3"]
+[ext_resource type="Texture2D" uid="uid://dvulrsrf3w8d4" path="res://icons/reg/cons/valley_hover.png" id="17_q5kky"]
+[ext_resource type="Texture2D" uid="uid://byq2chwgm1red" path="res://icons/reg/cons/waste_norm.png" id="18_tjnwk"]
+[ext_resource type="Texture2D" uid="uid://dsfcnvue3v8oe" path="res://icons/reg/cons/waste_press.png" id="19_8xavr"]
+[ext_resource type="Texture2D" uid="uid://d30gj7fm465m8" path="res://icons/reg/cons/waste_hover.png" id="20_i58bv"]
+[ext_resource type="Texture2D" uid="uid://cs1kja1nwyh7u" path="res://icons/reg/cons/vault_norm.png" id="21_4ejh1"]
+[ext_resource type="Texture2D" uid="uid://dvlf3v5a0vhle" path="res://icons/reg/cons/vault_press.png" id="22_g186q"]
+[ext_resource type="Texture2D" uid="uid://doyjhcwwv5cxx" path="res://icons/reg/cons/vault_hover.png" id="23_kg3hm"]
+[ext_resource type="Texture2D" uid="uid://bj8i3r3dqrbog" path="res://icons/reg/exp/point.bmp" id="24_6s72r"]
+[ext_resource type="Texture2D" uid="uid://c5eblgnrna6cu" path="res://icons/seas/icons/Dreams.bmp" id="31_yldyr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g8ulf"]
 content_margin_left = 4.0
@@ -17,10 +39,6 @@ content_margin_top = 4.0
 content_margin_right = 4.0
 content_margin_bottom = 4.0
 bg_color = Color(0.588235, 0.4, 0.4, 0.294118)
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
 corner_detail = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ohe4u"]
@@ -29,10 +47,6 @@ content_margin_top = 4.0
 content_margin_right = 4.0
 content_margin_bottom = 4.0
 bg_color = Color(0.486275, 0.329412, 0.329412, 0.6)
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
 corner_detail = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d7tig"]
@@ -1776,104 +1790,175 @@ theme_override_constants/margin_bottom = 24
 layout_mode = 2
 script = ExtResource("3_ttfa3")
 
-[node name="AreaSelect" type="OptionButton" parent="Tabs/Regular Spirits/Margin/VBox"]
+[node name="Back" type="Button" parent="Tabs/Regular Spirits/Margin/VBox"]
+visible = false
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
 focus_mode = 0
-item_count = 6
-selected = 0
-popup/item_0/text = "Isle of Dawn"
-popup/item_0/id = 0
-popup/item_1/text = "Daylight Prairie"
-popup/item_1/id = 1
-popup/item_2/text = "Hidden Forest"
-popup/item_2/id = 2
-popup/item_3/text = "Valley of Triumph"
-popup/item_3/id = 3
-popup/item_4/text = "Golden Wasteland"
-popup/item_4/id = 4
-popup/item_5/text = "Vault of Knowledge"
-popup/item_5/id = 5
-
-[node name="SpiritSelect" type="OptionButton" parent="Tabs/Regular Spirits/Margin/VBox"]
-layout_mode = 2
-focus_mode = 0
-item_count = 1
-selected = 0
-popup/item_0/text = "Stats"
-popup/item_0/id = 0
+theme_override_constants/icon_max_width = 100
+text = "Back"
 
 [node name="Label" type="Label" parent="Tabs/Regular Spirits/Margin/VBox"]
 layout_mode = 2
+
+[node name="Area Selection" type="HBoxContainer" parent="Tabs/Regular Spirits/Margin/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="Tabs/Regular Spirits/Margin/VBox/Area Selection"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+icon = ExtResource("6_qgd6k")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button2" type="Button" parent="Tabs/Regular Spirits/Margin/VBox/Area Selection"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+icon = ExtResource("7_6p25c")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button3" type="Button" parent="Tabs/Regular Spirits/Margin/VBox/Area Selection"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+icon = ExtResource("6_qgd6k")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button4" type="Button" parent="Tabs/Regular Spirits/Margin/VBox/Area Selection"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+icon = ExtResource("7_6p25c")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button5" type="Button" parent="Tabs/Regular Spirits/Margin/VBox/Area Selection"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+icon = ExtResource("6_qgd6k")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button6" type="Button" parent="Tabs/Regular Spirits/Margin/VBox/Area Selection"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+icon = ExtResource("7_6p25c")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Isle of Dawn" type="TextureButton" parent="Tabs/Regular Spirits/Margin/VBox/Area Selection"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+texture_normal = ExtResource("6_k6lfe")
+texture_pressed = ExtResource("7_dtldi")
+texture_hover = ExtResource("8_y8ijf")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Daylight Prairie" type="TextureButton" parent="Tabs/Regular Spirits/Margin/VBox/Area Selection"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+texture_normal = ExtResource("9_tpqtt")
+texture_pressed = ExtResource("10_dl6j4")
+texture_hover = ExtResource("11_201mh")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Hidden Forest" type="TextureButton" parent="Tabs/Regular Spirits/Margin/VBox/Area Selection"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+texture_normal = ExtResource("12_eong8")
+texture_pressed = ExtResource("13_3sonk")
+texture_hover = ExtResource("14_vc5qi")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Valley of Triumph" type="TextureButton" parent="Tabs/Regular Spirits/Margin/VBox/Area Selection"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+texture_normal = ExtResource("15_xn8y6")
+texture_pressed = ExtResource("16_u3oy3")
+texture_hover = ExtResource("17_q5kky")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Golden Wasteland" type="TextureButton" parent="Tabs/Regular Spirits/Margin/VBox/Area Selection"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+texture_normal = ExtResource("18_tjnwk")
+texture_pressed = ExtResource("19_8xavr")
+texture_hover = ExtResource("20_i58bv")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Vault of Knowledge" type="TextureButton" parent="Tabs/Regular Spirits/Margin/VBox/Area Selection"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+texture_normal = ExtResource("21_4ejh1")
+texture_pressed = ExtResource("22_g186q")
+texture_hover = ExtResource("23_kg3hm")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Spirits 1" type="HBoxContainer" parent="Tabs/Regular Spirits/Margin/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="Tabs/Regular Spirits/Margin/VBox/Spirits 1"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Pointing Candlemaker"
+icon = ExtResource("24_6s72r")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
+[node name="Spirits 2" type="HBoxContainer" parent="Tabs/Regular Spirits/Margin/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="Tabs/Regular Spirits/Margin/VBox/Spirits 2"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Pointing Candlemaker"
+icon = ExtResource("24_6s72r")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
 
 [node name="Tree" parent="Tabs/Regular Spirits/Margin/VBox" instance=ExtResource("4_t1mtd")]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="Stats" type="VBoxContainer" parent="Tabs/Regular Spirits/Margin/VBox"]
+[node name="Label2" type="Label" parent="Tabs/Regular Spirits/Margin/VBox"]
 layout_mode = 2
-
-[node name="Titles" type="HBoxContainer" parent="Tabs/Regular Spirits/Margin/VBox/Stats"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Tabs/Regular Spirits/Margin/VBox/Stats/Titles"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-
-[node name="Label2" type="Label" parent="Tabs/Regular Spirits/Margin/VBox/Stats/Titles"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Candles"
-horizontal_alignment = 1
-
-[node name="Label3" type="Label" parent="Tabs/Regular Spirits/Margin/VBox/Stats/Titles"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Hearts"
-horizontal_alignment = 1
-
-[node name="Label4" type="Label" parent="Tabs/Regular Spirits/Margin/VBox/Stats/Titles"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Ascended"
-horizontal_alignment = 1
-
-[node name="Spirit" type="HBoxContainer" parent="Tabs/Regular Spirits/Margin/VBox/Stats"]
-layout_mode = 2
-
-[node name="Name" type="Label" parent="Tabs/Regular Spirits/Margin/VBox/Stats/Spirit"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Spirit Name"
-
-[node name="Candles" type="Label" parent="Tabs/Regular Spirits/Margin/VBox/Stats/Spirit"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="Hearts" type="Label" parent="Tabs/Regular Spirits/Margin/VBox/Stats/Spirit"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="Ascended" type="Label" parent="Tabs/Regular Spirits/Margin/VBox/Stats/Spirit"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
 
 [node name="Clear" type="Button" parent="Tabs/Regular Spirits/Margin/VBox"]
 layout_mode = 2
+size_flags_vertical = 8
 focus_mode = 0
 theme_override_styles/normal = SubResource("StyleBoxFlat_g8ulf")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ohe4u")
@@ -2110,105 +2195,65 @@ theme_override_constants/margin_bottom = 24
 layout_mode = 2
 script = ExtResource("5_o6qgh")
 
-[node name="SeasonSelect" type="OptionButton" parent="Tabs/Seasonal Spirits/Margin/VBox"]
+[node name="Back" type="Button" parent="Tabs/Seasonal Spirits/Margin/VBox"]
+visible = false
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
 focus_mode = 0
-item_count = 1
-selected = 0
-popup/item_0/text = "All Seasons"
-popup/item_0/id = 0
+theme_override_constants/icon_max_width = 100
+text = "Back"
 
-[node name="SpiritSelect" type="OptionButton" parent="Tabs/Seasonal Spirits/Margin/VBox"]
+[node name="Label2" type="Label" parent="Tabs/Seasonal Spirits/Margin/VBox"]
 layout_mode = 2
+
+[node name="Season Selection" type="GridContainer" parent="Tabs/Seasonal Spirits/Margin/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+columns = 6
+
+[node name="Button" type="Button" parent="Tabs/Seasonal Spirits/Margin/VBox/Season Selection"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 focus_mode = 0
-item_count = 1
-selected = 0
-popup/item_0/text = "Stats"
-popup/item_0/id = 0
+icon = ExtResource("31_yldyr")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
 
-[node name="Label" type="Label" parent="Tabs/Seasonal Spirits/Margin/VBox"]
+[node name="Spirits 1" type="HBoxContainer" parent="Tabs/Seasonal Spirits/Margin/VBox"]
 layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="Tabs/Seasonal Spirits/Margin/VBox/Spirits 1"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Pointing Candlemaker"
+icon = ExtResource("24_6s72r")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
+[node name="Spirits 2" type="HBoxContainer" parent="Tabs/Seasonal Spirits/Margin/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="Tabs/Seasonal Spirits/Margin/VBox/Spirits 2"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Pointing Candlemaker"
+icon = ExtResource("24_6s72r")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
 
 [node name="Tree" parent="Tabs/Seasonal Spirits/Margin/VBox" instance=ExtResource("4_t1mtd")]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 4
-
-[node name="Stats" type="VBoxContainer" parent="Tabs/Seasonal Spirits/Margin/VBox"]
-layout_mode = 2
-
-[node name="Titles" type="HBoxContainer" parent="Tabs/Seasonal Spirits/Margin/VBox/Stats"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Tabs/Seasonal Spirits/Margin/VBox/Stats/Titles"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-
-[node name="Label5" type="Label" parent="Tabs/Seasonal Spirits/Margin/VBox/Stats/Titles"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Seasonal"
-horizontal_alignment = 1
-
-[node name="Label2" type="Label" parent="Tabs/Seasonal Spirits/Margin/VBox/Stats/Titles"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Candles"
-horizontal_alignment = 1
-
-[node name="Label3" type="Label" parent="Tabs/Seasonal Spirits/Margin/VBox/Stats/Titles"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Hearts"
-horizontal_alignment = 1
-
-[node name="Label4" type="Label" parent="Tabs/Seasonal Spirits/Margin/VBox/Stats/Titles"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Ascended"
-horizontal_alignment = 1
-
-[node name="Spirit" type="HBoxContainer" parent="Tabs/Seasonal Spirits/Margin/VBox/Stats"]
-layout_mode = 2
-
-[node name="Name" type="Label" parent="Tabs/Seasonal Spirits/Margin/VBox/Stats/Spirit"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Spirit Name"
-
-[node name="Seasonal" type="Label" parent="Tabs/Seasonal Spirits/Margin/VBox/Stats/Spirit"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="Candles" type="Label" parent="Tabs/Seasonal Spirits/Margin/VBox/Stats/Spirit"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="Hearts" type="Label" parent="Tabs/Seasonal Spirits/Margin/VBox/Stats/Spirit"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="Ascended" type="Label" parent="Tabs/Seasonal Spirits/Margin/VBox/Stats/Spirit"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
 
 [node name="Clear" type="Button" parent="Tabs/Seasonal Spirits/Margin/VBox"]
 layout_mode = 2
@@ -4097,15 +4142,13 @@ edit_alpha = false
 [connection signal="pressed" from="Tabs/Stats/Stats/VBox/Main/Collapse" to="Tabs/Stats/Stats/VBox" method="_on_collapse_pressed"]
 [connection signal="pressed" from="Tabs/Stats/Stats/VBox/Regular Spirits/Main/Expand" to="Tabs/Stats/Stats/VBox" method="_on_expand_reg_pressed"]
 [connection signal="pressed" from="Tabs/Stats/Stats/VBox/Regular Spirits/Main/Collapse" to="Tabs/Stats/Stats/VBox" method="_on_collapse_reg_pressed"]
-[connection signal="item_selected" from="Tabs/Regular Spirits/Margin/VBox/AreaSelect" to="Tabs/Regular Spirits/Margin/VBox" method="_on_area_select_item_selected"]
-[connection signal="item_selected" from="Tabs/Regular Spirits/Margin/VBox/SpiritSelect" to="Tabs/Regular Spirits/Margin/VBox" method="_on_spirit_select_item_selected"]
+[connection signal="pressed" from="Tabs/Regular Spirits/Margin/VBox/Back" to="Tabs/Regular Spirits/Margin/VBox" method="_on_back_pressed"]
 [connection signal="bought" from="Tabs/Regular Spirits/Margin/VBox/Tree" to="Tabs/Regular Spirits/Margin/VBox" method="_on_tree_bought"]
 [connection signal="pressed" from="Tabs/Regular Spirits/Margin/VBox/Clear" to="Tabs/Regular Spirits/Margin/VBox" method="_on_clear_pressed"]
 [connection signal="confirmed" from="Tabs/Regular Spirits/Margin/VBox/Confirm" to="Tabs/Regular Spirits/Margin/VBox" method="_on_confirm_confirmed"]
 [connection signal="value_changed" from="Tabs/Current Season/Margin/VBox/Have/Candles" to="Tabs/Current Season/Margin/VBox" method="_on_check_toggled"]
 [connection signal="toggled" from="Tabs/Current Season/Margin/VBox/Pass/Check" to="Tabs/Current Season/Margin/VBox" method="_on_check_toggled"]
-[connection signal="item_selected" from="Tabs/Seasonal Spirits/Margin/VBox/SeasonSelect" to="Tabs/Seasonal Spirits/Margin/VBox" method="_on_area_select_item_selected"]
-[connection signal="item_selected" from="Tabs/Seasonal Spirits/Margin/VBox/SpiritSelect" to="Tabs/Seasonal Spirits/Margin/VBox" method="_on_spirit_select_item_selected"]
+[connection signal="pressed" from="Tabs/Seasonal Spirits/Margin/VBox/Back" to="Tabs/Seasonal Spirits/Margin/VBox" method="_on_back_pressed"]
 [connection signal="bought" from="Tabs/Seasonal Spirits/Margin/VBox/Tree" to="Tabs/Seasonal Spirits/Margin/VBox" method="_on_tree_bought"]
 [connection signal="pressed" from="Tabs/Seasonal Spirits/Margin/VBox/Clear" to="Tabs/Seasonal Spirits/Margin/VBox" method="_on_clear_pressed"]
 [connection signal="confirmed" from="Tabs/Seasonal Spirits/Margin/VBox/Confirm" to="Tabs/Seasonal Spirits/Margin/VBox" method="_on_confirm_confirmed"]

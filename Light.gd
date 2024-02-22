@@ -26,12 +26,12 @@ func uncheck_section(section):
 func _on_expand_pressed():
 	for c in get_children():
 		if c == $Main: continue
-		if c.get_node("Title/Label").text == "v": c.get_node("Title").set_pressed(false)
+		if c.get_node("Margin/Title/Label").text == "v": c.get_node("Margin/Title").set_pressed(false)
 
 func _on_collapse_pressed():
 	for c in get_children():
 		if c == $Main: continue
-		if c.get_node("Title/Label").text == "^": c.get_node("Title").set_pressed(true)
+		if c.get_node("Margin/Title/Label").text == "^": c.get_node("Margin/Title").set_pressed(true)
 
 func _on_check_pressed():
 	for c in get_children():

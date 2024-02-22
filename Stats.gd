@@ -32,12 +32,12 @@ func set_values():
 	var spentTotal = {"c":0,"h":0,"a":0,"c2":0,"h2":0,"a2":0}
 	var neededTotal = {"c":0,"h":0,"a":0,"c2":0,"h2":0,"a2":0}
 	var spiritTotal = 0
-	var compTotal = 0
+	var compTotal = 0.0
 	for a in areas:
 		var costsSpent = {"c":0,"h":0,"a":0,"c2":0,"h2":0,"a2":0}
 		var costsNeeded = {"c":0,"h":0,"a":0,"c2":0,"h2":0,"a2":0}
 		var spiritCount = 0
-		var compPercent = 0
+		var compPercent = 0.0
 		for s in spirits.data:
 			if spirits.data[s]["loc"] == a:
 				spiritCount += 1
