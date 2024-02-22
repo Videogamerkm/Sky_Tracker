@@ -34,6 +34,7 @@ func _spirit_select(spirit):
 	if bought.has(spirit): $Tree.import_bought(bought[spirit])
 	$Tree.show()
 	$Back.show()
+	$Area.add_theme_color_override("font_color",Color(1,1,1,0))
 	$"Spirits 1".hide()
 	$"Spirits 2".hide()
 	$"Area Selection".hide()
@@ -42,6 +43,7 @@ func _on_back_pressed():
 	curr_spirit = ""
 	$Tree.hide()
 	$Back.hide()
+	$Area.remove_theme_color_override("font_color")
 	$"Spirits 1".show()
 	$"Spirits 2".show()
 	$"Area Selection".show()

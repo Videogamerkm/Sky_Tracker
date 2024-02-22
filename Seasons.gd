@@ -21,6 +21,7 @@ func setup():
 	_area_select($"../../../Current Season/Margin/VBox".seasonName)
 
 func _area_select(area):
+	$Season.text = area
 	for c in $"Spirits 1".get_children(): $"Spirits 1".remove_child(c)
 	for c in $"Spirits 2".get_children(): $"Spirits 2".remove_child(c)
 	var c = 0
@@ -33,7 +34,6 @@ func _area_select(area):
 			if c < 4: $"Spirits 1".add_child(sp)
 			else: $"Spirits 2".add_child(sp)
 			c += 1
-	$Season.text = area
 
 func _spirit_select(spirit):
 	curr_spirit = spirit
@@ -41,6 +41,7 @@ func _spirit_select(spirit):
 	if bought.has(spirit): $Tree.import_bought(bought[spirit])
 	$Tree.show()
 	$Back.show()
+	$Season.add_theme_color_override("font_color",Color(1,1,1,0))
 	$"Spirits 1".hide()
 	$"Spirits 2".hide()
 	$"Season Selection".hide()
@@ -49,6 +50,7 @@ func _on_back_pressed():
 	curr_spirit = ""
 	$Tree.hide()
 	$Back.hide()
+	$Season.remove_theme_color_override("font_color")
 	$"Spirits 1".show()
 	$"Spirits 2".show()
 	$"Season Selection".show()
