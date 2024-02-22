@@ -17,7 +17,7 @@ func set_tree(rows):
 				icons.get_child(i).set_button_icon(load("res://icons/"+rowSplit[0]+".bmp"))
 				icons.get_child(i).set_disabled(true)
 				icons.get_child(i).set_pressed(false)
-				icons.get_child(i).connect("toggled",icon_pressed.bind(icons.get_child(i),x-1))
+				icons.get_child(i).connect("toggled",icon_pressed.bind(icons.get_child(i),x))
 				icons.get_child(i).cost = rowSplit[1]
 				icons.get_child(i).type = rowSplit[2]
 				if rowSplit.size() > 3 && rowSplit[3] == "sp": icons.get_child(i).isSP = true
@@ -34,13 +34,17 @@ func set_tree(rows):
 
 func icon_pressed(button_pressed,node,row):
 	if button_pressed:
-		node.set_disabled(true)
-		node.add_theme_color_override("icon_disabled_color",Color(1,1,1,1))
-		bought.emit()
+		row -= 1
 		if row >= 0 && node.name == "Mid":
 			for i in range(0,3):
-				if not get_child(row*2).get_child(i).is_pressed():
-					get_child(row*2).get_child(i).set_disabled(false)
+				get_child(row*2).get_child(i).set_disabled(false)
+	else:
+		if row >= 1 && node.name == "Mid":
+			for r in range(0,row):
+				for i in range(0,3):
+					get_child(r*2).get_child(i).set_disabled(true)
+					get_child(r*2).get_child(i).set_pressed(false)
+	bought.emit()
 
 func import_bought(vals: Array):
 	var c = 0
