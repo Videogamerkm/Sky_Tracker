@@ -40,7 +40,10 @@ static var data = {"Bearhug Hermit":{"loc":"Season of Dreams",
 	"Princess":{"loc":"Season of the Nine-Colored Deer",
 	"tree":[["seas/cos/princess sp2;0;0;sp","base/season_heart;3;sp;sp",""],["base/5C;0;0;sp","base/5C;32;sp",""],
 	["seas/exp/princess;0;0;sp","seas/cos/princess 2;26;sp",""],["seas/cos/princess sp1;0;0;sp","seas/exp/princess;22;sp",""],
-	["base/5C;0;0;sp","base/5C;18;sp",""],["seas/exp/princess;0;0;sp","seas/cos/princess 1;8;sp",""],["","seas/exp/princess;0;0",""]]}}
+	["base/5C;0;0;sp","base/5C;18;sp",""],["seas/exp/princess;0;0;sp","seas/cos/princess 1;8;sp",""],["","seas/exp/princess;0;0",""]]},
+	"Spirit of Mural":{"loc":"Season of the Nine-Colored Deer",
+	"tree":[["","seas/cos/mural 5;2;sh;sp",""],["","seas/cos/mural 4;1;sh;sp",""],
+	["seas/cos/mural 1;50;c","seas/cos/mural 3;1;sh;sp","seas/cos/mural 2;120;c"],["","seas/icons/the Nine-Colored Deer;0;0;sp",""]]}}
 
 static func get_cost(name) -> Dictionary:
 	var c = 0

@@ -12,6 +12,8 @@ static var data = {"Pointing Candlemaker":{"loc":"Isle of Dawn",
 	"tree":[["reg/exp/reject;2;c","base/5C;5;c","reg/cos/reject 2;3;h"],["","reg/exp/reject;2;c",""],["reg/cos/reject 1;1;h","base/wing;1;a","base/heart;3;c"],
 	["reg/exp/reject;1;c","base/1C;1;c",""],["","reg/exp/reject;0;0",""]]},
 	
+	"Elder of the Isle":{"loc":"Isle of Dawn","tree":[["","reg/cos/isle 2;125;a;u",""],["","reg/cos/isle 1;4;a;u",""]]},
+	
 	"Butterfly Charmer":{"loc":"Daylight Prairie","t2":1,
 	"tree":[["","reg/cos/charm 3;9;h;t",""],["","base/wing;3;a;t",""],["reg/exp/charm;2;c","base/5C;5;c","reg/cos/charm 2;4;h"],
 	["","reg/exp/charm;2;c",""],["reg/cos/charm 1;3;h","base/wing;1;a","base/heart;3;c"],["reg/exp/charm;1;c","base/1C;1;c",""],
@@ -45,6 +47,8 @@ static var data = {"Pointing Candlemaker":{"loc":"Isle of Dawn",
 	"Ceremonial Worshipper":{"loc":"Daylight Prairie",
 	"tree":[["","base/5C;5;c",""],["base/heart;3;c","base/wing;1;a",""],["","base/1C;1;c",""],
 	["","reg/exp/worship;0;0",""]]},
+	
+	"Elder of the Prairie":{"loc":"Daylight Prairie","tree":[["","reg/cos/prairie 2;75;a;u",""],["","reg/cos/prairie 1;3;a;u",""]]},
 	
 	"Shivering Trailblazer":{"loc":"Hidden Forest",
 	"tree":[["","reg/cos/shiver 2;5;h",""],["reg/exp/shiver;3;c","base/5C;5;c",""],["","reg/exp/shiver;3;c",""],
@@ -81,6 +85,8 @@ static var data = {"Pointing Candlemaker":{"loc":"Isle of Dawn",
 	"tree":[["","base/sheet;2;h",""],["","base/5C;5;c",""],["base/heart;3;c","base/wing;1;a",""],
 	["","base/1C;1;c",""],["","reg/exp/whale;0;0",""]]},
 	
+	"Elder of the Forest":{"loc":"Hidden Forest","tree":[["","reg/cos/forest 2;250;a;u",""],["","reg/cos/forest 1;6;a;u",""]]},
+	
 	"Confident Sightseer":{"loc":"Valley of Triumph",
 	"tree":[["","reg/cos/confident 2;5;h",""],["","base/5C;5;c",""],["base/heart;3;c","base/wing;2;a",""],
 	["reg/cos/confident 1;2;h","base/1C;1;c",""],["","reg/exp/confident;0;0",""]]},
@@ -111,6 +117,8 @@ static var data = {"Pointing Candlemaker":{"loc":"Isle of Dawn",
 	["","base/5C;5;c",""],["base/heart;3;c","base/wing;3;a",""],
 	["reg/cos/proud 1;10;h","base/1C;1;c",""],["","reg/exp/proud;0;0",""]]},
 	
+	"Elder of the Valley":{"loc":"Valley of Triumph","tree":[["","reg/cos/valley 2;6;a;u",""],["","reg/cos/valley 1;5;a;u",""]]},
+	
 	"Frightened Refugee":{"loc":"Golden Wasteland",
 	"tree":[["","reg/cos/fright 2;5;h",""],["reg/exp/fright;5;c","base/5C;5;c",""],["","reg/exp/fright;5;c",""],
 	["reg/cos/fright 1;3;h","base/wing;1;a","base/heart;3;c"],["reg/exp/fright;4;c","base/1C;1;c",""],["","reg/exp/fright;0;0",""]]},
@@ -137,6 +145,8 @@ static var data = {"Pointing Candlemaker":{"loc":"Isle of Dawn",
 	"tree":[["","reg/cos/lookout 2;10;h",""],["reg/exp/lookout;5;c","base/5C;5;c",""],["","reg/exp/lookout;5;c",""],
 	["reg/cos/lookout 1;5;h","base/wing;2;a","base/heart;3;c"],["reg/exp/lookout;5;c","base/1C;1;c",""],["","reg/exp/lookout;0;0",""]]},
 	
+	"Elder of the Wasteland":{"loc":"Golden Wasteland","tree":[["","reg/cos/waste;6;a;u",""]]},
+	
 	"Praying Acolyte":{"loc":"Vault of Knowledge","t2":1,
 	"tree":[["","reg/cos/pray 3;75;h;t",""],["","base/wing;9;a;t",""],["","reg/cos/pray 2;25;h",""],
 	["reg/exp/pray;7;c","base/5C;5;c",""],["","reg/exp/pray;5;c",""],["reg/cos/pray 1;5;h","base/wing;3;a","base/heart;3;c"],
@@ -157,7 +167,9 @@ static var data = {"Pointing Candlemaker":{"loc":"Isle of Dawn",
 	
 	"Meditating Monastic":{"loc":"Vault of Knowledge",
 	"tree":[["","reg/cos/meditate 2;30;h",""],["reg/exp/meditate;10;c","base/5C;5;c",""],["","reg/exp/meditate;7;c",""],
-	["reg/cos/meditate 1;10;h","base/wing;2;a","base/heart;3;c"],["reg/exp/meditate;10;c","base/1C;1;c",""],["","reg/exp/meditate;0;0",""]]}}
+	["reg/cos/meditate 1;10;h","base/wing;2;a","base/heart;3;c"],["reg/exp/meditate;10;c","base/1C;1;c",""],["","reg/exp/meditate;0;0",""]]},
+	
+	"Elder of the Vault":{"loc":"Vault of Knowledge","tree":[["","reg/cos/vault;5;a;u",""]]},}
 
 static func get_cost(name) -> Dictionary:
 	var c = 0

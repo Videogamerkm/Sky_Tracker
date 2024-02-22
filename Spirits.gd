@@ -21,10 +21,10 @@ func _area_select(area):
 	for s in spirits.data:
 		if spirits.data[s]["loc"] == area:
 			var sp = spiritIcon.duplicate()
-			sp.text = s.replace(" ","\n")
+			sp.text = s.replace(" ","\n").replace("Elder\nof\nthe\n","Elder of\nthe ")
 			sp.connect("pressed",_spirit_select.bind(s))
 			sp.set_button_icon(load("icons/"+spirits.data[s]["tree"][-1][1].split(";")[0]+".bmp"))
-			if c < 4: $"Spirits 1".add_child(sp)
+			if c < 5: $"Spirits 1".add_child(sp)
 			else: $"Spirits 2".add_child(sp)
 			c += 1
 
