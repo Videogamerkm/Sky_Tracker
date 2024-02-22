@@ -114,24 +114,20 @@ func set_values():
 	while light_coll + reg_coll + seas_coll >= wedges[w]: w += 1
 	$"Winged Light/Wings".text = "You should have "+str(w)+" cape wedges."
 
-func _on_expand_pressed():
-	for c in get_children():
-		if c == $Main: continue
-		if c.get_node("Margin/Title/Label").text == "v": c.get_node("Margin/Title").set_pressed(false)
+func accordion(parent,expand):
+	for c in parent.get_children():
+		if c.name == "Main" || c.name == "Margin": continue
+		if c.get_node("Margin/Title/Label").text == ("v" if expand else "^"):
+			c.get_node("Margin/Title").set_pressed(not expand)
 
-func _on_collapse_pressed():
-	for c in get_children():
-		if c == $Main: continue
-		if c.get_node("Margin/Title/Label").text == "^": c.get_node("Margin/Title").set_pressed(true)
+func _on_expand_pressed(): accordion(self,true)
 
-func _on_expand_reg_pressed():
-	for c in $"Regular Spirits".get_children():
-		if c == $"Regular Spirits/Main": continue
-		if c.name == "Margin": continue
-		if c.get_node("Margin/Title/Label").text == "v": c.get_node("Margin/Title").set_pressed(false)
+func _on_collapse_pressed(): accordion(self,false)
 
-func _on_collapse_reg_pressed():
-	for c in $"Regular Spirits".get_children():
-		if c == $"Regular Spirits/Main": continue
-		if c.name == "Margin": continue
-		if c.get_node("Margin/Title/Label").text == "^": c.get_node("Margin/Title").set_pressed(true)
+func _on_expand_reg_pressed(): accordion($"Regular Spirits",true)
+
+func _on_collapse_reg_pressed(): accordion($"Regular Spirits",false)
+
+func _on_expand_seas_pressed(): accordion($"Seasonal Spirits",true)
+
+func _on_collapse_seas_pressed(): accordion($"Seasonal Spirits",false)

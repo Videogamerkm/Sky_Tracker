@@ -14,9 +14,6 @@ func _ready():
 		season.set_button_icon(load("icons/seas/icons/"+s.replace("Season of ","")+".bmp"))
 		season.connect("pressed",_area_select.bind(s))
 		$"Season Selection".add_child(season)
-	setup()
-
-func setup():
 	$"Season Selection".get_node($"../../../Current Season/Margin/VBox".seasonName).set_pressed(true)
 	_area_select($"../../../Current Season/Margin/VBox".seasonName)
 

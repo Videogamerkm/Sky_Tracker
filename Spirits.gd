@@ -8,9 +8,6 @@ var bought = {}
 func _ready():
 	for b in $"Area Selection".get_children():
 		b.connect("pressed",_area_select.bind(b.name))
-	setup()
-
-func setup():
 	_area_select("Isle of Dawn")
 
 func _area_select(area):
@@ -23,7 +20,8 @@ func _area_select(area):
 			var sp = spiritIcon.duplicate()
 			sp.text = s.replace(" ","\n").replace("Elder\nof\nthe\n","Elder of\nthe ")
 			sp.connect("pressed",_spirit_select.bind(s))
-			sp.set_button_icon(load("icons/"+spirits.data[s]["tree"][-1][1].split(";")[0]+".bmp"))
+			var icon = "icons/"+spirits.data[s]["tree"][-1][1].split(";")[0]+".bmp"
+			sp.set_button_icon(load(icon))
 			if c < 5: $"Spirits 1".add_child(sp)
 			else: $"Spirits 2".add_child(sp)
 			c += 1
