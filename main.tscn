@@ -110,8 +110,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
 theme = ExtResource("1_q23n0")
 script = ExtResource("1_se3df")
 
@@ -1469,11 +1467,64 @@ horizontal_alignment = 2
 [node name="Seasonal Spirits" parent="Tabs/Stats/Stats/VBox" instance=ExtResource("1_au16a")]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Seasonal Spirits"]
+[node name="Main" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Seasonal Spirits"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="Tabs/Stats/Stats/VBox/Seasonal Spirits/Main"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Expand" type="Button" parent="Tabs/Stats/Stats/VBox/Seasonal Spirits/Main"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Expand All"
+
+[node name="Collapse" type="Button" parent="Tabs/Stats/Stats/VBox/Seasonal Spirits/Main"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Collapse All"
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Seasonal Spirits/Main"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Season" parent="Tabs/Stats/Stats/VBox/Seasonal Spirits" instance=ExtResource("1_au16a")]
+layout_mode = 2
+sub = true
+
+[node name="Completion" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Seasonal Spirits/Season"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Seasonal Spirits/Season/Completion"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
-text = "This section is currently incomplete"
+text = "Completion by Currency:"
+
+[node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Seasonal Spirits/Season/Completion"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 2
+
+[node name="Completion2" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Seasonal Spirits/Season"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Seasonal Spirits/Season/Completion2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Completion by Purchases:"
+
+[node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Seasonal Spirits/Season/Completion2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 2
 
 [node name="Winged Light" parent="Tabs/Stats/Stats/VBox" instance=ExtResource("1_au16a")]
 layout_mode = 2
@@ -1804,7 +1855,6 @@ text = "Back"
 [node name="Area" type="Label" parent="Tabs/Regular Spirits/Margin/VBox"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
-text = "Isle of Dawn"
 horizontal_alignment = 1
 
 [node name="Area Selection" type="HBoxContainer" parent="Tabs/Regular Spirits/Margin/VBox"]
@@ -1901,16 +1951,6 @@ expand_icon = true
 [node name="Spirits 2" type="HBoxContainer" parent="Tabs/Regular Spirits/Margin/VBox"]
 layout_mode = 2
 size_flags_vertical = 3
-
-[node name="Button" type="Button" parent="Tabs/Regular Spirits/Margin/VBox/Spirits 2"]
-layout_mode = 2
-size_flags_horizontal = 3
-focus_mode = 0
-text = "Pointing Candlemaker"
-icon = ExtResource("24_6s72r")
-icon_alignment = 1
-vertical_icon_alignment = 0
-expand_icon = true
 
 [node name="Tree" parent="Tabs/Regular Spirits/Margin/VBox" instance=ExtResource("4_t1mtd")]
 visible = false
@@ -4111,6 +4151,8 @@ edit_alpha = false
 [connection signal="pressed" from="Tabs/Stats/Stats/VBox/Main/Collapse" to="Tabs/Stats/Stats/VBox" method="_on_collapse_pressed"]
 [connection signal="pressed" from="Tabs/Stats/Stats/VBox/Regular Spirits/Main/Expand" to="Tabs/Stats/Stats/VBox" method="_on_expand_reg_pressed"]
 [connection signal="pressed" from="Tabs/Stats/Stats/VBox/Regular Spirits/Main/Collapse" to="Tabs/Stats/Stats/VBox" method="_on_collapse_reg_pressed"]
+[connection signal="pressed" from="Tabs/Stats/Stats/VBox/Seasonal Spirits/Main/Expand" to="Tabs/Stats/Stats/VBox" method="_on_expand_seas_pressed"]
+[connection signal="pressed" from="Tabs/Stats/Stats/VBox/Seasonal Spirits/Main/Collapse" to="Tabs/Stats/Stats/VBox" method="_on_collapse_seas_pressed"]
 [connection signal="pressed" from="Tabs/Regular Spirits/Margin/VBox/Back" to="Tabs/Regular Spirits/Margin/VBox" method="_on_back_pressed"]
 [connection signal="bought" from="Tabs/Regular Spirits/Margin/VBox/Tree" to="Tabs/Regular Spirits/Margin/VBox" method="_on_tree_bought"]
 [connection signal="pressed" from="Tabs/Regular Spirits/Margin/VBox/Clear" to="Tabs/Regular Spirits/Margin/VBox" method="_on_clear_pressed"]

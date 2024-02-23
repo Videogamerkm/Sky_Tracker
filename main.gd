@@ -24,13 +24,6 @@ func _on_tabs_tab_changed(tab):
 	if tab == 0: $Tabs/Stats/Stats/VBox.set_values()
 	if tab == 2: $"Tabs/Current Season/Margin/VBox"._ready()
 
-func _on_pick_color_changed(color):
-	RenderingServer.set_default_clear_color(color)
-
-func _on_check_button_toggled(button_pressed):
-	if button_pressed: theme = preload("res://black.tres")
-	else: theme = preload("res://white.tres")
-
 func _input(event):
 	if event.is_action_pressed("Rainbow") && not $AnimationPlayer.is_playing():
 		$AnimationPlayer.play("rainbow")

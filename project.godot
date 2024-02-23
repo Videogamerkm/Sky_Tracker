@@ -13,6 +13,7 @@ config_version=5
 config/name="Sky Tracker"
 run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
+run/low_processor_mode=true
 config/icon="res://icon.png"
 
 [display]
@@ -33,4 +34,5 @@ Rainbow={
 
 [rendering]
 
+driver/depth_prepass/enable=false
 environment/defaults/default_clear_color=Color(0.0844167, 0.045, 0.1, 1)
