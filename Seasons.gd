@@ -7,7 +7,9 @@ var curr_spirit = ""
 var bought = {}
 
 func _ready():
-	for c in $"Season Selection".get_children(): $"Season Selection".remove_child(c)
+	for c in $"Season Selection".get_children():
+		$"Season Selection".remove_child(c)
+		c.queue_free()
 	for s in spirits.seasons:
 		var season = seasonIcon.duplicate()
 		season.name = s
@@ -19,8 +21,12 @@ func _ready():
 
 func _area_select(area):
 	$Season.text = area
-	for c in $"Spirits 1".get_children(): $"Spirits 1".remove_child(c)
-	for c in $"Spirits 2".get_children(): $"Spirits 2".remove_child(c)
+	for c in $"Spirits 1".get_children():
+		$"Spirits 1".remove_child(c)
+		c.queue_free()
+	for c in $"Spirits 2".get_children():
+		$"Spirits 2".remove_child(c)
+		c.queue_free()
 	var c = 0
 	for s in spirits.data:
 		if spirits.data[s]["loc"] == area:
