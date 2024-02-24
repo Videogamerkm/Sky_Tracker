@@ -14,7 +14,7 @@ static func get_cost(data,name) -> Dictionary:
 			if item == "": continue
 			var amnt = int(item.split(";")[1])
 			var type = item.split(";")[2]
-			if item.split(";").size() > 3:
+			if item.ends_with(";t"):
 				if type == "c": c2 += amnt
 				if type == "h": h2 += amnt
 				if type == "a": a2 += amnt
@@ -42,7 +42,7 @@ static func get_unspent(data,name,bought) -> Dictionary:
 			if not(item == "" || bought[x][y]):
 				var amnt = int(item.split(";")[1])
 				var type = item.split(";")[2]
-				if item.split(";").size() > 3:
+				if item.ends_with(";t"):
 					if type == "c": c2 += amnt
 					if type == "h": h2 += amnt
 					if type == "a": a2 += amnt
@@ -75,8 +75,8 @@ static func get_completion(data,name,bought) -> int:
 	for row in data[name]["tree"]:
 		var y = 0
 		for item in row:
-			if item != "" && bought[x][y]: b += 1
-			if item != "": t += 1
+			if item != "" && not item.ends_with(";t") && bought[x][y]: b += 1
+			if item != "" && not item.ends_with(";t"): t += 1
 			y += 1
 		x += 1
 	return floor(b*100.0/t)
