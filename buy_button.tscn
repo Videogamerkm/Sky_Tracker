@@ -87,3 +87,5 @@ theme_override_constants/outline_size = 2
 theme_override_fonts/font = SubResource("SystemFont_85ybg")
 theme_override_font_sizes/font_size = 25
 text = "10"
+
+[connection signal="toggled" from="." to="." method="_on_toggled"]
