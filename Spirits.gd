@@ -36,6 +36,7 @@ func _spirit_select(spirit):
 	if bought.has(spirit): $Tree.import_bought(bought[spirit])
 	$Tree.show()
 	$Back.show()
+	$All.show()
 	$Area.add_theme_color_override("font_color",Color(1,1,1,0))
 	$"Spirits 1".hide()
 	$"Spirits 2".hide()
@@ -45,6 +46,7 @@ func _on_back_pressed():
 	curr_spirit = ""
 	$Tree.hide()
 	$Back.hide()
+	$All.hide()
 	$Area.remove_theme_color_override("font_color")
 	$"Spirits 1".show()
 	$"Spirits 2".show()
@@ -64,3 +66,6 @@ func _on_confirm_confirmed():
 	else:
 		bought.erase(curr_spirit)
 		$Tree.set_tree(spirits.data[curr_spirit]["tree"])
+
+func _on_all_pressed():
+	bought[curr_spirit] = $Tree.buy_all()

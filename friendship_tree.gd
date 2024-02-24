@@ -66,3 +66,17 @@ func export_bought() -> Array:
 		c += 1
 	return ret
 
+func buy_all() -> Array:
+	var ret = []
+	var c = 0
+	for child in get_children():
+		if c % 2 == 0:
+			var row = []
+			for i in range(0,3):
+				if child.get_child(i).is_visible():
+					row.append(true)
+					child.get_child(i).set_pressed(true)
+				else: row.append(false)
+			ret.append(row)
+		c += 1
+	return ret
