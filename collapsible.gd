@@ -1,10 +1,12 @@
 extends VBoxContainer
 
 @export var sub = false
+@export var collapse = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$Margin/Title.text = name
+	if collapse: _on_collapse_toggled(true)
 	if sub:
 		$Margin/Title.add_theme_stylebox_override("normal",preload("res://sub_collapse.tres"))
 		$Margin/Title.add_theme_stylebox_override("hover",preload("res://sub_collapse.tres"))
