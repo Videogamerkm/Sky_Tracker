@@ -23,8 +23,8 @@ func _ready():
 	$Cost.text = str(cost)
 	if isSP: $SP.show()
 
-func _on_toggled(button_pressed):
-	if button_pressed:
+func _on_toggled(press):
+	if press:
 		$Curr.hide()
 		$Cost.hide()
 	elif type != "0":
