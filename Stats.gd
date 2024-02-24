@@ -9,6 +9,22 @@ var areas = ["Isle of Dawn","Daylight Prairie","Hidden Forest","Valley of Triump
 var wedges = [1,2,5,10,20,35,55,75,100,120,150,200,250]
 
 func _ready():
+	var row = $"Regular Spirits/Isle of Dawn/Titles"
+	for a in areas:
+		var area_row = get_node("Regular Spirits/"+a)
+		if not a == "Isle of Dawn": area_row.add_child(row.duplicate())
+	for s in spirits.data:
+		var spirit_row = row.duplicate()
+		spirit_row.name = s
+		get_node("Regular Spirits/"+spirits.data[s]["loc"]).add_child(spirit_row)
+		if spirits.data[s].has("t2"):
+			spirit_row = row.duplicate()
+			spirit_row.name = s+" T2"
+			spirit_row.get_node("Spirit").text = "Tier 2"
+			spirit_row.get_node("Spirit").horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
+			spirit_row.get_node("By Purchase").text = "100%"
+			spirit_row.set_modulate(Color(1,0.75,0.75))
+			get_node("Regular Spirits/"+spirits.data[s]["loc"]).add_child(spirit_row)
 	set_values()
 
 func set_values():
@@ -28,7 +44,7 @@ func set_values():
 			comp += seas_spirits.get_completion(s,seasonal.bought[s])
 	$"Current Season/Completion2/Season".text = str(floor(comp/4.0))+"%"
 	
-	# Regular spirit values
+	# Constellation values
 	var spentTotal = {"c":0,"h":0,"a":0,"c2":0,"h2":0,"a2":0}
 	var neededTotal = {"c":0,"h":0,"a":0,"c2":0,"h2":0,"a2":0}
 	var spiritTotal = 0
@@ -42,28 +58,51 @@ func set_values():
 			if spirits.data[s]["loc"] == a:
 				spiritCount += 1
 				var sCost = spirits.get_cost(s)
+				get_node("Regular Spirits/"+a+"/"+s+"/Spirit").text = s
+				var currency = 0
+				var curr_spent = 0
+				var asc = 0
+				var asc_spent = 0
+				get_node("Regular Spirits/"+a+"/"+s+"/By Purchase").text = "0%"
 				if regular.bought.has(s):
 					compPercent += spirits.get_completion(s,regular.bought[s])
-					var sUnspent = spirits.get_unspent(s,regular.bought[s])
-					for key in costsNeeded.keys():
+					get_node("Regular Spirits/"+a+"/"+s+"/By Purchase").text = str(spirits.get_completion(s,regular.bought[s]))+"%"
+				for key in costsNeeded.keys():
+					currency += sCost[key]
+					if spirits.data[s].has("t2") && key.contains("2"): asc += sCost[key]
+					if regular.bought.has(s):
+						var sUnspent = spirits.get_unspent(s,regular.bought[s])
 						costsNeeded[key] += sUnspent[key]
 						costsSpent[key] += sCost[key] - sUnspent[key]
-				else:
-					for key in costsNeeded.keys():
+						if not key.contains("2"): get_node("Regular Spirits/"+a+"/"+s+"/"+key).text = str(sUnspent[key])
+						elif spirits.data[s].has("t2"):
+							asc_spent += sUnspent[key]
+							get_node("Regular Spirits/"+a+"/"+s+" T2/"+key.replace("2","")).text = str(sUnspent[key])
+						curr_spent += sCost[key] - sUnspent[key]
+					else:
 						costsNeeded[key] += sCost[key]
+						if not key.contains("2"): get_node("Regular Spirits/"+a+"/"+s+"/"+key).text = str(sCost[key])
+						elif spirits.data[s].has("t2"): get_node("Regular Spirits/"+a+"/"+s+" T2/"+key.replace("2","")).text = str(sCost[key])
+				get_node("Regular Spirits/"+a+"/"+s+"/By Currency").text = str(floor(curr_spent*100.0/currency))+"%"
+				if get_node("Regular Spirits/"+a+"/"+s+"/By Currency").text == "100%" && get_node("Regular Spirits/"+a+"/"+s+"/By Purchase").text == "100%":
+					get_node("Regular Spirits/"+a+"/"+s).set_modulate(Color(0.75,1,0.75))
+				else: get_node("Regular Spirits/"+a+"/"+s).set_modulate(Color(1,1,1))
+				if spirits.data[s].has("t2"):
+					get_node("Regular Spirits/"+a+"/"+s+" T2/By Currency").text = str(floor(asc_spent*100.0/asc))+"%"
+					get_node("Regular Spirits/"+a+"/"+s+" T2").set_modulate(Color(1,0.75,0.75))
 		var overall_spent = 0
 		var overall_need = 0
 		for type in ["c","h","a"]:
 			var tCap = type.capitalize()
-			get_node("Regular Spirits/"+a+"/Grid/"+tCap+" Spent").text = str(costsSpent[type])
-			get_node("Regular Spirits/"+a+"/Grid/"+tCap+" Needed").text = str(costsNeeded[type])
+			get_node("Constellations/"+a+"/Grid/"+tCap+" Spent").text = str(costsSpent[type])
+			get_node("Constellations/"+a+"/Grid/"+tCap+" Needed").text = str(costsNeeded[type])
 			overall_spent += costsSpent[type]
 			overall_need += costsNeeded[type]
-			get_node("Regular Spirits/"+a+"/Grid/"+tCap+" Comp").text = str(floor(costsSpent[type]*100.0/(costsSpent[type]+costsNeeded[type])))+"%"
-			if has_node("Regular Spirits/"+a+"/Grid/"+tCap+" T2"):
-				get_node("Regular Spirits/"+a+"/Grid/"+tCap+" T2").text = str(costsNeeded[type+"2"])
-		get_node("Regular Spirits/"+a+"/Completion/Need").text = str(floor(overall_spent*100.0/(overall_spent+overall_need)))+"%"
-		get_node("Regular Spirits/"+a+"/Completion2/Need").text = str(floor(compPercent/spiritCount))+"%"
+			get_node("Constellations/"+a+"/Grid/"+tCap+" Comp").text = str(floor(costsSpent[type]*100.0/(costsSpent[type]+costsNeeded[type])))+"%"
+			if has_node("Constellations/"+a+"/Grid/"+tCap+" T2"):
+				get_node("Constellations/"+a+"/Grid/"+tCap+" T2").text = str(costsNeeded[type+"2"])
+		get_node("Constellations/"+a+"/Completion/Need").text = str(floor(overall_spent*100.0/(overall_spent+overall_need)))+"%"
+		get_node("Constellations/"+a+"/Completion2/Need").text = str(floor(compPercent/spiritCount))+"%"
 		for key in costsNeeded.keys():
 			spentTotal[key] += costsSpent[key]
 			neededTotal[key] += costsNeeded[key]
@@ -73,15 +112,18 @@ func set_values():
 	var overall_need = 0
 	for type in ["c","h","a"]:
 		var tCap = type.capitalize()
-		get_node("Regular Spirits/Total/Grid/"+tCap+" Spent").text = str(spentTotal[type])
-		get_node("Regular Spirits/Total/Grid/"+tCap+" Needed").text = str(neededTotal[type])
+		get_node("Constellations/Total/Grid/"+tCap+" Spent").text = str(spentTotal[type])
+		get_node("Constellations/Total/Grid/"+tCap+" Needed").text = str(neededTotal[type])
 		overall_spent += spentTotal[type]
 		overall_need += neededTotal[type]
-		get_node("Regular Spirits/Total/Grid/"+tCap+" Comp").text = str(floor(spentTotal[type]*100.0/(spentTotal[type]+neededTotal[type])))+"%"
-		if has_node("Regular Spirits/Total/Grid/"+tCap+" T2"):
-			get_node("Regular Spirits/Total/Grid/"+tCap+" T2").text = str(neededTotal[type+"2"])
-	get_node("Regular Spirits/Total/Completion/Need").text = str(floor(overall_spent*100.0/(overall_spent+overall_need)))+"%"
-	get_node("Regular Spirits/Total/Completion2/Need").text = str(floor(compTotal/spiritTotal))+"%"
+		get_node("Constellations/Total/Grid/"+tCap+" Comp").text = str(floor(spentTotal[type]*100.0/(spentTotal[type]+neededTotal[type])))+"%"
+		if has_node("Constellations/Total/Grid/"+tCap+" T2"):
+			get_node("Constellations/Total/Grid/"+tCap+" T2").text = str(neededTotal[type+"2"])
+	get_node("Constellations/Total/Completion/Need").text = str(floor(overall_spent*100.0/(overall_spent+overall_need)))+"%"
+	get_node("Constellations/Total/Completion2/Need").text = str(floor(compTotal/spiritTotal))+"%"
+	
+	# Regular spirit values
+	
 	
 	# Seasonal spirit values
 	# TODO: Seasonal spirits
@@ -120,14 +162,4 @@ func accordion(parent,expand):
 		if c.get_node("Margin/Title/Label").text == ("v" if expand else "^"):
 			c.get_node("Margin/Title").set_pressed(not expand)
 
-func _on_expand_pressed(): accordion(self,true)
-
-func _on_collapse_pressed(): accordion(self,false)
-
-func _on_expand_reg_pressed(): accordion($"Regular Spirits",true)
-
-func _on_collapse_reg_pressed(): accordion($"Regular Spirits",false)
-
-func _on_expand_seas_pressed(): accordion($"Seasonal Spirits",true)
-
-func _on_collapse_seas_pressed(): accordion($"Seasonal Spirits",false)
+func accordion_text(id: String,expand: bool): accordion(get_node(id),expand)

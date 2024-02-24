@@ -241,6 +241,1229 @@ theme_override_font_sizes/font_size = 16
 text = "0%"
 horizontal_alignment = 2
 
+[node name="Constellations" parent="Tabs/Stats/Stats/VBox" instance=ExtResource("1_au16a")]
+layout_mode = 2
+
+[node name="Main" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Constellations"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Main"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Expand" type="Button" parent="Tabs/Stats/Stats/VBox/Constellations/Main"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Expand All"
+
+[node name="Collapse" type="Button" parent="Tabs/Stats/Stats/VBox/Constellations/Main"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Collapse All"
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Main"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Isle of Dawn" parent="Tabs/Stats/Stats/VBox/Constellations" instance=ExtResource("1_au16a")]
+layout_mode = 2
+sub = true
+
+[node name="Grid" type="GridContainer" parent="Tabs/Stats/Stats/VBox/Constellations/Isle of Dawn"]
+layout_mode = 2
+columns = 4
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Isle of Dawn/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+
+[node name="Label2" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Isle of Dawn/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Spent"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Isle of Dawn/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Needed"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Isle of Dawn/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "% Complete"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Isle of Dawn/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Candles:"
+
+[node name="C Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Isle of Dawn/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="C Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Isle of Dawn/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="C Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Isle of Dawn/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Isle of Dawn/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Hearts:"
+
+[node name="H Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Isle of Dawn/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="H Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Isle of Dawn/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="H Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Isle of Dawn/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 1
+
+[node name="Label7" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Isle of Dawn/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Ascended:"
+
+[node name="A Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Isle of Dawn/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="A Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Isle of Dawn/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="A Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Isle of Dawn/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 1
+
+[node name="Completion" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Constellations/Isle of Dawn"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Isle of Dawn/Completion"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Completion by Currency:"
+
+[node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Isle of Dawn/Completion"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 2
+
+[node name="Completion2" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Constellations/Isle of Dawn"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Isle of Dawn/Completion2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Completion by Purchases:"
+
+[node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Isle of Dawn/Completion2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 2
+
+[node name="Daylight Prairie" parent="Tabs/Stats/Stats/VBox/Constellations" instance=ExtResource("1_au16a")]
+layout_mode = 2
+sub = true
+
+[node name="Grid" type="GridContainer" parent="Tabs/Stats/Stats/VBox/Constellations/Daylight Prairie"]
+layout_mode = 2
+columns = 5
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Daylight Prairie/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+
+[node name="Label2" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Daylight Prairie/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Spent"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Daylight Prairie/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Needed"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Daylight Prairie/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "% Complete"
+horizontal_alignment = 1
+
+[node name="Label8" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Daylight Prairie/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Tier 2"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Daylight Prairie/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Candles:"
+
+[node name="C Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Daylight Prairie/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="C Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Daylight Prairie/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="C Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Daylight Prairie/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 1
+
+[node name="C T2" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Daylight Prairie/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Daylight Prairie/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Hearts:"
+
+[node name="H Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Daylight Prairie/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="H Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Daylight Prairie/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="H Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Daylight Prairie/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 1
+
+[node name="H T2" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Daylight Prairie/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Label7" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Daylight Prairie/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Ascended:"
+
+[node name="A Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Daylight Prairie/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="A Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Daylight Prairie/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="A Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Daylight Prairie/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 1
+
+[node name="A T2" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Daylight Prairie/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Completion" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Constellations/Daylight Prairie"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Daylight Prairie/Completion"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Completion by Currency:"
+
+[node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Daylight Prairie/Completion"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 2
+
+[node name="Completion2" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Constellations/Daylight Prairie"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Daylight Prairie/Completion2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Completion by Purchases:"
+
+[node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Daylight Prairie/Completion2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 2
+
+[node name="Hidden Forest" parent="Tabs/Stats/Stats/VBox/Constellations" instance=ExtResource("1_au16a")]
+layout_mode = 2
+sub = true
+
+[node name="Grid" type="GridContainer" parent="Tabs/Stats/Stats/VBox/Constellations/Hidden Forest"]
+layout_mode = 2
+columns = 5
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Hidden Forest/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+
+[node name="Label2" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Hidden Forest/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Spent"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Hidden Forest/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Needed"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Hidden Forest/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "% Complete"
+horizontal_alignment = 1
+
+[node name="Label8" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Hidden Forest/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Tier 2"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Hidden Forest/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Candles:"
+
+[node name="C Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Hidden Forest/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="C Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Hidden Forest/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="C Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Hidden Forest/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 1
+
+[node name="C T2" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Hidden Forest/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Hidden Forest/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Hearts:"
+
+[node name="H Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Hidden Forest/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="H Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Hidden Forest/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="H Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Hidden Forest/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 1
+
+[node name="H T2" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Hidden Forest/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Label7" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Hidden Forest/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Ascended:"
+
+[node name="A Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Hidden Forest/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="A Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Hidden Forest/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="A Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Hidden Forest/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 1
+
+[node name="A T2" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Hidden Forest/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Completion" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Constellations/Hidden Forest"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Hidden Forest/Completion"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Completion by Currency:"
+
+[node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Hidden Forest/Completion"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 2
+
+[node name="Completion2" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Constellations/Hidden Forest"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Hidden Forest/Completion2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Completion by Purchases:"
+
+[node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Hidden Forest/Completion2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 2
+
+[node name="Valley of Triumph" parent="Tabs/Stats/Stats/VBox/Constellations" instance=ExtResource("1_au16a")]
+layout_mode = 2
+sub = true
+
+[node name="Grid" type="GridContainer" parent="Tabs/Stats/Stats/VBox/Constellations/Valley of Triumph"]
+layout_mode = 2
+columns = 5
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Valley of Triumph/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+
+[node name="Label2" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Valley of Triumph/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Spent"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Valley of Triumph/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Needed"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Valley of Triumph/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "% Complete"
+horizontal_alignment = 1
+
+[node name="Label8" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Valley of Triumph/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Tier 2"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Valley of Triumph/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Candles:"
+
+[node name="C Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Valley of Triumph/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="C Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Valley of Triumph/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="C Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Valley of Triumph/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 1
+
+[node name="C T2" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Valley of Triumph/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Valley of Triumph/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Hearts:"
+
+[node name="H Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Valley of Triumph/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="H Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Valley of Triumph/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="H Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Valley of Triumph/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 1
+
+[node name="H T2" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Valley of Triumph/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Label7" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Valley of Triumph/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Ascended:"
+
+[node name="A Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Valley of Triumph/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="A Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Valley of Triumph/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="A Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Valley of Triumph/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 1
+
+[node name="A T2" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Valley of Triumph/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Completion" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Constellations/Valley of Triumph"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Valley of Triumph/Completion"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Completion by Currency:"
+
+[node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Valley of Triumph/Completion"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 2
+
+[node name="Completion2" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Constellations/Valley of Triumph"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Valley of Triumph/Completion2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Completion by Purchases:"
+
+[node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Valley of Triumph/Completion2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 2
+
+[node name="Golden Wasteland" parent="Tabs/Stats/Stats/VBox/Constellations" instance=ExtResource("1_au16a")]
+layout_mode = 2
+sub = true
+
+[node name="Grid" type="GridContainer" parent="Tabs/Stats/Stats/VBox/Constellations/Golden Wasteland"]
+layout_mode = 2
+columns = 5
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Golden Wasteland/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+
+[node name="Label2" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Golden Wasteland/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Spent"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Golden Wasteland/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Needed"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Golden Wasteland/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "% Complete"
+horizontal_alignment = 1
+
+[node name="Label8" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Golden Wasteland/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Tier 2"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Golden Wasteland/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Candles:"
+
+[node name="C Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Golden Wasteland/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="C Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Golden Wasteland/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="C Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Golden Wasteland/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 1
+
+[node name="C T2" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Golden Wasteland/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Golden Wasteland/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Hearts:"
+
+[node name="H Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Golden Wasteland/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="H Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Golden Wasteland/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="H Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Golden Wasteland/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 1
+
+[node name="H T2" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Golden Wasteland/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Label7" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Golden Wasteland/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Ascended:"
+
+[node name="A Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Golden Wasteland/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="A Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Golden Wasteland/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="A Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Golden Wasteland/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 1
+
+[node name="A T2" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Golden Wasteland/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Completion" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Constellations/Golden Wasteland"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Golden Wasteland/Completion"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Completion by Currency:"
+
+[node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Golden Wasteland/Completion"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 2
+
+[node name="Completion2" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Constellations/Golden Wasteland"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Golden Wasteland/Completion2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Completion by Purchases:"
+
+[node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Golden Wasteland/Completion2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 2
+
+[node name="Vault of Knowledge" parent="Tabs/Stats/Stats/VBox/Constellations" instance=ExtResource("1_au16a")]
+layout_mode = 2
+sub = true
+
+[node name="Grid" type="GridContainer" parent="Tabs/Stats/Stats/VBox/Constellations/Vault of Knowledge"]
+layout_mode = 2
+columns = 5
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Vault of Knowledge/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+
+[node name="Label2" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Vault of Knowledge/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Spent"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Vault of Knowledge/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Needed"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Vault of Knowledge/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "% Complete"
+horizontal_alignment = 1
+
+[node name="Label8" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Vault of Knowledge/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Tier 2"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Vault of Knowledge/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Candles:"
+
+[node name="C Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Vault of Knowledge/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="C Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Vault of Knowledge/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="C Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Vault of Knowledge/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 1
+
+[node name="C T2" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Vault of Knowledge/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Vault of Knowledge/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Hearts:"
+
+[node name="H Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Vault of Knowledge/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="H Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Vault of Knowledge/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="H Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Vault of Knowledge/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 1
+
+[node name="H T2" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Vault of Knowledge/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Label7" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Vault of Knowledge/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Ascended:"
+
+[node name="A Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Vault of Knowledge/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="A Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Vault of Knowledge/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="A Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Vault of Knowledge/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 1
+
+[node name="A T2" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Vault of Knowledge/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Completion" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Constellations/Vault of Knowledge"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Vault of Knowledge/Completion"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Completion by Currency:"
+
+[node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Vault of Knowledge/Completion"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 2
+
+[node name="Completion2" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Constellations/Vault of Knowledge"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Vault of Knowledge/Completion2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Completion by Purchases:"
+
+[node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Vault of Knowledge/Completion2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 2
+
+[node name="Total" parent="Tabs/Stats/Stats/VBox/Constellations" instance=ExtResource("1_au16a")]
+layout_mode = 2
+sub = true
+
+[node name="Grid" type="GridContainer" parent="Tabs/Stats/Stats/VBox/Constellations/Total"]
+layout_mode = 2
+columns = 5
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Total/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+
+[node name="Label2" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Total/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Spent"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Total/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Needed"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Total/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "% Complete"
+horizontal_alignment = 1
+
+[node name="Label8" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Total/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Tier 2"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Total/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Candles:"
+
+[node name="C Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Total/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="C Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Total/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="C Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Total/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 1
+
+[node name="C T2" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Total/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Total/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Hearts:"
+
+[node name="H Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Total/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="H Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Total/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="H Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Total/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 1
+
+[node name="H T2" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Total/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Label7" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Total/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Ascended:"
+
+[node name="A Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Total/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="A Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Total/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="A Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Total/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 1
+
+[node name="A T2" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Total/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Completion" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Constellations/Total"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Total/Completion"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Completion by Currency:"
+
+[node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Total/Completion"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 2
+
+[node name="Completion2" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Constellations/Total"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Total/Completion2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Completion by Purchases:"
+
+[node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Total/Completion2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 2
+
 [node name="Regular Spirits" parent="Tabs/Stats/Stats/VBox" instance=ExtResource("1_au16a")]
 layout_mode = 2
 
@@ -271,1260 +1494,71 @@ size_flags_horizontal = 3
 layout_mode = 2
 sub = true
 
-[node name="Grid" type="GridContainer" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn"]
+[node name="Titles" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn"]
 layout_mode = 2
-columns = 4
 
-[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn/Grid"]
+[node name="Spirit" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn/Titles"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+theme_override_font_sizes/font_size = 16
+
+[node name="c" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn/Titles"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
-
-[node name="Label2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Spent"
+text = "Candles"
 horizontal_alignment = 1
 
-[node name="Label3" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn/Grid"]
+[node name="h" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn/Titles"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
-text = "Needed"
+text = "Hearts"
 horizontal_alignment = 1
 
-[node name="Label4" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn/Grid"]
+[node name="a" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn/Titles"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
-text = "% Complete"
+text = "Ascended"
 horizontal_alignment = 1
 
-[node name="Label5" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn/Grid"]
+[node name="By Currency" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn/Titles"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
-text = "Candles:"
-
-[node name="C Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
+text = "% by
+Currency"
 horizontal_alignment = 1
 
-[node name="C Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn/Grid"]
+[node name="By Purchase" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn/Titles"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
-text = "0"
+text = "% by
+Purchase"
 horizontal_alignment = 1
-
-[node name="C Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0%"
-horizontal_alignment = 1
-
-[node name="Label6" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Hearts:"
-
-[node name="H Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="H Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="H Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0%"
-horizontal_alignment = 1
-
-[node name="Label7" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Ascended:"
-
-[node name="A Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="A Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="A Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0%"
-horizontal_alignment = 1
-
-[node name="Completion" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn/Completion"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Completion by Currency:"
-
-[node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn/Completion"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0%"
-horizontal_alignment = 2
-
-[node name="Completion2" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn/Completion2"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Completion by Purchases:"
-
-[node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Isle of Dawn/Completion2"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0%"
-horizontal_alignment = 2
 
 [node name="Daylight Prairie" parent="Tabs/Stats/Stats/VBox/Regular Spirits" instance=ExtResource("1_au16a")]
 layout_mode = 2
 sub = true
 
-[node name="Grid" type="GridContainer" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie"]
-layout_mode = 2
-columns = 5
-
-[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-
-[node name="Label2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Spent"
-horizontal_alignment = 1
-
-[node name="Label3" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Needed"
-horizontal_alignment = 1
-
-[node name="Label4" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "% Complete"
-horizontal_alignment = 1
-
-[node name="Label8" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Tier 2"
-horizontal_alignment = 1
-
-[node name="Label5" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Candles:"
-
-[node name="C Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="C Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="C Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0%"
-horizontal_alignment = 1
-
-[node name="C T2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="Label6" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Hearts:"
-
-[node name="H Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="H Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="H Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0%"
-horizontal_alignment = 1
-
-[node name="H T2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="Label7" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Ascended:"
-
-[node name="A Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="A Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="A Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0%"
-horizontal_alignment = 1
-
-[node name="A T2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="Completion" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie/Completion"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Completion by Currency:"
-
-[node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie/Completion"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0%"
-horizontal_alignment = 2
-
-[node name="Completion2" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie/Completion2"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Completion by Purchases:"
-
-[node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Daylight Prairie/Completion2"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0%"
-horizontal_alignment = 2
-
 [node name="Hidden Forest" parent="Tabs/Stats/Stats/VBox/Regular Spirits" instance=ExtResource("1_au16a")]
 layout_mode = 2
 sub = true
-
-[node name="Grid" type="GridContainer" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest"]
-layout_mode = 2
-columns = 5
-
-[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-
-[node name="Label2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Spent"
-horizontal_alignment = 1
-
-[node name="Label3" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Needed"
-horizontal_alignment = 1
-
-[node name="Label4" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "% Complete"
-horizontal_alignment = 1
-
-[node name="Label8" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Tier 2"
-horizontal_alignment = 1
-
-[node name="Label5" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Candles:"
-
-[node name="C Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="C Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="C Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0%"
-horizontal_alignment = 1
-
-[node name="C T2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="Label6" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Hearts:"
-
-[node name="H Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="H Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="H Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0%"
-horizontal_alignment = 1
-
-[node name="H T2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="Label7" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Ascended:"
-
-[node name="A Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="A Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="A Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0%"
-horizontal_alignment = 1
-
-[node name="A T2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="Completion" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest/Completion"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Completion by Currency:"
-
-[node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest/Completion"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0%"
-horizontal_alignment = 2
-
-[node name="Completion2" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest/Completion2"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Completion by Purchases:"
-
-[node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Hidden Forest/Completion2"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0%"
-horizontal_alignment = 2
 
 [node name="Valley of Triumph" parent="Tabs/Stats/Stats/VBox/Regular Spirits" instance=ExtResource("1_au16a")]
 layout_mode = 2
 sub = true
 
-[node name="Grid" type="GridContainer" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph"]
-layout_mode = 2
-columns = 5
-
-[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-
-[node name="Label2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Spent"
-horizontal_alignment = 1
-
-[node name="Label3" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Needed"
-horizontal_alignment = 1
-
-[node name="Label4" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "% Complete"
-horizontal_alignment = 1
-
-[node name="Label8" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Tier 2"
-horizontal_alignment = 1
-
-[node name="Label5" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Candles:"
-
-[node name="C Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="C Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="C Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0%"
-horizontal_alignment = 1
-
-[node name="C T2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="Label6" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Hearts:"
-
-[node name="H Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="H Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="H Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0%"
-horizontal_alignment = 1
-
-[node name="H T2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="Label7" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Ascended:"
-
-[node name="A Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="A Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="A Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0%"
-horizontal_alignment = 1
-
-[node name="A T2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="Completion" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph/Completion"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Completion by Currency:"
-
-[node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph/Completion"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0%"
-horizontal_alignment = 2
-
-[node name="Completion2" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph/Completion2"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Completion by Purchases:"
-
-[node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Valley of Triumph/Completion2"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0%"
-horizontal_alignment = 2
-
 [node name="Golden Wasteland" parent="Tabs/Stats/Stats/VBox/Regular Spirits" instance=ExtResource("1_au16a")]
 layout_mode = 2
 sub = true
 
-[node name="Grid" type="GridContainer" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland"]
-layout_mode = 2
-columns = 5
-
-[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-
-[node name="Label2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Spent"
-horizontal_alignment = 1
-
-[node name="Label3" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Needed"
-horizontal_alignment = 1
-
-[node name="Label4" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "% Complete"
-horizontal_alignment = 1
-
-[node name="Label8" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Tier 2"
-horizontal_alignment = 1
-
-[node name="Label5" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Candles:"
-
-[node name="C Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="C Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="C Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0%"
-horizontal_alignment = 1
-
-[node name="C T2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="Label6" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Hearts:"
-
-[node name="H Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="H Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="H Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0%"
-horizontal_alignment = 1
-
-[node name="H T2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="Label7" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Ascended:"
-
-[node name="A Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="A Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="A Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0%"
-horizontal_alignment = 1
-
-[node name="A T2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="Completion" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland/Completion"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Completion by Currency:"
-
-[node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland/Completion"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0%"
-horizontal_alignment = 2
-
-[node name="Completion2" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland/Completion2"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Completion by Purchases:"
-
-[node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Golden Wasteland/Completion2"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0%"
-horizontal_alignment = 2
-
 [node name="Vault of Knowledge" parent="Tabs/Stats/Stats/VBox/Regular Spirits" instance=ExtResource("1_au16a")]
 layout_mode = 2
 sub = true
-
-[node name="Grid" type="GridContainer" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge"]
-layout_mode = 2
-columns = 5
-
-[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-
-[node name="Label2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Spent"
-horizontal_alignment = 1
-
-[node name="Label3" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Needed"
-horizontal_alignment = 1
-
-[node name="Label4" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "% Complete"
-horizontal_alignment = 1
-
-[node name="Label8" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Tier 2"
-horizontal_alignment = 1
-
-[node name="Label5" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Candles:"
-
-[node name="C Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="C Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="C Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0%"
-horizontal_alignment = 1
-
-[node name="C T2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="Label6" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Hearts:"
-
-[node name="H Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="H Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="H Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0%"
-horizontal_alignment = 1
-
-[node name="H T2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="Label7" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Ascended:"
-
-[node name="A Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="A Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="A Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0%"
-horizontal_alignment = 1
-
-[node name="A T2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="Completion" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge/Completion"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Completion by Currency:"
-
-[node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge/Completion"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0%"
-horizontal_alignment = 2
-
-[node name="Completion2" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge/Completion2"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Completion by Purchases:"
-
-[node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Vault of Knowledge/Completion2"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0%"
-horizontal_alignment = 2
-
-[node name="Total" parent="Tabs/Stats/Stats/VBox/Regular Spirits" instance=ExtResource("1_au16a")]
-layout_mode = 2
-sub = true
-
-[node name="Grid" type="GridContainer" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total"]
-layout_mode = 2
-columns = 5
-
-[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-
-[node name="Label2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Spent"
-horizontal_alignment = 1
-
-[node name="Label3" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Needed"
-horizontal_alignment = 1
-
-[node name="Label4" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "% Complete"
-horizontal_alignment = 1
-
-[node name="Label8" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Tier 2"
-horizontal_alignment = 1
-
-[node name="Label5" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Candles:"
-
-[node name="C Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="C Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="C Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0%"
-horizontal_alignment = 1
-
-[node name="C T2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="Label6" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Hearts:"
-
-[node name="H Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="H Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="H Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0%"
-horizontal_alignment = 1
-
-[node name="H T2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="Label7" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Ascended:"
-
-[node name="A Spent" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="A Needed" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="A Comp" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0%"
-horizontal_alignment = 1
-
-[node name="A T2" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total/Grid"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0"
-horizontal_alignment = 1
-
-[node name="Completion" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total/Completion"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Completion by Currency:"
-
-[node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total/Completion"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0%"
-horizontal_alignment = 2
-
-[node name="Completion2" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total/Completion2"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Completion by Purchases:"
-
-[node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Total/Completion2"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0%"
-horizontal_alignment = 2
-
-[node name="Seasonal Spirits" parent="Tabs/Stats/Stats/VBox" instance=ExtResource("1_au16a")]
-layout_mode = 2
-
-[node name="Main" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Seasonal Spirits"]
-layout_mode = 2
-
-[node name="Label2" type="Label" parent="Tabs/Stats/Stats/VBox/Seasonal Spirits/Main"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="Expand" type="Button" parent="Tabs/Stats/Stats/VBox/Seasonal Spirits/Main"]
-layout_mode = 2
-size_flags_horizontal = 3
-focus_mode = 0
-text = "Expand All"
-
-[node name="Collapse" type="Button" parent="Tabs/Stats/Stats/VBox/Seasonal Spirits/Main"]
-layout_mode = 2
-size_flags_horizontal = 3
-focus_mode = 0
-text = "Collapse All"
-
-[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Seasonal Spirits/Main"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="Season" parent="Tabs/Stats/Stats/VBox/Seasonal Spirits" instance=ExtResource("1_au16a")]
-layout_mode = 2
-sub = true
-
-[node name="Completion" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Seasonal Spirits/Season"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Seasonal Spirits/Season/Completion"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Completion by Currency:"
-
-[node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Seasonal Spirits/Season/Completion"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0%"
-horizontal_alignment = 2
-
-[node name="Completion2" type="HBoxContainer" parent="Tabs/Stats/Stats/VBox/Seasonal Spirits/Season"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Seasonal Spirits/Season/Completion2"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Completion by Purchases:"
-
-[node name="Need" type="Label" parent="Tabs/Stats/Stats/VBox/Seasonal Spirits/Season/Completion2"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "0%"
-horizontal_alignment = 2
 
 [node name="Winged Light" parent="Tabs/Stats/Stats/VBox" instance=ExtResource("1_au16a")]
 layout_mode = 2
@@ -1960,6 +1994,15 @@ size_flags_horizontal = 4
 [node name="Label2" type="Label" parent="Tabs/Regular Spirits/Margin/VBox"]
 layout_mode = 2
 
+[node name="All" type="Button" parent="Tabs/Regular Spirits/Margin/VBox"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+focus_mode = 0
+theme_override_constants/icon_max_width = 100
+text = "Buy All"
+
 [node name="Clear" type="Button" parent="Tabs/Regular Spirits/Margin/VBox"]
 layout_mode = 2
 size_flags_vertical = 8
@@ -1975,6 +2018,9 @@ dialog_text = "Are you sure you want to clear purchase data?
 
 This cannot be undone."
 dialog_autowrap = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Tabs/Regular Spirits/Margin/VBox"]
+layout_mode = 2
 
 [node name="Current Season" type="ScrollContainer" parent="Tabs"]
 visible = false
@@ -4147,14 +4193,15 @@ edit_alpha = false
 [connection signal="tree_entered" from="." to="." method="_on_tree_entered"]
 [connection signal="tree_exiting" from="." to="." method="_on_tree_exiting"]
 [connection signal="tab_changed" from="Tabs" to="." method="_on_tabs_tab_changed"]
-[connection signal="pressed" from="Tabs/Stats/Stats/VBox/Main/Expand" to="Tabs/Stats/Stats/VBox" method="_on_expand_pressed"]
-[connection signal="pressed" from="Tabs/Stats/Stats/VBox/Main/Collapse" to="Tabs/Stats/Stats/VBox" method="_on_collapse_pressed"]
-[connection signal="pressed" from="Tabs/Stats/Stats/VBox/Regular Spirits/Main/Expand" to="Tabs/Stats/Stats/VBox" method="_on_expand_reg_pressed"]
-[connection signal="pressed" from="Tabs/Stats/Stats/VBox/Regular Spirits/Main/Collapse" to="Tabs/Stats/Stats/VBox" method="_on_collapse_reg_pressed"]
-[connection signal="pressed" from="Tabs/Stats/Stats/VBox/Seasonal Spirits/Main/Expand" to="Tabs/Stats/Stats/VBox" method="_on_expand_seas_pressed"]
-[connection signal="pressed" from="Tabs/Stats/Stats/VBox/Seasonal Spirits/Main/Collapse" to="Tabs/Stats/Stats/VBox" method="_on_collapse_seas_pressed"]
+[connection signal="pressed" from="Tabs/Stats/Stats/VBox/Main/Expand" to="Tabs/Stats/Stats/VBox" method="accordion_text" binds= [".", true]]
+[connection signal="pressed" from="Tabs/Stats/Stats/VBox/Main/Collapse" to="Tabs/Stats/Stats/VBox" method="accordion_text" binds= [".", false]]
+[connection signal="pressed" from="Tabs/Stats/Stats/VBox/Constellations/Main/Expand" to="Tabs/Stats/Stats/VBox" method="accordion_text" binds= ["Constellations", true]]
+[connection signal="pressed" from="Tabs/Stats/Stats/VBox/Constellations/Main/Collapse" to="Tabs/Stats/Stats/VBox" method="accordion_text" binds= ["Constellations", false]]
+[connection signal="pressed" from="Tabs/Stats/Stats/VBox/Regular Spirits/Main/Expand" to="Tabs/Stats/Stats/VBox" method="accordion_text" binds= ["Regular Spirits", true]]
+[connection signal="pressed" from="Tabs/Stats/Stats/VBox/Regular Spirits/Main/Collapse" to="Tabs/Stats/Stats/VBox" method="accordion_text" binds= ["Regular Spirits", false]]
 [connection signal="pressed" from="Tabs/Regular Spirits/Margin/VBox/Back" to="Tabs/Regular Spirits/Margin/VBox" method="_on_back_pressed"]
 [connection signal="bought" from="Tabs/Regular Spirits/Margin/VBox/Tree" to="Tabs/Regular Spirits/Margin/VBox" method="_on_tree_bought"]
+[connection signal="pressed" from="Tabs/Regular Spirits/Margin/VBox/All" to="Tabs/Regular Spirits/Margin/VBox" method="_on_all_pressed"]
 [connection signal="pressed" from="Tabs/Regular Spirits/Margin/VBox/Clear" to="Tabs/Regular Spirits/Margin/VBox" method="_on_clear_pressed"]
 [connection signal="confirmed" from="Tabs/Regular Spirits/Margin/VBox/Confirm" to="Tabs/Regular Spirits/Margin/VBox" method="_on_confirm_confirmed"]
 [connection signal="value_changed" from="Tabs/Current Season/Margin/VBox/Have/Candles" to="Tabs/Current Season/Margin/VBox" method="_on_check_toggled"]
