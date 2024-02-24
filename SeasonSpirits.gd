@@ -61,7 +61,7 @@ static func get_spent(name,bought) -> int:
 	for row in data[name]["tree"]:
 		var y = 0
 		for item in row:
-			if item != "" && item.ends_with(";sp") && bought[x][y]:
+			if item != "" && item.ends_with(";sp") && not item.contains(";sp;") && bought[x][y]:
 				c += int(item.split(";")[1])
 			y += 1
 		x += 1
