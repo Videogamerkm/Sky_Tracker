@@ -1,5 +1,6 @@
 extends VBoxContainer
 
+var spirits = preload("res://SeasonSpirits.gd")
 var seasonName = "Season of the Nine-Colored Deer"
 var start = 1705305600
 var end = 1711958399
@@ -29,7 +30,6 @@ func _ready():
 		$Complete.text += "You'll be able to buy all the cosmetics "+str(floor(daysSpare))+" day(s) before the season ends.\n"
 		if not $Pass/Check.button_pressed: $Complete.text += "(Note: This does not include season pass items.)"
 
-
 func _process(_delta):
 	var curr = Time.get_unix_time_from_system()
 	if not $Days.text == str(floor((end-curr)/86400)) + left:
@@ -52,7 +52,6 @@ func _on_check_toggled(_button_pressed):
 	_ready()
 
 func update_candles():
-	var spirits = preload("res://SeasonSpirits.gd")
 	var bought = $"../../../Seasonal Spirits/Margin/VBox".bought
 	if not bought: bought = {}
 	var candles = 0

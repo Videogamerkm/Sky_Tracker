@@ -3,6 +3,7 @@ extends Control
 var saveFile = "user://save.dat"
 
 func _on_tree_exiting():
+	$Tabs.queue_free()
 	var file = FileAccess.open(saveFile, FileAccess.WRITE)
 	file.store_var($"Tabs/Regular Spirits/Margin/VBox".bought)
 	file.store_var($"Tabs/Current Season/Margin/VBox/Pass/Check".is_pressed())
@@ -15,22 +16,15 @@ func _on_tree_entered():
 	var file = FileAccess.open(saveFile, FileAccess.READ)
 	if not $"Tabs/Regular Spirits/Margin/VBox".is_node_ready(): await $"Tabs/Regular Spirits/Margin/VBox".ready
 	$"Tabs/Regular Spirits/Margin/VBox".bought = file.get_var()
-	$"Tabs/Regular Spirits/Margin/VBox".setup()
 	$"Tabs/Current Season/Margin/VBox/Pass/Check".set_pressed(file.get_var())
 	$"Tabs/Current Season/Margin/VBox/Have/Candles".value = file.get_var()
 	if file.get_position() < file.get_length(): $"Tabs/Seasonal Spirits/Margin/VBox".bought = file.get_var()
 	if file.get_position() < file.get_length(): $"Tabs/Winged Light Tracker/Margin/VBox".import_checked(file.get_var())
+	$Tabs/Stats/Stats/VBox.set_values()
 
 func _on_tabs_tab_changed(tab):
 	if tab == 0: $Tabs/Stats/Stats/VBox.set_values()
 	if tab == 2: $"Tabs/Current Season/Margin/VBox"._ready()
-
-func _on_pick_color_changed(color):
-	RenderingServer.set_default_clear_color(color)
-
-func _on_check_button_toggled(button_pressed):
-	if button_pressed: theme = preload("res://black.tres")
-	else: theme = preload("res://white.tres")
 
 func _input(event):
 	if event.is_action_pressed("Rainbow") && not $AnimationPlayer.is_playing():
