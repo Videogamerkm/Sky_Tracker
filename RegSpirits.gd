@@ -173,9 +173,17 @@ static var data = {"Pointing Candlemaker":{"loc":"Isle of Dawn",
 	
 	"Elder of the Vault":{"loc":"Vault of Knowledge","tree":[["","reg/cos/vault;5;a;u",""]]},}
 
-static func get_cost(name) -> Dictionary: return util.get_cost(data,name)
+static func get_cost(name) -> Dictionary:
+	var ret = util.get_cost(data,name)
+	ret.erase("sp")
+	ret.erase("sh")
+	return ret
 
-static func get_unspent(name,bought) -> Dictionary: return util.get_unspent(data,name,bought)
+static func get_unspent(name,bought) -> Dictionary:
+	var ret = util.get_unspent(data,name,bought)
+	ret.erase("sp")
+	ret.erase("sh")
+	return ret
 
 static func get_spent(name,bought) -> int: return util.get_spent(data,name,bought)
 
