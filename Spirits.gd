@@ -12,12 +12,8 @@ func _ready():
 
 func _area_select(area):
 	$Area.text = area
-	for c in $"Spirits 1".get_children():
-		$"Spirits 1".remove_child(c)
-		c.queue_free()
-	for c in $"Spirits 2".get_children():
-		$"Spirits 2".remove_child(c)
-		c.queue_free()
+	for c in $"Spirits 1".get_children(): c.queue_free()
+	for c in $"Spirits 2".get_children(): c.queue_free()
 	var c = 0
 	for s in spirits.data:
 		if spirits.data[s]["loc"] == area:
