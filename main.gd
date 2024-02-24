@@ -3,6 +3,7 @@ extends Control
 var saveFile = "user://save.dat"
 
 func _on_tree_exiting():
+	$Tabs.queue_free()
 	var file = FileAccess.open(saveFile, FileAccess.WRITE)
 	file.store_var($"Tabs/Regular Spirits/Margin/VBox".bought)
 	file.store_var($"Tabs/Current Season/Margin/VBox/Pass/Check".is_pressed())
