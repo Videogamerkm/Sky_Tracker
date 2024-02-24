@@ -3161,6 +3161,10 @@ focus_mode = 0
 layout_mode = 2
 focus_mode = 0
 
+[node name="CheckBox3" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge/Oasis"]
+layout_mode = 2
+focus_mode = 0
+
 [node name="Third Floor" type="HBoxContainer" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge"]
 layout_mode = 2
 

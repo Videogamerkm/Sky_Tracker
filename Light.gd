@@ -92,4 +92,4 @@ func import_checked(map):
 		var checks = map[entry]
 		for cb in get_node(entry).get_children():
 			if cb is Label: continue
-			cb.set_pressed(checks.pop_front())
+			if checks.size() > 0: cb.set_pressed(checks.pop_front())
