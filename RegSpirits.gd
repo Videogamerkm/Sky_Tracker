@@ -35,7 +35,7 @@ static var data = {"Pointing Candlemaker":{"loc":"Isle of Dawn",
 	["reg/exp/yawn;1;c","base/1C;1;c",""],["","reg/exp/yawn;0;0",""]]},
 	
 	"Laughing Light Catcher":{"loc":"Daylight Prairie",
-	"tree":[["reg/exp/laugh;5;c","base/5C;5;c","reg/cos/laugh 2;5;h"],["","reg/exp/laugh;2;c",""],["reg/cos/laugh 1;5;h","base/wing;2;a","base/heart;3;c"],
+	"tree":[["reg/exp/laugh;5;c","base/5C;5;c","reg/cos/laugh 2;5;h"],["","reg/exp/laugh;5;c",""],["reg/cos/laugh 1;5;h","base/wing;2;a","base/heart;3;c"],
 	["reg/exp/laugh;1;c","base/1C;1;c",""],["","reg/exp/laugh;0;0",""]]},
 	
 	"Bird Whisperer":{"loc":"Daylight Prairie",
