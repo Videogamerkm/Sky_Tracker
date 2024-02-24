@@ -19,6 +19,7 @@ func _on_tree_entered():
 	$"Tabs/Current Season/Margin/VBox/Have/Candles".value = file.get_var()
 	if file.get_position() < file.get_length(): $"Tabs/Seasonal Spirits/Margin/VBox".bought = file.get_var()
 	if file.get_position() < file.get_length(): $"Tabs/Winged Light Tracker/Margin/VBox".import_checked(file.get_var())
+	$Tabs/Stats/Stats/VBox.set_values()
 
 func _on_tabs_tab_changed(tab):
 	if tab == 0: $Tabs/Stats/Stats/VBox.set_values()
