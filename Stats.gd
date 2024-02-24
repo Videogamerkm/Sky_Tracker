@@ -50,23 +50,31 @@ func set_values():
 	var need = (current.needPass if current.get_node("Pass/Check").button_pressed else current.needNoPass)
 	$"Current Season/Needed/Season Need".text = str(max(need - coll,0))
 	$"Current Season/Avail/Season Avail".text = current.get_node("Candles/Val").text
-	$"Current Season/Completion/Season".text = str(floor(spent*100/need))+"%"
+	$"Current Season/Completion3/Season".text = str(floor(spent*100/need))+"%"
 	var comp = 0
+	var guideComp = 0
+	var seasonSpirits = 0.0
 	for s in seas_spirits.data:
-		if seas_spirits.data[s]["loc"] == current.seasonName && seasonal.bought.has(s):
-			comp += seas_spirits.get_completion(s,seasonal.bought[s])
-	$"Current Season/Completion2/Season".text = str(floor(comp/4.0))+"%"
+		if seas_spirits.data[s]["loc"] == current.seasonName:
+			seasonSpirits += 1
+			if seasonal.bought.has(s):
+				comp += seas_spirits.get_completion(s,seasonal.bought[s])
+				if seas_spirits.data[s].has("isGuide"): guideComp = seas_spirits.get_completion(s,seasonal.bought[s])
+	$"Current Season/Completion2/Season".text = str(floor(comp/seasonSpirits))+"%"
+	$"Current Season/Completion/Season".text = str(floor((comp-guideComp)/(seasonSpirits-1)))+"%"
 	
 	# Regular spirit values
 	var spentTotal = {"c":0,"h":0,"a":0,"c2":0,"h2":0,"a2":0,"u":0}
 	var neededTotal = {"c":0,"h":0,"a":0,"c2":0,"h2":0,"a2":0,"u":0}
 	var spiritTotal = 0
 	var compTotal = 0.0
+	var elderTotal = 0
 	for a in areas:
 		var costsSpent = {"c":0,"h":0,"a":0,"c2":0,"h2":0,"a2":0,"u":0}
 		var costsNeeded = {"c":0,"h":0,"a":0,"c2":0,"h2":0,"a2":0,"u":0}
 		var spiritCount = 0
 		var compPercent = 0.0
+		var elderPercent = 0
 		for s in spirits.data:
 			if spirits.data[s]["loc"] == a:
 				spiritCount += 1
@@ -79,6 +87,7 @@ func set_values():
 				get_node("Regular Spirits/"+a+"/"+s+"/By Purchase").text = "0%"
 				if regular.bought.has(s):
 					compPercent += spirits.get_completion(s,regular.bought[s])
+					if s.begins_with("Elder of"): elderPercent = spirits.get_completion(s,regular.bought[s])
 					get_node("Regular Spirits/"+a+"/"+s+"/By Purchase").text = str(spirits.get_completion(s,regular.bought[s]))+"%"
 				for key in sCost.keys():
 					if not key.contains("2"): currency += sCost[key]
@@ -122,9 +131,7 @@ func set_values():
 			get_node("Constellations/"+a+"/Grid/"+tCap+" Comp").text = str(floor(costsSpent[type]*100.0/(costsSpent[type]+costsNeeded[type])))+"%"
 			if has_node("Constellations/"+a+"/Grid/"+tCap+" T2"):
 				get_node("Constellations/"+a+"/Grid/"+tCap+" T2").text = str(costsNeeded[type+"2"])
-		var spent_woGift = overall_spent - costsSpent["u"]
-		var need_woGift = overall_need - costsNeeded["u"]
-		get_node("Constellations/"+a+"/Completion/Need").text = str(floor(spent_woGift*100.0/(spent_woGift+need_woGift)))+"%"
+		get_node("Constellations/"+a+"/Completion/Need").text = str(floor((compPercent-elderPercent)/(spiritCount-1)))+"%"
 		get_node("Constellations/"+a+"/Completion3/Need").text = str(floor(overall_spent*100.0/(overall_spent+overall_need)))+"%"
 		get_node("Constellations/"+a+"/Completion2/Need").text = str(floor(compPercent/spiritCount))+"%"
 		for key in costsNeeded.keys():
@@ -132,6 +139,7 @@ func set_values():
 			neededTotal[key] += costsNeeded[key]
 		spiritTotal += spiritCount
 		compTotal += compPercent
+		elderTotal += elderPercent
 	var overall_spent = 0
 	var overall_need = 0
 	for type in ["c","h","a"]:
@@ -143,7 +151,8 @@ func set_values():
 		get_node("Constellations/Total/Grid/"+tCap+" Comp").text = str(floor(spentTotal[type]*100.0/(spentTotal[type]+neededTotal[type])))+"%"
 		if has_node("Constellations/Total/Grid/"+tCap+" T2"):
 			get_node("Constellations/Total/Grid/"+tCap+" T2").text = str(neededTotal[type+"2"])
-	get_node("Constellations/Total/Completion/Need").text = str(floor(overall_spent*100.0/(overall_spent+overall_need)))+"%"
+	get_node("Constellations/Total/Completion/Need").text = str(floor((compTotal-elderTotal)/(spiritTotal-6)))+"%"
+	get_node("Constellations/Total/Completion3/Need").text = str(floor(overall_spent*100.0/(overall_spent+overall_need)))+"%"
 	get_node("Constellations/Total/Completion2/Need").text = str(floor(compTotal/spiritTotal))+"%"
 	
 	# Seasonal spirit values

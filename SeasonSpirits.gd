@@ -47,7 +47,7 @@ static var data = {"Bearhug Hermit":{"loc":"Season of Dreams",
 	["seas/exp/princess;0;0;sp","seas/cos/princess 2;26;sp",""],["seas/cos/princess sp1;0;0;sp","seas/exp/princess;22;sp",""],
 	["base/5C;0;0;sp","base/5C;18;sp",""],["seas/exp/princess;0;0;sp","seas/cos/princess 1;8;sp",""],["","seas/exp/princess;0;0",""]]},
 	
-	"Spirit of Mural":{"loc":"Season of the Nine-Colored Deer",
+	"Spirit of Mural":{"loc":"Season of the Nine-Colored Deer","isGuide":true,
 	"tree":[["","seas/cos/mural 5;2;sh;sp",""],["","seas/cos/mural 4;1;sh;sp",""],
 	["seas/cos/mural 1;50;c","seas/cos/mural 3;1;sh;sp","seas/cos/mural 2;120;c"],["","seas/icons/the Nine-Colored Deer;0;0;sp",""]]}}
 
@@ -55,7 +55,17 @@ static func get_cost(name) -> Dictionary: return util.get_cost(data,name)
 
 static func get_unspent(name,bought) -> Dictionary: return util.get_unspent(data,name,bought)
 
-static func get_spent(name,bought) -> int: return util.get_spent(data,name,bought)
+static func get_spent(name,bought) -> int:
+	var c = 0
+	var x = 0
+	for row in data[name]["tree"]:
+		var y = 0
+		for item in row:
+			if item != "" && item.ends_with(";sp") && bought[x][y]:
+				c += int(item.split(";")[1])
+			y += 1
+		x += 1
+	return c
 
 static func get_completion(name,bought) -> int: return util.get_completion(data,name,bought)
 

@@ -56,18 +56,6 @@ static func get_unspent(data,name,bought) -> Dictionary:
 		x += 1
 	return {"c":c,"h":h,"a":a,"c2":c2,"h2":h2,"a2":a2,"sp":sp,"sh":sh}
 
-static func get_spent(data,name,bought) -> int:
-	var c = 0
-	var x = 0
-	for row in data[name]["tree"]:
-		var y = 0
-		for item in row:
-			if item != "" && bought[x][y]:
-				c += int(item.split(";")[1])
-			y += 1
-		x += 1
-	return c
-
 static func get_completion(data,name,bought) -> int:
 	var b = 0
 	var t = 0

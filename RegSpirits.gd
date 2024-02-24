@@ -185,8 +185,6 @@ static func get_unspent(name,bought) -> Dictionary:
 	ret.erase("sh")
 	return ret
 
-static func get_spent(name,bought) -> int: return util.get_spent(data,name,bought)
-
 static func get_completion(name,bought) -> int: return util.get_completion(data,name,bought)
 
 static func get_all_wings() -> int: return util.get_all_wings(data)
