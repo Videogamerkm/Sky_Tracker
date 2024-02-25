@@ -22,7 +22,6 @@ func _ready():
 			spirit_row.name = s+" T2"
 			spirit_row.get_node("Spirit").text = "Tier 2"
 			spirit_row.get_node("Spirit").horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
-			spirit_row.get_node("By Purchase").text = "100%"
 			spirit_row.set_modulate(Color(1,0.75,0.75))
 			get_node("Regular Spirits/"+spirits.data[s]["loc"]).add_child(spirit_row)
 	for a in seas_spirits.seasons:
@@ -37,6 +36,13 @@ func _ready():
 		var new_row = $"Seasonal Spirits/Season/Titles".duplicate()
 		new_row.name = s
 		get_node("Seasonal Spirits/"+seas_spirits.data[s]["loc"]).add_child(new_row)
+		if seas_spirits.data[s].has("t2"):
+			new_row = row.duplicate()
+			new_row.name = s+" T2"
+			new_row.get_node("Spirit").text = "Tier 2"
+			new_row.get_node("Spirit").horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
+			new_row.set_modulate(Color(1,0.75,0.75))
+			get_node("Seasonal Spirits/"+seas_spirits.data[s]["loc"]).add_child(new_row)
 	$"Seasonal Spirits/Season".queue_free()
 	set_values()
 
@@ -85,10 +91,12 @@ func set_values():
 				var asc = 0
 				var asc_spent = 0
 				get_node("Regular Spirits/"+a+"/"+s+"/By Purchase").text = "0%"
+				if spirits.data[s].has("t2"): get_node("Regular Spirits/"+a+"/"+s+" T2/By Purchase").text = "0%"
 				if regular.bought.has(s):
 					compPercent += spirits.get_completion(s,regular.bought[s])
 					if s.begins_with("Elder of"): elderPercent = spirits.get_completion(s,regular.bought[s])
 					get_node("Regular Spirits/"+a+"/"+s+"/By Purchase").text = str(spirits.get_completion(s,regular.bought[s]))+"%"
+					if spirits.data[s].has("t2"): get_node("Regular Spirits/"+a+"/"+s+" T2/By Purchase").text = str(spirits.get_t2_completion(s,regular.bought[s]))+"%"
 				for key in sCost.keys():
 					if not key.contains("2"): currency += sCost[key]
 					elif spirits.data[s].has("t2"): asc += sCost[key]
@@ -166,8 +174,10 @@ func set_values():
 		var asc = 0
 		var asc_spent = 0
 		get_node("Seasonal Spirits/"+a+"/"+s+"/By Purchase").text = "0%"
+		if seas_spirits.data[s].has("t2"): get_node("Seasonal Spirits/"+a+"/"+s+" T2/By Purchase").text = "0%"
 		if seasonal.bought.has(s):
 			get_node("Seasonal Spirits/"+a+"/"+s+"/By Purchase").text = str(seas_spirits.get_completion(s,seasonal.bought[s]))+"%"
+			if seas_spirits.data[s].has("t2"): get_node("Seasonal Spirits/"+a+"/"+s+" T2/By Purchase").text = str(seas_spirits.get_t2_completion(s,seasonal.bought[s]))+"%"
 		for key in sCost.keys():
 			if not key.contains("2"): currency += sCost[key]
 			elif seas_spirits.data[s].has("t2"): asc += sCost[key]
