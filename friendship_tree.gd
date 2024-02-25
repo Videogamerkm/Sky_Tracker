@@ -6,7 +6,7 @@ extends VBoxContainer
 signal bought
 
 func set_tree(rows):
-	for c in get_children(): queue_free(c)
+	for c in get_children(): c.queue_free()
 	var x = 0
 	for r in rows:
 		var icons = iconRow.duplicate()
