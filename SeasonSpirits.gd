@@ -52,7 +52,6 @@ static var data = {"Bearhug Hermit":{"loc":"Season of Dreams",
 	["seas/cos/mural 1;50;c","seas/cos/mural 3;1;sh;sp","seas/cos/mural 2;120;c"],["","seas/icons/the Nine-Colored Deer;0;0;sp",""]]}}
 
 static func get_cost(name) -> Dictionary: return util.get_cost(data,name)
-
 static func get_unspent(name,bought) -> Dictionary: return util.get_unspent(data,name,bought)
 
 static func get_spent(name,bought) -> int:
@@ -68,7 +67,6 @@ static func get_spent(name,bought) -> int:
 	return c
 
 static func get_completion(name,bought) -> int: return util.get_completion(data,name,bought)
-
+static func get_t2_completion(name,bought) -> int: return util.get_t2_completion(data,name,bought)
 static func get_all_wings() -> int: return util.get_all_wings(data)
-
 static func get_wings(bought) -> int: return util.get_wings(data,bought)

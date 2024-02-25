@@ -69,6 +69,19 @@ static func get_completion(data,name,bought) -> int:
 		x += 1
 	return floor(b*100.0/t)
 
+static func get_t2_completion(data,name,bought) -> int:
+	var b = 0
+	var t = 0
+	var x = 0
+	for row in data[name]["tree"]:
+		var y = 0
+		for item in row:
+			if item != "" && item.ends_with(";t") && bought[x][y]: b += 1
+			if item != "" && item.ends_with(";t"): t += 1
+			y += 1
+		x += 1
+	return floor(b*100.0/t)
+
 static func get_all_wings(data) -> int:
 	var w = 0
 	for s in data:
