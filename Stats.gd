@@ -150,7 +150,7 @@ func set_values():
 		elderTotal += elderPercent
 	var overall_spent = 0
 	var overall_need = 0
-	for type in ["c","h","a"]:
+	for type in ["c","h","a","u"]:
 		var tCap = type.capitalize()
 		get_node("Constellations/Total/Grid/"+tCap+" Spent").text = str(spentTotal[type])
 		get_node("Constellations/Total/Grid/"+tCap+" Needed").text = str(neededTotal[type])
