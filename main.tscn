@@ -2211,6 +2211,26 @@ theme_override_font_sizes/font_size = 16
 text = "0"
 horizontal_alignment = 1
 
+[node name="Label17" type="Label" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Tier 2 Regular Spirit Buffs"
+
+[node name="Tier2 Coll" type="Label" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Tier2 Avail" type="Label" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
 [node name="Label16" type="Label" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -2225,6 +2245,26 @@ text = "0"
 horizontal_alignment = 1
 
 [node name="Seasonal Avail" type="Label" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="Label18" type="Label" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Tier 2 Seasonal Spirit Buffs"
+
+[node name="SeasTier2 Coll" type="Label" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+
+[node name="SeasTier2 Avail" type="Label" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16

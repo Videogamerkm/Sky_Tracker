@@ -101,3 +101,23 @@ static func get_wings(data,bought) -> int:
 				y += 1
 			x += 1
 	return w
+
+static func get_all_t2_wings(data) -> int:
+	var w = 0
+	for s in data:
+		for row in data[s]["tree"]:
+			for item in row:
+				if item != "" && item.ends_with(";t") && item.split(";")[0] == "base/wing": w += 1
+	return w
+
+static func get_t2_wings(data,bought) -> int:
+	var w = 0
+	for s in data:
+		var x = 0
+		for row in data[s]["tree"]:
+			var y = 0
+			for item in row:
+				if item != "" && bought.has(s) && item.ends_with(";t") && item.split(";")[0] == "base/wing" && bought[s][x][y]: w += 1
+				y += 1
+			x += 1
+	return w
