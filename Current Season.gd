@@ -13,7 +13,7 @@ const left = " day(s) left in the season"
 func _ready():
 	$Time/Start.text = timeUtils.convert_time(start)
 	$Time/End.text = timeUtils.convert_time(end)
-	var days = floor(timeUtils.get_time_since(end)/86400)
+	var days = floor(timeUtils.get_time_since(end)/86400.0)
 	$Days.text = str(days) + left
 	update_candles()
 	var candles = days*(6 if $Pass/Check.button_pressed else 5)
@@ -30,7 +30,7 @@ func _ready():
 		if not $Pass/Check.button_pressed: $Complete.text += "(Note: This does not include season pass items.)"
 
 func _process(_delta):
-	if not $Days.text == str(floor(timeUtils.get_time_since(end)/86400)) + left:
+	if not $Days.text == str(floor(timeUtils.get_time_since(end)/86400.0)) + left:
 		_ready()
 
 func _on_check_toggled(_button_pressed):

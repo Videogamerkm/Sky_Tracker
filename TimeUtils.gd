@@ -20,7 +20,7 @@ static func convert_time(timestamp) -> String:
 	return ("%02d:%02d"%[dict["hour"],dict["minute"]])+" "+ret+post+", "+str(dict["year"])
 
 static func get_time_since(timestamp) -> int:
-	return Time.get_unix_time_from_datetime_dict(timestamp) - get_game_offset() - Time.get_unix_time_from_system()
+	return floor(Time.get_unix_time_from_datetime_dict(timestamp) - get_game_offset() - Time.get_unix_time_from_system())
 
 static func get_post(day:String) -> String:
 	var post = "th"

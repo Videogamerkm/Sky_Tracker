@@ -19,12 +19,12 @@ func _ready():
 		$Name.text = day
 		$Time/Start.text = timeUtils.convert_time(start)
 		$Time/End.text = timeUtils.convert_time(end)
-		var days = floor(timeUtils.get_time_since(end)/86400)
+		var days = floor(timeUtils.get_time_since(end)/86400.0)
 		$Days.text = str(days) + left
 		$Tree.set_tree(rows[day])
 
 func _process(_delta):
-	if not $Days.text == str(floor(timeUtils.get_time_since(end)/86400)) + left:
+	if not $Days.text == str(floor(timeUtils.get_time_since(end)/86400.0)) + left:
 		_ready()
 
 func _on_tree_bought():
