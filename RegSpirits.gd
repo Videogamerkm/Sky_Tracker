@@ -188,4 +188,6 @@ static func get_unspent(name,bought) -> Dictionary:
 static func get_completion(name,bought) -> int: return util.get_completion(data,name,bought)
 static func get_t2_completion(name,bought) -> int: return util.get_t2_completion(data,name,bought)
 static func get_all_wings() -> int: return util.get_all_wings(data)
+static func get_all_t2_wings() -> int: return util.get_all_t2_wings(data)
 static func get_wings(bought) -> int: return util.get_wings(data,bought)
+static func get_t2_wings(bought) -> int: return util.get_t2_wings(data,bought)
