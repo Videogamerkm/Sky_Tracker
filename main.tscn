@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://b04gr0a605mxh"]
+[gd_scene load_steps=47 format=3 uid="uid://b04gr0a605mxh"]
 
 [ext_resource type="PackedScene" uid="uid://bap3aptv3y1dw" path="res://collapsible.tscn" id="1_au16a"]
 [ext_resource type="Theme" uid="uid://cqobwtkqodo0r" path="res://white.tres" id="1_q23n0"]
@@ -32,6 +32,7 @@
 [ext_resource type="Script" path="res://Shards.gd" id="31_o8kan"]
 [ext_resource type="Texture2D" uid="uid://c5eblgnrna6cu" path="res://icons/seas/icons/Dreams.bmp" id="31_yldyr"]
 [ext_resource type="Script" path="res://Days.gd" id="32_s61rv"]
+[ext_resource type="Script" path="res://Settings.gd" id="33_lxqsm"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_kei1y"]
 
@@ -64,6 +65,16 @@ corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 5
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5muw6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ty0t3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u7qhy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7gr2j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_141fx"]
 
 [sub_resource type="Animation" id="Animation_h7fm0"]
 resource_name = "RESET"
@@ -4071,6 +4082,36 @@ focus_mode = 0
 theme_override_constants/icon_max_width = 100
 text = "Buy All"
 
+[node name="Settings" type="ScrollContainer" parent="Tabs"]
+visible = false
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="Tabs/Settings"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBox" type="VBoxContainer" parent="Tabs/Settings/Margin"]
+layout_mode = 2
+script = ExtResource("33_lxqsm")
+
+[node name="CheckButton" type="CheckButton" parent="Tabs/Settings/Margin/VBox"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+focus_mode = 0
+theme_override_constants/h_separation = 10
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5muw6")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ty0t3")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_u7qhy")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7gr2j")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_141fx")
+text = "Use shortened tab names"
+
 [node name="Candle Tracker" type="ScrollContainer" parent="."]
 visible = false
 layout_mode = 2
@@ -4733,52 +4774,7 @@ libraries = {
 "": SubResource("AnimationLibrary_lasoq")
 }
 
-[node name="Settings" type="ScrollContainer" parent="."]
-visible = false
-layout_mode = 2
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 31.0
-
-[node name="Margin" type="MarginContainer" parent="Settings"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_constants/margin_left = 24
-theme_override_constants/margin_top = 24
-theme_override_constants/margin_right = 24
-theme_override_constants/margin_bottom = 24
-
-[node name="VBox" type="VBoxContainer" parent="Settings/Margin"]
-layout_mode = 2
-
-[node name="CheckButton" type="CheckButton" parent="Settings/Margin/VBox"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 3
-focus_mode = 0
-text = "Use black instead of white for fonts"
-
-[node name="Background" type="HBoxContainer" parent="Settings/Margin/VBox"]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="Label" type="Label" parent="Settings/Margin/VBox/Background"]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "Background Colour"
-horizontal_alignment = 1
-
-[node name="Pick" type="ColorPickerButton" parent="Settings/Margin/VBox/Background"]
-layout_mode = 2
-size_flags_vertical = 3
-focus_mode = 0
-text = "Background Colour"
-color = Color(1, 1, 1, 1)
-edit_alpha = false
-
 [connection signal="tree_entered" from="." to="." method="_on_tree_entered"]
-[connection signal="tree_exiting" from="." to="." method="_on_tree_exiting"]
 [connection signal="tab_changed" from="Tabs" to="." method="_on_tabs_tab_changed"]
 [connection signal="pressed" from="Tabs/Stats/Stats/VBox/Main/Expand" to="Tabs/Stats/Stats/VBox" method="accordion_text" binds= [".", true]]
 [connection signal="pressed" from="Tabs/Stats/Stats/VBox/Main/Collapse" to="Tabs/Stats/Stats/VBox" method="accordion_text" binds= [".", false]]
@@ -4806,9 +4802,8 @@ edit_alpha = false
 [connection signal="pressed" from="Tabs/Winged Light Tracker/Margin/VBox/Main/Uncheck" to="Tabs/Winged Light Tracker/Margin/VBox" method="_on_uncheck_pressed"]
 [connection signal="bought" from="Tabs/Days Of/Margin/VBox/Tree" to="Tabs/Days Of/Margin/VBox" method="_on_tree_bought"]
 [connection signal="pressed" from="Tabs/Days Of/Margin/VBox/All" to="Tabs/Days Of/Margin/VBox" method="_on_all_pressed"]
+[connection signal="toggled" from="Tabs/Settings/Margin/VBox/CheckButton" to="Tabs/Settings/Margin/VBox" method="_on_check_button_toggled"]
 [connection signal="pressed" from="Candle Tracker/Margin/VBox/Main/Expand" to="Candle Tracker/Margin/VBox" method="_on_expand_pressed"]
 [connection signal="pressed" from="Candle Tracker/Margin/VBox/Main/Collapse" to="Candle Tracker/Margin/VBox" method="_on_collapse_pressed"]
 [connection signal="pressed" from="Candle Tracker/Margin/VBox/Main/Check" to="Candle Tracker/Margin/VBox" method="_on_check_pressed"]
 [connection signal="pressed" from="Candle Tracker/Margin/VBox/Main/Uncheck" to="Candle Tracker/Margin/VBox" method="_on_uncheck_pressed"]
-[connection signal="toggled" from="Settings/Margin/VBox/CheckButton" to="." method="_on_check_button_toggled"]
-[connection signal="color_changed" from="Settings/Margin/VBox/Background/Pick" to="." method="_on_pick_color_changed"]

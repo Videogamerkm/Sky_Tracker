@@ -12,6 +12,7 @@ config_version=5
 
 config/name="Sky Tracker"
 run/main_scene="res://main.tscn"
+config/auto_accept_quit=false
 config/features=PackedStringArray("4.1", "Forward Plus")
 run/low_processor_mode=true
 config/icon="res://icon.png"

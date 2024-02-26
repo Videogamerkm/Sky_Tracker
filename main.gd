@@ -2,8 +2,12 @@ extends Control
 
 var saveFile = "user://save.dat"
 
-func _on_tree_exiting():
-	$Tabs.queue_free()
+func _notification(what):
+	if what == NOTIFICATION_WM_CLOSE_REQUEST:
+		save()
+		get_tree().quit()
+
+func save():
 	var file = FileAccess.open(saveFile, FileAccess.WRITE)
 	file.store_var($"Tabs/Regular Spirits/Margin/VBox".bought)
 	file.store_var($"Tabs/Current Season/Margin/VBox/Pass/Check".is_pressed())
@@ -11,6 +15,8 @@ func _on_tree_exiting():
 	file.store_var($"Tabs/Seasonal Spirits/Margin/VBox".bought)
 	file.store_var($"Tabs/Winged Light Tracker/Margin/VBox".export_checked())
 	file.store_var($"Tabs/Days Of/Margin/VBox".bought)
+	file.store_var($Tabs/Settings/Margin/VBox.use_short)
+	file.close()
 
 func _on_tree_entered():
 	if not FileAccess.file_exists(saveFile): return
@@ -23,6 +29,8 @@ func _on_tree_entered():
 	if file.get_position() < file.get_length(): $"Tabs/Winged Light Tracker/Margin/VBox".import_checked(file.get_var())
 	if not $"Tabs/Days Of/Margin/VBox".is_node_ready(): await $"Tabs/Days Of/Margin/VBox".ready
 	if file.get_position() < file.get_length(): $"Tabs/Days Of/Margin/VBox".bought = file.get_var()
+	if file.get_position() < file.get_length(): $Tabs/Settings/Margin/VBox.use_short = file.get_var()
+	$Tabs/Settings/Margin/VBox.set_short()
 	$Tabs/Stats/Stats/VBox.set_values()
 	$"Tabs/Days Of/Margin/VBox".import()
 
