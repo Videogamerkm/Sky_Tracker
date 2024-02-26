@@ -3,7 +3,7 @@ extends VBoxContainer
 var spirits = preload("res://SeasonSpirits.gd")
 var seasonName = "Season of the Nine-Colored Deer"
 var start = 1705305600
-var end = 1711958399
+var end = 1711954799
 var needNoPass = 354
 var needPass = 398
 const months = ["","January","February","March","April","May","June","July","August","September","October","November","December"]
@@ -46,7 +46,7 @@ func convert_time(timestamp) -> String:
 		post = "nd"
 	elif day.ends_with("3") && not day == "13":
 		post = "rd"
-	return ret+post+", "+str(dict["year"])
+	return ("%02d:%02d"%[dict["hour"],dict["minute"]])+" "+ret+post+", "+str(dict["year"])
 
 func _on_check_toggled(_button_pressed):
 	_ready()
