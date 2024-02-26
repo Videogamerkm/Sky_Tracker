@@ -2704,6 +2704,15 @@ visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 
+[node name="All" type="Button" parent="Tabs/Seasonal Spirits/Margin/VBox"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+focus_mode = 0
+theme_override_constants/icon_max_width = 100
+text = "Buy All"
+
 [node name="Clear" type="Button" parent="Tabs/Seasonal Spirits/Margin/VBox"]
 layout_mode = 2
 focus_mode = 0
@@ -4604,6 +4613,7 @@ edit_alpha = false
 [connection signal="toggled" from="Tabs/Current Season/Margin/VBox/Pass/Check" to="Tabs/Current Season/Margin/VBox" method="_on_check_toggled"]
 [connection signal="pressed" from="Tabs/Seasonal Spirits/Margin/VBox/Back" to="Tabs/Seasonal Spirits/Margin/VBox" method="_on_back_pressed"]
 [connection signal="bought" from="Tabs/Seasonal Spirits/Margin/VBox/Tree" to="Tabs/Seasonal Spirits/Margin/VBox" method="_on_tree_bought"]
+[connection signal="pressed" from="Tabs/Seasonal Spirits/Margin/VBox/All" to="Tabs/Seasonal Spirits/Margin/VBox" method="_on_all_pressed"]
 [connection signal="pressed" from="Tabs/Seasonal Spirits/Margin/VBox/Clear" to="Tabs/Seasonal Spirits/Margin/VBox" method="_on_clear_pressed"]
 [connection signal="confirmed" from="Tabs/Seasonal Spirits/Margin/VBox/Confirm" to="Tabs/Seasonal Spirits/Margin/VBox" method="_on_confirm_confirmed"]
 [connection signal="pressed" from="Tabs/Winged Light Tracker/Margin/VBox/Main/Expand" to="Tabs/Winged Light Tracker/Margin/VBox" method="_on_expand_pressed"]
