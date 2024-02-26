@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://b04gr0a605mxh"]
+[gd_scene load_steps=41 format=3 uid="uid://b04gr0a605mxh"]
 
 [ext_resource type="PackedScene" uid="uid://bap3aptv3y1dw" path="res://collapsible.tscn" id="1_au16a"]
 [ext_resource type="Theme" uid="uid://cqobwtkqodo0r" path="res://white.tres" id="1_q23n0"]
@@ -31,6 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://bj8i3r3dqrbog" path="res://icons/reg/exp/point.bmp" id="24_6s72r"]
 [ext_resource type="Script" path="res://Shards.gd" id="31_o8kan"]
 [ext_resource type="Texture2D" uid="uid://c5eblgnrna6cu" path="res://icons/seas/icons/Dreams.bmp" id="31_yldyr"]
+[ext_resource type="Script" path="res://Days.gd" id="32_s61rv"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_kei1y"]
 
@@ -3971,6 +3972,96 @@ theme_override_font_sizes/font_size = 16
 text = "Check out this Sky Shards App by Plutoy for more."
 uri = "https://sky-shards.pages.dev/"
 
+[node name="Days Of" type="ScrollContainer" parent="Tabs"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="Margin" type="MarginContainer" parent="Tabs/Days Of"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="No" type="Label" parent="Tabs/Days Of/Margin"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 24
+text = "There isn't a Days of event currently going on."
+horizontal_alignment = 1
+
+[node name="VBox" type="VBoxContainer" parent="Tabs/Days Of/Margin"]
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("32_s61rv")
+
+[node name="Name" type="Label" parent="Tabs/Days Of/Margin/VBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 24
+text = "43"
+horizontal_alignment = 1
+
+[node name="Time" type="HBoxContainer" parent="Tabs/Days Of/Margin/VBox"]
+layout_mode = 2
+
+[node name="Start" type="Label" parent="Tabs/Days Of/Margin/VBox/Time"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "January 1st, 2024"
+horizontal_alignment = 2
+
+[node name="Label" type="Label" parent="Tabs/Days Of/Margin/VBox/Time"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 20
+text = " - "
+horizontal_alignment = 1
+
+[node name="End" type="Label" parent="Tabs/Days Of/Margin/VBox/Time"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "January 15th, 2024"
+
+[node name="Days" type="Label" parent="Tabs/Days Of/Margin/VBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "43"
+horizontal_alignment = 1
+
+[node name="Per Day" type="Label" parent="Tabs/Days Of/Margin/VBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "Tickets collectable per day: 5"
+horizontal_alignment = 1
+
+[node name="place4" type="Label" parent="Tabs/Days Of/Margin/VBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+
+[node name="Tree" parent="Tabs/Days Of/Margin/VBox" instance=ExtResource("4_t1mtd")]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="All" type="Button" parent="Tabs/Days Of/Margin/VBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+focus_mode = 0
+theme_override_constants/icon_max_width = 100
+text = "Buy All"
+
 [node name="Candle Tracker" type="ScrollContainer" parent="."]
 visible = false
 layout_mode = 2
@@ -4703,6 +4794,8 @@ edit_alpha = false
 [connection signal="pressed" from="Tabs/Winged Light Tracker/Margin/VBox/Main/Collapse" to="Tabs/Winged Light Tracker/Margin/VBox" method="_on_collapse_pressed"]
 [connection signal="pressed" from="Tabs/Winged Light Tracker/Margin/VBox/Main/Check" to="Tabs/Winged Light Tracker/Margin/VBox" method="_on_check_pressed"]
 [connection signal="pressed" from="Tabs/Winged Light Tracker/Margin/VBox/Main/Uncheck" to="Tabs/Winged Light Tracker/Margin/VBox" method="_on_uncheck_pressed"]
+[connection signal="bought" from="Tabs/Days Of/Margin/VBox/Tree" to="Tabs/Days Of/Margin/VBox" method="_on_tree_bought"]
+[connection signal="pressed" from="Tabs/Days Of/Margin/VBox/All" to="Tabs/Days Of/Margin/VBox" method="_on_all_pressed"]
 [connection signal="pressed" from="Candle Tracker/Margin/VBox/Main/Expand" to="Candle Tracker/Margin/VBox" method="_on_expand_pressed"]
 [connection signal="pressed" from="Candle Tracker/Margin/VBox/Main/Collapse" to="Candle Tracker/Margin/VBox" method="_on_collapse_pressed"]
 [connection signal="pressed" from="Candle Tracker/Margin/VBox/Main/Check" to="Candle Tracker/Margin/VBox" method="_on_check_pressed"]

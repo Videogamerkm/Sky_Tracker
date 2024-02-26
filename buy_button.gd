@@ -1,5 +1,6 @@
 extends Button
 
+var days = preload("res://Days.gd")
 @export var type = "a"
 @export var cost = 10
 @export var isSP = false
@@ -17,6 +18,8 @@ func _ready():
 		$Curr.set_texture(preload("res://icons/base/season_candle.bmp"))
 	elif type == "sh":
 		$Curr.set_texture(preload("res://icons/base/season_heart.bmp"))
+	elif type == "k":
+		$Curr.set_texture(load("res://icons/days/"+days.short+"/ticket.bmp"))
 	elif type == "0":
 		$Curr.hide()
 		$Cost.hide()
