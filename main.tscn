@@ -4152,6 +4152,48 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_7gr2j")
 theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_141fx")
 text = "Use shortened tab names"
 
+[node name="Credits" type="ScrollContainer" parent="Tabs"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="Margin" type="MarginContainer" parent="Tabs/Credits"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBox" type="VBoxContainer" parent="Tabs/Credits/Margin"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Tabs/Credits/Margin/VBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 24
+text = "Thank you for using this app!"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="Tabs/Credits/Margin/VBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "
+The banner at the top of the current season tab, the check button icons, and the spirit constellation buttons are created by my wonderful husband, who is also my primary tester and an absolute font of excellent design ideas.
+
+The majority of other assets (currency icons, expressions and cosmetics, and the season icons) were sourced from the Sky Fandom wiki. As I understand it, the primary contributors to the wiki of these are Morybel, Mimi4117, Jet Lye, and Ray808080. I primarily made this app to collect the information from the Fandom wiki and present it in a useful way that made sense to me, away from said wiki, as I have serious issues with Fandom. But, this wouldn't have been possible without the hard work of the people contributing there.
+
+Ultimately, all information and graphics are pulled from or based on Sky: Children of the Light, a game by thatgamecompany.
+
+If you somehow found this app without playing the game, you really should try it out!"
+horizontal_alignment = 1
+autowrap_mode = 3
+
 [node name="Candle Tracker" type="ScrollContainer" parent="."]
 visible = false
 layout_mode = 2
