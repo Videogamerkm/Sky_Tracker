@@ -1,7 +1,8 @@
 extends VBoxContainer
 
-var timeUtils = preload("res://TimeUtils.gd")
+const timeUtils = preload("res://TimeUtils.gd")
 const day = "Days of Love"
+const location = "Jellyfish Cove"
 const short = "love"
 const start = {"day":12,"month":2,"year":2024,"hour":0}
 const end = {"day":25,"month":2,"year":2024,"hour":23,"minute":59}
@@ -36,3 +37,7 @@ func _on_all_pressed():
 func import():
 	if timeUtils.get_time_since(end) >= 0 && bought.has(day):
 		$Tree.import_bought(bought[day])
+
+static func get_location_override() -> String:
+	if timeUtils.get_time_since(end) < 0: return ""
+	else: return location

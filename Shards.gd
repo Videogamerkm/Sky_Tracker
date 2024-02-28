@@ -1,6 +1,7 @@
 extends VBoxContainer
 
 var timeUtils = preload("res://TimeUtils.gd")
+var days = preload("res://Days.gd")
 var cycle = [2,1,3,0,4,1,2,0,3,1,4,0]
 const excl = [[6,0],[0,1],[1,2],[2,3],[3,4]]
 const times = [[7_080,35_880,64_680],[8_280,37_080,65_880],[28_080,49_680,71_280],[8_880,30_480,52_080],[13_080,34_680,56_280]]
@@ -11,7 +12,6 @@ const locs = [["Butterfly Fields","Forest Brook","Ice Rink","Broken Temple","Sta
 	["Sanctuary Islands","Elevated Clearing","Hermit Valley","Forgotten Ark","Jellyfish Cove"]]
 const vals = [[],[],[2.0,2.5,2.5,2.0,3.5],[2.5,3.5,2.5,2.5,3.5],[3.5,3.5,3.5,3.5,3.5]]
 var server_reset
-var location_override = "Jellyfish Cove"
 
 func _ready():
 	set_fields()
@@ -30,7 +30,7 @@ func set_fields():
 	var c = cycle[(datetime["day"] - 1) % cycle.size()]
 	var type = "None" if datetime["weekday"] == excl[c][0] || datetime["weekday"] == excl[c][1] else "Strong" if c > 1 else "Regular"
 	var loc = locs[c][(datetime["day"] - 1) % 5]
-	type = "None" if loc == location_override else type
+	type = "None" if loc == days.get_location_override() else type
 	var val = 0 if type == "None" else 200 if type == "Regular" else vals[c][(datetime["day"] - 1) % 5]
 	$Date.text = "It is %s, %s %s%s, %d"%[timeUtils.days[datetime["weekday"]],timeUtils.months[datetime["month"]],datetime["day"],timeUtils.get_post(str(datetime["day"])),datetime["year"]]
 	if type != "None":
@@ -47,4 +47,4 @@ func set_fields():
 		for i in range(1,4): get_node("Time"+str(i)).hide()
 		$place2.hide()
 		$Reward.text = "There are no shards falling today."
-		if loc == location_override: $Reward.text += " Normally there would be, but something is overriding it."
+		if loc == days.get_location_override(): $Reward.text += " Normally there would be, but something is overriding it."
