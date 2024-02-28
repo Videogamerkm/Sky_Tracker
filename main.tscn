@@ -4184,13 +4184,13 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "
-The banner at the top of the current season tab, the check button icons, and the spirit constellation buttons are created by my wonderful husband, who is also my primary tester and an absolute font of excellent design ideas.
+I created this in the hopes of having a lightweight, non-web app to help track some information in Sky: Children of the Light, a game by thatgamecompany. Ultimately, all of the information and graphics here are directly from or derived from their work.
 
-The majority of other assets (currency icons, expressions and cosmetics, and the season icons) were sourced from the Sky Fandom wiki. As I understand it, the primary contributors to the wiki of these are Morybel, Mimi4117, Jet Lye, and Ray808080. I primarily made this app to collect the information from the Fandom wiki and present it in a useful way that made sense to me, away from said wiki, as I have serious issues with Fandom. But, this wouldn't have been possible without the hard work of the people contributing there.
+A secondary reason I created this app is I have some major, fundamental issues with the way Fandom manages the wikis hosted by them. There's lots of information out there, notably about why the Pokemon, Minecraft, Terraria, and Hollow Knight communities moved their wikis off of Fandom. You should search those topics for more.
 
-Ultimately, all information and graphics are pulled from or based on Sky: Children of the Light, a game by thatgamecompany.
+Despite that, a lot of the information I've included here is derived or pulled from the Sky fandom wiki. Notably, I used a lot of icons and graphics created by contributors, especially Morybel, Mimi4117, Jet Lye, and Ray808080.
 
-If you somehow found this app without playing the game, you really should try it out!"
+Finally, there's a few graphics that my husband created for this app: the constellation buttons on the regular spirits page, and the banner on the current season page. He's been the source of a lot of the most user-friendly changes I've made since inception."
 horizontal_alignment = 1
 autowrap_mode = 3
 
