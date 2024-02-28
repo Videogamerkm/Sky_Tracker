@@ -248,8 +248,8 @@ func set_values():
 	$"Winged Light/Grid".get_node("Seasonal Avail").text = str(seas_avail)
 	$"Winged Light/Grid".get_node("SeasTier2 Coll").text = str(seas_t2)
 	$"Winged Light/Grid".get_node("SeasTier2 Avail").text = str(seas_t2_avail)
-	$"Winged Light/Grid".get_node("Total Coll2").text = str(light_coll + reg_coll + seas_coll)
-	$"Winged Light/Grid".get_node("Total Avail2").text = str(light_avail + reg_avail + seas_avail)
+	$"Winged Light/Grid".get_node("Total Coll2").text = str(light_coll + reg_coll + reg_t2 + seas_coll + seas_t2)
+	$"Winged Light/Grid".get_node("Total Avail2").text = str(light_avail + reg_avail + seas_avail + reg_t2_avail + seas_t2_avail)
 	var w = 0
 	while light_coll + reg_coll + seas_coll >= wedges[w]: w += 1
 	$"Winged Light/Wings".text = "You should have "+str(w)+" cape wedges."
