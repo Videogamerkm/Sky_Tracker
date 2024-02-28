@@ -15,6 +15,7 @@ func set_short():
 		$"../../..".set_tab_title(5,"Shrd")
 		$"../../..".set_tab_title(6,"Days")
 		$"../../..".set_tab_title(7,"Sets")
+		$"../../..".set_tab_title(8,"Creds")
 	else:
 		$"../../..".set_tab_title(1,"Regular Spirits")
 		$"../../..".set_tab_title(2,"Current Season")
@@ -23,3 +24,5 @@ func set_short():
 		$"../../..".set_tab_title(5,"Shard Eruptions")
 		$"../../..".set_tab_title(6,"Days Of")
 		$"../../..".set_tab_title(7,"Settings")
+		$"../../..".set_tab_title(8,"Credits")
+	$CheckButton.set_pressed_no_signal(use_short)
