@@ -4152,6 +4152,48 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_7gr2j")
 theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_141fx")
 text = "Use shortened tab names"
 
+[node name="Credits" type="ScrollContainer" parent="Tabs"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="Margin" type="MarginContainer" parent="Tabs/Credits"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBox" type="VBoxContainer" parent="Tabs/Credits/Margin"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Tabs/Credits/Margin/VBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 24
+text = "Thank you for using this app!"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="Tabs/Credits/Margin/VBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "
+I created this in the hopes of having a lightweight, non-web app to help track some information in Sky: Children of the Light, a game by thatgamecompany. Ultimately, all of the information and graphics here are directly from or derived from their work.
+
+A secondary reason I created this app is I have some major, fundamental issues with the way Fandom manages the wikis hosted by them. There's lots of information out there, notably about why the Pokemon, Minecraft, Terraria, and Hollow Knight communities moved their wikis off of Fandom. You should search those topics for more.
+
+Despite that, a lot of the information I've included here is derived or pulled from the Sky fandom wiki. Notably, I used a lot of icons and graphics created by contributors, especially Morybel, Mimi4117, Jet Lye, and Ray808080.
+
+Finally, there's a few graphics that my husband created for this app: the constellation buttons on the regular spirits page, and the banner on the current season page. He's been the source of a lot of the most user-friendly changes I've made since inception."
+horizontal_alignment = 1
+autowrap_mode = 3
+
 [node name="Candle Tracker" type="ScrollContainer" parent="."]
 visible = false
 layout_mode = 2
