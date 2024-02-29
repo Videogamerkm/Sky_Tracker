@@ -28,8 +28,8 @@ static var data = {"Bearhug Hermit":{"loc":"Season of Dreams",
 	["seas/cos/bearhug 1;42;c","base/wing;2;a","base/heart;3;c"],["base/sheet;15;c","base/5C;5;c",""],["","seas/exp/bearhug;0;0",""]]},
 	
 	"Light Whisperer":{"loc":"Season of Flight",
-	"tree":[["seas/cos/light 3;8;h","seas/cos/light 4;70;c","seas/cos/light 2;70;c"],["","base/5C;5;c",""],
-	["seas/cos/light 1;42;c","base/wing;2;a","base/heart;3;c"],["","base/5C;5;c",""],["","seas/exp/light;0;0",""]]},
+	"tree":[["seas/cos/light 1;50;c","seas/cos/light 4;70;c","seas/cos/light 2;65;c"],["","base/5C;5;c",""],
+	["seas/cos/light 3;45;c","base/wing;2;a","base/heart;3;c"],["","base/5C;5;c",""],["","seas/exp/light;0;0",""]]},
 	
 	"Herb Gatherer":{"loc":"Season of the Nine-Colored Deer",
 	"tree":[["base/5C;0;0;sp","base/season_heart;3;sp;sp",""],["seas/exp/whistle;0;0;sp","seas/cos/whistle 2;36;sp",""],
