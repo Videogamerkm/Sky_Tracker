@@ -17,11 +17,11 @@ func _ready():
 func _on_collapse_toggled(button_pressed):
 	if button_pressed:
 		for c in get_children():
-			if c == $Margin: continue
+			if c == $Margin or c is Window: continue
 			else: c.hide()
 		$Margin/Title/Label.text = "v"
 	else:
 		for c in get_children():
-			if c == $Margin: continue
+			if c == $Margin or c is Window: continue
 			else: c.show()
 		$Margin/Title/Label.text = "^"
