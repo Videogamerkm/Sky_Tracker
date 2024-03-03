@@ -48,8 +48,9 @@ func _on_back_pressed():
 	$"Spirits 2".show()
 	$"Area Selection".show()
 
-func _on_tree_bought():
+func _on_tree_bought(_iconValue,_press):
 	bought[curr_spirit] = $Tree.export_bought()
+	# No need to pass on value, these trees are static
 
 func _on_clear_pressed():
 	$Confirm.show()
@@ -64,4 +65,4 @@ func _on_confirm_confirmed():
 		$Tree.set_tree(spirits.data[curr_spirit]["tree"])
 
 func _on_all_pressed():
-	bought[curr_spirit] = $Tree.buy_all()
+	$Tree.buy_all()
