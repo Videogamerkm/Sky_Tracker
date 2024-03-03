@@ -39,6 +39,7 @@ func _on_tree_entered():
 			$"Tabs/Seasonal Spirits/Margin/VBox".curr_spirit = s
 			$"Tabs/Seasonal Spirits/Margin/VBox/Tree".set_tree(preload("res://SeasonSpirits.gd").data[s]["tree"])
 			$"Tabs/Seasonal Spirits/Margin/VBox/Tree".import_bought($"Tabs/Seasonal Spirits/Margin/VBox".bought[s])
+		$"Tabs/Seasonal Spirits/Margin/VBox".curr_spirit = ""
 	$Tabs/Settings/Margin/VBox.set_short()
 	$Tabs/Stats/Stats/VBox.set_values()
 	$"Tabs/Days Of/Margin/VBox/VBox".import()
