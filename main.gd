@@ -33,6 +33,12 @@ func _on_tree_entered():
 	if file.get_position() < file.get_length(): $"Tabs/Days Of/Margin/VBox/VBox".bought = file.get_var()
 	if file.get_position() < file.get_length(): $Tabs/Settings/Margin/VBox.use_short = file.get_var()
 	if file.get_position() < file.get_length(): cosmetics = file.get_var()
+	$"Tabs/Seasonal Spirits/Margin/VBox".bought.erase("")
+	if cosmetics == []:
+		for s in $"Tabs/Seasonal Spirits/Margin/VBox".bought:
+			$"Tabs/Seasonal Spirits/Margin/VBox".curr_spirit = s
+			$"Tabs/Seasonal Spirits/Margin/VBox/Tree".set_tree(preload("res://SeasonSpirits.gd").data[s]["tree"])
+			$"Tabs/Seasonal Spirits/Margin/VBox/Tree".import_bought($"Tabs/Seasonal Spirits/Margin/VBox".bought[s])
 	$Tabs/Settings/Margin/VBox.set_short()
 	$Tabs/Stats/Stats/VBox.set_values()
 	$"Tabs/Days Of/Margin/VBox/VBox".import()
@@ -52,4 +58,4 @@ func _input(event):
 func update_cos(value,add):
 	if value == "" or (value.begins_with("base/") and not value.contains("?")): return
 	if add and not cosmetics.has(value): cosmetics.append(value)
-	elif cosmetics.has(value): cosmetics.erase(value)
+	elif not add and cosmetics.has(value): cosmetics.erase(value)
