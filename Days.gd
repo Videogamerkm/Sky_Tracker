@@ -67,7 +67,7 @@ func import():
 		$Tree.import_bought(bought[day])
 	for c in $"../Past".get_children():
 		if not c.is_node_ready(): await c.ready
-		if c is Label: continue
+		if c is Label or (timeUtils.get_time_since(end) >= 0 && c.name == day): continue
 		if rows.has(c.name): c.get_node("Tree").set_tree(rows[c.name],short[c.name])
 		if bought.has(c.name): c.get_node("Tree").import_bought(bought[c.name])
 
@@ -88,7 +88,7 @@ func _on_tree_reject():
 		var row = []
 		for i in r:
 			if i != "": row.append(main.cosmetics.has(i.split(";")[0]))
-			else: row.append(false)
+			else: row.append(null)
 		newBought.append(row)
 	bought[day] = newBought
-	import()
+	$Tree.import_bought(bought[day])

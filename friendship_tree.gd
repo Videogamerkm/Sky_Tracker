@@ -60,10 +60,10 @@ func import_bought(vals: Array):
 	for row in vals:
 		var r = 0
 		for b in row:
-			if b and not get_child(c).get_child(r).is_visible():
+			if (b and not get_child(c).get_child(r).is_visible()) or (b == null and get_child(c).get_child(r).is_visible()):
 				reject.emit()
 				return
-			get_child(c).get_child(r).set_pressed(b)
+			if b != null: get_child(c).get_child(r).set_pressed(b)
 			r += 1
 		c += 2
 
@@ -73,7 +73,9 @@ func export_bought() -> Array:
 	for child in get_children():
 		if c % 2 == 0:
 			var row = []
-			for i in range(0,3): row.append(child.get_child(i).is_pressed())
+			for i in range(0,3):
+				if child.get_child(i).is_visible(): row.append(child.get_child(i).is_pressed())
+				else: row.append(null)
 			ret.append(row)
 		c += 1
 	return ret
@@ -88,7 +90,7 @@ func buy_all() -> Array:
 				if child.get_child(i).is_visible():
 					row.append(true)
 					child.get_child(i).set_pressed(true)
-				else: row.append(false)
+				else: row.append(null)
 			ret.append(row)
 		c += 1
 	return ret

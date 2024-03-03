@@ -24,7 +24,7 @@ func _on_tree_reject():
 		var row = []
 		for i in r:
 			if i != "": row.append(main.cosmetics.has(i.split(";")[0]))
-			else: row.append(false)
+			else: row.append(null)
 		newBought.append(row)
 	daysTab.bought[name] = newBought
 	$Tree.import_bought(daysTab.bought[name])
