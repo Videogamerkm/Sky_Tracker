@@ -40,7 +40,7 @@ static var data = {"Pointing Candlemaker":{"loc":"Isle of Dawn",
 	
 	"Bird Whisperer":{"loc":"Daylight Prairie",
 	"tree":[["","reg/cos/bird;5;h",""],["","base/5C;5;c",""],["base/heart;3;c","base/wing;2;a",""],
-	["base/sheet;1;h","base/1C;1;c",""],["","reg/exp/bird;0;0",""]]},
+	["base/sheet?1;1;h","base/1C;1;c",""],["","reg/exp/bird;0;0",""]]},
 	
 	"Exhausted Dock Worker":{"loc":"Daylight Prairie",
 	"tree":[["","reg/cos/sweat;3;h",""],["reg/exp/sweat;5;c","base/5C;5;c",""],["","reg/exp/sweat;5;c",""],
@@ -84,7 +84,7 @@ static var data = {"Pointing Candlemaker":{"loc":"Isle of Dawn",
 	["reg/exp/cry;3;c","base/1C;1;c",""],["","reg/exp/cry;0;0",""]]},
 	
 	"Whale Whisperer":{"loc":"Hidden Forest",
-	"tree":[["","base/sheet;2;h",""],["","base/5C;5;c",""],["base/heart;3;c","base/wing;1;a",""],
+	"tree":[["","base/sheet?2;2;h",""],["","base/5C;5;c",""],["base/heart;3;c","base/wing;1;a",""],
 	["","base/1C;1;c",""],["","reg/exp/whale;0;0",""]]},
 	
 	"Elder of the Forest":{"loc":"Hidden Forest","tree":[["","reg/cos/forest 2;250;a;u",""],["","reg/cos/forest 1;6;a;u",""]]},
@@ -99,7 +99,7 @@ static var data = {"Pointing Candlemaker":{"loc":"Isle of Dawn",
 	["reg/exp/handstand;3;c","base/1C;1;c",""],["","reg/exp/handstand;0;0",""]]},
 	
 	"Manta Whisperer":{"loc":"Valley of Triumph",
-	"tree":[["","base/sheet;3;h",""],["","base/5C;5;c",""],["","base/wing;1;a",""],
+	"tree":[["","base/sheet?3;3;h",""],["","base/5C;5;c",""],["","base/wing;1;a",""],
 	["base/heart;3;c","base/1C;1;c",""],["","reg/exp/manta;0;0",""]]},
 	
 	"Backflipping Champion":{"loc":"Valley of Triumph",

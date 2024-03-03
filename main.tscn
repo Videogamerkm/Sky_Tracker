@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://b04gr0a605mxh"]
+[gd_scene load_steps=48 format=3 uid="uid://b04gr0a605mxh"]
 
 [ext_resource type="PackedScene" uid="uid://bap3aptv3y1dw" path="res://collapsible.tscn" id="1_au16a"]
 [ext_resource type="Theme" uid="uid://cqobwtkqodo0r" path="res://white.tres" id="1_q23n0"]
@@ -32,6 +32,7 @@
 [ext_resource type="Script" path="res://Shards.gd" id="31_o8kan"]
 [ext_resource type="Texture2D" uid="uid://c5eblgnrna6cu" path="res://icons/seas/icons/Dreams.bmp" id="31_yldyr"]
 [ext_resource type="Script" path="res://Days.gd" id="32_s61rv"]
+[ext_resource type="Script" path="res://DaysFold.gd" id="33_8v5j5"]
 [ext_resource type="Script" path="res://Settings.gd" id="33_lxqsm"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_kei1y"]
@@ -4047,80 +4048,455 @@ theme_override_constants/margin_top = 24
 theme_override_constants/margin_right = 24
 theme_override_constants/margin_bottom = 24
 
-[node name="No" type="Label" parent="Tabs/Days Of/Margin"]
-visible = false
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 24
-text = "There isn't a Days of event currently going on."
-horizontal_alignment = 1
-
 [node name="VBox" type="VBoxContainer" parent="Tabs/Days Of/Margin"]
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="Tabs/Days Of/Margin/VBox"]
 layout_mode = 2
 size_flags_horizontal = 3
 script = ExtResource("32_s61rv")
 
-[node name="Name" type="Label" parent="Tabs/Days Of/Margin/VBox"]
+[node name="No" type="Label" parent="Tabs/Days Of/Margin/VBox/VBox"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 24
+text = "There isn't a Days of-event currently going on."
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Name" type="Label" parent="Tabs/Days Of/Margin/VBox/VBox"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 24
 text = "43"
 horizontal_alignment = 1
 
-[node name="Time" type="HBoxContainer" parent="Tabs/Days Of/Margin/VBox"]
+[node name="Time" type="HBoxContainer" parent="Tabs/Days Of/Margin/VBox/VBox"]
 layout_mode = 2
 
-[node name="Start" type="Label" parent="Tabs/Days Of/Margin/VBox/Time"]
+[node name="Start" type="Label" parent="Tabs/Days Of/Margin/VBox/VBox/Time"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 20
 text = "January 1st, 2024"
 horizontal_alignment = 2
 
-[node name="Label" type="Label" parent="Tabs/Days Of/Margin/VBox/Time"]
+[node name="Label" type="Label" parent="Tabs/Days Of/Margin/VBox/VBox/Time"]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 20
 text = " - "
 horizontal_alignment = 1
 
-[node name="End" type="Label" parent="Tabs/Days Of/Margin/VBox/Time"]
+[node name="End" type="Label" parent="Tabs/Days Of/Margin/VBox/VBox/Time"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 20
 text = "January 15th, 2024"
 
-[node name="Days" type="Label" parent="Tabs/Days Of/Margin/VBox"]
+[node name="Days" type="Label" parent="Tabs/Days Of/Margin/VBox/VBox"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 20
 text = "43"
 horizontal_alignment = 1
 
-[node name="Per Day" type="Label" parent="Tabs/Days Of/Margin/VBox"]
+[node name="Per Day" type="Label" parent="Tabs/Days Of/Margin/VBox/VBox"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 20
 text = "Tickets collectable per day: 5"
 horizontal_alignment = 1
 
-[node name="place4" type="Label" parent="Tabs/Days Of/Margin/VBox"]
+[node name="place4" type="Label" parent="Tabs/Days Of/Margin/VBox/VBox"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 12
 horizontal_alignment = 1
 
-[node name="Tree" parent="Tabs/Days Of/Margin/VBox" instance=ExtResource("4_t1mtd")]
+[node name="Tree" parent="Tabs/Days Of/Margin/VBox/VBox" instance=ExtResource("4_t1mtd")]
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="All" type="Button" parent="Tabs/Days Of/Margin/VBox"]
+[node name="All" type="Button" parent="Tabs/Days Of/Margin/VBox/VBox"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0
 focus_mode = 0
 theme_override_constants/icon_max_width = 100
 text = "Buy All"
+
+[node name="Clear" type="Button" parent="Tabs/Days Of/Margin/VBox/VBox"]
+layout_mode = 2
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_d7tig")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ohe4u")
+text = "Clear Event Data"
+
+[node name="Confirm" type="ConfirmationDialog" parent="Tabs/Days Of/Margin/VBox/VBox"]
+initial_position = 2
+size = Vector2i(300, 187)
+dialog_text = "Are you sure you want to clear purchase data for this event?
+
+This cannot be undone."
+dialog_autowrap = true
+
+[node name="Past" type="VBoxContainer" parent="Tabs/Days Of/Margin/VBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Days of Fortune" parent="Tabs/Days Of/Margin/VBox/Past" instance=ExtResource("1_au16a")]
+layout_mode = 2
+script = ExtResource("33_8v5j5")
+collapse = true
+
+[node name="Tree" parent="Tabs/Days Of/Margin/VBox/Past/Days of Fortune" instance=ExtResource("4_t1mtd")]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="All" type="Button" parent="Tabs/Days Of/Margin/VBox/Past/Days of Fortune"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+focus_mode = 0
+theme_override_constants/icon_max_width = 100
+text = "Buy All"
+
+[node name="Clear" type="Button" parent="Tabs/Days Of/Margin/VBox/Past/Days of Fortune"]
+layout_mode = 2
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_d7tig")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ohe4u")
+text = "Clear Event Data"
+
+[node name="Confirm" type="ConfirmationDialog" parent="Tabs/Days Of/Margin/VBox/Past/Days of Fortune"]
+initial_position = 2
+size = Vector2i(300, 187)
+dialog_text = "Are you sure you want to clear purchase data for this event?
+
+This cannot be undone."
+dialog_autowrap = true
+
+[node name="Days of Love" parent="Tabs/Days Of/Margin/VBox/Past" instance=ExtResource("1_au16a")]
+layout_mode = 2
+script = ExtResource("33_8v5j5")
+collapse = true
+
+[node name="Tree" parent="Tabs/Days Of/Margin/VBox/Past/Days of Love" instance=ExtResource("4_t1mtd")]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="All" type="Button" parent="Tabs/Days Of/Margin/VBox/Past/Days of Love"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+focus_mode = 0
+theme_override_constants/icon_max_width = 100
+text = "Buy All"
+
+[node name="Clear" type="Button" parent="Tabs/Days Of/Margin/VBox/Past/Days of Love"]
+layout_mode = 2
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_d7tig")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ohe4u")
+text = "Clear Event Data"
+
+[node name="Confirm" type="ConfirmationDialog" parent="Tabs/Days Of/Margin/VBox/Past/Days of Love"]
+initial_position = 2
+size = Vector2i(300, 187)
+dialog_text = "Are you sure you want to clear purchase data for this event?
+
+This cannot be undone."
+dialog_autowrap = true
+
+[node name="Days of Bloom" parent="Tabs/Days Of/Margin/VBox/Past" instance=ExtResource("1_au16a")]
+layout_mode = 2
+script = ExtResource("33_8v5j5")
+collapse = true
+
+[node name="Tree" parent="Tabs/Days Of/Margin/VBox/Past/Days of Bloom" instance=ExtResource("4_t1mtd")]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="All" type="Button" parent="Tabs/Days Of/Margin/VBox/Past/Days of Bloom"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+focus_mode = 0
+theme_override_constants/icon_max_width = 100
+text = "Buy All"
+
+[node name="Clear" type="Button" parent="Tabs/Days Of/Margin/VBox/Past/Days of Bloom"]
+layout_mode = 2
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_d7tig")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ohe4u")
+text = "Clear Event Data"
+
+[node name="Confirm" type="ConfirmationDialog" parent="Tabs/Days Of/Margin/VBox/Past/Days of Bloom"]
+initial_position = 2
+size = Vector2i(300, 187)
+dialog_text = "Are you sure you want to clear purchase data for this event?
+
+This cannot be undone."
+dialog_autowrap = true
+
+[node name="Days of Nature" parent="Tabs/Days Of/Margin/VBox/Past" instance=ExtResource("1_au16a")]
+layout_mode = 2
+script = ExtResource("33_8v5j5")
+collapse = true
+
+[node name="Tree" parent="Tabs/Days Of/Margin/VBox/Past/Days of Nature" instance=ExtResource("4_t1mtd")]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="All" type="Button" parent="Tabs/Days Of/Margin/VBox/Past/Days of Nature"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+focus_mode = 0
+theme_override_constants/icon_max_width = 100
+text = "Buy All"
+
+[node name="Clear" type="Button" parent="Tabs/Days Of/Margin/VBox/Past/Days of Nature"]
+layout_mode = 2
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_d7tig")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ohe4u")
+text = "Clear Event Data"
+
+[node name="Confirm" type="ConfirmationDialog" parent="Tabs/Days Of/Margin/VBox/Past/Days of Nature"]
+initial_position = 2
+size = Vector2i(300, 187)
+dialog_text = "Are you sure you want to clear purchase data for this event?
+
+This cannot be undone."
+dialog_autowrap = true
+
+[node name="Days of Color" parent="Tabs/Days Of/Margin/VBox/Past" instance=ExtResource("1_au16a")]
+layout_mode = 2
+script = ExtResource("33_8v5j5")
+collapse = true
+
+[node name="Tree" parent="Tabs/Days Of/Margin/VBox/Past/Days of Color" instance=ExtResource("4_t1mtd")]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="All" type="Button" parent="Tabs/Days Of/Margin/VBox/Past/Days of Color"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+focus_mode = 0
+theme_override_constants/icon_max_width = 100
+text = "Buy All"
+
+[node name="Clear" type="Button" parent="Tabs/Days Of/Margin/VBox/Past/Days of Color"]
+layout_mode = 2
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_d7tig")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ohe4u")
+text = "Clear Event Data"
+
+[node name="Confirm" type="ConfirmationDialog" parent="Tabs/Days Of/Margin/VBox/Past/Days of Color"]
+initial_position = 2
+size = Vector2i(300, 187)
+dialog_text = "Are you sure you want to clear purchase data for this event?
+
+This cannot be undone."
+dialog_autowrap = true
+
+[node name="Days of Music" parent="Tabs/Days Of/Margin/VBox/Past" instance=ExtResource("1_au16a")]
+layout_mode = 2
+script = ExtResource("33_8v5j5")
+collapse = true
+
+[node name="Tree" parent="Tabs/Days Of/Margin/VBox/Past/Days of Music" instance=ExtResource("4_t1mtd")]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="All" type="Button" parent="Tabs/Days Of/Margin/VBox/Past/Days of Music"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+focus_mode = 0
+theme_override_constants/icon_max_width = 100
+text = "Buy All"
+
+[node name="Clear" type="Button" parent="Tabs/Days Of/Margin/VBox/Past/Days of Music"]
+layout_mode = 2
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_d7tig")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ohe4u")
+text = "Clear Event Data"
+
+[node name="Confirm" type="ConfirmationDialog" parent="Tabs/Days Of/Margin/VBox/Past/Days of Music"]
+initial_position = 2
+size = Vector2i(300, 187)
+dialog_text = "Are you sure you want to clear purchase data for this event?
+
+This cannot be undone."
+dialog_autowrap = true
+
+[node name="Sky Anniversary" parent="Tabs/Days Of/Margin/VBox/Past" instance=ExtResource("1_au16a")]
+layout_mode = 2
+script = ExtResource("33_8v5j5")
+collapse = true
+
+[node name="Tree" parent="Tabs/Days Of/Margin/VBox/Past/Sky Anniversary" instance=ExtResource("4_t1mtd")]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="All" type="Button" parent="Tabs/Days Of/Margin/VBox/Past/Sky Anniversary"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+focus_mode = 0
+theme_override_constants/icon_max_width = 100
+text = "Buy All"
+
+[node name="Clear" type="Button" parent="Tabs/Days Of/Margin/VBox/Past/Sky Anniversary"]
+layout_mode = 2
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_d7tig")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ohe4u")
+text = "Clear Event Data"
+
+[node name="Confirm" type="ConfirmationDialog" parent="Tabs/Days Of/Margin/VBox/Past/Sky Anniversary"]
+initial_position = 2
+size = Vector2i(300, 187)
+dialog_text = "Are you sure you want to clear purchase data for this event?
+
+This cannot be undone."
+dialog_autowrap = true
+
+[node name="Days of Sunlight" parent="Tabs/Days Of/Margin/VBox/Past" instance=ExtResource("1_au16a")]
+layout_mode = 2
+script = ExtResource("33_8v5j5")
+collapse = true
+
+[node name="Tree" parent="Tabs/Days Of/Margin/VBox/Past/Days of Sunlight" instance=ExtResource("4_t1mtd")]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="All" type="Button" parent="Tabs/Days Of/Margin/VBox/Past/Days of Sunlight"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+focus_mode = 0
+theme_override_constants/icon_max_width = 100
+text = "Buy All"
+
+[node name="Clear" type="Button" parent="Tabs/Days Of/Margin/VBox/Past/Days of Sunlight"]
+layout_mode = 2
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_d7tig")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ohe4u")
+text = "Clear Event Data"
+
+[node name="Confirm" type="ConfirmationDialog" parent="Tabs/Days Of/Margin/VBox/Past/Days of Sunlight"]
+initial_position = 2
+size = Vector2i(300, 187)
+dialog_text = "Are you sure you want to clear purchase data for this event?
+
+This cannot be undone."
+dialog_autowrap = true
+
+[node name="Days of Style" parent="Tabs/Days Of/Margin/VBox/Past" instance=ExtResource("1_au16a")]
+layout_mode = 2
+script = ExtResource("33_8v5j5")
+collapse = true
+
+[node name="Tree" parent="Tabs/Days Of/Margin/VBox/Past/Days of Style" instance=ExtResource("4_t1mtd")]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="All" type="Button" parent="Tabs/Days Of/Margin/VBox/Past/Days of Style"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+focus_mode = 0
+theme_override_constants/icon_max_width = 100
+text = "Buy All"
+
+[node name="Clear" type="Button" parent="Tabs/Days Of/Margin/VBox/Past/Days of Style"]
+layout_mode = 2
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_d7tig")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ohe4u")
+text = "Clear Event Data"
+
+[node name="Confirm" type="ConfirmationDialog" parent="Tabs/Days Of/Margin/VBox/Past/Days of Style"]
+initial_position = 2
+size = Vector2i(300, 187)
+dialog_text = "Are you sure you want to clear purchase data for this event?
+
+This cannot be undone."
+dialog_autowrap = true
+
+[node name="Days of Mischief" parent="Tabs/Days Of/Margin/VBox/Past" instance=ExtResource("1_au16a")]
+layout_mode = 2
+script = ExtResource("33_8v5j5")
+collapse = true
+
+[node name="Tree" parent="Tabs/Days Of/Margin/VBox/Past/Days of Mischief" instance=ExtResource("4_t1mtd")]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="All" type="Button" parent="Tabs/Days Of/Margin/VBox/Past/Days of Mischief"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+focus_mode = 0
+theme_override_constants/icon_max_width = 100
+text = "Buy All"
+
+[node name="Clear" type="Button" parent="Tabs/Days Of/Margin/VBox/Past/Days of Mischief"]
+layout_mode = 2
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_d7tig")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ohe4u")
+text = "Clear Event Data"
+
+[node name="Confirm" type="ConfirmationDialog" parent="Tabs/Days Of/Margin/VBox/Past/Days of Mischief"]
+initial_position = 2
+size = Vector2i(300, 187)
+dialog_text = "Are you sure you want to clear purchase data for this event?
+
+This cannot be undone."
+dialog_autowrap = true
+
+[node name="Days of Feast" parent="Tabs/Days Of/Margin/VBox/Past" instance=ExtResource("1_au16a")]
+layout_mode = 2
+script = ExtResource("33_8v5j5")
+collapse = true
+
+[node name="Tree" parent="Tabs/Days Of/Margin/VBox/Past/Days of Feast" instance=ExtResource("4_t1mtd")]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="All" type="Button" parent="Tabs/Days Of/Margin/VBox/Past/Days of Feast"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+focus_mode = 0
+theme_override_constants/icon_max_width = 100
+text = "Buy All"
+
+[node name="Clear" type="Button" parent="Tabs/Days Of/Margin/VBox/Past/Days of Feast"]
+layout_mode = 2
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_d7tig")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ohe4u")
+text = "Clear Event Data"
+
+[node name="Confirm" type="ConfirmationDialog" parent="Tabs/Days Of/Margin/VBox/Past/Days of Feast"]
+initial_position = 2
+size = Vector2i(300, 187)
+dialog_text = "Are you sure you want to clear purchase data for this event?
+
+This cannot be undone."
+dialog_autowrap = true
 
 [node name="Settings" type="ScrollContainer" parent="Tabs"]
 visible = false
@@ -4875,6 +5251,7 @@ libraries = {
 [connection signal="toggled" from="Tabs/Current Season/Margin/VBox/Pass/Check" to="Tabs/Current Season/Margin/VBox" method="_on_check_toggled"]
 [connection signal="pressed" from="Tabs/Seasonal Spirits/Margin/VBox/Back" to="Tabs/Seasonal Spirits/Margin/VBox" method="_on_back_pressed"]
 [connection signal="bought" from="Tabs/Seasonal Spirits/Margin/VBox/Tree" to="Tabs/Seasonal Spirits/Margin/VBox" method="_on_tree_bought"]
+[connection signal="reject" from="Tabs/Seasonal Spirits/Margin/VBox/Tree" to="Tabs/Seasonal Spirits/Margin/VBox" method="_on_tree_reject"]
 [connection signal="pressed" from="Tabs/Seasonal Spirits/Margin/VBox/All" to="Tabs/Seasonal Spirits/Margin/VBox" method="_on_all_pressed"]
 [connection signal="pressed" from="Tabs/Seasonal Spirits/Margin/VBox/Clear" to="Tabs/Seasonal Spirits/Margin/VBox" method="_on_clear_pressed"]
 [connection signal="confirmed" from="Tabs/Seasonal Spirits/Margin/VBox/Confirm" to="Tabs/Seasonal Spirits/Margin/VBox" method="_on_confirm_confirmed"]
@@ -4882,8 +5259,66 @@ libraries = {
 [connection signal="pressed" from="Tabs/Winged Light Tracker/Margin/VBox/Main/Collapse" to="Tabs/Winged Light Tracker/Margin/VBox" method="_on_collapse_pressed"]
 [connection signal="pressed" from="Tabs/Winged Light Tracker/Margin/VBox/Main/Check" to="Tabs/Winged Light Tracker/Margin/VBox" method="_on_check_pressed"]
 [connection signal="pressed" from="Tabs/Winged Light Tracker/Margin/VBox/Main/Uncheck" to="Tabs/Winged Light Tracker/Margin/VBox" method="_on_uncheck_pressed"]
-[connection signal="bought" from="Tabs/Days Of/Margin/VBox/Tree" to="Tabs/Days Of/Margin/VBox" method="_on_tree_bought"]
-[connection signal="pressed" from="Tabs/Days Of/Margin/VBox/All" to="Tabs/Days Of/Margin/VBox" method="_on_all_pressed"]
+[connection signal="bought" from="Tabs/Days Of/Margin/VBox/VBox/Tree" to="Tabs/Days Of/Margin/VBox/VBox" method="_on_tree_bought"]
+[connection signal="reject" from="Tabs/Days Of/Margin/VBox/VBox/Tree" to="Tabs/Days Of/Margin/VBox/VBox" method="_on_tree_reject"]
+[connection signal="pressed" from="Tabs/Days Of/Margin/VBox/VBox/All" to="Tabs/Days Of/Margin/VBox/VBox" method="_on_all_pressed"]
+[connection signal="pressed" from="Tabs/Days Of/Margin/VBox/VBox/Clear" to="Tabs/Days Of/Margin/VBox/VBox" method="_on_clear_pressed"]
+[connection signal="confirmed" from="Tabs/Days Of/Margin/VBox/VBox/Confirm" to="Tabs/Days Of/Margin/VBox/VBox" method="_on_confirm_confirmed"]
+[connection signal="bought" from="Tabs/Days Of/Margin/VBox/Past/Days of Fortune/Tree" to="Tabs/Days Of/Margin/VBox/Past/Days of Fortune" method="_on_tree_bought"]
+[connection signal="reject" from="Tabs/Days Of/Margin/VBox/Past/Days of Fortune/Tree" to="Tabs/Days Of/Margin/VBox/Past/Days of Fortune" method="_on_tree_reject"]
+[connection signal="pressed" from="Tabs/Days Of/Margin/VBox/Past/Days of Fortune/All" to="Tabs/Days Of/Margin/VBox/Past/Days of Fortune" method="_on_all_pressed"]
+[connection signal="pressed" from="Tabs/Days Of/Margin/VBox/Past/Days of Fortune/Clear" to="Tabs/Days Of/Margin/VBox/Past/Days of Fortune" method="_on_clear_pressed"]
+[connection signal="confirmed" from="Tabs/Days Of/Margin/VBox/Past/Days of Fortune/Confirm" to="Tabs/Days Of/Margin/VBox/Past/Days of Fortune" method="_on_confirm_confirmed"]
+[connection signal="bought" from="Tabs/Days Of/Margin/VBox/Past/Days of Love/Tree" to="Tabs/Days Of/Margin/VBox/Past/Days of Love" method="_on_tree_bought"]
+[connection signal="reject" from="Tabs/Days Of/Margin/VBox/Past/Days of Love/Tree" to="Tabs/Days Of/Margin/VBox/Past/Days of Love" method="_on_tree_reject"]
+[connection signal="pressed" from="Tabs/Days Of/Margin/VBox/Past/Days of Love/All" to="Tabs/Days Of/Margin/VBox/Past/Days of Love" method="_on_all_pressed"]
+[connection signal="pressed" from="Tabs/Days Of/Margin/VBox/Past/Days of Love/Clear" to="Tabs/Days Of/Margin/VBox/Past/Days of Love" method="_on_clear_pressed"]
+[connection signal="confirmed" from="Tabs/Days Of/Margin/VBox/Past/Days of Love/Confirm" to="Tabs/Days Of/Margin/VBox/Past/Days of Love" method="_on_confirm_confirmed"]
+[connection signal="bought" from="Tabs/Days Of/Margin/VBox/Past/Days of Bloom/Tree" to="Tabs/Days Of/Margin/VBox/Past/Days of Bloom" method="_on_tree_bought"]
+[connection signal="reject" from="Tabs/Days Of/Margin/VBox/Past/Days of Bloom/Tree" to="Tabs/Days Of/Margin/VBox/Past/Days of Bloom" method="_on_tree_reject"]
+[connection signal="pressed" from="Tabs/Days Of/Margin/VBox/Past/Days of Bloom/All" to="Tabs/Days Of/Margin/VBox/Past/Days of Bloom" method="_on_all_pressed"]
+[connection signal="pressed" from="Tabs/Days Of/Margin/VBox/Past/Days of Bloom/Clear" to="Tabs/Days Of/Margin/VBox/Past/Days of Bloom" method="_on_clear_pressed"]
+[connection signal="confirmed" from="Tabs/Days Of/Margin/VBox/Past/Days of Bloom/Confirm" to="Tabs/Days Of/Margin/VBox/Past/Days of Bloom" method="_on_confirm_confirmed"]
+[connection signal="bought" from="Tabs/Days Of/Margin/VBox/Past/Days of Nature/Tree" to="Tabs/Days Of/Margin/VBox/Past/Days of Nature" method="_on_tree_bought"]
+[connection signal="reject" from="Tabs/Days Of/Margin/VBox/Past/Days of Nature/Tree" to="Tabs/Days Of/Margin/VBox/Past/Days of Nature" method="_on_tree_reject"]
+[connection signal="pressed" from="Tabs/Days Of/Margin/VBox/Past/Days of Nature/All" to="Tabs/Days Of/Margin/VBox/Past/Days of Nature" method="_on_all_pressed"]
+[connection signal="pressed" from="Tabs/Days Of/Margin/VBox/Past/Days of Nature/Clear" to="Tabs/Days Of/Margin/VBox/Past/Days of Nature" method="_on_clear_pressed"]
+[connection signal="confirmed" from="Tabs/Days Of/Margin/VBox/Past/Days of Nature/Confirm" to="Tabs/Days Of/Margin/VBox/Past/Days of Nature" method="_on_confirm_confirmed"]
+[connection signal="bought" from="Tabs/Days Of/Margin/VBox/Past/Days of Color/Tree" to="Tabs/Days Of/Margin/VBox/Past/Days of Color" method="_on_tree_bought"]
+[connection signal="reject" from="Tabs/Days Of/Margin/VBox/Past/Days of Color/Tree" to="Tabs/Days Of/Margin/VBox/Past/Days of Color" method="_on_tree_reject"]
+[connection signal="pressed" from="Tabs/Days Of/Margin/VBox/Past/Days of Color/All" to="Tabs/Days Of/Margin/VBox/Past/Days of Color" method="_on_all_pressed"]
+[connection signal="pressed" from="Tabs/Days Of/Margin/VBox/Past/Days of Color/Clear" to="Tabs/Days Of/Margin/VBox/Past/Days of Color" method="_on_clear_pressed"]
+[connection signal="confirmed" from="Tabs/Days Of/Margin/VBox/Past/Days of Color/Confirm" to="Tabs/Days Of/Margin/VBox/Past/Days of Color" method="_on_confirm_confirmed"]
+[connection signal="bought" from="Tabs/Days Of/Margin/VBox/Past/Days of Music/Tree" to="Tabs/Days Of/Margin/VBox/Past/Days of Music" method="_on_tree_bought"]
+[connection signal="reject" from="Tabs/Days Of/Margin/VBox/Past/Days of Music/Tree" to="Tabs/Days Of/Margin/VBox/Past/Days of Music" method="_on_tree_reject"]
+[connection signal="pressed" from="Tabs/Days Of/Margin/VBox/Past/Days of Music/All" to="Tabs/Days Of/Margin/VBox/Past/Days of Music" method="_on_all_pressed"]
+[connection signal="pressed" from="Tabs/Days Of/Margin/VBox/Past/Days of Music/Clear" to="Tabs/Days Of/Margin/VBox/Past/Days of Music" method="_on_clear_pressed"]
+[connection signal="confirmed" from="Tabs/Days Of/Margin/VBox/Past/Days of Music/Confirm" to="Tabs/Days Of/Margin/VBox/Past/Days of Music" method="_on_confirm_confirmed"]
+[connection signal="bought" from="Tabs/Days Of/Margin/VBox/Past/Sky Anniversary/Tree" to="Tabs/Days Of/Margin/VBox/Past/Sky Anniversary" method="_on_tree_bought"]
+[connection signal="reject" from="Tabs/Days Of/Margin/VBox/Past/Sky Anniversary/Tree" to="Tabs/Days Of/Margin/VBox/Past/Sky Anniversary" method="_on_tree_reject"]
+[connection signal="pressed" from="Tabs/Days Of/Margin/VBox/Past/Sky Anniversary/All" to="Tabs/Days Of/Margin/VBox/Past/Sky Anniversary" method="_on_all_pressed"]
+[connection signal="pressed" from="Tabs/Days Of/Margin/VBox/Past/Sky Anniversary/Clear" to="Tabs/Days Of/Margin/VBox/Past/Sky Anniversary" method="_on_clear_pressed"]
+[connection signal="confirmed" from="Tabs/Days Of/Margin/VBox/Past/Sky Anniversary/Confirm" to="Tabs/Days Of/Margin/VBox/Past/Sky Anniversary" method="_on_confirm_confirmed"]
+[connection signal="bought" from="Tabs/Days Of/Margin/VBox/Past/Days of Sunlight/Tree" to="Tabs/Days Of/Margin/VBox/Past/Days of Sunlight" method="_on_tree_bought"]
+[connection signal="reject" from="Tabs/Days Of/Margin/VBox/Past/Days of Sunlight/Tree" to="Tabs/Days Of/Margin/VBox/Past/Days of Sunlight" method="_on_tree_reject"]
+[connection signal="pressed" from="Tabs/Days Of/Margin/VBox/Past/Days of Sunlight/All" to="Tabs/Days Of/Margin/VBox/Past/Days of Sunlight" method="_on_all_pressed"]
+[connection signal="pressed" from="Tabs/Days Of/Margin/VBox/Past/Days of Sunlight/Clear" to="Tabs/Days Of/Margin/VBox/Past/Days of Sunlight" method="_on_clear_pressed"]
+[connection signal="confirmed" from="Tabs/Days Of/Margin/VBox/Past/Days of Sunlight/Confirm" to="Tabs/Days Of/Margin/VBox/Past/Days of Sunlight" method="_on_confirm_confirmed"]
+[connection signal="bought" from="Tabs/Days Of/Margin/VBox/Past/Days of Style/Tree" to="Tabs/Days Of/Margin/VBox/Past/Days of Style" method="_on_tree_bought"]
+[connection signal="reject" from="Tabs/Days Of/Margin/VBox/Past/Days of Style/Tree" to="Tabs/Days Of/Margin/VBox/Past/Days of Style" method="_on_tree_reject"]
+[connection signal="pressed" from="Tabs/Days Of/Margin/VBox/Past/Days of Style/All" to="Tabs/Days Of/Margin/VBox/Past/Days of Style" method="_on_all_pressed"]
+[connection signal="pressed" from="Tabs/Days Of/Margin/VBox/Past/Days of Style/Clear" to="Tabs/Days Of/Margin/VBox/Past/Days of Style" method="_on_clear_pressed"]
+[connection signal="confirmed" from="Tabs/Days Of/Margin/VBox/Past/Days of Style/Confirm" to="Tabs/Days Of/Margin/VBox/Past/Days of Style" method="_on_confirm_confirmed"]
+[connection signal="bought" from="Tabs/Days Of/Margin/VBox/Past/Days of Mischief/Tree" to="Tabs/Days Of/Margin/VBox/Past/Days of Mischief" method="_on_tree_bought"]
+[connection signal="reject" from="Tabs/Days Of/Margin/VBox/Past/Days of Mischief/Tree" to="Tabs/Days Of/Margin/VBox/Past/Days of Mischief" method="_on_tree_reject"]
+[connection signal="pressed" from="Tabs/Days Of/Margin/VBox/Past/Days of Mischief/All" to="Tabs/Days Of/Margin/VBox/Past/Days of Mischief" method="_on_all_pressed"]
+[connection signal="pressed" from="Tabs/Days Of/Margin/VBox/Past/Days of Mischief/Clear" to="Tabs/Days Of/Margin/VBox/Past/Days of Mischief" method="_on_clear_pressed"]
+[connection signal="confirmed" from="Tabs/Days Of/Margin/VBox/Past/Days of Mischief/Confirm" to="Tabs/Days Of/Margin/VBox/Past/Days of Mischief" method="_on_confirm_confirmed"]
+[connection signal="bought" from="Tabs/Days Of/Margin/VBox/Past/Days of Feast/Tree" to="Tabs/Days Of/Margin/VBox/Past/Days of Feast" method="_on_tree_bought"]
+[connection signal="reject" from="Tabs/Days Of/Margin/VBox/Past/Days of Feast/Tree" to="Tabs/Days Of/Margin/VBox/Past/Days of Feast" method="_on_tree_reject"]
+[connection signal="pressed" from="Tabs/Days Of/Margin/VBox/Past/Days of Feast/All" to="Tabs/Days Of/Margin/VBox/Past/Days of Feast" method="_on_all_pressed"]
+[connection signal="pressed" from="Tabs/Days Of/Margin/VBox/Past/Days of Feast/Clear" to="Tabs/Days Of/Margin/VBox/Past/Days of Feast" method="_on_clear_pressed"]
+[connection signal="confirmed" from="Tabs/Days Of/Margin/VBox/Past/Days of Feast/Confirm" to="Tabs/Days Of/Margin/VBox/Past/Days of Feast" method="_on_confirm_confirmed"]
 [connection signal="toggled" from="Tabs/Settings/Margin/VBox/CheckButton" to="Tabs/Settings/Margin/VBox" method="_on_check_button_toggled"]
 [connection signal="pressed" from="Candle Tracker/Margin/VBox/Main/Expand" to="Candle Tracker/Margin/VBox" method="_on_expand_pressed"]
 [connection signal="pressed" from="Candle Tracker/Margin/VBox/Main/Collapse" to="Candle Tracker/Margin/VBox" method="_on_collapse_pressed"]

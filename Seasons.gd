@@ -3,6 +3,7 @@ extends VBoxContainer
 var spirits = preload("res://SeasonSpirits.gd")
 @onready var spiritIcon = $"Spirits 1/Button".duplicate()
 @onready var seasonIcon = $"Season Selection/Button".duplicate()
+@onready var main = $"../../../.."
 var curr_spirit = ""
 var bought = {}
 
@@ -54,8 +55,10 @@ func _on_back_pressed():
 	$"Spirits 2".show()
 	$"Season Selection".show()
 
-func _on_tree_bought():
+func _on_tree_bought(iconValue,press):
 	bought[curr_spirit] = $Tree.export_bought()
+	# Pass that value into a DB
+	main.update_cos(iconValue,press)
 
 func _on_clear_pressed():
 	$Confirm.show()
@@ -70,4 +73,15 @@ func _on_confirm_confirmed():
 		$Tree.set_tree(spirits.data[curr_spirit]["tree"])
 
 func _on_all_pressed():
-	bought[curr_spirit] = $Tree.buy_all()
+	$Tree.buy_all()
+
+func _on_tree_reject():
+	var newBought = []
+	for r in spirits.data[curr_spirit]["tree"]:
+		var row = []
+		for i in r:
+			if i != "": row.append(main.cosmetics.has(i.split(";")[0]))
+			else: row.append(false)
+		newBought.append(row)
+	bought[curr_spirit] = newBought
+	$Tree.import_bought(bought[curr_spirit])

@@ -7,22 +7,11 @@ func _on_check_button_toggled(button_pressed):
 	set_short()
 
 func set_short():
+	var tabNames = []
 	if use_short:
-		$"../../..".set_tab_title(1,"Reg")
-		$"../../..".set_tab_title(2,"C.S.")
-		$"../../..".set_tab_title(3,"Ssnl")
-		$"../../..".set_tab_title(4,"WL")
-		$"../../..".set_tab_title(5,"Shrd")
-		$"../../..".set_tab_title(6,"Days")
-		$"../../..".set_tab_title(7,"Sets")
-		$"../../..".set_tab_title(8,"Creds")
+		tabNames = ["Reg","C.S.","Ssnl","WL","Shrd","Days","Sets","Creds"]
 	else:
-		$"../../..".set_tab_title(1,"Regular Spirits")
-		$"../../..".set_tab_title(2,"Current Season")
-		$"../../..".set_tab_title(3,"Seasonal Spirits")
-		$"../../..".set_tab_title(4,"Winged Light Tracker")
-		$"../../..".set_tab_title(5,"Shard Eruptions")
-		$"../../..".set_tab_title(6,"Days Of")
-		$"../../..".set_tab_title(7,"Settings")
-		$"../../..".set_tab_title(8,"Credits")
+		tabNames = ["Regular Spirits","Current Season","Seasonal Spirits","Winged Light Tracker"
+			,"Shard Eruptions","Days Of","Settings","Credits"]
+	for i in range(1,$"../../..".get_tab_count()): $"../../..".set_tab_title(i,tabNames[i-1])
 	$CheckButton.set_pressed_no_signal(use_short)

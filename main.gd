@@ -1,6 +1,7 @@
 extends Control
 
 var saveFile = "user://save.dat"
+var cosmetics = []
 
 func _notification(what):
 	if what == NOTIFICATION_WM_CLOSE_REQUEST:
@@ -14,8 +15,9 @@ func save():
 	file.store_var($"Tabs/Current Season/Margin/VBox/Have/Candles".value)
 	file.store_var($"Tabs/Seasonal Spirits/Margin/VBox".bought)
 	file.store_var($"Tabs/Winged Light Tracker/Margin/VBox".export_checked())
-	file.store_var($"Tabs/Days Of/Margin/VBox".bought)
+	file.store_var($"Tabs/Days Of/Margin/VBox/VBox".bought)
 	file.store_var($Tabs/Settings/Margin/VBox.use_short)
+	file.store_var(cosmetics)
 	file.close()
 
 func _on_tree_entered():
@@ -27,12 +29,13 @@ func _on_tree_entered():
 	$"Tabs/Current Season/Margin/VBox/Have/Candles".value = file.get_var()
 	if file.get_position() < file.get_length(): $"Tabs/Seasonal Spirits/Margin/VBox".bought = file.get_var()
 	if file.get_position() < file.get_length(): $"Tabs/Winged Light Tracker/Margin/VBox".import_checked(file.get_var())
-	if not $"Tabs/Days Of/Margin/VBox".is_node_ready(): await $"Tabs/Days Of/Margin/VBox".ready
-	if file.get_position() < file.get_length(): $"Tabs/Days Of/Margin/VBox".bought = file.get_var()
+	if not $"Tabs/Days Of/Margin/VBox/VBox".is_node_ready(): await $"Tabs/Days Of/Margin/VBox/VBox".ready
+	if file.get_position() < file.get_length(): $"Tabs/Days Of/Margin/VBox/VBox".bought = file.get_var()
 	if file.get_position() < file.get_length(): $Tabs/Settings/Margin/VBox.use_short = file.get_var()
+	if file.get_position() < file.get_length(): cosmetics = file.get_var()
 	$Tabs/Settings/Margin/VBox.set_short()
 	$Tabs/Stats/Stats/VBox.set_values()
-	$"Tabs/Days Of/Margin/VBox".import()
+	$"Tabs/Days Of/Margin/VBox/VBox".import()
 
 func _on_tabs_tab_changed(tab):
 	if tab == 0: $Tabs/Stats/Stats/VBox.set_values()
@@ -45,3 +48,8 @@ func _input(event):
 	elif event.is_action_pressed("Rainbow"):
 		$AnimationPlayer.play("RESET")
 		get_tree().root.set_input_as_handled()
+
+func update_cos(value,add):
+	if value == "" or (value.begins_with("base/") and not value.contains("?")): return
+	if add and not cosmetics.has(value): cosmetics.append(value)
+	elif cosmetics.has(value): cosmetics.erase(value)
