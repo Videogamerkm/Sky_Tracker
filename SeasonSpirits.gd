@@ -40,12 +40,12 @@ static var data = {"Bearhug Hermit":{"loc":"Season of Dreams",
 	["seas/cos/shrug 1;42;c","base/wing;2;a","base/heart;3;c"],["seas/exp/shrug;4;h","base/5C;5;c",""],["","seas/exp/shrug;0;0",""]]},
 	
 	"Ceasing Commodore":{"loc":"Season of Abyss",
-	"tree":[["seas/cos/calm 2;42;c","seas/cos/calm 3;70;c",""],["seas/exp/calm;6;h","base/5C;5;c",""],["","seas/exp/calm;3;h",""],
-	["seas/cos/calm 1;42;c","base/wing;2;a","base/heart;3;c"],["seas/exp/calm;4;h","base/5C;5;c",""],["","seas/exp/calm;0;0",""]]},
+	"tree":[["seas/cos/calm 1;40;c","seas/cos/calm 3;70;c",""],["seas/exp/calm;6;h","base/5C;5;c",""],["","seas/exp/calm;3;h",""],
+	["seas/cos/calm 2;45;c","base/wing;2;a","base/heart;3;c"],["seas/exp/calm;4;h","base/5C;5;c",""],["","seas/exp/calm;0;0",""]]},
 	
 	"Frantic Stagehand":{"loc":"Season of Performance",
-	"tree":[["seas/cos/shake 2;42;c","seas/cos/shake 3;70;c",""],["seas/exp/shake;6;h","base/5C;5;c","base/sheet;15;c"],["","seas/exp/shake;3;h",""],
-	["seas/cos/shake 1;42;c","base/wing;2;a","base/heart;3;c"],["seas/exp/shake;4;h","base/5C;5;c",""],["","seas/exp/shake;0;0",""]]},
+	"tree":[["seas/exp/shake;8;h","seas/cos/shake 2;34;c","seas/cos/shake 3;70;c"],["","base/5C;5;c",""],
+	["seas/cos/shake 1;48;c","base/wing;2;a","base/heart;3;c"],["base/sheet?29;22;c","base/5C;5;c",""],["","seas/exp/shake;0;0",""]]},
 	
 	"Herb Gatherer":{"loc":"Season of the Nine-Colored Deer",
 	"tree":[["base/5C;0;0;sp","base/season_heart;3;sp;sp",""],["seas/exp/whistle;0;0;sp","seas/cos/whistle 2;36;sp",""],
