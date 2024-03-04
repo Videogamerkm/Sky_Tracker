@@ -1,19 +1,19 @@
 extends VBoxContainer
 
-var seasonName = "Season of the Nine-Colored Deer"
-var start = 1705305600
-var end = 1711958399
-var needNoPass = 354
-var needPass = 398
-const months = ["","January","February","March","April","May","June","July","August","September","October","November","December"]
+var spirits = preload("res://SeasonSpirits.gd")
+var timeUtils = preload("res://TimeUtils.gd")
+const seasonName = "Season of the Nine-Colored Deer"
+const start = {"day":15,"month":1,"year":2024,"hour":0} #1705305600
+const end = {"day":31,"month":3,"year":2024,"hour":23,"minute":59} #1711954799
+const needNoPass = 354
+const needPass = 398
 const left = " day(s) left in the season"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Time/Start.text = convert_time(start)
-	$Time/End.text = convert_time(end)
-	var curr = Time.get_unix_time_from_system()
-	var days = floor((end-curr)/86400)
+	$Time/Start.text = timeUtils.convert_time(start)
+	$Time/End.text = timeUtils.convert_time(end)
+	var days = floor(timeUtils.get_time_until(end)/86400.0)
 	$Days.text = str(days) + left
 	update_candles()
 	var candles = days*(6 if $Pass/Check.button_pressed else 5)
@@ -29,30 +29,14 @@ func _ready():
 		$Complete.text += "You'll be able to buy all the cosmetics "+str(floor(daysSpare))+" day(s) before the season ends.\n"
 		if not $Pass/Check.button_pressed: $Complete.text += "(Note: This does not include season pass items.)"
 
-
 func _process(_delta):
-	var curr = Time.get_unix_time_from_system()
-	if not $Days.text == str(floor((end-curr)/86400)) + left:
+	if not $Days.text == str(floor(timeUtils.get_time_until(end)/86400.0)) + left:
 		_ready()
-
-func convert_time(timestamp) -> String:
-	var dict = Time.get_datetime_dict_from_unix_time(timestamp)
-	var day = str(dict["day"])
-	var ret = months[dict["month"]]+" "+day
-	var post = "th"
-	if day.ends_with("1") && not day == "11":
-		post = "st"
-	elif day.ends_with("2") && not day == "12":
-		post = "nd"
-	elif day.ends_with("3") && not day == "13":
-		post = "rd"
-	return ret+post+", "+str(dict["year"])
 
 func _on_check_toggled(_button_pressed):
 	_ready()
 
 func update_candles():
-	var spirits = preload("res://SeasonSpirits.gd")
 	var bought = $"../../../Seasonal Spirits/Margin/VBox".bought
 	if not bought: bought = {}
 	var candles = 0
@@ -60,4 +44,3 @@ func update_candles():
 		if spirits.data[s]["loc"] == seasonName && bought.has(s):
 			candles += spirits.get_spent(s,bought[s])
 	$Spent/Val.text = str(candles)
-
