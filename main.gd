@@ -36,13 +36,26 @@ func _on_tree_entered():
 	$"Tabs/Seasonal Spirits/Margin/VBox".bought.erase("")
 	if cosmetics == []:
 		for s in $"Tabs/Seasonal Spirits/Margin/VBox".bought:
-			$"Tabs/Seasonal Spirits/Margin/VBox".curr_spirit = s
-			$"Tabs/Seasonal Spirits/Margin/VBox/Tree".set_tree(preload("res://SeasonSpirits.gd").data[s]["tree"])
-			$"Tabs/Seasonal Spirits/Margin/VBox/Tree".import_bought($"Tabs/Seasonal Spirits/Margin/VBox".bought[s])
-		$"Tabs/Seasonal Spirits/Margin/VBox".curr_spirit = ""
+			fix_old(s)
+	if cosmetics.has("seas/exp/whistle"): fix_old("Herb Gatherer")
+	if cosmetics.has("seas/exp/flex"): fix_old("Hunter")
+	if cosmetics.has("seas/exp/cradle"): fix_old("Feudal Lord")
+	if cosmetics.has("seas/exp/princess"): fix_old("Princess")
+	if cosmetics.has("seas/exp/bearhug"): fix_old("Bearhug Hermit")
+	if cosmetics.has("seas/exp/shake"): fix_old("Frantic Stagehand")
+	if cosmetics.has("seas/exp/shrug"): fix_old("Indifferent Alchemist")
+	if cosmetics.has("seas/exp/nod"): fix_old("Nodding Muralist")
+	if cosmetics.has("seas/exp/calm"): fix_old("Ceasing Commodore")
 	$Tabs/Settings/Margin/VBox.set_short()
 	$Tabs/Stats/Stats/VBox.set_values()
 	$"Tabs/Days Of/Margin/VBox/VBox".import()
+
+func fix_old(s):
+	var seas = $"Tabs/Seasonal Spirits/Margin/VBox"
+	seas.curr_spirit = s
+	seas.get_node("Tree").set_tree(preload("res://SeasonSpirits.gd").data[s]["tree"])
+	seas.get_node("Tree").import_bought(seas.bought[s])
+	seas.curr_spirit = ""
 
 func _on_tabs_tab_changed(tab):
 	if tab == 0: $Tabs/Stats/Stats/VBox.set_values()
@@ -58,5 +71,9 @@ func _input(event):
 
 func update_cos(value,add):
 	if value == "" or (value.begins_with("base/") and not value.contains("?")): return
-	if add and not cosmetics.has(value): cosmetics.append(value)
+	if add and not cosmetics.has(value):
+		if value.contains("?"):
+			var split = value.split("?")[0]
+			if cosmetics.has(split): cosmetics.erase(split)
+		cosmetics.append(value)
 	elif not add and cosmetics.has(value): cosmetics.erase(value)

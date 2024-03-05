@@ -28,7 +28,7 @@ func _area_select(area):
 			var sp = spiritIcon.duplicate()
 			sp.text = s.replace(" ","\n").replace("Spirit\nof\n","Spirit of ")
 			sp.connect("pressed",_spirit_select.bind(s))
-			sp.set_button_icon(load("icons/"+spirits.data[s]["tree"][-1][1].split(";")[0]+".bmp"))
+			sp.set_button_icon(load("icons/"+spirits.data[s]["tree"][-1][1].split(";")[0].split("?")[0]+".bmp"))
 			if c < 4: $"Spirits 1".add_child(sp)
 			else: $"Spirits 2".add_child(sp)
 			c += 1
