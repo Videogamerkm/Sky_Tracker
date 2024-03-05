@@ -1,0 +1,72 @@
+{
+	"Indifferent Alchemist": {
+		"loc": "Season of Enchantment",
+		"tree": [
+			[
+				"seas/cos/shrug 2;42;c",
+				"seas/cos/shrug 3;70;c",
+				""
+			],
+			[
+				"seas/exp/shrug?4;6;h",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"",
+				"seas/exp/shrug?3;3;h",
+				""
+			],
+			[
+				"seas/cos/shrug 1;42;c",
+				"base/wing;2;a",
+				"base/heart;3;c"
+			],
+			[
+				"seas/exp/shrug?2;4;h",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"",
+				"seas/exp/shrug?1;0;0",
+				""
+			]
+		]
+	},
+	"Nodding Muralist": {
+		"loc": "Season of Enchantment",
+		"tree": [
+			[
+				"",
+				"seas/cos/nod 2;34;c",
+				""
+			],
+			[
+				"seas/exp/nod?4;6;h",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"",
+				"seas/exp/nod?3;3;h",
+				""
+			],
+			[
+				"seas/cos/nod 1;30;c",
+				"base/wing;2;a",
+				"base/heart;3;c"
+			],
+			[
+				"seas/exp/nod?2;4;h",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"",
+				"seas/exp/nod?1;0;0",
+				""
+			]
+		]
+	}
+}
