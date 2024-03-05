@@ -53,7 +53,7 @@ func _on_tree_entered():
 func fix_old(s):
 	var seas = $"Tabs/Seasonal Spirits/Margin/VBox"
 	seas.curr_spirit = s
-	seas.get_node("Tree").set_tree(preload("res://SeasonSpirits.gd").data[s]["tree"])
+	seas.get_node("Tree").set_tree(SeasonSpirits.data[s]["tree"])
 	seas.get_node("Tree").import_bought(seas.bought[s])
 	seas.curr_spirit = ""
 

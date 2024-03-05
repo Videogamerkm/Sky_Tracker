@@ -17,6 +17,11 @@ config/features=PackedStringArray("4.1", "Forward Plus")
 run/low_processor_mode=true
 config/icon="res://icon.png"
 
+[autoload]
+
+RegSpirits="*res://RegSpirits.gd"
+SeasonSpirits="*res://SeasonSpirits.gd"
+
 [display]
 
 window/size/viewport_width=800
