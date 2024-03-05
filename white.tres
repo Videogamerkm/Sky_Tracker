@@ -1,7 +1,11 @@
-[gd_resource type="Theme" load_steps=15 format=3 uid="uid://cqobwtkqodo0r"]
+[gd_resource type="Theme" load_steps=19 format=3 uid="uid://cqobwtkqodo0r"]
 
 [ext_resource type="Texture2D" uid="uid://degwa45pv8pjo" path="res://icons/base/check.bmp" id="1_uyum6"]
 [ext_resource type="Texture2D" uid="uid://4mjdpa0jeya3" path="res://icons/base/uncheck.bmp" id="2_hjq38"]
+[ext_resource type="Texture2D" uid="uid://bdco3gif3x2il" path="res://icons/L.png" id="3_re56a"]
+[ext_resource type="Texture2D" uid="uid://drw8nyd88n1lf" path="res://icons/L1.png" id="4_b5ig0"]
+[ext_resource type="Texture2D" uid="uid://cpj3h18guvobp" path="res://icons/R.png" id="5_sy8j7"]
+[ext_resource type="Texture2D" uid="uid://bitphgg1204ap" path="res://icons/R1.png" id="6_gav71"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1rjlt"]
 content_margin_left = 4.0
@@ -127,4 +131,8 @@ CheckBox/styles/hover_pressed = SubResource("StyleBoxFlat_iuwmx")
 CheckBox/styles/normal = SubResource("StyleBoxFlat_0defy")
 CheckBox/styles/pressed = SubResource("StyleBoxFlat_nom53")
 LineEdit/styles/normal = SubResource("StyleBoxFlat_mxrt6")
+TabContainer/icons/decrement = ExtResource("3_re56a")
+TabContainer/icons/decrement_highlight = ExtResource("4_b5ig0")
+TabContainer/icons/increment = ExtResource("5_sy8j7")
+TabContainer/icons/increment_highlight = ExtResource("6_gav71")
 TabContainer/styles/panel = SubResource("StyleBoxFlat_x2xbg")
