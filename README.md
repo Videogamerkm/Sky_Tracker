@@ -31,4 +31,4 @@ Despite that, a lot of the information I've included here is derived or pulled f
 
 Finally, there's a few graphics that my husband created for this app: the constellation buttons on the regular spirits page, and the banner on the current season page. He's been the source of a lot of the most user-friendly changes I've made since inception.
 
-While I wasn't aware of it when I started development, since being pointed to it (Sky Planner by Silverfeelin)[https://sky-planner.pages.dev/] has been a big inspiration and where I look to see if I'm providing new, useful work to the community. They've got some features over there that I don't and if you prefer web-based apps it's an excellent option!
+While I wasn't aware of it when I started development, since being pointed to it [Sky Planner by Silverfeelin](https://sky-planner.pages.dev/) has been a big inspiration and where I look to see if I'm providing new, useful work to the community. They've got some features over there that I don't and if you prefer web-based apps it's an excellent option!
