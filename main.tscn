@@ -4566,9 +4566,18 @@ A secondary reason I created this app is I have some major, fundamental issues w
 
 Despite that, a lot of the information I've included here is derived or pulled from the Sky fandom wiki. Notably, I used a lot of icons and graphics created by contributors, especially Morybel, Mimi4117, Jet Lye, and Ray808080.
 
-Finally, there's a few graphics that my husband created for this app: the constellation buttons on the regular spirits page, and the banner on the current season page. He's been the source of a lot of the most user-friendly changes I've made since inception."
+Finally, there's a few graphics that my husband created for this app: the constellation buttons on the regular spirits page, and the banner on the current season page. He's been the source of a lot of the most user-friendly changes I've made since inception.
+
+While I wasn't aware of it when I started development, since being pointed to it Sky Planner by Silverfeelin has been a big inspiration and where I look to see if I'm providing new, useful work to the community. They've got some features over there that I don't and if you prefer web-based apps it's an excellent option!"
 horizontal_alignment = 1
 autowrap_mode = 3
+
+[node name="App Link" type="LinkButton" parent="Tabs/Credits/Margin/VBox"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 16
+text = "Click here to be directed to Sky Planner"
+uri = "https://sky-planner.pages.dev/"
 
 [node name="Candle Tracker" type="ScrollContainer" parent="."]
 visible = false
