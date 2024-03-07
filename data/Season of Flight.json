@@ -1,0 +1,32 @@
+{
+	"Light Whisperer": {
+		"loc": "Season of Flight",
+		"tree": [
+			[
+				"seas/cos/light 1;50;c",
+				"seas/cos/light 4;70;c",
+				"seas/cos/light 2;65;c"
+			],
+			[
+				"",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"seas/cos/light 3;45;c",
+				"base/wing;2;a",
+				"base/heart;3;c"
+			],
+			[
+				"",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"",
+				"seas/exp/light;0;0",
+				""
+			]
+		]
+	}
+}

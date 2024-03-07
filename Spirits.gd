@@ -1,6 +1,5 @@
 extends VBoxContainer
 
-var spirits = preload("res://RegSpirits.gd")
 @onready var spiritIcon = $"Spirits 1/Button".duplicate()
 var curr_spirit = ""
 var bought = {}
@@ -15,12 +14,12 @@ func _area_select(area):
 	for c in $"Spirits 1".get_children(): c.queue_free()
 	for c in $"Spirits 2".get_children(): c.queue_free()
 	var c = 0
-	for s in spirits.data:
-		if spirits.data[s]["loc"] == area:
+	for s in RegSpirits.data:
+		if RegSpirits.data[s]["loc"] == area:
 			var sp = spiritIcon.duplicate()
 			sp.text = s.replace(" ","\n").replace("Elder\nof\nthe\n","Elder of\nthe ")
 			sp.connect("pressed",_spirit_select.bind(s))
-			var icon = "icons/"+spirits.data[s]["tree"][-1][1].split(";")[0]+".bmp"
+			var icon = "icons/"+RegSpirits.data[s]["tree"][-1][1].split(";")[0]+".bmp"
 			sp.set_button_icon(load(icon))
 			if c < 5: $"Spirits 1".add_child(sp)
 			else: $"Spirits 2".add_child(sp)
@@ -28,7 +27,7 @@ func _area_select(area):
 
 func _spirit_select(spirit):
 	curr_spirit = spirit
-	$Tree.set_tree(spirits.data[spirit]["tree"])
+	$Tree.set_tree(RegSpirits.data[spirit]["tree"])
 	if bought.has(spirit): $Tree.import_bought(bought[spirit])
 	$Tree.show()
 	$Back.show()
@@ -57,12 +56,12 @@ func _on_clear_pressed():
 
 func _on_confirm_confirmed():
 	if curr_spirit == "":
-		for s in spirits.data:
-			if spirits.data[s]["loc"] == $Area.text && bought.has(s):
+		for s in RegSpirits.data:
+			if RegSpirits.data[s]["loc"] == $Area.text && bought.has(s):
 				bought.erase(s)
 	else:
 		bought.erase(curr_spirit)
-		$Tree.set_tree(spirits.data[curr_spirit]["tree"])
+		$Tree.set_tree(RegSpirits.data[curr_spirit]["tree"])
 
 func _on_all_pressed():
 	$Tree.buy_all()

@@ -1,0 +1,32 @@
+{
+	"Frantic Stagehand": {
+		"loc": "Season of Performance",
+		"tree": [
+			[
+				"seas/exp/shake?2;8;h",
+				"seas/cos/shake 2;34;c",
+				"seas/cos/shake 3;70;c"
+			],
+			[
+				"",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"seas/cos/shake 1;48;c",
+				"base/wing;2;a",
+				"base/heart;3;c"
+			],
+			[
+				"base/sheet?29;22;c",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"",
+				"seas/exp/shake?1;0;0",
+				""
+			]
+		]
+	}
+}

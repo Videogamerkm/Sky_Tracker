@@ -1,6 +1,5 @@
 extends VBoxContainer
 
-var spirits = preload("res://SeasonSpirits.gd")
 var timeUtils = preload("res://TimeUtils.gd")
 const seasonName = "Season of the Nine-Colored Deer"
 const start = {"day":15,"month":1,"year":2024,"hour":0} #1705305600
@@ -40,7 +39,7 @@ func update_candles():
 	var bought = $"../../../Seasonal Spirits/Margin/VBox".bought
 	if not bought: bought = {}
 	var candles = 0
-	for s in spirits.data:
-		if spirits.data[s]["loc"] == seasonName && bought.has(s):
-			candles += spirits.get_spent(s,bought[s])
+	for s in SeasonSpirits.data:
+		if SeasonSpirits.data[s]["loc"] == seasonName && bought.has(s):
+			candles += SeasonSpirits.get_spent(s,bought[s])
 	$Spent/Val.text = str(candles)

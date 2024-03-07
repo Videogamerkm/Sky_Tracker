@@ -1,0 +1,32 @@
+{
+	"Bearhug Hermit": {
+		"loc": "Season of Dreams",
+		"tree": [
+			[
+				"seas/exp/bearhug?2;8;h",
+				"seas/cos/bearhug 3;70;c",
+				"seas/cos/bearhug 2;50;c"
+			],
+			[
+				"",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"seas/cos/bearhug 1;42;c",
+				"base/wing;2;a",
+				"base/heart;3;c"
+			],
+			[
+				"base/sheet?19;15;c",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"",
+				"seas/exp/bearhug?1;0;0",
+				""
+			]
+		]
+	}
+}
