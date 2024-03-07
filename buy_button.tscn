@@ -1,9 +1,9 @@
 [gd_scene load_steps=10 format=3 uid="uid://comkmo1edc6w5"]
 
-[ext_resource type="Texture2D" uid="uid://bj8i3r3dqrbog" path="res://icons/reg/exp/point.bmp" id="1_nru54"]
-[ext_resource type="Texture2D" uid="uid://c2xaswla4wwdq" path="res://icons/base/candle.bmp" id="2_32vtd"]
+[ext_resource type="Texture2D" uid="uid://5a1uvgaimsq1" path="res://icons/reg/exp/point.bmp" id="1_nru54"]
+[ext_resource type="Texture2D" uid="uid://c0udelvjoltu8" path="res://icons/base/candle.bmp" id="2_32vtd"]
 [ext_resource type="Script" path="res://buy_button.gd" id="2_nrh32"]
-[ext_resource type="Texture2D" uid="uid://mq2yyf2nob6j" path="res://icons/seas/icons/the Nine-Colored Deer.bmp" id="4_a4ln6"]
+[ext_resource type="Texture2D" uid="uid://b3k8xcpjbqen1" path="res://icons/seas/icons/the Nine-Colored Deer.bmp" id="4_a4ln6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rf45p"]
 bg_color = Color(0, 0, 0, 0.25098)

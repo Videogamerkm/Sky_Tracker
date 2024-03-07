@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://friendship_tree.gd" id="1_kubeo"]
 [ext_resource type="PackedScene" uid="uid://comkmo1edc6w5" path="res://buy_button.tscn" id="2_dbd6g"]
-[ext_resource type="Texture2D" uid="uid://busn8wvu1a32c" path="res://icons/base/conn_left.png" id="3_leh34"]
-[ext_resource type="Texture2D" uid="uid://b05ldfps7sbfl" path="res://icons/base/conn_vert.png" id="4_j55f8"]
-[ext_resource type="Texture2D" uid="uid://d305d8x7v7py8" path="res://icons/base/conn_right.png" id="5_8fjsg"]
+[ext_resource type="Texture2D" uid="uid://cacf4x22o8hbi" path="res://icons/base/conn_left.png" id="3_leh34"]
+[ext_resource type="Texture2D" uid="uid://33ptcjtk15sl" path="res://icons/base/conn_vert.png" id="4_j55f8"]
+[ext_resource type="Texture2D" uid="uid://c1m6nbsw1wlqk" path="res://icons/base/conn_right.png" id="5_8fjsg"]
 
 [node name="Friendship Tree" type="VBoxContainer"]
 anchors_preset = 15
