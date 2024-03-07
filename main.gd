@@ -58,8 +58,12 @@ func fix_old(s):
 	seas.curr_spirit = ""
 
 func _on_tabs_tab_changed(tab):
+	var reg = $"Tabs/Regular Spirits/Margin/VBox"
+	var seas = $"Tabs/Seasonal Spirits/Margin/VBox"
 	if tab == 0: $Tabs/Stats/Stats/VBox.set_values()
+	if tab == 1 && reg.curr_spirit != "": reg._on_back_pressed()
 	if tab == 2: $"Tabs/Current Season/Margin/VBox"._ready()
+	if tab == 3 && seas.curr_spirit != "": seas._on_back_pressed()
 
 func _input(event):
 	if event.is_action_pressed("Rainbow") && not $AnimationPlayer.is_playing():
