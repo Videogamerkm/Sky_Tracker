@@ -1,5 +1,5 @@
 # Godot 4+ specific ignores
 .godot/
-*.import
-icons/
+icons/**/*.png
+icons/**/*.bmp
 icon.png
