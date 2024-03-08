@@ -2501,21 +2501,21 @@ layout_mode = 2
 [node name="Start" type="Label" parent="Tabs/Current Season/Margin/VBox/Time"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 16
 text = "January 1st, 2024"
 horizontal_alignment = 2
 
 [node name="Label" type="Label" parent="Tabs/Current Season/Margin/VBox/Time"]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 16
 text = " - "
 horizontal_alignment = 1
 
 [node name="End" type="Label" parent="Tabs/Current Season/Margin/VBox/Time"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 16
 text = "January 15th, 2024"
 
 [node name="Days" type="Label" parent="Tabs/Current Season/Margin/VBox"]
@@ -2528,7 +2528,7 @@ horizontal_alignment = 1
 [node name="place4" type="Label" parent="Tabs/Current Season/Margin/VBox"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 8
 horizontal_alignment = 1
 
 [node name="Have" type="HBoxContainer" parent="Tabs/Current Season/Margin/VBox"]
@@ -2578,7 +2578,7 @@ theme_override_font_sizes/font_size = 20
 [node name="place3" type="Label" parent="Tabs/Current Season/Margin/VBox"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 8
 horizontal_alignment = 1
 autowrap_mode = 3
 
@@ -2608,6 +2608,22 @@ theme_override_font_sizes/font_size = 20
 text = "Remaining collectable candles:"
 
 [node name="Val" type="Label" parent="Tabs/Current Season/Margin/VBox/Candles"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "0"
+horizontal_alignment = 1
+
+[node name="Need" type="HBoxContainer" parent="Tabs/Current Season/Margin/VBox"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/Current Season/Margin/VBox/Need"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "Remaining candles needed:"
+
+[node name="Val" type="Label" parent="Tabs/Current Season/Margin/VBox/Need"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 20
@@ -2649,7 +2665,7 @@ horizontal_alignment = 1
 [node name="place2" type="Label" parent="Tabs/Current Season/Margin/VBox"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 8
 horizontal_alignment = 1
 autowrap_mode = 3
 
@@ -2664,14 +2680,14 @@ autowrap_mode = 3
 [node name="place" type="Label" parent="Tabs/Current Season/Margin/VBox"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 8
 horizontal_alignment = 1
 autowrap_mode = 3
 
 [node name="Tip" type="Label" parent="Tabs/Current Season/Margin/VBox"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 10
 text = "Tip: Go to the Seasonal Spirits tab to update how many candles you've spent."
 horizontal_alignment = 1
 autowrap_mode = 3
@@ -4518,7 +4534,7 @@ script = ExtResource("33_lxqsm")
 [node name="CheckButton" type="CheckButton" parent="Tabs/Settings/Margin/VBox"]
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 6
+size_flags_vertical = 0
 focus_mode = 0
 theme_override_constants/h_separation = 10
 theme_override_styles/normal = SubResource("StyleBoxEmpty_5muw6")
@@ -4531,7 +4547,7 @@ text = "Use shortened tab names"
 [node name="CheckButton2" type="CheckButton" parent="Tabs/Settings/Margin/VBox"]
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 6
+size_flags_vertical = 0
 focus_mode = 0
 theme_override_constants/h_separation = 10
 theme_override_styles/normal = SubResource("StyleBoxEmpty_5muw6")

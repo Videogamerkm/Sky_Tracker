@@ -18,6 +18,7 @@ func _ready():
 	var candles = days*(6 if $Pass/Check.button_pressed else 5)
 	$"Per Day/Val".text = str(6 if $Pass/Check.button_pressed else 5)
 	$Candles/Val.text = str(candles)
+	$Need/Val.text = str(max((needPass if $Pass/Check.button_pressed else needNoPass) - (int($Spent/Val.text)+$Have/Candles.value),0))
 	$Total/Val.text = str(int($Spent/Val.text)+$Have/Candles.value)
 	var total = candles + int($Spent/Val.text) + $Have/Candles.value
 	$Complete.text = "You have missed too many candles to buy all the cosmetics (or you need to update things)."
