@@ -21,6 +21,7 @@ config/icon="res://icon.png"
 
 RegSpirits="*res://RegSpirits.gd"
 SeasonSpirits="*res://SeasonSpirits.gd"
+Global="*res://Global.gd"
 
 [display]
 

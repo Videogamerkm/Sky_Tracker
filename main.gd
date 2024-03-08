@@ -18,6 +18,7 @@ func save():
 	file.store_var($"Tabs/Days Of/Margin/VBox/VBox".bought)
 	file.store_var($Tabs/Settings/Margin/VBox.use_short)
 	file.store_var(cosmetics)
+	file.store_var(Global.spoilers)
 	file.close()
 
 func _on_tree_entered():
@@ -33,6 +34,7 @@ func _on_tree_entered():
 	if file.get_position() < file.get_length(): $"Tabs/Days Of/Margin/VBox/VBox".bought = file.get_var()
 	if file.get_position() < file.get_length(): $Tabs/Settings/Margin/VBox.use_short = file.get_var()
 	if file.get_position() < file.get_length(): cosmetics = file.get_var()
+	if file.get_position() < file.get_length(): Global.spoilers = file.get_var()
 	$"Tabs/Seasonal Spirits/Margin/VBox".bought.erase("")
 	if cosmetics == []:
 		for s in $"Tabs/Seasonal Spirits/Margin/VBox".bought:
@@ -47,6 +49,7 @@ func _on_tree_entered():
 	if cosmetics.has("seas/exp/nod"): fix_old("Nodding Muralist")
 	if cosmetics.has("seas/exp/calm"): fix_old("Ceasing Commodore")
 	$Tabs/Settings/Margin/VBox.set_short()
+	$Tabs/Settings/Margin/VBox/CheckButton2.set_pressed_no_signal(Global.spoilers)
 	$Tabs/Stats/Stats/VBox.set_values()
 	$"Tabs/Days Of/Margin/VBox/VBox".import()
 
@@ -60,10 +63,12 @@ func fix_old(s):
 func _on_tabs_tab_changed(tab):
 	var reg = $"Tabs/Regular Spirits/Margin/VBox"
 	var seas = $"Tabs/Seasonal Spirits/Margin/VBox"
+	var days = $"Tabs/Days Of/Margin/VBox"
 	if tab == 0: $Tabs/Stats/Stats/VBox.set_values()
 	if tab == 1 && reg.curr_spirit != "": reg._on_back_pressed()
 	if tab == 2: $"Tabs/Current Season/Margin/VBox"._ready()
 	if tab == 3 && seas.curr_spirit != "": seas._on_back_pressed()
+#	if tab == 6 && days.current != "": days._on_back_pressed()
 
 func _input(event):
 	if event.is_action_pressed("Rainbow") && not $AnimationPlayer.is_playing():

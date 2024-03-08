@@ -15,3 +15,6 @@ func set_short():
 			,"Shard Eruptions","Days Of","Settings","Credits"]
 	for i in range(1,$"../../..".get_tab_count()): $"../../..".set_tab_title(i,tabNames[i-1])
 	$CheckButton.set_pressed_no_signal(use_short)
+
+func _on_check_button_2_toggled(button_pressed):
+	Global.spoilers = button_pressed

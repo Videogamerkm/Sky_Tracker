@@ -7,6 +7,8 @@ extends Button
 @export var isSP = false
 
 func _ready():
+	if Global.spoilers: add_theme_color_override("icon_disabled_color",Color(0.5,0.5,0.5))
+	else: add_theme_color_override("icon_disabled_color",Color(0,0,0))
 	$Curr.show()
 	$Cost.show()
 	if type == "c":
