@@ -72,3 +72,8 @@ func _on_confirm_confirmed():
 
 func _on_all_pressed():
 	$Tree.buy_all()
+
+func _input(event):
+	if event.is_action_pressed("Back") && curr_spirit != "":
+		_on_back_pressed()
+		get_tree().root.set_input_as_handled()

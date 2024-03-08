@@ -2,6 +2,9 @@ extends Control
 
 var saveFile = "user://save.dat"
 var cosmetics = []
+var history = []
+var histIndex = -1
+var collHist = true
 
 func _notification(what):
 	if what == NOTIFICATION_WM_CLOSE_REQUEST:
@@ -70,6 +73,10 @@ func _on_tabs_tab_changed(tab):
 	if tab == 2: $"Tabs/Current Season/Margin/VBox"._ready()
 	if tab == 3 && seas.curr_spirit != "": seas._on_back_pressed()
 #	if tab == 6 && days.current != "": days._on_back_pressed()
+	if collHist:
+		history.resize(histIndex + 1)
+		history.append($Tabs.get_previous_tab())
+		histIndex += 1
 
 func _input(event):
 	if event.is_action_pressed("Rainbow") && not $AnimationPlayer.is_playing():
@@ -77,6 +84,19 @@ func _input(event):
 		get_tree().root.set_input_as_handled()
 	elif event.is_action_pressed("Rainbow"):
 		$AnimationPlayer.play("RESET")
+		get_tree().root.set_input_as_handled()
+	elif event.is_action_pressed("Back") && history.size() > 0 && histIndex >= 0:
+		collHist = false
+		$Tabs.set_current_tab(history[histIndex])
+		if history.size() - 1 == histIndex: history.append($Tabs.get_previous_tab())
+		histIndex -= 1
+		collHist = true
+		get_tree().root.set_input_as_handled()
+	elif event.is_action_pressed("Forward") && histIndex < history.size() - 2:
+		collHist = false
+		histIndex += 1
+		$Tabs.set_current_tab(history[histIndex + 1])
+		collHist = true
 		get_tree().root.set_input_as_handled()
 
 func update_cos(value,add):
