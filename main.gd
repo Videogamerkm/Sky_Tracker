@@ -66,6 +66,7 @@ func _on_tabs_tab_changed(tab):
 	var days = $"Tabs/Days Of/Margin/VBox"
 	if tab == 0: $Tabs/Stats/Stats/VBox.set_values()
 	if tab == 1 && reg.curr_spirit != "": reg._on_back_pressed()
+	elif tab == 1: reg._area_select(reg.get_node("Area").text)
 	if tab == 2: $"Tabs/Current Season/Margin/VBox"._ready()
 	if tab == 3 && seas.curr_spirit != "": seas._on_back_pressed()
 #	if tab == 6 && days.current != "": days._on_back_pressed()

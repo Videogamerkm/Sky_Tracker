@@ -14,8 +14,15 @@ func _area_select(area):
 	for c in $"Spirits 1".get_children(): c.queue_free()
 	for c in $"Spirits 2".get_children(): c.queue_free()
 	var c = 0
+	var comp = true
+	for s in RegSpirits.data:
+		if RegSpirits.data[s]["loc"] == area && not s.begins_with("Elder"):
+			comp = comp && bought.has(s) && RegSpirits.get_completion(s,bought[s]) == 100
+		if not comp: break
 	for s in RegSpirits.data:
 		if RegSpirits.data[s]["loc"] == area:
+			if s.begins_with("Elder") && not Global.spoilers && not comp:
+				continue
 			var sp = spiritIcon.duplicate()
 			sp.text = s.replace(" ","\n").replace("Elder\nof\nthe\n","Elder of\nthe ")
 			sp.connect("pressed",_spirit_select.bind(s))
