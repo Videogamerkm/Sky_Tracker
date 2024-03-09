@@ -4531,7 +4531,7 @@ theme_override_constants/margin_bottom = 24
 layout_mode = 2
 script = ExtResource("33_lxqsm")
 
-[node name="CheckButton" type="CheckButton" parent="Tabs/Settings/Margin/VBox"]
+[node name="Short" type="CheckButton" parent="Tabs/Settings/Margin/VBox"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
@@ -4544,7 +4544,7 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_7gr2j")
 theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_141fx")
 text = "Use shortened tab names"
 
-[node name="CheckButton2" type="CheckButton" parent="Tabs/Settings/Margin/VBox"]
+[node name="Spoilers" type="CheckButton" parent="Tabs/Settings/Margin/VBox"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
@@ -4556,6 +4556,19 @@ theme_override_styles/disabled = SubResource("StyleBoxEmpty_u7qhy")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_7gr2j")
 theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_141fx")
 text = "Show spoilers"
+
+[node name="Time" type="CheckButton" parent="Tabs/Settings/Margin/VBox"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+focus_mode = 0
+theme_override_constants/h_separation = 10
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5muw6")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ty0t3")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_u7qhy")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7gr2j")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_141fx")
+text = "Use 12h time instead of 24h time"
 
 [node name="Credits" type="ScrollContainer" parent="Tabs"]
 visible = false
@@ -5357,8 +5370,9 @@ libraries = {
 [connection signal="pressed" from="Tabs/Days Of/Margin/VBox/Past/Days of Feast/All" to="Tabs/Days Of/Margin/VBox/Past/Days of Feast" method="_on_all_pressed"]
 [connection signal="pressed" from="Tabs/Days Of/Margin/VBox/Past/Days of Feast/Clear" to="Tabs/Days Of/Margin/VBox/Past/Days of Feast" method="_on_clear_pressed"]
 [connection signal="confirmed" from="Tabs/Days Of/Margin/VBox/Past/Days of Feast/Confirm" to="Tabs/Days Of/Margin/VBox/Past/Days of Feast" method="_on_confirm_confirmed"]
-[connection signal="toggled" from="Tabs/Settings/Margin/VBox/CheckButton" to="Tabs/Settings/Margin/VBox" method="_on_check_button_toggled"]
-[connection signal="toggled" from="Tabs/Settings/Margin/VBox/CheckButton2" to="Tabs/Settings/Margin/VBox" method="_on_check_button_2_toggled"]
+[connection signal="toggled" from="Tabs/Settings/Margin/VBox/Short" to="Tabs/Settings/Margin/VBox" method="_on_short_toggled"]
+[connection signal="toggled" from="Tabs/Settings/Margin/VBox/Spoilers" to="Tabs/Settings/Margin/VBox" method="_on_spoilers_toggled"]
+[connection signal="toggled" from="Tabs/Settings/Margin/VBox/Time" to="Tabs/Settings/Margin/VBox" method="_on_time_toggled"]
 [connection signal="pressed" from="Candle Tracker/Margin/VBox/Main/Expand" to="Candle Tracker/Margin/VBox" method="_on_expand_pressed"]
 [connection signal="pressed" from="Candle Tracker/Margin/VBox/Main/Collapse" to="Candle Tracker/Margin/VBox" method="_on_collapse_pressed"]
 [connection signal="pressed" from="Candle Tracker/Margin/VBox/Main/Check" to="Candle Tracker/Margin/VBox" method="_on_check_pressed"]
