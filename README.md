@@ -23,12 +23,12 @@ You may notice that not all spirits have exactly the right tree, particularly sp
 
 You can find a copy of this section (minus this note) in the Credits tab in-app.
 
-I created this in the hopes of having a lightweight, non-web app to help track some information in Sky: Children of the Light, a game by thatgamecompany. Ultimately, all of the information and graphics here are directly from or derived from their work.
+I created this in the hopes of having a lightweight, non-web app to help track some information in Sky: Children of the Light, a game by thatgamecompany. I and any contributors to this app are not affiliated with them, but the information and graphics are all either directly from or derived from their work.
 
-A secondary reason I created this app is I have some major, fundamental issues with the way Fandom manages the wikis hosted by them. There's lots of information out there, notably about why the Pokemon, Minecraft, Terraria, and Hollow Knight communities moved their wikis off of Fandom. You should search those topics for more.
+A secondary reason I created this app is I have some major, fundamental issues with the way Fandom manages the wikis hosted by them. There's lots of information out there, notably about why the Pokemon, Minecraft, Terraria, and Hollow Knight communities moved their wikis off of Fandom. On the other hand, I understand why an established wiki community may not want to move off of Fandom, particularly with how aggressive they are about SEO - my problem is with Fandom, not the contributors to the Sky wiki in any way.
 
-Despite that, a lot of the information I've included here is derived or pulled from the Sky fandom wiki. Notably, I used a lot of icons and graphics created by contributors, especially Morybel, Mimi4117, Jet Lye, and Ray808080.
+With that said, a lot of the information I've included here is derived or pulled from the Sky fandom wiki. Notably, I've used icons for expressions, cosmetics, seasons, and currency created by contributors to the Sky wiki, and have included them with permission from the administrators. A special thank you to Ray and Morybel who helped me word this section properly!
 
 Finally, there's a few graphics that my husband created for this app: the constellation buttons on the regular spirits page, and the banner on the current season page. He's been the source of a lot of the most user-friendly changes I've made since inception.
 
-While I wasn't aware of it when I started development, since being pointed to it [Sky Planner by Silverfeelin](https://sky-planner.pages.dev/) has been a big inspiration and where I look to see if I'm providing new, useful work to the community. They've got some features over there that I don't and if you prefer web-based apps it's an excellent option!
+If you're looking for a web-based app instead of something you have to download, check out [Sky Planner by Silverfeelin](https://sky-planner.pages.dev/), whose recommendations have brought some excellent QoL to this app. Sky Planner has a bunch of features you definitely should take a peek at, and has been a source of inspiration for me since I learned about it!

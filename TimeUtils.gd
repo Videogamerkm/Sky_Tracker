@@ -17,7 +17,11 @@ static func convert_time(timestamp) -> String:
 		post = "nd"
 	elif day.ends_with("3") && not day == "13":
 		post = "rd"
-	return ("%02d:%02d"%[dict["hour"],dict["minute"]])+" "+ret+post+", "+str(dict["year"])
+	var time = ("%02d:%02d"%[dict["hour"],dict["minute"]])
+	if Global.useTwelve:
+		var hour = dict["hour"] % 12
+		time = ("%02d:%02d"%[hour,dict["minute"]])+(" PM" if dict["hour"] > 12 else " AM")
+	return time+" "+ret+post+", "+str(dict["year"])
 
 static func get_time_until(timestamp) -> int:
 	return floor(Time.get_unix_time_from_datetime_dict(timestamp) - get_game_offset() - Time.get_unix_time_from_system())

@@ -84,3 +84,8 @@ func _on_tree_reject():
 		newBought.append(row)
 	bought[curr_spirit] = newBought
 	$Tree.import_bought(bought[curr_spirit])
+
+func _input(event):
+	if event.is_action_pressed("Back") && curr_spirit != "":
+		_on_back_pressed()
+		get_tree().root.set_input_as_handled()

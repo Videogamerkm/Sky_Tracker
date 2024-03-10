@@ -1,11 +1,11 @@
 [gd_resource type="Theme" load_steps=19 format=3 uid="uid://cqobwtkqodo0r"]
 
-[ext_resource type="Texture2D" uid="uid://degwa45pv8pjo" path="res://icons/base/check.bmp" id="1_uyum6"]
-[ext_resource type="Texture2D" uid="uid://4mjdpa0jeya3" path="res://icons/base/uncheck.bmp" id="2_hjq38"]
-[ext_resource type="Texture2D" uid="uid://bdco3gif3x2il" path="res://icons/L.png" id="3_re56a"]
-[ext_resource type="Texture2D" uid="uid://drw8nyd88n1lf" path="res://icons/L1.png" id="4_b5ig0"]
-[ext_resource type="Texture2D" uid="uid://cpj3h18guvobp" path="res://icons/R.png" id="5_sy8j7"]
-[ext_resource type="Texture2D" uid="uid://bitphgg1204ap" path="res://icons/R1.png" id="6_gav71"]
+[ext_resource type="Texture2D" uid="uid://bgp7idqxhuwm3" path="res://icons/base/check.bmp" id="1_uyum6"]
+[ext_resource type="Texture2D" uid="uid://ct660w6wmqwmf" path="res://icons/base/uncheck.bmp" id="2_hjq38"]
+[ext_resource type="Texture2D" uid="uid://dx6hyrbkrhu22" path="res://icons/L.png" id="3_re56a"]
+[ext_resource type="Texture2D" uid="uid://cnyomwlss4m5m" path="res://icons/L1.png" id="4_b5ig0"]
+[ext_resource type="Texture2D" uid="uid://d2o5drwperjex" path="res://icons/R.png" id="5_sy8j7"]
+[ext_resource type="Texture2D" uid="uid://bs15gvg40o32a" path="res://icons/R1.png" id="6_gav71"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1rjlt"]
 content_margin_left = 4.0
