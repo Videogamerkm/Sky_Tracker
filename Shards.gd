@@ -1,7 +1,7 @@
 extends VBoxContainer
 
 var timeUtils = preload("res://TimeUtils.gd")
-var days = preload("res://Days.gd")
+var days = preload("res://Events.gd")
 var cycle = [2,1,3,0,4,1,2,0,3,1,4,0]
 const excl = [[6,0],[0,1],[1,2],[2,3],[3,4]]
 const times = [[7_080,35_880,64_680],[8_280,37_080,65_880],[28_080,49_680,71_280],[8_880,30_480,52_080],[13_080,34_680,56_280]]
