@@ -27,7 +27,7 @@ I created this in the hopes of having a lightweight, non-web app to help track s
 
 A secondary reason I created this app is I have some major, fundamental issues with the way Fandom manages the wikis hosted by them. There's lots of information out there, notably about why the Pokemon, Minecraft, Terraria, and Hollow Knight communities moved their wikis off of Fandom. On the other hand, I understand why an established wiki community may not want to move off of Fandom, particularly with how aggressive they are about SEO - my problem is with Fandom, not the contributors to the Sky wiki in any way.
 
-Despite that, a lot of the information I've included here is derived or pulled from the Sky fandom wiki. Notably, I used a lot of icons and graphics created by contributors on the Sky wiki, and have included them with permission from the administrators. Thank you!
+With that said, a lot of the information I've included here is derived or pulled from the Sky fandom wiki. Notably, I've used icons for expressions, cosmetics, seasons, and currency created by contributors to the Sky wiki, and have included them with permission from the administrators. A special thank you to Ray and Morybel who helped me word this section properly!
 
 Finally, there's a few graphics that my husband created for this app: the constellation buttons on the regular spirits page, and the banner on the current season page. He's been the source of a lot of the most user-friendly changes I've made since inception.
 
