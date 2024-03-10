@@ -183,7 +183,6 @@ grow_vertical = 2
 tab_alignment = 1
 
 [node name="Stats" type="ScrollContainer" parent="Tabs"]
-visible = false
 layout_mode = 2
 horizontal_scroll_mode = 0
 
@@ -4097,6 +4096,7 @@ text = "Check out this Sky Shards App by Plutoy for more."
 uri = "https://sky-shards.pages.dev/"
 
 [node name="Yearly Events" type="ScrollContainer" parent="Tabs"]
+visible = false
 layout_mode = 2
 
 [node name="Margin" type="MarginContainer" parent="Tabs/Yearly Events"]

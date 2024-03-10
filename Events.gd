@@ -1,7 +1,7 @@
 extends VBoxContainer
 
 const timeUtils = preload("res://TimeUtils.gd")
-@onready var main = $"../../../../.."
+@onready var main = $"../../../.."
 const day = "Days of Bloom"
 const location = "Prairie Peaks"
 const start = {"day":25,"month":3,"year":2024,"hour":0}
@@ -83,4 +83,4 @@ func _on_tree_reject():
 			else: row.append(null)
 		newBought.append(row)
 	bought[selected] = newBought
-	$Tree.import_bought(bought[selected],short[selected])
+	$Tree.import_bought(bought[selected])

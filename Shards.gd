@@ -26,6 +26,7 @@ func set_fields():
 	datetime.merge({"hour":0,"minute":0,"second":0},true)
 	## server_reset + shard time + local offset = local shard drop time
 	## server_reset + times[g][s] + local_offset_secs
+	server_reset = Time.get_unix_time_from_datetime_dict(datetime) - timeUtils.get_game_offset()
 	var c = cycle[(datetime["day"] - 1) % cycle.size()]
 	var type = "None" if datetime["weekday"] == excl[c][0] || datetime["weekday"] == excl[c][1] else "Strong" if c > 1 else "Regular"
 	var loc = locs[c][(datetime["day"] - 1) % 5]
@@ -36,8 +37,8 @@ func set_fields():
 		$Current.show()
 		for i in range(1,4):
 			get_node("Time"+str(i)).show()
-			var start = get_time_string(datetime, times[c][i-1])
-			var end = get_time_string(datetime, times[c][i-1] + 14_400)
+			var start = get_time_string(times[c][i-1])
+			var end = get_time_string(times[c][i-1] + 14_400)
 			get_node("Time"+str(i)).text = start+" - "+end
 		$place2.show()
 		$Reward.text = "There will be "+type+" shards falling in "+loc+", awarding "+str(val)+" "+("wax." if val == 200 else "ascended candles.")
@@ -48,9 +49,9 @@ func set_fields():
 		$Reward.text = "There are no shards falling today."
 		if loc == days.get_location_override(): $Reward.text += " Normally there would be, but something is overriding it."
 
-func get_time_string(reset, time) -> String:
-	server_reset = Time.get_unix_time_from_datetime_dict(reset)
+func get_time_string(time) -> String:
 	time = time - timeUtils.get_game_offset() + timeUtils.local_offset_secs
 	var aft = " AM" if time < 43_200 else (" PM" if time < 86_400 else " AM")
 	if Global.useTwelve: time = time % 43_200
+	time = time + timeUtils.get_game_offset()
 	return Time.get_time_string_from_unix_time(server_reset + time).replace(":00","").replace("00:","12:") + (aft if Global.useTwelve else "")
