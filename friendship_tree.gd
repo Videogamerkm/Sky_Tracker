@@ -43,8 +43,10 @@ func icon_pressed(button_pressed,node,row):
 		if row >= 0 && node.name == "Mid":
 			for i in range(0,3):
 				get_child(row*2).get_child(i).set_locked(false)
-		if row >= 1:
-			pass
+		if row >= -1 && row < get_children().size() / 2.0:
+			for r in range(row+2,get_children().size()/2.0 + 1):
+				get_child(r*2).get_child(1).set_locked(false)
+				get_child(r*2).get_child(1).set_pressed(true)
 	else:
 		if row >= 1 && node.name == "Mid":
 			for r in range(0,row):
