@@ -1,6 +1,5 @@
 extends VBoxContainer
 
-var spirits = preload("res://SeasonSpirits.gd")
 var timeUtils = preload("res://TimeUtils.gd")
 const seasonName = "Season of the Nine-Colored Deer"
 const start = {"day":15,"month":1,"year":2024,"hour":0} #1705305600
@@ -19,6 +18,7 @@ func _ready():
 	var candles = days*(6 if $Pass/Check.button_pressed else 5)
 	$"Per Day/Val".text = str(6 if $Pass/Check.button_pressed else 5)
 	$Candles/Val.text = str(candles)
+	$Need/Val.text = str(max((needPass if $Pass/Check.button_pressed else needNoPass) - (int($Spent/Val.text)+$Have/Candles.value),0))
 	$Total/Val.text = str(int($Spent/Val.text)+$Have/Candles.value)
 	var total = candles + int($Spent/Val.text) + $Have/Candles.value
 	$Complete.text = "You have missed too many candles to buy all the cosmetics (or you need to update things)."
@@ -40,7 +40,7 @@ func update_candles():
 	var bought = $"../../../Seasonal Spirits/Margin/VBox".bought
 	if not bought: bought = {}
 	var candles = 0
-	for s in spirits.data:
-		if spirits.data[s]["loc"] == seasonName && bought.has(s):
-			candles += spirits.get_spent(s,bought[s])
+	for s in SeasonSpirits.data:
+		if SeasonSpirits.data[s]["loc"] == seasonName && bought.has(s):
+			candles += SeasonSpirits.get_spent(s,bought[s])
 	$Spent/Val.text = str(candles)

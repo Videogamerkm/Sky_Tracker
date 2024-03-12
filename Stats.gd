@@ -3,8 +3,6 @@ extends VBoxContainer
 @onready var current = $"../../../Current Season/Margin/VBox"
 @onready var regular = $"../../../Regular Spirits/Margin/VBox"
 @onready var seasonal = $"../../../Seasonal Spirits/Margin/VBox"
-var spirits = preload("res://RegSpirits.gd")
-var seas_spirits = preload("res://SeasonSpirits.gd")
 var areas = ["Isle of Dawn","Daylight Prairie","Hidden Forest","Valley of Triumph","Golden Wasteland","Vault of Knowledge"]
 var wedges = [1,2,5,10,20,35,55,75,100,120,150,200,250]
 
@@ -13,18 +11,18 @@ func _ready():
 	for a in areas:
 		var area_row = get_node("Regular Spirits/"+a)
 		if not a == "Isle of Dawn": area_row.add_child(row.duplicate())
-	for s in spirits.data:
+	for s in RegSpirits.data:
 		var spirit_row = row.duplicate()
 		spirit_row.name = s
-		get_node("Regular Spirits/"+spirits.data[s]["loc"]).add_child(spirit_row)
-		if spirits.data[s].has("t2"):
+		get_node("Regular Spirits/"+RegSpirits.data[s]["loc"]).add_child(spirit_row)
+		if RegSpirits.data[s].has("t2"):
 			spirit_row = row.duplicate()
 			spirit_row.name = s+" T2"
 			spirit_row.get_node("Spirit").text = "Tier 2"
 			spirit_row.get_node("Spirit").horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
 			spirit_row.set_modulate(Color(1,0.75,0.75))
-			get_node("Regular Spirits/"+spirits.data[s]["loc"]).add_child(spirit_row)
-	for a in seas_spirits.seasons:
+			get_node("Regular Spirits/"+RegSpirits.data[s]["loc"]).add_child(spirit_row)
+	for a in SeasonSpirits.seasons:
 		var new_row = $"Seasonal Spirits/Season".duplicate()
 		new_row.name = a
 		if a == current.seasonName:
@@ -32,17 +30,17 @@ func _ready():
 			new_row.get_node("Titles/h").text = "S. Hearts"
 			new_row.get_node("Titles/a").text = "Candles"
 		$"Seasonal Spirits".add_child(new_row)
-	for s in seas_spirits.data:
+	for s in SeasonSpirits.data:
 		var new_row = $"Seasonal Spirits/Season/Titles".duplicate()
 		new_row.name = s
-		get_node("Seasonal Spirits/"+seas_spirits.data[s]["loc"]).add_child(new_row)
-		if seas_spirits.data[s].has("t2"):
+		get_node("Seasonal Spirits/"+SeasonSpirits.data[s]["loc"]).add_child(new_row)
+		if SeasonSpirits.data[s].has("t2"):
 			new_row = row.duplicate()
 			new_row.name = s+" T2"
 			new_row.get_node("Spirit").text = "Tier 2"
 			new_row.get_node("Spirit").horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
 			new_row.set_modulate(Color(1,0.75,0.75))
-			get_node("Seasonal Spirits/"+seas_spirits.data[s]["loc"]).add_child(new_row)
+			get_node("Seasonal Spirits/"+SeasonSpirits.data[s]["loc"]).add_child(new_row)
 	$"Seasonal Spirits/Season".queue_free()
 	set_values()
 
@@ -60,12 +58,12 @@ func set_values():
 	var comp = 0
 	var guideComp = 0
 	var seasonSpirits = 0.0
-	for s in seas_spirits.data:
-		if seas_spirits.data[s]["loc"] == current.seasonName:
+	for s in SeasonSpirits.data:
+		if SeasonSpirits.data[s]["loc"] == current.seasonName:
 			seasonSpirits += 1
 			if seasonal.bought.has(s):
-				comp += seas_spirits.get_completion(s,seasonal.bought[s])
-				if seas_spirits.data[s].has("isGuide"): guideComp = seas_spirits.get_completion(s,seasonal.bought[s])
+				comp += SeasonSpirits.get_completion(s,seasonal.bought[s])
+				if SeasonSpirits.data[s].has("isGuide"): guideComp = SeasonSpirits.get_completion(s,seasonal.bought[s])
 	$"Current Season/Completion2/Season".text = str(floor(comp/seasonSpirits))+"%"
 	$"Current Season/Completion/Season".text = str(floor((comp-guideComp)/(seasonSpirits-1)))+"%"
 	
@@ -81,27 +79,27 @@ func set_values():
 		var spiritCount = 0
 		var compPercent = 0.0
 		var elderPercent = 0
-		for s in spirits.data:
-			if spirits.data[s]["loc"] == a:
+		for s in RegSpirits.data:
+			if RegSpirits.data[s]["loc"] == a:
 				spiritCount += 1
-				var sCost = spirits.get_cost(s)
+				var sCost = RegSpirits.get_cost(s)
 				get_node("Regular Spirits/"+a+"/"+s+"/Spirit").text = s
 				var currency = 0
 				var curr_spent = 0
 				var asc = 0
 				var asc_spent = 0
 				get_node("Regular Spirits/"+a+"/"+s+"/By Purchase").text = "0%"
-				if spirits.data[s].has("t2"): get_node("Regular Spirits/"+a+"/"+s+" T2/By Purchase").text = "0%"
+				if RegSpirits.data[s].has("t2"): get_node("Regular Spirits/"+a+"/"+s+" T2/By Purchase").text = "0%"
 				if regular.bought.has(s):
-					compPercent += spirits.get_completion(s,regular.bought[s])
-					if s.begins_with("Elder of"): elderPercent = spirits.get_completion(s,regular.bought[s])
-					get_node("Regular Spirits/"+a+"/"+s+"/By Purchase").text = str(spirits.get_completion(s,regular.bought[s]))+"%"
-					if spirits.data[s].has("t2"): get_node("Regular Spirits/"+a+"/"+s+" T2/By Purchase").text = str(spirits.get_t2_completion(s,regular.bought[s]))+"%"
+					compPercent += RegSpirits.get_completion(s,regular.bought[s])
+					if s.begins_with("Elder of"): elderPercent = RegSpirits.get_completion(s,regular.bought[s])
+					get_node("Regular Spirits/"+a+"/"+s+"/By Purchase").text = str(RegSpirits.get_completion(s,regular.bought[s]))+"%"
+					if RegSpirits.data[s].has("t2"): get_node("Regular Spirits/"+a+"/"+s+" T2/By Purchase").text = str(RegSpirits.get_t2_completion(s,regular.bought[s]))+"%"
 				for key in sCost.keys():
 					if not key.contains("2"): currency += sCost[key]
-					elif spirits.data[s].has("t2"): asc += sCost[key]
+					elif RegSpirits.data[s].has("t2"): asc += sCost[key]
 					if regular.bought.has(s):
-						var sUnspent = spirits.get_unspent(s,regular.bought[s])
+						var sUnspent = RegSpirits.get_unspent(s,regular.bought[s])
 						if key == "a" && s.contains("Elder of"):
 							costsNeeded["u"] += sUnspent[key]
 							costsSpent["u"] += sCost[key] - sUnspent[key]
@@ -111,19 +109,19 @@ func set_values():
 						if not key.contains("2"):
 							get_node("Regular Spirits/"+a+"/"+s+"/"+key).text = str(sUnspent[key])
 							curr_spent += sCost[key] - sUnspent[key]
-						elif spirits.data[s].has("t2"):
+						elif RegSpirits.data[s].has("t2"):
 							asc_spent += sCost[key] - sUnspent[key]
 							get_node("Regular Spirits/"+a+"/"+s+" T2/"+key.replace("2","")).text = str(sUnspent[key])
 					else:
 						if key == "a" && s.contains("Elder of"): costsNeeded["u"] += sCost[key]
 						else: costsNeeded[key] += sCost[key]
 						if not key.contains("2"): get_node("Regular Spirits/"+a+"/"+s+"/"+key).text = str(sCost[key])
-						elif spirits.data[s].has("t2"): get_node("Regular Spirits/"+a+"/"+s+" T2/"+key.replace("2","")).text = str(sCost[key])
+						elif RegSpirits.data[s].has("t2"): get_node("Regular Spirits/"+a+"/"+s+" T2/"+key.replace("2","")).text = str(sCost[key])
 				get_node("Regular Spirits/"+a+"/"+s+"/By Currency").text = str(floor(curr_spent*100.0/currency))+"%"
 				if get_node("Regular Spirits/"+a+"/"+s+"/By Currency").text == "100%" && get_node("Regular Spirits/"+a+"/"+s+"/By Purchase").text == "100%":
 					get_node("Regular Spirits/"+a+"/"+s).set_modulate(Color(0.75,1,0.75))
 				else: get_node("Regular Spirits/"+a+"/"+s).set_modulate(Color(1,1,1))
-				if spirits.data[s].has("t2"):
+				if RegSpirits.data[s].has("t2"):
 					get_node("Regular Spirits/"+a+"/"+s+" T2/By Currency").text = str(floor(asc_spent*100.0/asc))+"%"
 					get_node("Regular Spirits/"+a+"/"+s+" T2").set_modulate(Color(1,0.75,0.75))
 					if get_node("Regular Spirits/"+a+"/"+s+" T2/By Currency").text == "100%":
@@ -164,25 +162,25 @@ func set_values():
 	get_node("Constellations/Total/Completion2/Need").text = str(floor(compTotal/spiritTotal))+"%"
 	
 	# Seasonal spirit values
-	for s in seas_spirits.data:
+	for s in SeasonSpirits.data:
 		var costsNeeded = {"c":0,"h":0,"a":0,"c2":0,"h2":0,"a2":0,"sp":0,"sh":0}
-		var sCost = seas_spirits.get_cost(s)
-		var a = seas_spirits.data[s]["loc"]
+		var sCost = SeasonSpirits.get_cost(s)
+		var a = SeasonSpirits.data[s]["loc"]
 		get_node("Seasonal Spirits/"+a+"/"+s+"/Spirit").text = s
 		var currency = 0
 		var curr_spent = 0
 		var asc = 0
 		var asc_spent = 0
 		get_node("Seasonal Spirits/"+a+"/"+s+"/By Purchase").text = "0%"
-		if seas_spirits.data[s].has("t2"): get_node("Seasonal Spirits/"+a+"/"+s+" T2/By Purchase").text = "0%"
+		if SeasonSpirits.data[s].has("t2"): get_node("Seasonal Spirits/"+a+"/"+s+" T2/By Purchase").text = "0%"
 		if seasonal.bought.has(s):
-			get_node("Seasonal Spirits/"+a+"/"+s+"/By Purchase").text = str(seas_spirits.get_completion(s,seasonal.bought[s]))+"%"
-			if seas_spirits.data[s].has("t2"): get_node("Seasonal Spirits/"+a+"/"+s+" T2/By Purchase").text = str(seas_spirits.get_t2_completion(s,seasonal.bought[s]))+"%"
+			get_node("Seasonal Spirits/"+a+"/"+s+"/By Purchase").text = str(SeasonSpirits.get_completion(s,seasonal.bought[s]))+"%"
+			if SeasonSpirits.data[s].has("t2"): get_node("Seasonal Spirits/"+a+"/"+s+" T2/By Purchase").text = str(SeasonSpirits.get_t2_completion(s,seasonal.bought[s]))+"%"
 		for key in sCost.keys():
 			if not key.contains("2"): currency += sCost[key]
-			elif seas_spirits.data[s].has("t2"): asc += sCost[key]
+			elif SeasonSpirits.data[s].has("t2"): asc += sCost[key]
 			if seasonal.bought.has(s):
-				var sUnspent = seas_spirits.get_unspent(s,seasonal.bought[s])
+				var sUnspent = SeasonSpirits.get_unspent(s,seasonal.bought[s])
 				costsNeeded[key] += sUnspent[key]
 				if key == "sp" && a == current.seasonName:
 					get_node("Seasonal Spirits/"+a+"/"+s+"/c").text = str(sUnspent[key])
@@ -197,7 +195,7 @@ func set_values():
 				elif not key.contains("2") && not key.contains("s"):
 					get_node("Seasonal Spirits/"+a+"/"+s+"/"+key).text = str(sUnspent[key])
 					curr_spent += sCost[key] - sUnspent[key]
-				elif seas_spirits.data[s].has("t2"):
+				elif SeasonSpirits.data[s].has("t2"):
 					asc_spent += sCost[key] - sUnspent[key]
 					get_node("Seasonal Spirits/"+a+"/"+s+" T2/"+key.replace("2","")).text = str(sUnspent[key])
 			else:
@@ -207,12 +205,12 @@ func set_values():
 				elif key == "c" && a == current.seasonName: get_node("Seasonal Spirits/"+a+"/"+s+"/a").text = str(sCost[key])
 				elif key == "a" && a == current.seasonName: continue
 				elif not key.contains("2") && not key.contains("s"): get_node("Seasonal Spirits/"+a+"/"+s+"/"+key).text = str(sCost[key])
-				elif seas_spirits.data[s].has("t2"): get_node("Seasonal Spirits/"+a+"/"+s+" T2/"+key.replace("2","")).text = str(sCost[key])
+				elif SeasonSpirits.data[s].has("t2"): get_node("Seasonal Spirits/"+a+"/"+s+" T2/"+key.replace("2","")).text = str(sCost[key])
 		get_node("Seasonal Spirits/"+a+"/"+s+"/By Currency").text = str(floor(curr_spent*100.0/currency))+"%"
 		if get_node("Seasonal Spirits/"+a+"/"+s+"/By Currency").text == "100%" && get_node("Seasonal Spirits/"+a+"/"+s+"/By Purchase").text == "100%":
 			get_node("Seasonal Spirits/"+a+"/"+s).set_modulate(Color(0.75,1,0.75))
 		else: get_node("Seasonal Spirits/"+a+"/"+s).set_modulate(Color(1,1,1))
-		if seas_spirits.data[s].has("t2"):
+		if SeasonSpirits.data[s].has("t2"):
 			get_node("Seasonal Spirits/"+a+"/"+s+" T2/By Currency").text = str(floor(asc_spent*100.0/asc))+"%"
 			get_node("Seasonal Spirits/"+a+"/"+s+" T2").set_modulate(Color(1,0.75,0.75))
 			if get_node("Seasonal Spirits/"+a+"/"+s+" T2/By Currency").text == "100%":
@@ -232,18 +230,18 @@ func set_values():
 		$"Winged Light/Grid".get_node(a+" Avail").text = str(uncheck)
 	$"Winged Light/Grid".get_node("Total Coll").text = str(light_coll)
 	$"Winged Light/Grid".get_node("Total Avail").text = str(light_avail)
-	var reg_t2 = spirits.get_t2_wings(regular.bought)
-	var reg_t2_avail = spirits.get_all_t2_wings() - reg_t2
-	var reg_coll = spirits.get_wings(regular.bought) - reg_t2
-	var reg_avail = spirits.get_all_wings() - reg_coll - reg_t2_avail - reg_t2
+	var reg_t2 = RegSpirits.get_t2_wings(regular.bought)
+	var reg_t2_avail = RegSpirits.get_all_t2_wings() - reg_t2
+	var reg_coll = RegSpirits.get_wings(regular.bought) - reg_t2
+	var reg_avail = RegSpirits.get_all_wings() - reg_coll - reg_t2_avail - reg_t2
 	$"Winged Light/Grid".get_node("Regular Coll").text = str(reg_coll)
 	$"Winged Light/Grid".get_node("Regular Avail").text = str(reg_avail)
 	$"Winged Light/Grid".get_node("Tier2 Coll").text = str(reg_t2)
 	$"Winged Light/Grid".get_node("Tier2 Avail").text = str(reg_t2_avail)
-	var seas_t2 = seas_spirits.get_t2_wings(seasonal.bought)
-	var seas_t2_avail = seas_spirits.get_all_t2_wings() - seas_t2
-	var seas_coll = seas_spirits.get_wings(seasonal.bought) - seas_t2
-	var seas_avail = seas_spirits.get_all_wings() - seas_coll - seas_t2_avail - seas_t2
+	var seas_t2 = SeasonSpirits.get_t2_wings(seasonal.bought)
+	var seas_t2_avail = SeasonSpirits.get_all_t2_wings() - seas_t2
+	var seas_coll = SeasonSpirits.get_wings(seasonal.bought) - seas_t2
+	var seas_avail = SeasonSpirits.get_all_wings() - seas_coll - seas_t2_avail - seas_t2
 	$"Winged Light/Grid".get_node("Seasonal Coll").text = str(seas_coll)
 	$"Winged Light/Grid".get_node("Seasonal Avail").text = str(seas_avail)
 	$"Winged Light/Grid".get_node("SeasTier2 Coll").text = str(seas_t2)

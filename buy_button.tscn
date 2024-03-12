@@ -1,7 +1,5 @@
-[gd_scene load_steps=10 format=3 uid="uid://comkmo1edc6w5"]
+[gd_scene load_steps=8 format=3 uid="uid://comkmo1edc6w5"]
 
-[ext_resource type="Texture2D" uid="uid://bj8i3r3dqrbog" path="res://icons/reg/exp/point.bmp" id="1_nru54"]
-[ext_resource type="Texture2D" uid="uid://c2xaswla4wwdq" path="res://icons/base/candle.bmp" id="2_32vtd"]
 [ext_resource type="Script" path="res://buy_button.gd" id="2_nrh32"]
 [ext_resource type="Texture2D" uid="uid://mq2yyf2nob6j" path="res://icons/seas/icons/the Nine-Colored Deer.bmp" id="4_a4ln6"]
 
@@ -47,7 +45,6 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_uyqjm")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_3hqv2")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_e42xk")
 toggle_mode = true
-icon = ExtResource("1_nru54")
 icon_alignment = 1
 expand_icon = true
 script = ExtResource("2_nrh32")
@@ -59,7 +56,6 @@ offset_top = 20.0
 offset_right = 60.0
 offset_bottom = 50.0
 mouse_filter = 2
-texture = ExtResource("2_32vtd")
 expand_mode = 1
 stretch_mode = 5
 

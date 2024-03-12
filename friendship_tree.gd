@@ -21,7 +21,7 @@ func set_tree(rows,days=""):
 				icons.get_child(i).cost = rowSplit[1]
 				icons.get_child(i).type = rowSplit[2]
 				if days != "": icons.get_child(i).days = days
-				if rowSplit[0].contains("base/sheet"): rowSplit[0] = rowSplit[0].split("?")[0]
+				if rowSplit[0].contains("?"): rowSplit[0] = rowSplit[0].split("?")[0]
 				icons.get_child(i).set_button_icon(load("res://icons/"+rowSplit[0]+".bmp"))
 				icons.get_child(i).set_pressed(false)
 				icons.get_child(i).connect("toggled",icon_pressed.bind(icons.get_child(i),x))

@@ -1,0 +1,37 @@
+{
+	"Ceasing Commodore": {
+		"loc": "Season of Abyss",
+		"tree": [
+			[
+				"seas/cos/calm 1;40;c",
+				"seas/cos/calm 3;70;c",
+				""
+			],
+			[
+				"seas/exp/calm?4;6;h",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"",
+				"seas/exp/calm?3;3;h",
+				""
+			],
+			[
+				"seas/cos/calm 2;45;c",
+				"base/wing;2;a",
+				"base/heart;3;c"
+			],
+			[
+				"seas/exp/calm?2;4;h",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"",
+				"seas/exp/calm?1;0;0",
+				""
+			]
+		]
+	}
+}

@@ -12,6 +12,8 @@ const hide = Color(0,0,0)
 
 func _ready():
 	set_locked(locked)
+	if Global.spoilers: add_theme_color_override("icon_disabled_color",Color(0.5,0.5,0.5))
+	else: add_theme_color_override("icon_disabled_color",Color(0,0,0))
 	$Curr.show()
 	$Cost.show()
 	if type == "c":
