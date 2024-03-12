@@ -1,0 +1,37 @@
+{
+	"Daydream Forester": {
+		"loc": "Season of Assembly",
+		"tree": [
+			[
+				"",
+				"seas/cos/bubble 2;60;c",
+				""
+			],
+			[
+				"seas/exp/bubble?4;6;h",
+				"base/5C;5;c",
+				"base/sheet?20;15;c"
+			],
+			[
+				"",
+				"seas/exp/bubble?3;3;h",
+				""
+			],
+			[
+				"seas/cos/bubble 1;24;c",
+				"base/wing;2;a",
+				"base/heart;3;c"
+			],
+			[
+				"seas/exp/bubble?2;4;h",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"",
+				"seas/exp/bubble?1;0;0",
+				""
+			]
+		]
+	}
+}
