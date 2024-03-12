@@ -23,7 +23,6 @@ func set_tree(rows,days=""):
 				if days != "": icons.get_child(i).days = days
 				if rowSplit[0].contains("?"): rowSplit[0] = rowSplit[0].split("?")[0]
 				icons.get_child(i).set_button_icon(load("res://icons/"+rowSplit[0]+".bmp"))
-				icons.get_child(i).set_disabled(true)
 				icons.get_child(i).set_pressed(false)
 				icons.get_child(i).connect("toggled",icon_pressed.bind(icons.get_child(i),x))
 				if rowSplit.size() > 3 && rowSplit[3] == "sp": icons.get_child(i).isSP = true
@@ -36,19 +35,23 @@ func set_tree(rows,days=""):
 		add_child(lines)
 		x += 1
 	remove_child(get_child(-1))
-	get_child(-1).get_child(1).set_disabled(false)
+	get_child(-1).get_child(1).set_locked(false)
 
 func icon_pressed(button_pressed,node,row):
 	if button_pressed:
 		row -= 1
 		if row >= 0 && node.name == "Mid":
 			for i in range(0,3):
-				get_child(row*2).get_child(i).set_disabled(false)
+				get_child(row*2).get_child(i).set_locked(false)
+		if row >= -1 && row < get_children().size() / 2.0:
+			for r in range(row+2,get_children().size()/2.0 + 1):
+				get_child(r*2).get_child(1).set_locked(false)
+				get_child(r*2).get_child(1).set_pressed(true)
 	else:
 		if row >= 1 && node.name == "Mid":
 			for r in range(0,row):
 				for i in range(0,3):
-					get_child(r*2).get_child(i).set_disabled(true)
+					get_child(r*2).get_child(i).set_locked(true)
 					get_child(r*2).get_child(i).set_pressed(false)
 	bought.emit(node.iconValue,button_pressed)
 

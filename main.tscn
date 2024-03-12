@@ -2336,6 +2336,9 @@ text = "Total"
 [node name="Total Coll2" type="Label" parent="Tabs/Stats/Stats/VBox/Winged Light/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
+tooltip_text = "If you haven't left orbit yet
+this might not be exact."
+mouse_filter = 1
 theme_override_font_sizes/font_size = 24
 text = "0"
 horizontal_alignment = 1
@@ -3732,6 +3735,10 @@ layout_mode = 2
 focus_mode = 0
 
 [node name="CheckBox2" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge/Oasis"]
+layout_mode = 2
+focus_mode = 0
+
+[node name="CheckBox3" type="CheckBox" parent="Tabs/Winged Light Tracker/Margin/VBox/Vault of Knowledge/Oasis"]
 layout_mode = 2
 focus_mode = 0
 

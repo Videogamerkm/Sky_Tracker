@@ -5,8 +5,13 @@ extends Button
 @export var type = "a"
 @export var cost = 10
 @export var isSP = false
+var locked = true
+const normal = Color(0.67,0.67,1.00)
+const spoiler = Color(0.5,0.5,0.5)
+const hide = Color(0,0,0)
 
 func _ready():
+	set_locked(locked)
 	if Global.spoilers: add_theme_color_override("icon_disabled_color",Color(0.5,0.5,0.5))
 	else: add_theme_color_override("icon_disabled_color",Color(0,0,0))
 	$Curr.show()
@@ -24,10 +29,14 @@ func _ready():
 	elif type == "k":
 		$Curr.set_texture(load("res://icons/days/"+days+"/ticket.bmp"))
 	elif type == "0":
-		$Curr.hide()
+		$Curr.set_texture(preload("res://icons/base/dot.png"))
 		$Cost.hide()
 	$Cost.text = str(cost)
 	if isSP: $SP.show()
+
+func _process(_delta):
+	if type == "0" && (button_pressed || locked): $Curr.hide()
+	elif type == "0": $Curr.show()
 
 func _on_toggled(press):
 	if press:
@@ -36,3 +45,9 @@ func _on_toggled(press):
 	elif type != "0":
 		$Curr.show()
 		$Cost.show()
+
+func set_locked(state):
+	locked = state
+	if state && Global.spoilers: add_theme_color_override("icon_normal_color",spoiler)
+	elif state: add_theme_color_override("icon_normal_color",hide)
+	else: add_theme_color_override("icon_normal_color",normal)
