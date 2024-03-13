@@ -2372,16 +2372,8 @@ theme_override_constants/margin_bottom = 24
 
 [node name="VBox" type="VBoxContainer" parent="Tabs/Regular Spirits/Margin"]
 layout_mode = 2
+theme_override_constants/separation = 10
 script = ExtResource("3_ttfa3")
-
-[node name="Back" type="Button" parent="Tabs/Regular Spirits/Margin/VBox"]
-visible = false
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 0
-focus_mode = 0
-theme_override_constants/icon_max_width = 100
-text = "Back"
 
 [node name="Area" type="Label" parent="Tabs/Regular Spirits/Margin/VBox"]
 layout_mode = 2
@@ -2486,19 +2478,7 @@ size_flags_vertical = 3
 [node name="Tree" parent="Tabs/Regular Spirits/Margin/VBox" instance=ExtResource("4_t1mtd")]
 visible = false
 layout_mode = 2
-size_flags_horizontal = 4
-
-[node name="Label2" type="Label" parent="Tabs/Regular Spirits/Margin/VBox"]
-layout_mode = 2
-
-[node name="All" type="Button" parent="Tabs/Regular Spirits/Margin/VBox"]
-visible = false
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 0
-focus_mode = 0
-theme_override_constants/icon_max_width = 100
-text = "Buy All"
+size_flags_horizontal = 1
 
 [node name="Clear" type="Button" parent="Tabs/Regular Spirits/Margin/VBox"]
 layout_mode = 2
@@ -2515,9 +2495,6 @@ dialog_text = "Are you sure you want to clear purchase data?
 
 This cannot be undone."
 dialog_autowrap = true
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Tabs/Regular Spirits/Margin/VBox"]
-layout_mode = 2
 
 [node name="Current Season" type="ScrollContainer" parent="Tabs"]
 visible = false
@@ -2758,15 +2735,6 @@ theme_override_constants/margin_bottom = 24
 layout_mode = 2
 script = ExtResource("5_o6qgh")
 
-[node name="Back" type="Button" parent="Tabs/Seasonal Spirits/Margin/VBox"]
-visible = false
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 0
-focus_mode = 0
-theme_override_constants/icon_max_width = 100
-text = "Back"
-
 [node name="Season" type="Label" parent="Tabs/Seasonal Spirits/Margin/VBox"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
@@ -2821,16 +2789,7 @@ expand_icon = true
 [node name="Tree" parent="Tabs/Seasonal Spirits/Margin/VBox" instance=ExtResource("4_t1mtd")]
 visible = false
 layout_mode = 2
-size_flags_horizontal = 4
-
-[node name="All" type="Button" parent="Tabs/Seasonal Spirits/Margin/VBox"]
-visible = false
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 0
-focus_mode = 0
-theme_override_constants/icon_max_width = 100
-text = "Buy All"
+size_flags_horizontal = 1
 
 [node name="Clear" type="Button" parent="Tabs/Seasonal Spirits/Margin/VBox"]
 layout_mode = 2
@@ -4318,23 +4277,6 @@ icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="All" type="Button" parent="Tabs/Yearly Events/Margin/VBox"]
-visible = false
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 0
-focus_mode = 0
-theme_override_constants/icon_max_width = 100
-text = "Buy All"
-
-[node name="Clear" type="Button" parent="Tabs/Yearly Events/Margin/VBox"]
-visible = false
-layout_mode = 2
-focus_mode = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_d7tig")
-theme_override_styles/hover = SubResource("StyleBoxFlat_ohe4u")
-text = "Clear Spirit Data"
-
 [node name="place2" type="Label" parent="Tabs/Yearly Events/Margin/VBox"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
@@ -4343,15 +4285,7 @@ horizontal_alignment = 1
 [node name="Tree" parent="Tabs/Yearly Events/Margin/VBox" instance=ExtResource("4_t1mtd")]
 visible = false
 layout_mode = 2
-size_flags_horizontal = 4
-
-[node name="Confirm" type="ConfirmationDialog" parent="Tabs/Yearly Events/Margin/VBox"]
-initial_position = 2
-size = Vector2i(300, 187)
-dialog_text = "Are you sure you want to clear purchase data?
-
-This cannot be undone."
-dialog_autowrap = true
+size_flags_horizontal = 1
 
 [node name="Settings" type="ScrollContainer" parent="Tabs"]
 visible = false
@@ -5132,28 +5066,26 @@ libraries = {
 [connection signal="pressed" from="Tabs/Stats/Stats/VBox/Regular Spirits/Main/Collapse" to="Tabs/Stats/Stats/VBox" method="accordion_text" binds= ["Regular Spirits", false]]
 [connection signal="pressed" from="Tabs/Stats/Stats/VBox/Seasonal Spirits/Main/Expand" to="Tabs/Stats/Stats/VBox" method="accordion_text" binds= ["Seasonal Spirits", true]]
 [connection signal="pressed" from="Tabs/Stats/Stats/VBox/Seasonal Spirits/Main/Collapse" to="Tabs/Stats/Stats/VBox" method="accordion_text" binds= ["Seasonal Spirits", false]]
-[connection signal="pressed" from="Tabs/Regular Spirits/Margin/VBox/Back" to="Tabs/Regular Spirits/Margin/VBox" method="_on_back_pressed"]
 [connection signal="bought" from="Tabs/Regular Spirits/Margin/VBox/Tree" to="Tabs/Regular Spirits/Margin/VBox" method="_on_tree_bought"]
-[connection signal="pressed" from="Tabs/Regular Spirits/Margin/VBox/All" to="Tabs/Regular Spirits/Margin/VBox" method="_on_all_pressed"]
+[connection signal="treeBack" from="Tabs/Regular Spirits/Margin/VBox/Tree" to="Tabs/Regular Spirits/Margin/VBox" method="_on_back_pressed"]
+[connection signal="treeClear" from="Tabs/Regular Spirits/Margin/VBox/Tree" to="Tabs/Regular Spirits/Margin/VBox" method="_on_clear"]
 [connection signal="pressed" from="Tabs/Regular Spirits/Margin/VBox/Clear" to="Tabs/Regular Spirits/Margin/VBox" method="_on_clear_pressed"]
-[connection signal="confirmed" from="Tabs/Regular Spirits/Margin/VBox/Confirm" to="Tabs/Regular Spirits/Margin/VBox" method="_on_confirm_confirmed"]
+[connection signal="confirmed" from="Tabs/Regular Spirits/Margin/VBox/Confirm" to="Tabs/Regular Spirits/Margin/VBox" method="_on_clear"]
 [connection signal="value_changed" from="Tabs/Current Season/Margin/VBox/Have/Candles" to="Tabs/Current Season/Margin/VBox" method="_on_check_toggled"]
 [connection signal="toggled" from="Tabs/Current Season/Margin/VBox/Pass/Check" to="Tabs/Current Season/Margin/VBox" method="_on_check_toggled"]
-[connection signal="pressed" from="Tabs/Seasonal Spirits/Margin/VBox/Back" to="Tabs/Seasonal Spirits/Margin/VBox" method="_on_back_pressed"]
 [connection signal="bought" from="Tabs/Seasonal Spirits/Margin/VBox/Tree" to="Tabs/Seasonal Spirits/Margin/VBox" method="_on_tree_bought"]
 [connection signal="reject" from="Tabs/Seasonal Spirits/Margin/VBox/Tree" to="Tabs/Seasonal Spirits/Margin/VBox" method="_on_tree_reject"]
-[connection signal="pressed" from="Tabs/Seasonal Spirits/Margin/VBox/All" to="Tabs/Seasonal Spirits/Margin/VBox" method="_on_all_pressed"]
+[connection signal="treeBack" from="Tabs/Seasonal Spirits/Margin/VBox/Tree" to="Tabs/Seasonal Spirits/Margin/VBox" method="_on_back_pressed"]
+[connection signal="treeClear" from="Tabs/Seasonal Spirits/Margin/VBox/Tree" to="Tabs/Seasonal Spirits/Margin/VBox" method="_on_clear"]
 [connection signal="pressed" from="Tabs/Seasonal Spirits/Margin/VBox/Clear" to="Tabs/Seasonal Spirits/Margin/VBox" method="_on_clear_pressed"]
-[connection signal="confirmed" from="Tabs/Seasonal Spirits/Margin/VBox/Confirm" to="Tabs/Seasonal Spirits/Margin/VBox" method="_on_confirm_confirmed"]
+[connection signal="confirmed" from="Tabs/Seasonal Spirits/Margin/VBox/Confirm" to="Tabs/Seasonal Spirits/Margin/VBox" method="_on_clear"]
 [connection signal="pressed" from="Tabs/Winged Light Tracker/Margin/VBox/Main/Collapse" to="Tabs/Winged Light Tracker/Margin/VBox" method="_on_collapse_pressed"]
 [connection signal="pressed" from="Tabs/Winged Light Tracker/Margin/VBox/Main/Expand" to="Tabs/Winged Light Tracker/Margin/VBox" method="_on_expand_pressed"]
 [connection signal="pressed" from="Tabs/Winged Light Tracker/Margin/VBox/Main/Check" to="Tabs/Winged Light Tracker/Margin/VBox" method="_on_check_pressed"]
 [connection signal="pressed" from="Tabs/Winged Light Tracker/Margin/VBox/Main/Uncheck" to="Tabs/Winged Light Tracker/Margin/VBox" method="_on_uncheck_pressed"]
-[connection signal="pressed" from="Tabs/Yearly Events/Margin/VBox/All" to="Tabs/Yearly Events/Margin/VBox" method="_on_all_pressed"]
-[connection signal="pressed" from="Tabs/Yearly Events/Margin/VBox/Clear" to="Tabs/Yearly Events/Margin/VBox" method="_on_clear_pressed"]
 [connection signal="bought" from="Tabs/Yearly Events/Margin/VBox/Tree" to="Tabs/Yearly Events/Margin/VBox" method="_on_tree_bought"]
 [connection signal="reject" from="Tabs/Yearly Events/Margin/VBox/Tree" to="Tabs/Yearly Events/Margin/VBox" method="_on_tree_reject"]
-[connection signal="confirmed" from="Tabs/Yearly Events/Margin/VBox/Confirm" to="Tabs/Yearly Events/Margin/VBox" method="_on_confirm_confirmed"]
+[connection signal="treeClear" from="Tabs/Yearly Events/Margin/VBox/Tree" to="Tabs/Yearly Events/Margin/VBox" method="_on_clear"]
 [connection signal="toggled" from="Tabs/Settings/Margin/VBox/Short" to="Tabs/Settings/Margin/VBox" method="_on_short_toggled"]
 [connection signal="toggled" from="Tabs/Settings/Margin/VBox/Spoilers" to="Tabs/Settings/Margin/VBox" method="_on_spoilers_toggled"]
 [connection signal="toggled" from="Tabs/Settings/Margin/VBox/Time" to="Tabs/Settings/Margin/VBox" method="_on_time_toggled"]
