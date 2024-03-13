@@ -53,7 +53,6 @@ func _press_event_button(node):
 	$Tree.set_tree(rows[d],event)
 	if bought.has(d): $Tree.import_bought(bought[d])
 	if not $Tree.is_visible_in_tree(): $Tree.show()
-	print($Tree.custom_minimum_size)
 
 func _on_tree_bought(iconValue,press):
 	bought[selected] = $Tree.export_bought()
