@@ -1,10 +1,58 @@
-[gd_scene load_steps=6 format=3 uid="uid://be03ohlum8yr2"]
+[gd_scene load_steps=10 format=3 uid="uid://be03ohlum8yr2"]
 
 [ext_resource type="Script" path="res://friendship_tree.gd" id="1_kubeo"]
 [ext_resource type="PackedScene" uid="uid://comkmo1edc6w5" path="res://buy_button.tscn" id="2_dbd6g"]
 [ext_resource type="Texture2D" uid="uid://busn8wvu1a32c" path="res://icons/base/conn_left.png" id="3_leh34"]
 [ext_resource type="Texture2D" uid="uid://b05ldfps7sbfl" path="res://icons/base/conn_vert.png" id="4_j55f8"]
 [ext_resource type="Texture2D" uid="uid://d305d8x7v7py8" path="res://icons/base/conn_right.png" id="5_8fjsg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2wihv"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.4, 0.4, 0.588235, 0.294118)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_63e34"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.329412, 0.329412, 0.486275, 0.6)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_akjr0"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.588235, 0.4, 0.4, 0.294118)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_25t5q"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.486275, 0.329412, 0.329412, 0.6)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+corner_detail = 5
 
 [node name="Friendship Tree" type="VBoxContainer"]
 anchors_preset = 15
@@ -14,36 +62,79 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_constants/separation = -25
 script = ExtResource("1_kubeo")
 
-[node name="Icon Row" type="Control" parent="."]
-custom_minimum_size = Vector2(250, 75)
+[node name="Org1" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Controls" type="VBoxContainer" parent="Org1"]
+custom_minimum_size = Vector2(75, 0)
 layout_mode = 2
 
-[node name="Left" parent="Icon Row" instance=ExtResource("2_dbd6g")]
+[node name="Back" type="Button" parent="Org1/Controls"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+focus_mode = 0
+text = "Back"
+
+[node name="All" type="Button" parent="Org1/Controls"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_2wihv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_63e34")
+text = "Buy All"
+
+[node name="Clear" type="Button" parent="Org1/Controls"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_akjr0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_25t5q")
+text = "Clear"
+
+[node name="Scroll" type="ScrollContainer" parent="Org1"]
+layout_mode = 2
+size_flags_horizontal = 3
+horizontal_scroll_mode = 0
+
+[node name="Rows" type="VBoxContainer" parent="Org1/Scroll"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = -25
+
+[node name="Icon Row" type="Control" parent="Org1/Scroll/Rows"]
+custom_minimum_size = Vector2(250, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Left" parent="Org1/Scroll/Rows/Icon Row" instance=ExtResource("2_dbd6g")]
 layout_mode = 0
 offset_top = 25.0
 offset_bottom = 75.0
 
-[node name="Mid" parent="Icon Row" instance=ExtResource("2_dbd6g")]
+[node name="Mid" parent="Org1/Scroll/Rows/Icon Row" instance=ExtResource("2_dbd6g")]
 layout_mode = 0
 offset_left = 100.0
 offset_right = 150.0
 
-[node name="Right" parent="Icon Row" instance=ExtResource("2_dbd6g")]
+[node name="Right" parent="Org1/Scroll/Rows/Icon Row" instance=ExtResource("2_dbd6g")]
 layout_mode = 0
 offset_left = 200.0
 offset_top = 25.0
 offset_right = 250.0
 offset_bottom = 75.0
 
-[node name="Line Row" type="Control" parent="."]
+[node name="Line Row" type="Control" parent="Org1/Scroll/Rows"]
 custom_minimum_size = Vector2(250, 75)
 layout_mode = 2
+size_flags_horizontal = 4
 mouse_filter = 2
 
-[node name="Left" type="TextureRect" parent="Line Row"]
+[node name="Left" type="TextureRect" parent="Org1/Scroll/Rows/Line Row"]
 layout_mode = 2
 offset_left = 50.0
 offset_top = 25.0
@@ -54,7 +145,7 @@ texture = ExtResource("3_leh34")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Mid" type="TextureRect" parent="Line Row"]
+[node name="Mid" type="TextureRect" parent="Org1/Scroll/Rows/Line Row"]
 layout_mode = 2
 offset_left = 100.0
 offset_right = 150.0
@@ -64,7 +155,7 @@ texture = ExtResource("4_j55f8")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Right" type="TextureRect" parent="Line Row"]
+[node name="Right" type="TextureRect" parent="Org1/Scroll/Rows/Line Row"]
 layout_mode = 2
 offset_left = 150.0
 offset_top = 25.0
@@ -74,3 +165,20 @@ size_flags_horizontal = 3
 texture = ExtResource("5_8fjsg")
 expand_mode = 1
 stretch_mode = 5
+
+[node name="Space" type="Control" parent="Org1"]
+custom_minimum_size = Vector2(75, 0)
+layout_mode = 2
+
+[node name="Confirm" type="ConfirmationDialog" parent="."]
+initial_position = 2
+size = Vector2i(300, 187)
+dialog_text = "Are you sure you want to clear purchase data?
+
+This cannot be undone."
+dialog_autowrap = true
+
+[connection signal="pressed" from="Org1/Controls/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Org1/Controls/All" to="." method="buy_all"]
+[connection signal="pressed" from="Org1/Controls/Clear" to="." method="_on_clear_pressed"]
+[connection signal="confirmed" from="Confirm" to="." method="_on_confirm_confirmed"]

@@ -54,4 +54,6 @@ func get_time_string(time) -> String:
 	var aft = " AM" if time < 43_200 else (" PM" if time < 86_400 else " AM")
 	if Global.useTwelve: time = time % 43_200
 	time = time + timeUtils.get_game_offset()
-	return Time.get_time_string_from_unix_time(server_reset + time).replace(":00","").replace("00:","12:") + (aft if Global.useTwelve else "")
+	var ret = Time.get_time_string_from_unix_time(server_reset + time).replace(":00","")
+	if Global.useTwelve: ret = ret.replace("00:","12:")
+	return ret + (aft if Global.useTwelve else "")

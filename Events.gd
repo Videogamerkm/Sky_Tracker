@@ -16,6 +16,7 @@ var bought = {}
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$Tree/Org1/Controls/Back.hide()
 	for c in $Events1.get_children(): c.connect("pressed", _press_event_button.bind(c))
 	for c in $Events2.get_children(): c.connect("pressed", _press_event_button.bind(c))
 	if timeUtils.get_time_until(end) < 0 or timeUtils.get_time_until(start) > 0:
@@ -52,8 +53,7 @@ func _press_event_button(node):
 	$Tree.set_tree(rows[d],event)
 	if bought.has(d): $Tree.import_bought(bought[d])
 	if not $Tree.is_visible_in_tree(): $Tree.show()
-	if not $Clear.is_visible_in_tree(): $Clear.show()
-	if not $All.is_visible_in_tree(): $All.show()
+	print($Tree.custom_minimum_size)
 
 func _on_tree_bought(iconValue,press):
 	bought[selected] = $Tree.export_bought()
@@ -67,10 +67,7 @@ static func get_location_override() -> String:
 	if timeUtils.get_time_until(end) < 0 or timeUtils.get_time_until(start) > 0: return ""
 	else: return location
 
-func _on_clear_pressed():
-	$Confirm.show()
-
-func _on_confirm_confirmed():
+func _on_clear():
 	bought.erase(selected)
 	$Tree.set_tree(rows[selected],short[selected])
 

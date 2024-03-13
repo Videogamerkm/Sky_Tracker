@@ -4,6 +4,7 @@ extends VBoxContainer
 @onready var seasonIcon = $"Season Selection/Button".duplicate()
 @onready var main = $"../../../.."
 var curr_spirit = ""
+var a = ""
 var bought = {}
 
 func _ready():
@@ -19,6 +20,7 @@ func _ready():
 
 func _area_select(area):
 	$Season.text = area
+	a = area
 	for c in $"Spirits 1".get_children(): c.queue_free()
 	for c in $"Spirits 2".get_children(): c.queue_free()
 	var c = 0
@@ -37,9 +39,8 @@ func _spirit_select(spirit):
 	$Tree.set_tree(SeasonSpirits.data[spirit]["tree"])
 	if bought.has(spirit): $Tree.import_bought(bought[spirit])
 	$Tree.show()
-	$Back.show()
-	$All.show()
-	$Season.add_theme_color_override("font_color",Color(1,1,1,0))
+	$Clear.hide()
+	$Season.set_text(spirit)
 	$"Spirits 1".hide()
 	$"Spirits 2".hide()
 	$"Season Selection".hide()
@@ -47,9 +48,8 @@ func _spirit_select(spirit):
 func _on_back_pressed():
 	curr_spirit = ""
 	$Tree.hide()
-	$Back.hide()
-	$All.hide()
-	$Season.remove_theme_color_override("font_color")
+	$Clear.show()
+	$Season.set_text(a)
 	$"Spirits 1".show()
 	$"Spirits 2".show()
 	$"Season Selection".show()
@@ -62,7 +62,7 @@ func _on_tree_bought(iconValue,press):
 func _on_clear_pressed():
 	$Confirm.show()
 
-func _on_confirm_confirmed():
+func _on_clear():
 	if curr_spirit == "":
 		for s in SeasonSpirits.data:
 			if SeasonSpirits.data[s]["loc"] == $Season.text && bought.has(s):
@@ -70,9 +70,6 @@ func _on_confirm_confirmed():
 	else:
 		bought.erase(curr_spirit)
 		$Tree.set_tree(SeasonSpirits.data[curr_spirit]["tree"])
-
-func _on_all_pressed():
-	$Tree.buy_all()
 
 func _on_tree_reject():
 	var newBought = []
