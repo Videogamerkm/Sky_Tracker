@@ -5,6 +5,22 @@ func _ready():
 		if c == $Main: continue
 		c.get_node("Check All/Check All").connect("pressed",check_section.bind(c))
 		c.get_node("Check All/Uncheck All").connect("pressed",uncheck_section.bind(c))
+		for a in c.get_children():
+			var x = 0
+			for b in a.get_children():
+				if b is Label: continue
+				b.connect("toggled",check.bind(x,c.name+"/"+a.name))
+				b.name = str(x)
+				x += 1
+
+func check(button_pressed,num,sect):
+	if button_pressed:
+		for b in range(0,num):
+			get_node(sect+"/"+str(b)).set_pressed_no_signal(true)
+	else:
+		for b in get_node(sect).get_children():
+			if b is Label or int(str(b.name)) <= num: continue
+			b.set_pressed_no_signal(false)
 
 func check_section(section):
 	for c in section.get_children():
