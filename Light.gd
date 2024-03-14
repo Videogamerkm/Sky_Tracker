@@ -8,7 +8,7 @@ func _ready():
 		for a in c.get_children():
 			var x = 0
 			for b in a.get_children():
-				if b is Label: continue
+				if not b is CheckBox: continue
 				b.connect("toggled",check.bind(x,c.name+"/"+a.name))
 				b.name = str(x)
 				x += 1
@@ -19,7 +19,7 @@ func check(button_pressed,num,sect):
 			get_node(sect+"/"+str(b)).set_pressed_no_signal(true)
 	else:
 		for b in get_node(sect).get_children():
-			if b is Label or int(str(b.name)) <= num: continue
+			if not b is CheckBox or int(str(b.name)) <= num: continue
 			b.set_pressed_no_signal(false)
 
 func check_section(section):
