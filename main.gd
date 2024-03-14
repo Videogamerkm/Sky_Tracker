@@ -34,9 +34,9 @@ func _on_tree_entered():
 	$Tabs/Home/Stats/VBox/File.text = "Current Save File: "+saveFile
 	load_save(saveFile)
 
-func load_save(save):
-	if not FileAccess.file_exists(save): return
-	var file = FileAccess.open(save, FileAccess.READ)
+func load_save(sv):
+	if not FileAccess.file_exists(sv): return
+	var file = FileAccess.open(sv, FileAccess.READ)
 	if not $"Tabs/Regular Spirits/Margin/VBox".is_node_ready(): await $"Tabs/Regular Spirits/Margin/VBox".ready
 	$"Tabs/Regular Spirits/Margin/VBox".bought = file.get_var()
 	$"Tabs/Current Season/Margin/VBox/Pass/Check".set_pressed(file.get_var())
