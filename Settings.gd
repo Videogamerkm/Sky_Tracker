@@ -9,7 +9,7 @@ func set_short():
 	else:
 		tabNames = ["Regular Spirits","Current Season","Seasonal Spirits","Winged Light Tracker"
 			,"Shard Eruptions","Yearly Events","Settings","Credits"]
-	for i in range(1,$"../../..".get_tab_count()): $"../../..".set_tab_title(i,tabNames[i-1])
+	for i in range(2,$"../../..".get_tab_count()): $"../../..".set_tab_title(i,tabNames[i-2])
 	$Short.set_pressed_no_signal(use_short)
 
 func _on_short_toggled(button_pressed):

@@ -182,6 +182,88 @@ grow_horizontal = 2
 grow_vertical = 2
 tab_alignment = 1
 
+[node name="Home" type="ScrollContainer" parent="Tabs"]
+visible = false
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="Stats" type="MarginContainer" parent="Tabs/Home"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBox" type="VBoxContainer" parent="Tabs/Home/Stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Welcome" type="Label" parent="Tabs/Home/Stats/VBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Thanks for giving Sky Tracker a try!
+
+To get started, try the Regular Spirits or Seasonal Spirits tabs to start logging which items you've bought.
+
+The app saves on close, but you can also click the save button below if you're worried about a crash!"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="space" type="Label" parent="Tabs/Home/Stats/VBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="File" type="Label" parent="Tabs/Home/Stats/VBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "save.dat"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="SaveLoad" type="HBoxContainer" parent="Tabs/Home/Stats/VBox"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Save" type="Button" parent="Tabs/Home/Stats/VBox/SaveLoad"]
+custom_minimum_size = Vector2(100, 75)
+layout_mode = 2
+focus_mode = 0
+text = "Save"
+
+[node name="SaveAs" type="Button" parent="Tabs/Home/Stats/VBox/SaveLoad"]
+custom_minimum_size = Vector2(100, 75)
+layout_mode = 2
+focus_mode = 0
+text = "Save As"
+
+[node name="Load" type="Button" parent="Tabs/Home/Stats/VBox/SaveLoad"]
+custom_minimum_size = Vector2(100, 75)
+layout_mode = 2
+focus_mode = 0
+text = "Load"
+
+[node name="SaveDialog" type="FileDialog" parent="Tabs/Home/Stats/VBox/SaveLoad"]
+initial_position = 1
+size = Vector2i(400, 300)
+access = 1
+filters = PackedStringArray("*.dat")
+
+[node name="LoadDialog" type="FileDialog" parent="Tabs/Home/Stats/VBox/SaveLoad"]
+title = "Open a File"
+initial_position = 1
+size = Vector2i(400, 300)
+ok_button_text = "Open"
+file_mode = 0
+access = 1
+filters = PackedStringArray("*.dat")
+
 [node name="Stats" type="ScrollContainer" parent="Tabs"]
 layout_mode = 2
 horizontal_scroll_mode = 0
@@ -5058,6 +5140,11 @@ libraries = {
 
 [connection signal="tree_entered" from="." to="." method="_on_tree_entered"]
 [connection signal="tab_changed" from="Tabs" to="." method="_on_tabs_tab_changed"]
+[connection signal="pressed" from="Tabs/Home/Stats/VBox/SaveLoad/Save" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="Tabs/Home/Stats/VBox/SaveLoad/SaveAs" to="." method="_on_save_as_pressed"]
+[connection signal="pressed" from="Tabs/Home/Stats/VBox/SaveLoad/Load" to="." method="_on_load_pressed"]
+[connection signal="file_selected" from="Tabs/Home/Stats/VBox/SaveLoad/SaveDialog" to="." method="_on_save_dialog_file_selected"]
+[connection signal="file_selected" from="Tabs/Home/Stats/VBox/SaveLoad/LoadDialog" to="." method="_on_load_dialog_file_selected"]
 [connection signal="pressed" from="Tabs/Stats/Stats/VBox/Main/Collapse" to="Tabs/Stats/Stats/VBox" method="accordion_text" binds= [".", false]]
 [connection signal="pressed" from="Tabs/Stats/Stats/VBox/Main/Expand" to="Tabs/Stats/Stats/VBox" method="accordion_text" binds= [".", true]]
 [connection signal="pressed" from="Tabs/Stats/Stats/VBox/Constellations/Main/Expand" to="Tabs/Stats/Stats/VBox" method="accordion_text" binds= ["Constellations", true]]

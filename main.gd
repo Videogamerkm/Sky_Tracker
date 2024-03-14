@@ -1,6 +1,8 @@
 extends Control
 
 var saveFile = "user://save.dat"
+var configFile = "user://app.cfg"
+var config = ConfigFile.new()
 var cosmetics = []
 var history = []
 var histIndex = -1
@@ -26,8 +28,15 @@ func save():
 	file.close()
 
 func _on_tree_entered():
-	if not FileAccess.file_exists(saveFile): return
-	var file = FileAccess.open(saveFile, FileAccess.READ)
+	var err = config.load(configFile)
+	if err == OK: saveFile = config.get_value("Current Save","file")
+	else: config.set_value("Current Save","file",saveFile)
+	$Tabs/Home/Stats/VBox/File.text = "Current Save File: "+saveFile
+	load_save(saveFile)
+
+func load_save(save):
+	if not FileAccess.file_exists(save): return
+	var file = FileAccess.open(save, FileAccess.READ)
 	if not $"Tabs/Regular Spirits/Margin/VBox".is_node_ready(): await $"Tabs/Regular Spirits/Margin/VBox".ready
 	$"Tabs/Regular Spirits/Margin/VBox".bought = file.get_var()
 	$"Tabs/Current Season/Margin/VBox/Pass/Check".set_pressed(file.get_var())
@@ -117,3 +126,28 @@ func update_cos(value,add):
 			if cosmetics.has(split): cosmetics.erase(split)
 		cosmetics.append(value)
 	elif not add and cosmetics.has(value): cosmetics.erase(value)
+
+func _on_save_pressed():
+	save()
+	var tween = create_tween()
+	tween.tween_property($Tabs/Home/Stats/VBox/SaveLoad/Save,"modulate",Color(1,1,1),2.0).from(Color(0,1,0)).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
+
+func _on_save_as_pressed():
+	$Tabs/Home/Stats/VBox/SaveLoad/SaveDialog.show()
+
+func _on_save_dialog_file_selected(path):
+	config.set_value("Current Save","file",path)
+	config.save(configFile)
+	saveFile = path
+	$Tabs/Home/Stats/VBox/File.text = "Current Save File: "+path
+	save()
+
+func _on_load_pressed():
+	$Tabs/Home/Stats/VBox/SaveLoad/LoadDialog.show()
+
+func _on_load_dialog_file_selected(path):
+	config.set_value("Current Save","file",path)
+	config.save(configFile)
+	saveFile = path
+	$Tabs/Home/Stats/VBox/File.text = "Current Save File: "+path
+	load_save(path)
