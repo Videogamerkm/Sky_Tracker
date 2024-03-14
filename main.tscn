@@ -327,17 +327,17 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Expand" type="Button" parent="Tabs/Stats/Stats/VBox/Constellations/Main"]
-layout_mode = 2
-size_flags_horizontal = 3
-focus_mode = 0
-text = "Expand All"
-
 [node name="Collapse" type="Button" parent="Tabs/Stats/Stats/VBox/Constellations/Main"]
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
 text = "Collapse All"
+
+[node name="Expand" type="Button" parent="Tabs/Stats/Stats/VBox/Constellations/Main"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Expand All"
 
 [node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Constellations/Main"]
 layout_mode = 2
@@ -1851,17 +1851,17 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Expand" type="Button" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Main"]
-layout_mode = 2
-size_flags_horizontal = 3
-focus_mode = 0
-text = "Expand All"
-
 [node name="Collapse" type="Button" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Main"]
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
 text = "Collapse All"
+
+[node name="Expand" type="Button" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Main"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Expand All"
 
 [node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Regular Spirits/Main"]
 layout_mode = 2
@@ -1947,17 +1947,17 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Expand" type="Button" parent="Tabs/Stats/Stats/VBox/Seasonal Spirits/Main"]
-layout_mode = 2
-size_flags_horizontal = 3
-focus_mode = 0
-text = "Expand All"
-
 [node name="Collapse" type="Button" parent="Tabs/Stats/Stats/VBox/Seasonal Spirits/Main"]
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
 text = "Collapse All"
+
+[node name="Expand" type="Button" parent="Tabs/Stats/Stats/VBox/Seasonal Spirits/Main"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Expand All"
 
 [node name="Label" type="Label" parent="Tabs/Stats/Stats/VBox/Seasonal Spirits/Main"]
 layout_mode = 2
@@ -5060,12 +5060,12 @@ libraries = {
 [connection signal="tab_changed" from="Tabs" to="." method="_on_tabs_tab_changed"]
 [connection signal="pressed" from="Tabs/Stats/Stats/VBox/Main/Collapse" to="Tabs/Stats/Stats/VBox" method="accordion_text" binds= [".", false]]
 [connection signal="pressed" from="Tabs/Stats/Stats/VBox/Main/Expand" to="Tabs/Stats/Stats/VBox" method="accordion_text" binds= [".", true]]
-[connection signal="pressed" from="Tabs/Stats/Stats/VBox/Constellations/Main/Expand" to="Tabs/Stats/Stats/VBox" method="accordion_text" binds= ["Constellations", true]]
 [connection signal="pressed" from="Tabs/Stats/Stats/VBox/Constellations/Main/Collapse" to="Tabs/Stats/Stats/VBox" method="accordion_text" binds= ["Constellations", false]]
-[connection signal="pressed" from="Tabs/Stats/Stats/VBox/Regular Spirits/Main/Expand" to="Tabs/Stats/Stats/VBox" method="accordion_text" binds= ["Regular Spirits", true]]
+[connection signal="pressed" from="Tabs/Stats/Stats/VBox/Constellations/Main/Expand" to="Tabs/Stats/Stats/VBox" method="accordion_text" binds= ["Constellations", true]]
 [connection signal="pressed" from="Tabs/Stats/Stats/VBox/Regular Spirits/Main/Collapse" to="Tabs/Stats/Stats/VBox" method="accordion_text" binds= ["Regular Spirits", false]]
-[connection signal="pressed" from="Tabs/Stats/Stats/VBox/Seasonal Spirits/Main/Expand" to="Tabs/Stats/Stats/VBox" method="accordion_text" binds= ["Seasonal Spirits", true]]
+[connection signal="pressed" from="Tabs/Stats/Stats/VBox/Regular Spirits/Main/Expand" to="Tabs/Stats/Stats/VBox" method="accordion_text" binds= ["Regular Spirits", true]]
 [connection signal="pressed" from="Tabs/Stats/Stats/VBox/Seasonal Spirits/Main/Collapse" to="Tabs/Stats/Stats/VBox" method="accordion_text" binds= ["Seasonal Spirits", false]]
+[connection signal="pressed" from="Tabs/Stats/Stats/VBox/Seasonal Spirits/Main/Expand" to="Tabs/Stats/Stats/VBox" method="accordion_text" binds= ["Seasonal Spirits", true]]
 [connection signal="bought" from="Tabs/Regular Spirits/Margin/VBox/Tree" to="Tabs/Regular Spirits/Margin/VBox" method="_on_tree_bought"]
 [connection signal="treeBack" from="Tabs/Regular Spirits/Margin/VBox/Tree" to="Tabs/Regular Spirits/Margin/VBox" method="_on_back_pressed"]
 [connection signal="treeClear" from="Tabs/Regular Spirits/Margin/VBox/Tree" to="Tabs/Regular Spirits/Margin/VBox" method="_on_clear"]
