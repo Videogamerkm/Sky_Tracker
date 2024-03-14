@@ -1,8 +1,5 @@
 extends VBoxContainer
 
-@onready var current = $"../../../Current Season/Margin/VBox"
-@onready var regular = $"../../../Regular Spirits/Margin/VBox"
-@onready var seasonal = $"../../../Seasonal Spirits/Margin/VBox"
 var areas = ["Isle of Dawn","Daylight Prairie","Hidden Forest","Valley of Triumph","Golden Wasteland","Vault of Knowledge"]
 var wedges = [1,2,5,10,20,35,55,75,100,120,150,200,250]
 
@@ -25,7 +22,7 @@ func _ready():
 	for a in SeasonSpirits.seasons:
 		var new_row = $"Seasonal Spirits/Season".duplicate()
 		new_row.name = a
-		if a == current.seasonName:
+		if a == Global.currSsnTab.seasonName:
 			new_row.get_node("Titles/c").text = "S. Candles"
 			new_row.get_node("Titles/h").text = "S. Hearts"
 			new_row.get_node("Titles/a").text = "Candles"
@@ -46,24 +43,24 @@ func _ready():
 
 func set_values():
 	# Current season values
-	if current.get_node("Spent/Val").text == "0": current._ready()
-	var spent = current.get_node("Spent/Val").text
+	if Global.currSsnTab.get_node("Spent/Val").text == "0": Global.currSsnTab._ready()
+	var spent = Global.currSsnTab.get_node("Spent/Val").text
 	$"Current Season/Spent/Season Spent".text = spent
 	spent = int(spent)
-	var coll = int(current.get_node("Total/Val").text)
-	var need = (current.needPass if current.get_node("Pass/Check").button_pressed else current.needNoPass)
+	var coll = int(Global.currSsnTab.get_node("Total/Val").text)
+	var need = (Global.currSsnTab.needPass if Global.currSsnTab.get_node("Pass/Check").button_pressed else Global.currSsnTab.needNoPass)
 	$"Current Season/Needed/Season Need".text = str(max(need - coll,0))
-	$"Current Season/Avail/Season Avail".text = current.get_node("Candles/Val").text
+	$"Current Season/Avail/Season Avail".text = Global.currSsnTab.get_node("Candles/Val").text
 	$"Current Season/Completion3/Season".text = str(floor(spent*100/need))+"%"
 	var comp = 0
 	var guideComp = 0
 	var seasonSpirits = 0.0
 	for s in SeasonSpirits.data:
-		if SeasonSpirits.data[s]["loc"] == current.seasonName:
+		if SeasonSpirits.data[s]["loc"] == Global.currSsnTab.seasonName:
 			seasonSpirits += 1
-			if seasonal.bought.has(s):
-				comp += SeasonSpirits.get_completion(s,seasonal.bought[s])
-				if SeasonSpirits.data[s].has("isGuide"): guideComp = SeasonSpirits.get_completion(s,seasonal.bought[s])
+			if Global.ssnlSprtTab.bought.has(s):
+				comp += SeasonSpirits.get_completion(s,Global.ssnlSprtTab.bought[s])
+				if SeasonSpirits.data[s].has("isGuide"): guideComp = SeasonSpirits.get_completion(s,Global.ssnlSprtTab.bought[s])
 	$"Current Season/Completion2/Season".text = str(floor(comp/seasonSpirits))+"%"
 	$"Current Season/Completion/Season".text = str(floor((comp-guideComp)/(seasonSpirits-1)))+"%"
 	
@@ -90,16 +87,16 @@ func set_values():
 				var asc_spent = 0
 				get_node("Regular Spirits/"+a+"/"+s+"/By Purchase").text = "0%"
 				if RegSpirits.data[s].has("t2"): get_node("Regular Spirits/"+a+"/"+s+" T2/By Purchase").text = "0%"
-				if regular.bought.has(s):
-					compPercent += RegSpirits.get_completion(s,regular.bought[s])
-					if s.begins_with("Elder of"): elderPercent = RegSpirits.get_completion(s,regular.bought[s])
-					get_node("Regular Spirits/"+a+"/"+s+"/By Purchase").text = str(RegSpirits.get_completion(s,regular.bought[s]))+"%"
-					if RegSpirits.data[s].has("t2"): get_node("Regular Spirits/"+a+"/"+s+" T2/By Purchase").text = str(RegSpirits.get_t2_completion(s,regular.bought[s]))+"%"
+				if Global.regSprtTab.bought.has(s):
+					compPercent += RegSpirits.get_completion(s,Global.regSprtTab.bought[s])
+					if s.begins_with("Elder of"): elderPercent = RegSpirits.get_completion(s,Global.regSprtTab.bought[s])
+					get_node("Regular Spirits/"+a+"/"+s+"/By Purchase").text = str(RegSpirits.get_completion(s,Global.regSprtTab.bought[s]))+"%"
+					if RegSpirits.data[s].has("t2"): get_node("Regular Spirits/"+a+"/"+s+" T2/By Purchase").text = str(RegSpirits.get_t2_completion(s,Global.regSprtTab.bought[s]))+"%"
 				for key in sCost.keys():
 					if not key.contains("2"): currency += sCost[key]
 					elif RegSpirits.data[s].has("t2"): asc += sCost[key]
-					if regular.bought.has(s):
-						var sUnspent = RegSpirits.get_unspent(s,regular.bought[s])
+					if Global.regSprtTab.bought.has(s):
+						var sUnspent = RegSpirits.get_unspent(s,Global.regSprtTab.bought[s])
 						if key == "a" && s.contains("Elder of"):
 							costsNeeded["u"] += sUnspent[key]
 							costsSpent["u"] += sCost[key] - sUnspent[key]
@@ -173,25 +170,25 @@ func set_values():
 		var asc_spent = 0
 		get_node("Seasonal Spirits/"+a+"/"+s+"/By Purchase").text = "0%"
 		if SeasonSpirits.data[s].has("t2"): get_node("Seasonal Spirits/"+a+"/"+s+" T2/By Purchase").text = "0%"
-		if seasonal.bought.has(s):
-			get_node("Seasonal Spirits/"+a+"/"+s+"/By Purchase").text = str(SeasonSpirits.get_completion(s,seasonal.bought[s]))+"%"
-			if SeasonSpirits.data[s].has("t2"): get_node("Seasonal Spirits/"+a+"/"+s+" T2/By Purchase").text = str(SeasonSpirits.get_t2_completion(s,seasonal.bought[s]))+"%"
+		if Global.ssnlSprtTab.bought.has(s):
+			get_node("Seasonal Spirits/"+a+"/"+s+"/By Purchase").text = str(SeasonSpirits.get_completion(s,Global.ssnlSprtTab.bought[s]))+"%"
+			if SeasonSpirits.data[s].has("t2"): get_node("Seasonal Spirits/"+a+"/"+s+" T2/By Purchase").text = str(SeasonSpirits.get_t2_completion(s,Global.ssnlSprtTab.bought[s]))+"%"
 		for key in sCost.keys():
 			if not key.contains("2"): currency += sCost[key]
 			elif SeasonSpirits.data[s].has("t2"): asc += sCost[key]
-			if seasonal.bought.has(s):
-				var sUnspent = SeasonSpirits.get_unspent(s,seasonal.bought[s])
+			if Global.ssnlSprtTab.bought.has(s):
+				var sUnspent = SeasonSpirits.get_unspent(s,Global.ssnlSprtTab.bought[s])
 				costsNeeded[key] += sUnspent[key]
-				if key == "sp" && a == current.seasonName:
+				if key == "sp" && a == Global.currSsnTab.seasonName:
 					get_node("Seasonal Spirits/"+a+"/"+s+"/c").text = str(sUnspent[key])
 					curr_spent += sCost[key] - sUnspent[key]
-				elif key == "sh" && a == current.seasonName:
+				elif key == "sh" && a == Global.currSsnTab.seasonName:
 					get_node("Seasonal Spirits/"+a+"/"+s+"/h").text = str(sUnspent[key])
 					curr_spent += sCost[key] - sUnspent[key]
-				elif key == "c" && a == current.seasonName:
+				elif key == "c" && a == Global.currSsnTab.seasonName:
 					get_node("Seasonal Spirits/"+a+"/"+s+"/a").text = str(sUnspent[key])
 					curr_spent += sCost[key] - sUnspent[key]
-				elif key == "a" && a == current.seasonName: continue
+				elif key == "a" && a == Global.currSsnTab.seasonName: continue
 				elif not key.contains("2") && not key.contains("s"):
 					get_node("Seasonal Spirits/"+a+"/"+s+"/"+key).text = str(sUnspent[key])
 					curr_spent += sCost[key] - sUnspent[key]
@@ -200,10 +197,10 @@ func set_values():
 					get_node("Seasonal Spirits/"+a+"/"+s+" T2/"+key.replace("2","")).text = str(sUnspent[key])
 			else:
 				costsNeeded[key] += sCost[key]
-				if key == "sp" && a == current.seasonName: get_node("Seasonal Spirits/"+a+"/"+s+"/c").text = str(sCost[key])
-				elif key == "sh" && a == current.seasonName: get_node("Seasonal Spirits/"+a+"/"+s+"/h").text = str(sCost[key])
-				elif key == "c" && a == current.seasonName: get_node("Seasonal Spirits/"+a+"/"+s+"/a").text = str(sCost[key])
-				elif key == "a" && a == current.seasonName: continue
+				if key == "sp" && a == Global.currSsnTab.seasonName: get_node("Seasonal Spirits/"+a+"/"+s+"/c").text = str(sCost[key])
+				elif key == "sh" && a == Global.currSsnTab.seasonName: get_node("Seasonal Spirits/"+a+"/"+s+"/h").text = str(sCost[key])
+				elif key == "c" && a == Global.currSsnTab.seasonName: get_node("Seasonal Spirits/"+a+"/"+s+"/a").text = str(sCost[key])
+				elif key == "a" && a == Global.currSsnTab.seasonName: continue
 				elif not key.contains("2") && not key.contains("s"): get_node("Seasonal Spirits/"+a+"/"+s+"/"+key).text = str(sCost[key])
 				elif SeasonSpirits.data[s].has("t2"): get_node("Seasonal Spirits/"+a+"/"+s+" T2/"+key.replace("2","")).text = str(sCost[key])
 		get_node("Seasonal Spirits/"+a+"/"+s+"/By Currency").text = str(floor(curr_spent*100.0/currency))+"%"
@@ -222,25 +219,25 @@ func set_values():
 	var light_coll = 0
 	var light_avail = 0
 	for a in light_areas:
-		var check = $"../../../Winged Light Tracker/Margin/VBox".get_checked(a)
-		var uncheck = $"../../../Winged Light Tracker/Margin/VBox".get_unchecked(a)
+		var check = Global.wlTab.get_checked(a)
+		var uncheck = Global.wlTab.get_unchecked(a)
 		light_coll += check
 		light_avail += uncheck
 		$"Winged Light/Grid".get_node(a+" Coll").text = str(check)
 		$"Winged Light/Grid".get_node(a+" Avail").text = str(uncheck)
 	$"Winged Light/Grid".get_node("Total Coll").text = str(light_coll)
 	$"Winged Light/Grid".get_node("Total Avail").text = str(light_avail)
-	var reg_t2 = RegSpirits.get_t2_wings(regular.bought)
+	var reg_t2 = RegSpirits.get_t2_wings(Global.regSprtTab.bought)
 	var reg_t2_avail = RegSpirits.get_all_t2_wings() - reg_t2
-	var reg_coll = RegSpirits.get_wings(regular.bought) - reg_t2
+	var reg_coll = RegSpirits.get_wings(Global.regSprtTab.bought) - reg_t2
 	var reg_avail = RegSpirits.get_all_wings() - reg_coll - reg_t2_avail - reg_t2
 	$"Winged Light/Grid".get_node("Regular Coll").text = str(reg_coll)
 	$"Winged Light/Grid".get_node("Regular Avail").text = str(reg_avail)
 	$"Winged Light/Grid".get_node("Tier2 Coll").text = str(reg_t2)
 	$"Winged Light/Grid".get_node("Tier2 Avail").text = str(reg_t2_avail)
-	var seas_t2 = SeasonSpirits.get_t2_wings(seasonal.bought)
+	var seas_t2 = SeasonSpirits.get_t2_wings(Global.ssnlSprtTab.bought)
 	var seas_t2_avail = SeasonSpirits.get_all_t2_wings() - seas_t2
-	var seas_coll = SeasonSpirits.get_wings(seasonal.bought) - seas_t2
+	var seas_coll = SeasonSpirits.get_wings(Global.ssnlSprtTab.bought) - seas_t2
 	var seas_avail = SeasonSpirits.get_all_wings() - seas_coll - seas_t2_avail - seas_t2
 	$"Winged Light/Grid".get_node("Seasonal Coll").text = str(seas_coll)
 	$"Winged Light/Grid".get_node("Seasonal Avail").text = str(seas_avail)

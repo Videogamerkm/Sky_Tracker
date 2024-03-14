@@ -1,7 +1,6 @@
 extends VBoxContainer
 
 const timeUtils = preload("res://TimeUtils.gd")
-@onready var main = $"../../../.."
 const day = "Days of Bloom"
 const location = "Prairie Peaks"
 const start = {"day":25,"month":3,"year":2024,"hour":0}
@@ -57,7 +56,7 @@ func _press_event_button(node):
 func _on_tree_bought(iconValue,press):
 	bought[selected] = $Tree.export_bought()
 	# Pass to DB
-	main.update_cos(iconValue,press)
+	Global.main.update_cos(iconValue,press)
 
 func _on_all_pressed():
 	$Tree.buy_all()
@@ -75,7 +74,7 @@ func _on_tree_reject():
 	for r in rows[selected]:
 		var row = []
 		for i in r:
-			if i != "": row.append(main.cosmetics.has(i.split(";")[0]))
+			if i != "": row.append(Global.main.cosmetics.has(i.split(";")[0]))
 			else: row.append(null)
 		newBought.append(row)
 	bought[selected] = newBought

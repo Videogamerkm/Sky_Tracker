@@ -37,7 +37,7 @@ func _on_check_toggled(_button_pressed):
 	_ready()
 
 func update_candles():
-	var bought = $"../../../Seasonal Spirits/Margin/VBox".bought
+	var bought = Global.ssnlSprtTab.bought
 	if not bought: bought = {}
 	var candles = 0
 	for s in SeasonSpirits.data:
