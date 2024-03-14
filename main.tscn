@@ -183,7 +183,6 @@ grow_vertical = 2
 tab_alignment = 1
 
 [node name="Home" type="ScrollContainer" parent="Tabs"]
-visible = false
 layout_mode = 2
 horizontal_scroll_mode = 0
 
@@ -265,6 +264,7 @@ access = 1
 filters = PackedStringArray("*.dat")
 
 [node name="Stats" type="ScrollContainer" parent="Tabs"]
+visible = false
 layout_mode = 2
 horizontal_scroll_mode = 0
 
