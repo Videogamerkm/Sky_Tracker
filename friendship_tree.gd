@@ -36,7 +36,7 @@ func set_tree(rows,days=""):
 		%Rows.add_child(icons)
 		%Rows.add_child(lines)
 		x += 1
-	custom_minimum_size = Vector2(0,x*100-25)
+	if days != "": custom_minimum_size = Vector2(0,x*100-25)
 	%Rows.remove_child(%Rows.get_child(-1))
 	%Rows.get_child(-1).get_child(1).set_locked(false)
 
