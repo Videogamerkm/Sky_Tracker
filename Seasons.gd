@@ -2,7 +2,6 @@ extends VBoxContainer
 
 @onready var spiritIcon = $"Spirits 1/Button".duplicate()
 @onready var seasonIcon = $"Season Selection/Button".duplicate()
-@onready var main = $"../../../.."
 var curr_spirit = ""
 var a = ""
 var bought = {}
@@ -15,8 +14,8 @@ func _ready():
 		season.set_button_icon(load("icons/seas/icons/"+s.replace("Season of ","")+".bmp"))
 		season.connect("pressed",_area_select.bind(s))
 		$"Season Selection".add_child(season)
-	$"Season Selection".get_node($"../../../Current Season/Margin/VBox".seasonName).set_pressed(true)
-	_area_select($"../../../Current Season/Margin/VBox".seasonName)
+	$"Season Selection".get_node(Global.currSsnTab.seasonName).set_pressed(true)
+	_area_select(Global.currSsnTab.seasonName)
 
 func _area_select(area):
 	$Season.text = area
@@ -57,7 +56,7 @@ func _on_back_pressed():
 func _on_tree_bought(iconValue,press):
 	bought[curr_spirit] = $Tree.export_bought()
 	# Pass that value into a DB
-	main.update_cos(iconValue,press)
+	Global.main.update_cos(iconValue,press)
 
 func _on_clear_pressed():
 	$Confirm.show()
@@ -76,7 +75,7 @@ func _on_tree_reject():
 	for r in SeasonSpirits.data[curr_spirit]["tree"]:
 		var row = []
 		for i in r:
-			if i != "": row.append(main.cosmetics.has(i.split(";")[0]))
+			if i != "": row.append(Global.main.cosmetics.has(i.split(";")[0]))
 			else: row.append(false)
 		newBought.append(row)
 	bought[curr_spirit] = newBought
