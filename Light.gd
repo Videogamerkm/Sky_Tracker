@@ -36,7 +36,7 @@ func uncheck_section(section):
 		if c.name == "Margin": continue
 		for cb in c.get_children():
 			if cb is Label: continue
-			if cb == $"Eye of Eden/Orbit/CheckBox": continue
+			if cb == $"Eye of Eden/Orbit/0": continue
 			cb.set_pressed(false)
 
 func _on_expand_pressed():
@@ -65,7 +65,7 @@ func _on_uncheck_pressed():
 			if a.name == "Margin": continue
 			for cb in a.get_children():
 				if cb is Label: continue
-				if cb == $"Eye of Eden/Orbit/CheckBox": continue
+				if cb == $"Eye of Eden/Orbit/0": continue
 				cb.set_pressed(false)
 
 func get_checked(area) -> int:
