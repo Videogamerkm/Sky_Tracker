@@ -252,7 +252,7 @@ text = "Load"
 initial_position = 1
 size = Vector2i(600, 450)
 access = 1
-filters = PackedStringArray("*.dat ; Save Data", "*.bak ; Backups")
+filters = PackedStringArray("*.dat ; Save Data")
 
 [node name="LoadDialog" type="FileDialog" parent="Tabs/Home/Margin/VBox/SaveLoad"]
 title = "Open a File"
@@ -261,7 +261,7 @@ size = Vector2i(600, 450)
 ok_button_text = "Open"
 file_mode = 0
 access = 1
-filters = PackedStringArray("*.dat")
+filters = PackedStringArray("*.dat ; Save Data")
 
 [node name="Stats" type="ScrollContainer" parent="Tabs"]
 visible = false

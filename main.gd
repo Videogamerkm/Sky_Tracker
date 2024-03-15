@@ -13,7 +13,11 @@ func _notification(what):
 		save()
 		get_tree().quit()
 
-func save():
+func save(backup = true):
+	if backup:
+		var old = FileAccess.open(saveFile, FileAccess.READ)
+		var back = FileAccess.open(saveFile+".bak", FileAccess.WRITE)
+		while(old.get_position() < old.get_length()): back.store_var(old.get_var())
 	var file = FileAccess.open(saveFile, FileAccess.WRITE)
 	file.store_var(Global.regSprtTab.bought)
 	file.store_var(Global.currSsnTab.get_node("Pass/Check").is_pressed())
@@ -36,7 +40,9 @@ func _on_tree_entered():
 	load_save(saveFile)
 
 func load_save(sv):
-	if not FileAccess.file_exists(sv): return
+	if not FileAccess.file_exists(sv):
+		sv += ".bak"
+		if not FileAccess.file_exists(sv): return
 	var file = FileAccess.open(sv, FileAccess.READ)
 	if not Global.regSprtTab.is_node_ready(): await Global.regSprtTab.ready
 	Global.regSprtTab.bought = file.get_var()
@@ -69,6 +75,7 @@ func load_save(sv):
 	Global.setsTab.get_node("Spoilers").set_pressed_no_signal(Global.spoilers)
 	Global.setsTab.get_node("Time").set_pressed_no_signal(Global.useTwelve)
 	Global.statsTab.set_values()
+	if sv.ends_with(".bak"): save(false)
 
 func fix_old(s):
 	Global.ssnlSprtTab.curr_spirit = s
@@ -137,7 +144,7 @@ func _on_save_dialog_file_selected(path):
 	config.save(configFile)
 	saveFile = path
 	Global.homeTab.get_node("File").text = "Current Save File: "+path
-	save()
+	save(false)
 
 func _on_load_pressed():
 	Global.homeTab.get_node("SaveLoad/LoadDialog").show()
