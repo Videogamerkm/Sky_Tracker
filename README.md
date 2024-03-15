@@ -3,6 +3,7 @@
 Sky Tracker is a lightweight, downloadable, fully offline application designed with completionists in mind as a companion for Sky: Children of the Light by thatgamecompany.
 
 Current features include:
+ - A home page with saving and loading options
  - Statistics about your progress in spirits and seasons
  - A tracking tab for regular spirits and elders
  - A tab to help keep track of the current season and your progress through it
@@ -14,6 +15,10 @@ Current features include:
  - A tracking tab for the reoccuring Days events
 
 You can check the repository issues for known bugs, upcoming or planned features, or to leave your own comment/question/issue/request!
+
+# Windows SmartScreen
+
+If you get a warning from Windows SmartScreen about the program when you try to open it, that is normal! Unfortunately I don't have the money to buy and maintain certificates for this app, so this is going to be a forever problem. Even if I did get a certificate on the app SmartScreen is likely to continue tagging it as potentially malicious for a long while, though if you have any info about very cheap certs please send it my way as at least then it'll be signed and complain *less*.
 
 # Notes About Spirits
 
