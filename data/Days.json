@@ -7,13 +7,18 @@
 		],
 		[
 			"days/bloom/4;80;c",
-			"base/5C;5;c",
+			"base/1C;0;0",
 			"days/bloom/5;110;c"
 		],
 		[
-			"",
-			"base/5C;5;c",
+			"days/bloom/8;25;h",
+			"base/1C;0;0",
 			""
+		],
+		[
+			"days/bloom/7;24;k",
+			"base/1C;0;0",
+			"days/bloom/6;48;k"
 		],
 		[
 			"",

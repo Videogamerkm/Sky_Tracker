@@ -1,5 +1,6 @@
 extends VBoxContainer
 
+const collapsible = preload("res://collapsible.gd")
 var areas = ["Isle of Dawn","Daylight Prairie","Hidden Forest","Valley of Triumph","Golden Wasteland","Vault of Knowledge"]
 var wedges = [1,2,5,10,20,35,55,75,100,120,150,200,250]
 
@@ -39,7 +40,17 @@ func _ready():
 			new_row.set_modulate(Color(1,0.75,0.75))
 			get_node("Seasonal Spirits/"+SeasonSpirits.data[s]["loc"]).add_child(new_row)
 	$"Seasonal Spirits/Season".queue_free()
+	for b in get_all_acc_btns(self):
+		if b.name == "Expand": b.connect("pressed",accordion.bind(b.get_parent().get_parent(),true))
+		elif b.name == "Collapse": b.connect("pressed",accordion.bind(b.get_parent().get_parent(),false))
 	set_values()
+
+func get_all_acc_btns(in_node, children_acc = []):
+	if in_node is Button and (in_node.name == "Expand" or in_node.name == "Collapse"):
+		children_acc.push_back(in_node)
+	for child in in_node.get_children():
+		children_acc = get_all_acc_btns(child, children_acc)
+	return children_acc
 
 func set_values():
 	# Current season values
@@ -251,8 +262,6 @@ func set_values():
 
 func accordion(parent,expand):
 	for c in parent.get_children():
-		if c.name == "Main" || c.name == "Margin": continue
+		if not c is collapsible: continue
 		if c.get_node("Margin/Title/Label").text == ("v" if expand else "^"):
 			c.get_node("Margin/Title").set_pressed(not expand)
-
-func accordion_text(id: String,expand: bool): accordion(get_node(id),expand)

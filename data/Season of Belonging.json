@@ -1,0 +1,32 @@
+{
+	"Hairtousle Teen": {
+		"loc": "Season of Belonging",
+		"tree": [
+			[
+				"seas/exp/tousle;9;h",
+				"seas/cos/tousle 1;50;c",
+				"seas/cos/tousle 2;70;c"
+			],
+			[
+				"",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"base/sheet?12;15;c",
+				"base/wing;2;a",
+				"base/heart;3;c"
+			],
+			[
+				"",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"",
+				"seas/exp/tousle?1;0;0",
+				""
+			]
+		]
+	}
+}
