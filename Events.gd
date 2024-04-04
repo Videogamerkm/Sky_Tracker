@@ -2,6 +2,7 @@ extends VBoxContainer
 
 const day = "Days of Bloom"
 const location = "Prairie Peaks"
+const tpd = 5
 const start = {"day":25,"month":3,"year":2024,"hour":0}
 const end = {"day":14,"month":4,"year":2024,"hour":23,"minute":59}
 const short = {"Days of Fortune":"fortune","Days of Love":"love","Days of Bloom":"bloom","Days of Nature":"nature",
@@ -32,6 +33,7 @@ func _ready():
 		$No.hide()
 		$Time.show()
 		$Days.show()
+		$"Per Day".text = "Tickets collectable per day: "+str(tpd)
 		$"Per Day".show()
 		$Time/Start.text = TimeUtils.convert_time(start)
 		$Time/End.text = TimeUtils.convert_time(end)
