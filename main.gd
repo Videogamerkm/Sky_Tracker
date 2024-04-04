@@ -23,6 +23,8 @@ func save(backup = true):
 		back.close()
 	var file = FileAccess.open(saveFile, FileAccess.WRITE)
 	file.store_var({"V":1.0,
+		"Plan":{"days":Global.planTab.days,"cpd":Global.planTab.cpd,"hpd":Global.planTab.hpd,
+			"currC":Global.planTab.currCandles,"currH":Global.planTab.currHearts,"currT":Global.planTab.currTicks},
 		"Reg":{"bought":Global.regSprtTab.bought,"planned":Global.regSprtTab.planned},
 		"Curr":{"pass":Global.currSsnTab.get_node("Pass/Check").is_pressed(),
 			"have":Global.currSsnTab.get_node("Have/Candles").value},
@@ -58,6 +60,12 @@ func load_save(sv):
 	if not data.has("V"):
 		load_legacy(sv)
 		return
+	Global.planTab.days = data["Plan"]["days"]
+	Global.planTab.cpd = data["Plan"]["cpd"]
+	Global.planTab.hpd = data["Plan"]["hpd"]
+	Global.planTab.currCandles = data["Plan"]["currC"]
+	Global.planTab.currHearts = data["Plan"]["currH"]
+	Global.planTab.currTicks = data["Plan"]["currT"]
 	Global.regSprtTab.bought = data["Reg"]["bought"]
 	Global.regSprtTab.planned = data["Reg"]["planned"]
 	Global.currSsnTab.get_node("Pass/Check").set_pressed(data["Curr"]["pass"])

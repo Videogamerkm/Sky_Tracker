@@ -1,6 +1,30 @@
 extends VBoxContainer
 
 var delSpirit = ""
+var days = 0:
+	set(val):
+		days = val
+		$Days/Num.value = days
+var cpd = 0:
+	set(val):
+		cpd = val
+		$Candles/Per.value = cpd
+var hpd = 0:
+	set(val):
+		hpd = val
+		$Hearts/Per.value = hpd
+var currCandles = 0:
+	set(val):
+		currCandles = val
+		$Candles/Curr.value = currCandles
+var currHearts = 0:
+	set(val):
+		currHearts = val
+		$Hearts/Curr.value = currHearts
+var currTicks = 0:
+	set(val):
+		currTicks = val
+		$Tickets/Curr.value = currTicks
 
 func _ready():
 	var w = 0
@@ -33,6 +57,9 @@ func _ready():
 	$Plans.get_child(8).hide()
 	$Plans.get_child(8).add_sibling(Label.new())
 	$Plans.get_child(-1).hide()
+	for n in [$Days/Num, $Candles/Curr, $Candles/Per, $Hearts/Curr, $Hearts/Per, $Tickets/Curr]:
+		if not n.is_connected("value_changed",recalculate): n.connect("value_changed",recalculate)
+	recalculate(0)
 
 func add_plans(data,spirit,plan):
 	for i in range(0,9):
@@ -67,3 +94,48 @@ func _on_confirm_confirmed():
 		Global.yrlyTab.planned.erase(delSpirit)
 	delSpirit = ""
 	_ready()
+
+func recalculate(_val):
+	$Tickets/Per.text = str(Global.yrlyTab.tpd)
+	days = $Days/Num.value
+	cpd = $Candles/Per.value
+	hpd = $Hearts/Per.value
+	var spd = int(Global.currSsnTab.get_node("Per Day/Val").text)
+	var currSeason = Global.currSsnTab.get_node("Have/Candles").value
+	currCandles = $Candles/Curr.value
+	currHearts = $Hearts/Curr.value
+	currTicks = $Tickets/Curr.value
+	var targCandles = int($Plans.get_child(-8).text)
+	var targHearts = int($Plans.get_child(-7).text)
+	var targSeason = int($Plans.get_child(-5).text)
+	var targTicks = int($Plans.get_child(-3).text)
+	var text = ""
+	if targCandles > 0 and targCandles <= days * cpd + currCandles:
+		text += "You will be able to get enough candles (%d left over).\n"\
+			% [(days * cpd + currCandles) - targCandles]
+	elif targCandles > 0:
+		text += "You will NOT be able to get enough candles (%d short).\n"\
+			% [targCandles - (days * cpd + currCandles)]
+	if targSeason > 0 and targSeason <= days * spd + currSeason:
+		text += "You will be able to get enough seasonal candles (%d left over).\nCheck Current Season tab for more info.\n"\
+			% [(days * spd + currSeason) - targSeason]
+	elif targSeason > 0:
+		text += "You will NOT be able to get enough seasonal candles (%d short).\nCheck Current Season tab for more info.\n"\
+			% [targSeason - (days * spd + currSeason)]
+	if targHearts > 0 and targHearts <= days * hpd + currHearts:
+		text += "You will be able to get enough hearts (%d left over).\n"\
+			% [(days * hpd + currHearts) - targHearts]
+	elif targHearts > 0:
+		text += "You will NOT be able to get enough hearts (%d short).\n"\
+			% [targHearts - (days * hpd + currHearts)]
+	if targTicks > 0 and targTicks <= days * Global.yrlyTab.tpd + currTicks:
+		text += "You will be able to get enough tickets, if you get all %d per day (%d left over).\n"\
+			% [Global.yrlyTab.tpd,(days * Global.yrlyTab.tpd + currTicks) - targTicks]
+	elif targTicks > 0:
+		text += "You will NOT be able to get enough tickets (%d short).\n"\
+			% [targTicks - (days * Global.yrlyTab.tpd + currTicks)]
+	$Comp.text = text
+
+func _gui_input(event):
+	if event is InputEventMouseButton and event.get_button_index() == MOUSE_BUTTON_LEFT:
+		get_parent().get_parent().grab_focus()
