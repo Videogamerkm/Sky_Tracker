@@ -1,4 +1,39 @@
 {
+	"Lively Navigator": {
+		"loc": "Season of Flight",
+		"tree": [
+			[
+				"seas/cos/navi 2;55;c",
+				"seas/cos/navi 3;70;c",
+				""
+			],
+			[
+				"seas/exp/navi?4;6;h",
+				"base/5C;5;c",
+				"base/sheet?24;15;c"
+			],
+			[
+				"",
+				"seas/exp/navi?3;3;h",
+				""
+			],
+			[
+				"seas/cos/navi 1;45;c",
+				"base/wing;2;a",
+				"base/heart;3;c"
+			],
+			[
+				"seas/exp/navi?2;4;h",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"",
+				"seas/exp/navi?1;0;0",
+				""
+			]
+		]
+	},
 	"Light Whisperer": {
 		"loc": "Season of Flight",
 		"tree": [
@@ -25,6 +60,112 @@
 			[
 				"",
 				"seas/exp/light;0;0",
+				""
+			]
+		]
+	},
+	"Tinkering Chimesmith": {
+		"loc": "Season of Flight",
+		"tree": [
+			[
+				"seas/cos/tinker 3;35;c",
+				"seas/cos/tinker 4;75;c",
+				"seas/cos/tinker 2;70;c"
+			],
+			[
+				"",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"seas/cos/tinker 1;45;c",
+				"base/wing;2;a",
+				"base/heart;3;c"
+			],
+			[
+				"",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"",
+				"seas/exp/tinker;0;0",
+				""
+			]
+		]
+	},
+	"Talented Builder": {
+		"loc": "Season of Flight",
+		"tree": [
+			[
+				"seas/cos/voila 2;70;c",
+				"seas/cos/voila 3;45;c",
+				""
+			],
+			[
+				"seas/exp/voila?4;6;h",
+				"base/5C;5;c",
+				"base/sheet?25;15;c"
+			],
+			[
+				"",
+				"seas/exp/voila?3;3;h",
+				""
+			],
+			[
+				"seas/cos/voila 1;40;c",
+				"base/wing;2;a",
+				"base/heart;3;c"
+			],
+			[
+				"seas/exp/voila?2;4;h",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"",
+				"seas/exp/voila?1;0;0",
+				""
+			]
+		]
+	},
+	"Flight Guide": {
+		"isGuide": true,
+		"loc": "Season of Flight",
+		"tree": [
+			[
+				"base/heart;3;c",
+				"base/hug;0;0",
+				""
+			],
+			[
+				"base/heart;3;c",
+				"base/!;0;0",
+				""
+			],
+			[
+				"base/heart;3;c",
+				"base/!;0;0",
+				""
+			],
+			[
+				"",
+				"base/!;0;0",
+				"|seas/cos/flight 2;2;sh"
+			],
+			[
+				"base/heart;3;c",
+				"base/five;0;0",
+				"|seas/cos/flight 1;2;sh"
+			],
+			[
+				"base/heart;3;c",
+				"base/!;0;0",
+				"seas/icons/Flight;0;0"
+			],
+			[
+				"",
+				"base/!;0;0",
 				""
 			]
 		]

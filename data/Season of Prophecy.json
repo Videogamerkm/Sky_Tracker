@@ -1,0 +1,178 @@
+{
+	"Prophet of Water": {
+		"loc": "Season of Prophecy",
+		"tree": [
+			[
+				"",
+				"seas/cos/deep 4;75;c",
+				""
+			],
+			[
+				"seas/exp/deep?4;6;h",
+				"base/5C;5;c",
+				"seas/cos/deep 3;54;c"
+			],
+			[
+				"",
+				"seas/exp/deep?3;3;h",
+				""
+			],
+			[
+				"seas/cos/deep 2;44;c",
+				"base/wing;2;a",
+				"base/heart;3;c"
+			],
+			[
+				"seas/exp/deep?2;4;h",
+				"base/5C;5;c",
+				"seas/cos/deep 1;15;c"
+			],
+			[
+				"",
+				"seas/exp/deep?1;0;0",
+				""
+			]
+		]
+	},
+	"Prophet of Earth": {
+		"loc": "Season of Prophecy",
+		"tree": [
+			[
+				"seas/cos/dust 3;75;c",
+				"seas/cos/dust 4;44;c",
+				""
+			],
+			[
+				"",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"seas/exp/dust?4;6;h",
+				"base/5C;5;c",
+				"base/sheet?16;15;c"
+			],
+			[
+				"",
+				"seas/exp/dust?3;3;h",
+				""
+			],
+			[
+				"seas/cos/dust 2;44;c",
+				"base/wing;2;a",
+				"base/heart;3;c"
+			],
+			[
+				"seas/exp/dust?2;4;h",
+				"base/5C;5;c",
+				"seas/cos/dust 1;15;c"
+			],
+			[
+				"",
+				"seas/exp/dust?1;0;0",
+				""
+			]
+		]
+	},
+	"Prophet of Air": {
+		"loc": "Season of Prophecy",
+		"tree": [
+			[
+				"",
+				"seas/cos/balance 4;75;c",
+				""
+			],
+			[
+				"seas/exp/balance?4;6;h",
+				"base/5C;5;c",
+				"seas/cos/balance 3;54;c"
+			],
+			[
+				"",
+				"seas/exp/balance?3;3;h",
+				""
+			],
+			[
+				"seas/cos/balance 2;44;c",
+				"base/wing;2;a",
+				"base/heart;3;c"
+			],
+			[
+				"seas/exp/balance?2;4;h",
+				"base/5C;5;c",
+				"seas/cos/balance 1;15;c"
+			],
+			[
+				"",
+				"seas/exp/balance?1;0;0",
+				""
+			]
+		]
+	},
+	"Prophet of Fire": {
+		"loc": "Season of Prophecy",
+		"tree": [
+			[
+				"seas/cos/pound 4;54;c",
+				"seas/cos/pound 5;75;c",
+				"seas/cos/pound 3;13;h"
+			],
+			[
+				"seas/exp/pound?4;6;h",
+				"base/5C;5;c",
+				"base/sheet?17;15;c"
+			],
+			[
+				"",
+				"seas/exp/pound?3;3;h",
+				""
+			],
+			[
+				"seas/cos/pound 2;44;c",
+				"base/wing;2;a",
+				"base/heart;3;c"
+			],
+			[
+				"seas/exp/pound?2;4;h",
+				"base/5C;5;c",
+				"seas/cos/pound 1;15;c"
+			],
+			[
+				"",
+				"seas/exp/pound?1;0;0",
+				""
+			]
+		]
+	},
+	"Prophecy Guide": {
+		"isGuide": true,
+		"loc": "Season of Prophecy",
+		"tree": [
+			[
+				"base/heart;3;c",
+				"base/hug;0;0",
+				""
+			],
+			[
+				"base/heart;3;c",
+				"base/!;0;0",
+				"|seas/cos/prophecy 2;2;sh"
+			],
+			[
+				"base/heart;3;c",
+				"base/!;0;0",
+				"|seas/cos/prophecy 1;2;sh"
+			],
+			[
+				"base/heart;3;c",
+				"base/!;0;0",
+				"seas/icons/Prophecy;0;0"
+			],
+			[
+				"",
+				"base/!;0;0",
+				""
+			]
+		]
+	}
+}

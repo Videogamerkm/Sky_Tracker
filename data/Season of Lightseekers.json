@@ -1,0 +1,208 @@
+{
+	"Piggyback Lightseeker": {
+		"loc": "Season of Lightseekers",
+		"tree": [
+			[
+				"seas/exp/piggy?2;8;h",
+				"seas/cos/piggy 3;60;c",
+				"seas/cos/piggy 2;26;c"
+			],
+			[
+				"",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"seas/cos/piggy 1;24;c",
+				"base/wing;2;a",
+				"base/heart;3;c"
+			],
+			[
+				"",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"",
+				"seas/exp/piggy?1;0;0",
+				""
+			]
+		]
+	},
+	"Doublefive Light Catcher": {
+		"loc": "Season of Lightseekers",
+		"tree": [
+			[
+				"seas/exp/2five?2;7;h",
+				"seas/cos/2five 3;34;c",
+				"seas/cos/2five 2;55;c"
+			],
+			[
+				"",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"seas/cos/2five 1;24;c",
+				"base/wing;2;a",
+				"base/heart;3;c"
+			],
+			[
+				"",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"",
+				"seas/exp/2five?1;0;0",
+				""
+			]
+		]
+	},
+	"Laidback Pioneer": {
+		"loc": "Season of Lightseekers",
+		"tree": [
+			[
+				"base/sheet?9;15;c",
+				"seas/cos/laidback 3;75;c",
+				"seas/cos/laidback 2;18;c"
+			],
+			[
+				"",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"seas/cos/laidback 1;30;c",
+				"base/wing;2;a",
+				"base/heart;3;c"
+			],
+			[
+				"",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"",
+				"seas/exp/laidback;0;0",
+				""
+			]
+		]
+	},
+	"Twirling Champion": {
+		"loc": "Season of Lightseekers",
+		"tree": [
+			[
+				"seas/cos/3axel 2;60;c",
+				"seas/cos/3axel 3;34;c",
+				""
+			],
+			[
+				"seas/exp/3axel?4;6;h",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"",
+				"seas/exp/3axel?3;3;h",
+				""
+			],
+			[
+				"seas/cos/3axel 1;24;c",
+				"base/wing;2;a",
+				"base/heart;3;c"
+			],
+			[
+				"seas/exp/3axel?2;4;h",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"",
+				"seas/exp/3axel?1;0;0",
+				""
+			]
+		]
+	},
+	"Crab Whisperer": {
+		"loc": "Season of Lightseekers",
+		"tree": [
+			[
+				"base/sheet?10;15;c",
+				"seas/cos/crab 4;70;c",
+				"seas/cos/crab 3;42;c"
+			],
+			[
+				"",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"seas/cos/crab 2;30;c",
+				"base/wing;2;a",
+				"base/heart;3;c"
+			],
+			[
+				"seas/cos/crab 1;20;c",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"",
+				"seas/exp/crab;0;0",
+				""
+			]
+		]
+	},
+	"Shushing Light Scholar": {
+		"loc": "Season of Lightseekers",
+		"tree": [
+			[
+				"",
+				"seas/cos/shush 2;65;c",
+				""
+			],
+			[
+				"seas/exp/shush?4;6;h",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"",
+				"seas/exp/shush?3;3;h",
+				""
+			],
+			[
+				"seas/cos/shush 1;30;c",
+				"base/wing;2;a",
+				"base/heart;3;c"
+			],
+			[
+				"seas/exp/shush?2;4;h",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"",
+				"seas/exp/shush?1;0;0",
+				""
+			]
+		]
+	},
+	"Lightseekers Guide": {
+		"isGuide": true,
+		"loc": "Season of Lightseekers",
+		"tree": [
+			[
+				"",
+				"seas/cos/lightseek 1;0;0",
+				""
+			],
+			[
+				"",
+				"seas/icons/Lightseekers;0;0",
+				""
+			]
+		]
+	}
+}

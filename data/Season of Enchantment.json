@@ -68,5 +68,186 @@
 				""
 			]
 		]
+	},
+	"Crab Walker": {
+		"loc": "Season of Enchantment",
+		"tree": [
+			[
+				"",
+				"seas/cos/crabwalk 2;60;c",
+				""
+			],
+			[
+				"seas/exp/crabwalk?4;6;h",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"",
+				"seas/exp/crabwalk?3;3;h",
+				""
+			],
+			[
+				"seas/cos/crabwalk 1;42;c",
+				"base/wing;2;a",
+				"base/heart;3;c"
+			],
+			[
+				"seas/exp/crabwalk?2;4;h",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"",
+				"seas/exp/crabwalk?1;0;0",
+				""
+			]
+		]
+	},
+	"Scarecrow Farmer": {
+		"loc": "Season of Enchantment",
+		"tree": [
+			[
+				"",
+				"seas/cos/boo 2;34;c",
+				""
+			],
+			[
+				"seas/exp/boo?4;6;h",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"",
+				"seas/exp/boo?3;3;h",
+				""
+			],
+			[
+				"seas/cos/boo 1;42;c",
+				"base/wing;2;a",
+				"base/heart;3;c"
+			],
+			[
+				"seas/exp/boo?2;4;h",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"",
+				"seas/exp/boo?1;0;0",
+				""
+			]
+		]
+	},
+	"Snoozing Carpenter": {
+		"loc": "Season of Enchantment",
+		"tree": [
+			[
+				"",
+				"seas/cos/doze 2;65;c",
+				""
+			],
+			[
+				"seas/exp/doze?4;6;h",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"",
+				"seas/exp/doze?3;3;h",
+				""
+			],
+			[
+				"seas/cos/doze 1;34;c",
+				"base/wing;2;a",
+				"base/heart;3;c"
+			],
+			[
+				"seas/exp/doze?2;4;h",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"",
+				"seas/exp/doze?1;0;0",
+				""
+			]
+		]
+	},
+	"Playfighting Herbalist": {
+		"loc": "Season of Enchantment",
+		"tree": [
+			[
+				"seas/cos/playfight 2;42;c",
+				"seas/cos/playfight 4;70;c",
+				"seas/cos/playfight 3;20;c"
+			],
+			[
+				"seas/exp/playfight?4;10;h",
+				"base/5C;5;c",
+				"base/sheet?13;15;c"
+			],
+			[
+				"",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"seas/cos/playfight 1;30;c",
+				"base/wing;2;a",
+				"base/heart;3;c"
+			],
+			[
+				"",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"",
+				"seas/exp/playfight?1;0;0",
+				""
+			]
+		]
+	},
+	"Enchantment Guide": {
+		"isGuide": true,
+		"loc": "Season of Enchantment",
+		"tree": [
+			[
+				"base/heart;3;c",
+				"base/hug;0;0",
+				""
+			],
+			[
+				"base/heart;3;c",
+				"base/!;0;0",
+				""
+			],
+			[
+				"base/heart;3;c",
+				"base/!;0;0",
+				""
+			],
+			[
+				"base/heart;3;c",
+				"base/!;0;0",
+				"|seas/cos/ench 2;4;sh"
+			],
+			[
+				"base/heart;3;c",
+				"base/!;0;0",
+				"|seas/cos/ench 1;2;sh"
+			],
+			[
+				"base/heart;3;c",
+				"base/!;0;0",
+				"seas/icons/Enchantment;0;0"
+			],
+			[
+				"",
+				"base/!;0;0",
+				""
+			]
+		]
 	}
 }
