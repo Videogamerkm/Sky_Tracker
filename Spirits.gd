@@ -4,6 +4,7 @@ extends VBoxContainer
 var curr_spirit = ""
 var a = ""
 var bought = {}
+var planned = {}
 
 func _ready():
 	for b in $"Area Selection".get_children():
@@ -38,6 +39,7 @@ func _spirit_select(spirit):
 	curr_spirit = spirit
 	$Tree.set_tree(RegSpirits.data[spirit]["tree"])
 	if bought.has(spirit): $Tree.import_bought(bought[spirit])
+	if planned.has(spirit): $Tree.set_planned(planned[spirit])
 	$Tree.show()
 	$Clear.hide()
 	$Area.set_text(spirit)
@@ -66,11 +68,19 @@ func _on_clear():
 		for s in RegSpirits.data:
 			if RegSpirits.data[s]["loc"] == $Area.text && bought.has(s):
 				bought.erase(s)
+				if planned.has(s): planned.erase(s)
 	else:
 		bought.erase(curr_spirit)
-		$Tree.set_tree(RegSpirits.data[curr_spirit]["tree"])
+		if planned.has(curr_spirit): planned.erase(curr_spirit)
+	$Tree.set_tree(RegSpirits.data[curr_spirit]["tree"])
 
 func _input(event):
 	if event.is_action_pressed("Back") && curr_spirit != "":
 		_on_back_pressed()
 		get_tree().root.set_input_as_handled()
+
+func _on_tree_planned():
+	planned[curr_spirit] = $Tree.get_planned()
+
+func _on_tree_plan_clear():
+	if planned.has(curr_spirit): planned.erase(curr_spirit)

@@ -1,4 +1,4 @@
-extends Object
+class_name TimeUtils extends Object
 
 static var game_offset_secs = -28_800
 static var game_offset_dst = -25_200

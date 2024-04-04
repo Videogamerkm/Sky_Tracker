@@ -5,15 +5,25 @@ extends Button
 @export var type = "a"
 @export var cost = 10
 @export var isSP = false
+var planned = false:
+	set(val):
+		planned = val
+		for p in panels: panels[p].set_border_width_all(2 if planned else 0)
 var locked = true
 const normal = Color(0.67,0.67,1.00)
 const spoiler = Color(0.5,0.5,0.5)
 const hide = Color(0,0,0)
+@onready var panels = {}
+signal planAdded(isPlanned)
 
 func _ready():
 	set_locked(locked)
 	if Global.spoilers: add_theme_color_override("icon_disabled_color",Color(0.5,0.5,0.5))
 	else: add_theme_color_override("icon_disabled_color",Color(0,0,0))
+	for p in ["normal","hover","pressed","disabled"]:
+		panels[p] = get_theme_stylebox(p).duplicate()
+		remove_theme_stylebox_override(p)
+		add_theme_stylebox_override(p,panels[p])
 	$Curr.show()
 	$Cost.show()
 	if type == "c":
@@ -23,9 +33,9 @@ func _ready():
 	elif type == "a":
 		$Curr.set_texture(preload("res://icons/base/ascended.bmp"))
 	elif type == "sp":
-		$Curr.set_texture(preload("res://icons/base/season_candle.bmp"))
+		$Curr.set_texture(preload("res://icons/base/season_candle.png"))
 	elif type == "sh":
-		$Curr.set_texture(preload("res://icons/base/season_heart.bmp"))
+		$Curr.set_texture(preload("res://icons/base/season_heart.png"))
 	elif type == "k":
 		$Curr.set_texture(load("res://icons/days/"+days+"/ticket.bmp"))
 	elif type == "0":
@@ -48,6 +58,12 @@ func _on_toggled(press):
 
 func set_locked(state):
 	locked = state
+	if locked: set_pressed(false)
 	if state && Global.spoilers: add_theme_color_override("icon_normal_color",spoiler)
 	elif state: add_theme_color_override("icon_normal_color",hide)
 	else: add_theme_color_override("icon_normal_color",normal)
+
+func _gui_input(event):
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
+		planned = not planned
+		planAdded.emit()
