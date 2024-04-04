@@ -28,5 +28,191 @@
 				""
 			]
 		]
+	},
+	"Pleaful Parent": {
+		"loc": "Season of Belonging",
+		"tree": [
+			[
+				"seas/cos/plea 2;65;c",
+				"seas/cos/plea 3;75;c",
+				""
+			],
+			[
+				"seas/exp/plea?4;6;h",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"",
+				"seas/exp/plea?3;3;h",
+				""
+			],
+			[
+				"seas/cos/plea 1;42;c",
+				"base/wing;2;a",
+				"base/heart;3;c"
+			],
+			[
+				"seas/exp/plea?2;4;h",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"",
+				"seas/exp/plea?1;0;0",
+				""
+			]
+		]
+	},
+	"Wise Grandparent": {
+		"loc": "Season of Lightseekers",
+		"tree": [
+			[
+				"seas/cos/wise 1;70;c",
+				"seas/cos/wise 3;48;c",
+				"seas/cos/wise 2;10;c"
+			],
+			[
+				"",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"",
+				"base/wing;2;a",
+				""
+			],
+			[
+				"base/sheet?11;15;c",
+				"base/5C;5;c",
+				"base/heart;3;c"
+			],
+			[
+				"",
+				"seas/exp/wise;0;0",
+				""
+			]
+		]
+	},
+	"Sparkler Parent": {
+		"loc": "Season of Belonging",
+		"tree": [
+			[
+				"seas/cos/sparkler 2;34;c",
+				"seas/cos/sparkler 3;33;c",
+				""
+			],
+			[
+				"seas/exp/sparkler?4;6;h",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"",
+				"seas/exp/sparkler?3;3;h",
+				""
+			],
+			[
+				"seas/cos/sparkler 1;36;c",
+				"base/wing;2;a",
+				"base/heart;3;c"
+			],
+			[
+				"seas/exp/sparkler?2;4;h",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"",
+				"seas/exp/sparkler?1;0;0",
+				""
+			]
+		]
+	},
+	"Boogie Kid": {
+		"loc": "Season of Belonging",
+		"tree": [
+			[
+				"",
+				"seas/cos/sparkler 2;60;c",
+				""
+			],
+			[
+				"seas/exp/boogie?4;6;h",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"",
+				"seas/exp/boogie?3;3;h",
+				""
+			],
+			[
+				"seas/cos/boogie 1;30;c",
+				"base/wing;2;a",
+				"base/heart;3;c"
+			],
+			[
+				"seas/exp/boogie?2;4;h",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"",
+				"seas/exp/boogie?1;0;0",
+				""
+			]
+		]
+	},
+	"Confetti Cousin": {
+		"loc": "Season of Belonging",
+		"tree": [
+			[
+				"",
+				"seas/cos/confetti 2;60;c",
+				""
+			],
+			[
+				"seas/exp/confetti?4;6;h",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"",
+				"seas/exp/confetti?3;3;h",
+				""
+			],
+			[
+				"seas/cos/confetti 1;42;c",
+				"base/wing;2;a",
+				"base/heart;3;c"
+			],
+			[
+				"seas/exp/confetti?2;4;h",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"",
+				"seas/exp/confetti?1;0;0",
+				""
+			]
+		]
+	},
+	"Belonging Guide": {
+		"isGuide": true,
+		"loc": "Season of Belonging",
+		"tree": [
+			[
+				"",
+				"seas/cos/belong 1;6;sh",
+				""
+			],
+			[
+				"",
+				"seas/icons/Belonging;0;0",
+				""
+			]
+		]
 	}
 }

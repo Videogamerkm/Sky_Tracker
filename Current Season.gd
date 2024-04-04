@@ -1,6 +1,5 @@
 extends VBoxContainer
 
-var timeUtils = preload("res://TimeUtils.gd")
 const seasonName = "Season of the Nine-Colored Deer"
 const start = {"day":15,"month":1,"year":2024,"hour":0} #1705305600
 const end = {"day":31,"month":3,"year":2024,"hour":23,"minute":59} #1711954799
@@ -10,10 +9,15 @@ const left = " day(s) left in the season"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Time/Start.text = timeUtils.convert_time(start)
-	$Time/End.text = timeUtils.convert_time(end)
-	var days = floor(timeUtils.get_time_until(end)/86400.0)
-	$Days.text = str(days) + left
+	$Time/Start.text = TimeUtils.convert_time(start)
+	$Time/End.text = TimeUtils.convert_time(end)
+	var days = floor(TimeUtils.get_time_until(end)/86400.0)
+	if days < 0:
+		$Days.text = "Season ended " + str(abs(days)) + " day(s) ago. See you next season!"
+		for c in get_children():
+			if c.name != "Banner" and c.name != "Time" and c.name != "Days":
+				c.hide()
+	else: $Days.text = str(days) + left
 	update_candles()
 	var candles = days*(6 if $Pass/Check.button_pressed else 5)
 	$"Per Day/Val".text = str(6 if $Pass/Check.button_pressed else 5)
@@ -30,7 +34,7 @@ func _ready():
 		if not $Pass/Check.button_pressed: $Complete.text += "(Note: This does not include season pass items.)"
 
 func _process(_delta):
-	if not $Days.text == str(floor(timeUtils.get_time_until(end)/86400.0)) + left:
+	if not $Days.text == str(floor(TimeUtils.get_time_until(end)/86400.0)) + left:
 		_ready()
 
 func _on_check_toggled(_button_pressed):

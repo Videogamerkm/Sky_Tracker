@@ -7,6 +7,7 @@ var useTwelve = false
 var main
 var homeTab
 var statsTab
+var planTab
 var regSprtTab
 var currSsnTab
 var ssnlSprtTab
@@ -19,6 +20,7 @@ func load_tabs():
 	main = get_tree().root.get_node("Main")
 	homeTab = get_tree().root.get_node("Main/Tabs/Home/Margin/VBox")
 	statsTab = get_tree().root.get_node("Main/Tabs/Stats/Margin/VBox")
+	planTab = get_tree().root.get_node("Main/Tabs/Planning/Margin/VBox")
 	regSprtTab = get_tree().root.get_node("Main/Tabs/Regular Spirits/Margin/VBox")
 	currSsnTab = get_tree().root.get_node("Main/Tabs/Current Season/Margin/VBox")
 	ssnlSprtTab = get_tree().root.get_node("Main/Tabs/Seasonal Spirits/Margin/VBox")

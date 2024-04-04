@@ -28,5 +28,146 @@
 				""
 			]
 		]
+	},
+	"Dancing Performer": {
+		"loc": "Season of Dreams",
+		"tree": [
+			[
+				"seas/cos/show 4;0;0",
+				"base/heart;3;sp",
+				""
+			],
+			[
+				"seas/cos/show 2;0;0",
+				"seas/cos/show 3;27;sp",
+				""
+			],
+			[
+				"seas/exp/show?4;0;0",
+				"base/5C;21;sp",
+				""
+			],
+			[
+				"seas/cos/show 1;0;0",
+				"seas/exp/show?3;16;sp",
+				""
+			],
+			[
+				"seas/exp/show?2;0;0",
+				"base/5C;12;sp",
+				""
+			],
+			[
+				"",
+				"seas/exp/show?1;0;0",
+				""
+			]
+		]
+	},
+	"Peeking Postman": {
+		"loc": "Season of Dreams",
+		"tree": [
+			[
+				"",
+				"seas/cos/peek 3;70;c",
+				""
+			],
+			[
+				"seas/exp/peek?4;6;h",
+				"base/5C;5;c",
+				"seas/cos/peek 2;65;c"
+			],
+			[
+				"",
+				"seas/exp/peek?3;3;h",
+				""
+			],
+			[
+				"seas/cos/peek 1;54;c",
+				"base/wing;2;a",
+				"base/heart;3;c"
+			],
+			[
+				"seas/exp/peek?2;4;h",
+				"base/5C;5;c",
+				"base/sheet?18;15;c"
+			],
+			[
+				"",
+				"seas/exp/peek?1;0;0",
+				""
+			]
+		]
+	},
+	"Spinning Mentor": {
+		"loc": "Season of Dreams",
+		"tree": [
+			[
+				"",
+				"seas/cos/trick 3;70;c",
+				""
+			],
+			[
+				"seas/exp/trick?4;6;h",
+				"base/5C;5;c",
+				"seas/cos/trick 2;42;c"
+			],
+			[
+				"",
+				"seas/exp/trick?3;3;h",
+				""
+			],
+			[
+				"seas/cos/trick 1;44;c",
+				"base/wing;2;a",
+				"base/heart;3;c"
+			],
+			[
+				"seas/exp/trick?2;4;h",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"",
+				"seas/exp/trick?1;0;0",
+				""
+			]
+		]
+	},
+	"Dreams Guide": {
+		"isGuide": true,
+		"loc": "Season of Dreams",
+		"tree": [
+			[
+				"base/heart;3;c",
+				"base/hug;0;0",
+				""
+			],
+			[
+				"base/heart;3;c",
+				"base/!;0;0",
+				""
+			],
+			[
+				"base/heart;3;c",
+				"base/!;0;0",
+				"|seas/cos/dreams 2;2;sh"
+			],
+			[
+				"base/heart;3;c",
+				"base/!;0;0",
+				"|seas/cos/dreams 1;2;sh"
+			],
+			[
+				"base/heart;3;c",
+				"base/!;0;0",
+				"seas/icons/Dreams;0;0"
+			],
+			[
+				"",
+				"base/!;0;0",
+				""
+			]
+		]
 	}
 }

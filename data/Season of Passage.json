@@ -1,0 +1,183 @@
+{
+	"Oddball Outcast": {
+		"loc": "Season of Passage",
+		"tree": [
+			[
+				"base/5C;0;0",
+				"base/heart;3;sp",
+				""
+			],
+			[
+				"seas/exp/hacky?4;0;0",
+				"seas/cos/hacky 3;32;sp",
+				""
+			],
+			[
+				"seas/cos/hacky 2;0;0",
+				"seas/exp/hacky?3;24;sp",
+				""
+			],
+			[
+				"base/5C;0;0",
+				"base/5C;18;sp",
+				""
+			],
+			[
+				"seas/exp/hacky?2;0;0",
+				"seas/cos/hacky 1;14;sp",
+				""
+			],
+			[
+				"",
+				"seas/exp/hacky?1;0;0",
+				""
+			]
+		]
+	},
+	"Tumbling Troublemaker": {
+		"loc": "Season of Passage",
+		"tree": [
+			[
+				"seas/cos/somersault 3;0;0",
+				"base/heart;3;sp",
+				""
+			],
+			[
+				"seas/cos/somersault 2;0;0",
+				"base/5C;32;sp",
+				""
+			],
+			[
+				"seas/exp/somersault?4;0;0",
+				"base/5C;28;sp",
+				""
+			],
+			[
+				"seas/cos/somersault 1;0;0",
+				"seas/exp/somersault?3;18;sp",
+				""
+			],
+			[
+				"seas/exp/somersault?2;0;0",
+				"base/5C;8;sp",
+				""
+			],
+			[
+				"",
+				"seas/exp/somersault?1;0;0",
+				""
+			]
+		]
+	},
+	"Melancholy Mope": {
+		"loc": "Season of Passage",
+		"tree": [
+			[
+				"base/5C;0;0",
+				"base/heart;3;sp",
+				""
+			],
+			[
+				"seas/exp/mope?4;0;0",
+				"seas/cos/mope 3;28;sp",
+				""
+			],
+			[
+				"seas/cos/mope 2;0;0",
+				"seas/exp/mope?3;26;sp",
+				""
+			],
+			[
+				"base/5C;0;0",
+				"base/5C;18;sp",
+				""
+			],
+			[
+				"seas/exp/mope?2;0;0",
+				"seas/cos/mope 1;6;sp",
+				""
+			],
+			[
+				"",
+				"seas/exp/mope?1;0;0",
+				""
+			]
+		]
+	},
+	"Overactive Overachiever": {
+		"loc": "Season of Passage",
+		"tree": [
+			[
+				"seas/cos/pullup 3;0;0",
+				"base/heart;3;sp",
+				""
+			],
+			[
+				"base/5C;0;0",
+				"base/5C;32;sp",
+				""
+			],
+			[
+				"seas/exp/pullup?4;0;0",
+				"seas/cos/pullup 2;30;sp",
+				""
+			],
+			[
+				"seas/cos/pullup 1;0;0",
+				"seas/exp/pullup?3;22;sp",
+				""
+			],
+			[
+				"seas/exp/pullup?2;0;0",
+				"base/5C;14;sp",
+				""
+			],
+			[
+				"",
+				"seas/exp/pullup?1;0;0",
+				""
+			]
+		]
+	},
+	"Passage Guide": {
+		"isGuide": true,
+		"loc": "Season of Passage",
+		"tree": [
+			[
+				"base/heart;0;0",
+				"seas/cos/passage 7;52;c",
+				"seas/cos/passage 6;39;h"
+			],
+			[
+				"base/heart;0;0",
+				"base/!;0;0",
+				"seas/cos/passage 5;46;c"
+			],
+			[
+				"base/heart;0;0",
+				"base/!;0;0",
+				"seas/cos/passage 4;44;c"
+			],
+			[
+				"seas/cos/passage 3;48;c",
+				"base/!;0;0",
+				"|seas/cos/passage 2;2;sh"
+			],
+			[
+				"base/heart;0;0",
+				"base/!;0;0",
+				"|seas/cos/passage 1;2;sh"
+			],
+			[
+				"",
+				"base/!;0;0",
+				"seas/icons/Passage;0;0"
+			],
+			[
+				"",
+				"base/teleport;0;0",
+				""
+			]
+		]
+	}
+}

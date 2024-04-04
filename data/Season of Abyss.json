@@ -1,4 +1,39 @@
 {
+	"Anxious Angler": {
+		"loc": "Season of Abyss",
+		"tree": [
+			[
+				"seas/cos/anxious 3;70;c",
+				"seas/cos/anxious 4;65;c",
+				""
+			],
+			[
+				"seas/exp/anxious?4;6;h",
+				"base/5C;5;c",
+				"seas/cos/anxious 2;35;c"
+			],
+			[
+				"",
+				"seas/exp/anxious?3;3;h",
+				""
+			],
+			[
+				"seas/cos/anxious 2;45;c",
+				"base/wing;2;a",
+				"base/heart;3;c"
+			],
+			[
+				"seas/exp/anxious?2;4;h",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"",
+				"seas/exp/anxious?1;0;0",
+				""
+			]
+		]
+	},
 	"Ceasing Commodore": {
 		"loc": "Season of Abyss",
 		"tree": [
@@ -30,6 +65,117 @@
 			[
 				"",
 				"seas/exp/calm?1;0;0",
+				""
+			]
+		]
+	},
+	"Bumbling Boatswain": {
+		"loc": "Season of Abyss",
+		"tree": [
+			[
+				"base/5C;0;0",
+				"base/heart;3;sp",
+				""
+			],
+			[
+				"seas/cos/ouch 2;0;0",
+				"seas/cos/ouch 3;24;sp",
+				""
+			],
+			[
+				"seas/exp/ouch?4;0;0",
+				"base/5C;20;sp",
+				""
+			],
+			[
+				"base/5C;0;0",
+				"seas/exp/ouch?3;16;sp",
+				""
+			],
+			[
+				"seas/cos/ouch 1;0;0",
+				"base/sheet?27;12;sp",
+				""
+			],
+			[
+				"seas/exp/ouch?2;0;0",
+				"base/5C;8;sp",
+				""
+			],
+			[
+				"",
+				"seas/exp/ouch?1;0;0",
+				""
+			]
+		]
+	},
+	"Cackling Cannoneer": {
+		"loc": "Season of Abyss",
+		"tree": [
+			[
+				"seas/cos/cackle 3;70;c",
+				"base/sheet?26;15;c",
+				""
+			],
+			[
+				"seas/exp/cackle?4;6;h",
+				"base/5C;5;c",
+				"seas/cos/cackle 2;50;c"
+			],
+			[
+				"",
+				"seas/exp/cackle?3;3;h",
+				""
+			],
+			[
+				"seas/cos/cackle 1;40;c",
+				"base/wing;2;a",
+				"base/heart;3;c"
+			],
+			[
+				"seas/exp/cackle?2;4;h",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"",
+				"seas/exp/cackle?1;0;0",
+				""
+			]
+		]
+	},
+	"Abyss Guide": {
+		"isGuide": true,
+		"loc": "Season of Abyss",
+		"tree": [
+			[
+				"base/heart;3;c",
+				"seas/cos/abyss 3;48;c",
+				""
+			],
+			[
+				"base/heart;3;c",
+				"base/!;0;0",
+				"|seas/cos/abyss 3;1;sh"
+			],
+			[
+				"base/heart;3;c",
+				"base/!;0;0",
+				"|seas/cos/abyss 2;2;sh"
+			],
+			[
+				"base/heart;3;c",
+				"base/!;0;0",
+				"|seas/cos/abyss 1;1;sh"
+			],
+			[
+				"base/heart;3;c",
+				"base/!;0;0",
+				"seas/icons/Abyss;0;0"
+			],
+			[
+				"",
+				"base/!;0;0",
 				""
 			]
 		]

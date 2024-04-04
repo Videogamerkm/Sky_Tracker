@@ -1,6 +1,5 @@
 extends VBoxContainer
 
-var timeUtils = preload("res://TimeUtils.gd")
 var days = preload("res://Events.gd")
 var cycle = [2,1,3,0,4,1,2,0,3,1,4,0]
 const excl = [[6,0],[0,1],[1,2],[2,3],[3,4]]
@@ -26,13 +25,13 @@ func set_fields():
 	datetime.merge({"hour":0,"minute":0,"second":0},true)
 	## server_reset + shard time + local offset = local shard drop time
 	## server_reset + times[g][s] + local_offset_secs
-	server_reset = Time.get_unix_time_from_datetime_dict(datetime) - timeUtils.get_game_offset()
+	server_reset = Time.get_unix_time_from_datetime_dict(datetime) - TimeUtils.get_game_offset()
 	var c = cycle[(datetime["day"] - 1) % cycle.size()]
 	var type = "None" if datetime["weekday"] == excl[c][0] || datetime["weekday"] == excl[c][1] else "Strong" if c > 1 else "Regular"
 	var loc = locs[c][(datetime["day"] - 1) % 5]
 	type = "None" if loc == days.get_location_override() else type
 	var val = 0 if type == "None" else 200 if type == "Regular" else vals[c][(datetime["day"] - 1) % 5]
-	$Date.text = "It is %s, %s %s%s, %d"%[timeUtils.days[datetime["weekday"]],timeUtils.months[datetime["month"]],datetime["day"],timeUtils.get_post(str(datetime["day"])),datetime["year"]]
+	$Date.text = "It is %s, %s %s%s, %d"%[TimeUtils.days[datetime["weekday"]],TimeUtils.months[datetime["month"]],datetime["day"],TimeUtils.get_post(str(datetime["day"])),datetime["year"]]
 	if type != "None":
 		$Current.show()
 		for i in range(1,4):
@@ -50,10 +49,10 @@ func set_fields():
 		if loc == days.get_location_override(): $Reward.text += " Normally there would be, but something is overriding it."
 
 func get_time_string(time) -> String:
-	time = time - timeUtils.get_game_offset() + timeUtils.local_offset_secs
+	time = time - TimeUtils.get_game_offset() + TimeUtils.local_offset_secs
 	var aft = " AM" if time < 43_200 else (" PM" if time < 86_400 else " AM")
 	if Global.useTwelve: time = time % 43_200
-	time = time + timeUtils.get_game_offset()
+	time = time + TimeUtils.get_game_offset()
 	var ret = Time.get_time_string_from_unix_time(server_reset + time).replace(":00","")
 	if Global.useTwelve: ret = ret.replace("00:","12:")
 	return ret + (aft if Global.useTwelve else "")

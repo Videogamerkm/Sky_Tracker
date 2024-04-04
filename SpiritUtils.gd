@@ -1,15 +1,17 @@
-extends Object
+class_name SpiritUtils extends Object
 
 static func get_cost(data,name) -> Dictionary:
 	var c = 0
 	var h = 0
 	var a = 0
+	var k = 0
 	var sp = 0
 	var sh = 0
 	var c2 = 0
 	var h2 = 0
 	var a2 = 0
-	for row in data[name]["tree"]:
+	var tree = data[name] if not data[name].has("tree") else data[name]["tree"]
+	for row in tree:
 		for item in row:
 			if item == "": continue
 			var amnt = int(item.split(";")[1])
@@ -24,19 +26,22 @@ static func get_cost(data,name) -> Dictionary:
 				if type == "c": c += amnt
 				if type == "h": h += amnt
 				if type == "a": a += amnt
-	return {"c":c,"h":h,"a":a,"c2":c2,"h2":h2,"a2":a2,"sp":sp,"sh":sh}
+				if type == "k": k += amnt
+	return {"c":c,"h":h,"a":a,"k":k,"c2":c2,"h2":h2,"a2":a2,"sp":sp,"sh":sh}
 
 static func get_unspent(data,name,bought) -> Dictionary:
 	var c = 0
 	var h = 0
 	var a = 0
+	var k = 0
 	var sp = 0
 	var sh = 0
 	var c2 = 0
 	var h2 = 0
 	var a2 = 0
 	var x = 0
-	for row in data[name]["tree"]:
+	var tree = data[name] if not data[name].has("tree") else data[name]["tree"]
+	for row in tree:
 		var y = 0
 		for item in row:
 			if not(item == "" || bought[x][y]):
@@ -52,15 +57,17 @@ static func get_unspent(data,name,bought) -> Dictionary:
 					if type == "c": c += amnt
 					if type == "h": h += amnt
 					if type == "a": a += amnt
+					if type == "k": k += amnt
 			y += 1
 		x += 1
-	return {"c":c,"h":h,"a":a,"c2":c2,"h2":h2,"a2":a2,"sp":sp,"sh":sh}
+	return {"c":c,"h":h,"a":a,"k":k,"c2":c2,"h2":h2,"a2":a2,"sp":sp,"sh":sh}
 
 static func get_completion(data,name,bought) -> int:
 	var b = 0
 	var t = 0
 	var x = 0
-	for row in data[name]["tree"]:
+	var tree = data[name] if not data[name].has("tree") else data[name]["tree"]
+	for row in tree:
 		var y = 0
 		for item in row:
 			if item != "" && not item.ends_with(";t") && bought[x][y]: b += 1

@@ -1,0 +1,158 @@
+{
+	"Ancient Light (Jellyfish)": {
+		"loc": "Season of Shattering",
+		"tree": [
+			[
+				"base/5C;0;0",
+				"base/heart;3;sp",
+				""
+			],
+			[
+				"seas/cos/void 2;0;0",
+				"seas/cos/void 3;42;sp",
+				""
+			],
+			[
+				"base/5C;0;0",
+				"base/5C;16;sp",
+				""
+			],
+			[
+				"",
+				"seas/cos/void 1;35;sp",
+				""
+			]
+		]
+	},
+	"Ancient Light (Manta)": {
+		"loc": "Season of Shattering",
+		"tree": [
+			[
+				"seas/cos/void 6;0;0",
+				"base/heart;3;sp",
+				""
+			],
+			[
+				"base/5C;0;0",
+				"base/5C;16;sp",
+				""
+			],
+			[
+				"seas/cos/void 4;0;0",
+				"seas/cos/void 5;35;sp",
+				""
+			],
+			[
+				"base/5C;0;0",
+				"base/5C;16;sp",
+				""
+			],
+			[
+				"",
+				"base/sheet?31;27;sp",
+				""
+			]
+		]
+	},
+	"Ancient Darkness (Dragon)": {
+		"loc": "Season of Shattering",
+		"tree": [
+			[
+				"base/5C;0;0",
+				"base/heart;3;sp",
+				""
+			],
+			[
+				"seas/cos/void 8;0;0",
+				"seas/cos/void 9;42;sp",
+				""
+			],
+			[
+				"base/5C;0;0",
+				"base/5C;16;sp",
+				""
+			],
+			[
+				"",
+				"seas/cos/void 7;35;sp",
+				""
+			]
+		]
+	},
+	"Ancient Darkness (Plants)": {
+		"loc": "Season of Shattering",
+		"tree": [
+			[
+				"seas/cos/void 12;0;0",
+				"base/heart;3;sp",
+				""
+			],
+			[
+				"base/5C;0;0",
+				"base/5C;16;sp",
+				""
+			],
+			[
+				"seas/cos/void 11;0;0",
+				"base/sheet?31;35;sp",
+				""
+			],
+			[
+				"base/5C;0;0",
+				"base/5C;16;sp",
+				""
+			],
+			[
+				"",
+				"seas/cos/void 10;27;sp",
+				""
+			]
+		]
+	},
+	"The Void of Shattering": {
+		"isGuide": true,
+		"loc": "Season of Shattering",
+		"tree": [
+			[
+				"base/heart;3;c",
+				"base/heart;3;c",
+				""
+			],
+			[
+				"base/heart;3;c",
+				"base/!;0;0",
+				""
+			],
+			[
+				"base/heart;3;c",
+				"base/!;0;0",
+				""
+			],
+			[
+				"base/heart;3;c",
+				"base/!;0;0",
+				""
+			],
+			[
+				"base/heart;3;c",
+				"base/!;0;0",
+				"|seas/cos/shattering 2;2;sh"
+			],
+			[
+				"base/heart;3;c",
+				"base/!;0;0",
+				"|seas/cos/shattering 1;2;sh"
+			],
+			[
+				"",
+				"base/!;0;0",
+				"seas/icons/Shattering;0;0"
+			],
+			[
+				"",
+				"base/teleport;0;0",
+				""
+			]
+		]
+	}
+}

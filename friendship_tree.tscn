@@ -94,6 +94,13 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_akjr0")
 theme_override_styles/hover = SubResource("StyleBoxFlat_25t5q")
 text = "Clear"
 
+[node name="Clear2" type="Button" parent="Org1/Controls"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+focus_mode = 0
+text = "Clear
+Plan"
+
 [node name="Scroll" type="ScrollContainer" parent="Org1"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -166,6 +173,37 @@ texture = ExtResource("5_8fjsg")
 expand_mode = 1
 stretch_mode = 5
 
+[node name="Left2" type="TextureRect" parent="Org1/Scroll/Rows/Line Row"]
+visible = false
+layout_mode = 2
+offset_top = 25.0
+offset_right = 50.0
+offset_bottom = 75.0
+size_flags_horizontal = 3
+texture = ExtResource("4_j55f8")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Mid2" type="TextureRect" parent="Org1/Scroll/Rows/Line Row"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("4_j55f8")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Right2" type="TextureRect" parent="Org1/Scroll/Rows/Line Row"]
+visible = false
+layout_mode = 2
+offset_left = 200.0
+offset_top = 25.0
+offset_right = 250.0
+offset_bottom = 75.0
+size_flags_horizontal = 3
+texture = ExtResource("4_j55f8")
+expand_mode = 1
+stretch_mode = 5
+
 [node name="Space" type="Control" parent="Org1"]
 custom_minimum_size = Vector2(75, 0)
 layout_mode = 2
@@ -181,4 +219,5 @@ dialog_autowrap = true
 [connection signal="pressed" from="Org1/Controls/Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="Org1/Controls/All" to="." method="buy_all"]
 [connection signal="pressed" from="Org1/Controls/Clear" to="." method="_on_clear_pressed"]
+[connection signal="pressed" from="Org1/Controls/Clear2" to="." method="_on_clear_plan_pressed"]
 [connection signal="confirmed" from="Confirm" to="." method="_on_confirm_confirmed"]

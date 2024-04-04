@@ -7,6 +7,7 @@ var cosmetics = []
 var history = []
 var histIndex = -1
 var collHist = true
+@onready var search = $Tabs/Home/Margin/VBox/Search/Search
 
 func _notification(what):
 	if what == NOTIFICATION_WM_CLOSE_REQUEST:
@@ -17,29 +18,70 @@ func save(backup = true):
 	if backup:
 		var old = FileAccess.open(saveFile, FileAccess.READ)
 		var back = FileAccess.open(saveFile+".bak", FileAccess.WRITE)
-		while(old.get_position() < old.get_length()): back.store_var(old.get_var())
+		back.store_var(old.get_var())
+		old.close()
+		back.close()
 	var file = FileAccess.open(saveFile, FileAccess.WRITE)
-	file.store_var(Global.regSprtTab.bought)
-	file.store_var(Global.currSsnTab.get_node("Pass/Check").is_pressed())
-	file.store_var(Global.currSsnTab.get_node("Have/Candles").value)
-	file.store_var(Global.ssnlSprtTab.bought)
-	file.store_var(Global.wlTab.export_checked())
-	file.store_var(Global.yrlyTab.bought)
-	file.store_var(Global.setsTab.use_short)
-	file.store_var(cosmetics)
-	file.store_var(Global.spoilers)
-	file.store_var(Global.useTwelve)
+	file.store_var({"V":1.0,
+		"Plan":{"days":Global.planTab.days,"cpd":Global.planTab.cpd,"hpd":Global.planTab.hpd,
+			"currC":Global.planTab.currCandles,"currH":Global.planTab.currHearts,"currT":Global.planTab.currTicks},
+		"Reg":{"bought":Global.regSprtTab.bought,"planned":Global.regSprtTab.planned},
+		"Curr":{"pass":Global.currSsnTab.get_node("Pass/Check").is_pressed(),
+			"have":Global.currSsnTab.get_node("Have/Candles").value},
+		"Seas":{"bought":Global.ssnlSprtTab.bought,"planned":Global.ssnlSprtTab.planned},
+		"WL":{"check":Global.wlTab.export_checked()},
+		"Yearly":{"bought":Global.yrlyTab.bought,"planned":Global.yrlyTab.planned},
+		"Other":{"cosmetics": cosmetics}})
 	file.close()
+	config.set_value("Options","short",Global.setsTab.use_short)
+	config.set_value("Options","spoil",Global.spoilers)
+	config.set_value("Options","twelve",Global.useTwelve)
+	config.save(configFile)
 
 func _on_tree_entered():
 	Global.load_tabs()
 	var err = config.load(configFile)
-	if err == OK: saveFile = config.get_value("Current Save","file")
+	if err == OK:
+		saveFile = config.get_value("Current Save","file")
+		Global.setsTab.use_short = config.get_value("Options","short")
+		Global.spoilers = config.get_value("Options","spoil")
+		Global.useTwelve = config.get_value("Options","twelve")
 	else: config.set_value("Current Save","file",saveFile)
 	Global.homeTab.get_node("File").text = "Current Save File: "+saveFile
 	load_save(saveFile)
 
 func load_save(sv):
+	if not FileAccess.file_exists(sv):
+		sv += ".bak"
+		if not FileAccess.file_exists(sv): return
+	var file = FileAccess.open(sv, FileAccess.READ)
+	var data = file.get_var()
+	if not Global.regSprtTab.is_node_ready(): await Global.regSprtTab.ready
+	if not data.has("V"):
+		load_legacy(sv)
+		return
+	Global.planTab.days = data["Plan"]["days"]
+	Global.planTab.cpd = data["Plan"]["cpd"]
+	Global.planTab.hpd = data["Plan"]["hpd"]
+	Global.planTab.currCandles = data["Plan"]["currC"]
+	Global.planTab.currHearts = data["Plan"]["currH"]
+	Global.planTab.currTicks = data["Plan"]["currT"]
+	Global.regSprtTab.bought = data["Reg"]["bought"]
+	Global.regSprtTab.planned = data["Reg"]["planned"]
+	Global.currSsnTab.get_node("Pass/Check").set_pressed(data["Curr"]["pass"])
+	Global.currSsnTab.get_node("Have/Candles").value = data["Curr"]["have"]
+	Global.ssnlSprtTab.bought = data["Seas"]["bought"]
+	Global.ssnlSprtTab.planned = data["Seas"]["planned"]
+	Global.wlTab.import_checked(data["WL"]["check"])
+	Global.yrlyTab.bought = data["Yearly"]["bought"]
+	Global.yrlyTab.planned = data["Yearly"]["planned"]
+	cosmetics = data["Other"]["cosmetics"]
+	Global.setsTab.set_short()
+	Global.setsTab.get_node("Spoilers").set_pressed_no_signal(Global.spoilers)
+	Global.setsTab.get_node("Time").set_pressed_no_signal(Global.useTwelve)
+	if sv.ends_with(".bak"): save(false)
+
+func load_legacy(sv):
 	if not FileAccess.file_exists(sv):
 		sv += ".bak"
 		if not FileAccess.file_exists(sv): return
@@ -74,7 +116,6 @@ func load_save(sv):
 	Global.setsTab.set_short()
 	Global.setsTab.get_node("Spoilers").set_pressed_no_signal(Global.spoilers)
 	Global.setsTab.get_node("Time").set_pressed_no_signal(Global.useTwelve)
-	Global.statsTab.set_values()
 	if sv.ends_with(".bak"): save(false)
 
 func fix_old(s):
@@ -91,11 +132,12 @@ func fix_old_day(s):
 
 func _on_tabs_tab_changed(tab):
 	if tab == 1: Global.statsTab.set_values()
-	if tab == 2 && Global.regSprtTab.curr_spirit != "": Global.regSprtTab._on_back_pressed()
-	elif tab == 2: Global.regSprtTab._area_select(Global.regSprtTab.get_node("Area").text)
-	if tab == 3: Global.currSsnTab._ready()
-	if tab == 4 && Global.ssnlSprtTab.curr_spirit != "": Global.ssnlSprtTab._on_back_pressed()
-	if tab == 6: Global.shrdTab.set_fields()
+	if tab == 2: Global.planTab._ready()
+	if tab == 3 && Global.regSprtTab.curr_spirit != "": Global.regSprtTab._on_back_pressed()
+	elif tab == 3: Global.regSprtTab._area_select(Global.regSprtTab.get_node("Area").text)
+	if tab == 4: Global.currSsnTab._ready()
+	if tab == 5 && Global.ssnlSprtTab.curr_spirit != "": Global.ssnlSprtTab._on_back_pressed()
+	if tab == 7: Global.shrdTab.set_fields()
 	if collHist:
 		history.resize(histIndex + 1)
 		history.append($Tabs.get_previous_tab())
@@ -155,3 +197,46 @@ func _on_load_dialog_file_selected(path):
 	saveFile = path
 	Global.homeTab.get_node("File").text = "Current Save File: "+path
 	load_save(path)
+
+func _on_search_focus_entered():
+	for s in RegSpirits.data: search.get_node("Popup").add_item(s)
+	for s in SeasonSpirits.data: search.get_node("Popup").add_item(s)
+	for s in Global.yrlyTab.rows: search.get_node("Popup").add_item(s)
+	search.get_node("Popup").show()
+
+func _on_search_text_changed(new_text):
+	var list = []
+	for c in $Tabs/Home/Margin/VBox/Items/Items.get_children():
+		$Tabs/Home/Margin/VBox/Items/Items.remove_child(c)
+		c.queue_free()
+	list.append_array(RegSpirits.data.keys())
+	list.append_array(SeasonSpirits.data.keys())
+	list.append_array(Global.yrlyTab.rows.keys())
+	for i in list:
+		if new_text.to_lower() in i.to_lower():
+			var btn = Button.new()
+			btn.flat = true
+			btn.text = i
+			btn.add_theme_color_override("font_color",Color(1,1,1,0.5))
+			btn.focus_mode = Control.FOCUS_NONE
+			btn.connect("pressed",_on_search_pressed.bind(i))
+			$Tabs/Home/Margin/VBox/Items/Items.add_child(btn)
+			if i.to_lower().begins_with(new_text.to_lower()):
+				$Tabs/Home/Margin/VBox/Items/Items.move_child(btn,0)
+
+func _on_search_pressed(text):
+	if text in RegSpirits.data.keys(): # Tab 3
+		$Tabs.set_current_tab(3)
+		Global.regSprtTab.find_child(RegSpirits.data[text]["loc"]).set_pressed(true)
+		Global.regSprtTab._area_select(RegSpirits.data[text]["loc"])
+		Global.regSprtTab._spirit_select(text)
+	elif text in SeasonSpirits.data.keys(): # Tab 5
+		$Tabs.set_current_tab(5)
+		Global.ssnlSprtTab.find_child(SeasonSpirits.data[text]["loc"],true,false).set_pressed(true)
+		Global.ssnlSprtTab._area_select(SeasonSpirits.data[text]["loc"])
+		Global.ssnlSprtTab._spirit_select(text)
+	elif text in Global.yrlyTab.rows.keys(): # Tab 8
+		Global.yrlyTab._press_event_button(Global.yrlyTab.find_child(Global.yrlyTab.short[text]))
+		$Tabs.set_current_tab(8)
+	$Tabs/Home/Margin/VBox/Search/Search.clear()
+	$Tabs/Home/Margin/VBox/Search/Search.release_focus()

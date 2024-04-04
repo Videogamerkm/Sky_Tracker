@@ -1,0 +1,188 @@
+{
+	"Reassuring Ranger": {
+		"loc": "Season of Moments",
+		"tree": [
+			[
+				"base/5C;0;0",
+				"base/heart;3;sp",
+				""
+			],
+			[
+				"seas/cos/sidehug 3;0;0",
+				"seas/cos/sidehug 4;36;sp",
+				""
+			],
+			[
+				"base/5C;0;0",
+				"base/5C;30;sp",
+				""
+			],
+			[
+				"seas/cos/sidehug 1;0;0",
+				"seas/cos/sidehug 2;26;sp",
+				""
+			],
+			[
+				"seas/exp/sidehug?2;0;0",
+				"base/5C;16;sp",
+				""
+			],
+			[
+				"",
+				"seas/exp/sidehug?1;0;0",
+				""
+			]
+		]
+	},
+	"Jolly Geologist": {
+		"loc": "Season of Moments",
+		"tree": [
+			[
+				"seas/cos/jolly 3;0;0",
+				"base/heart;3;sp",
+				""
+			],
+			[
+				"base/5C;0;0",
+				"base/sheet?37;34;sp",
+				""
+			],
+			[
+				"seas/exp/jolly?4;0;0",
+				"base/5C;28;sp",
+				""
+			],
+			[
+				"seas/cos/jolly 2;0;0",
+				"seas/exp/jolly?3;20;sp",
+				""
+			],
+			[
+				"seas/exp/jolly?2;0;0",
+				"seas/cos/jolly 1;8;sp",
+				""
+			],
+			[
+				"",
+				"seas/exp/jolly?1;0;0",
+				""
+			]
+		]
+	},
+	"Ascetic Monk": {
+		"loc": "Season of Moments",
+		"tree": [
+			[
+				"base/5C;0;0",
+				"base/heart;3;sp",
+				""
+			],
+			[
+				"seas/exp/blindfold?4;0;0",
+				"seas/cos/blindfold 3;32;sp",
+				""
+			],
+			[
+				"base/5C;0;0",
+				"seas/exp/blindfold?3;26;sp",
+				""
+			],
+			[
+				"seas/cos/blindfold 1;0;0",
+				"seas/cos/blindfold 2;18;sp",
+				""
+			],
+			[
+				"seas/exp/blindfold?2;0;0",
+				"base/5C;68;sp",
+				""
+			],
+			[
+				"",
+				"seas/exp/blindfold?1;0;0",
+				""
+			]
+		]
+	},
+	"Nightbird Whisperer": {
+		"loc": "Season of Moments",
+		"tree": [
+			[
+				"seas/cos/nightbird 4;0;0",
+				"base/heart;3;sp",
+				""
+			],
+			[
+				"base/5C;0;0",
+				"base/5C;36;sp",
+				""
+			],
+			[
+				"seas/cos/nightbird 2;0;0",
+				"seas/cos/nightbird 3;28;sp",
+				""
+			],
+			[
+				"base/5C;0;0",
+				"base/5C;24;sp",
+				""
+			],
+			[
+				"",
+				"seas/cos/nightbird 1;12;sp",
+				""
+			],
+			[
+				"",
+				"seas/exp/nightbird;0;0",
+				""
+			]
+		]
+	},
+	"Moments Guide": {
+		"isGuide": true,
+		"loc": "Season of Moments",
+		"tree": [
+			[
+				"",
+				"base/heart;0;0",
+				""
+			],
+			[
+				"base/heart;0;0",
+				"base/!;0;0",
+				""
+			],
+			[
+				"base/heart;0;0",
+				"base/!;0;0",
+				""
+			],
+			[
+				"",
+				"base/!;0;0",
+				"|seas/cos/moments 4;2;sh"
+			],
+			[
+				"base/heart;0;0",
+				"base/five;0;0",
+				"|seas/cos/moments 3;1;sh"
+			],
+			[
+				"base/heart;0;0",
+				"base/!;0;0",
+				"|seas/cos/moments 2;1;sh"
+			],
+			[
+				"base/teleport;0;0",
+				"base/!;0;0",
+				"seas/icons/Moments;0;0"
+			],
+			[
+				"",
+				"seas/cos/moments 1;0;0",
+				""
+			]
+		]
+	}
+}
