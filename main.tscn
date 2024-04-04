@@ -642,48 +642,45 @@ horizontal_alignment = 1
 
 [node name="Completion" type="HBoxContainer" parent="Tabs/Stats/Margin/VBox/Constellations/Isle of Dawn"]
 layout_mode = 2
+alignment = 1
 
 [node name="Label" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Isle of Dawn/Completion"]
 layout_mode = 2
-size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "Constellation Completion:"
 
 [node name="Need" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Isle of Dawn/Completion"]
 layout_mode = 2
-size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "0%"
 horizontal_alignment = 2
 
 [node name="Completion3" type="HBoxContainer" parent="Tabs/Stats/Margin/VBox/Constellations/Isle of Dawn"]
 layout_mode = 2
+alignment = 1
 
 [node name="Label" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Isle of Dawn/Completion3"]
 layout_mode = 2
-size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "Completion by Currency:"
 
 [node name="Need" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Isle of Dawn/Completion3"]
 layout_mode = 2
-size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "0%"
 horizontal_alignment = 2
 
 [node name="Completion2" type="HBoxContainer" parent="Tabs/Stats/Margin/VBox/Constellations/Isle of Dawn"]
 layout_mode = 2
+alignment = 1
 
 [node name="Label" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Isle of Dawn/Completion2"]
 layout_mode = 2
-size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "Completion by Purchases:"
 
 [node name="Need" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Isle of Dawn/Completion2"]
 layout_mode = 2
-size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "0%"
 horizontal_alignment = 2
@@ -860,48 +857,45 @@ horizontal_alignment = 1
 
 [node name="Completion" type="HBoxContainer" parent="Tabs/Stats/Margin/VBox/Constellations/Daylight Prairie"]
 layout_mode = 2
+alignment = 1
 
 [node name="Label" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Daylight Prairie/Completion"]
 layout_mode = 2
-size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "Constellation Completion:"
 
 [node name="Need" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Daylight Prairie/Completion"]
 layout_mode = 2
-size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "0%"
 horizontal_alignment = 2
 
 [node name="Completion3" type="HBoxContainer" parent="Tabs/Stats/Margin/VBox/Constellations/Daylight Prairie"]
 layout_mode = 2
+alignment = 1
 
 [node name="Label" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Daylight Prairie/Completion3"]
 layout_mode = 2
-size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "Completion by Currency:"
 
 [node name="Need" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Daylight Prairie/Completion3"]
 layout_mode = 2
-size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "0%"
 horizontal_alignment = 2
 
 [node name="Completion2" type="HBoxContainer" parent="Tabs/Stats/Margin/VBox/Constellations/Daylight Prairie"]
 layout_mode = 2
+alignment = 1
 
 [node name="Label" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Daylight Prairie/Completion2"]
 layout_mode = 2
-size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "Completion by Purchases:"
 
 [node name="Need" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Daylight Prairie/Completion2"]
 layout_mode = 2
-size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "0%"
 horizontal_alignment = 2
@@ -1078,48 +1072,45 @@ horizontal_alignment = 1
 
 [node name="Completion" type="HBoxContainer" parent="Tabs/Stats/Margin/VBox/Constellations/Hidden Forest"]
 layout_mode = 2
+alignment = 1
 
 [node name="Label" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Hidden Forest/Completion"]
 layout_mode = 2
-size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "Constellation Completion:"
 
 [node name="Need" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Hidden Forest/Completion"]
 layout_mode = 2
-size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "0%"
 horizontal_alignment = 2
 
 [node name="Completion3" type="HBoxContainer" parent="Tabs/Stats/Margin/VBox/Constellations/Hidden Forest"]
 layout_mode = 2
+alignment = 1
 
 [node name="Label" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Hidden Forest/Completion3"]
 layout_mode = 2
-size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "Completion by Currency:"
 
 [node name="Need" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Hidden Forest/Completion3"]
 layout_mode = 2
-size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "0%"
 horizontal_alignment = 2
 
 [node name="Completion2" type="HBoxContainer" parent="Tabs/Stats/Margin/VBox/Constellations/Hidden Forest"]
 layout_mode = 2
+alignment = 1
 
 [node name="Label" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Hidden Forest/Completion2"]
 layout_mode = 2
-size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "Completion by Purchases:"
 
 [node name="Need" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Hidden Forest/Completion2"]
 layout_mode = 2
-size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "0%"
 horizontal_alignment = 2
@@ -1296,48 +1287,45 @@ horizontal_alignment = 1
 
 [node name="Completion" type="HBoxContainer" parent="Tabs/Stats/Margin/VBox/Constellations/Valley of Triumph"]
 layout_mode = 2
+alignment = 1
 
 [node name="Label" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Valley of Triumph/Completion"]
 layout_mode = 2
-size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "Constellation Completion:"
 
 [node name="Need" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Valley of Triumph/Completion"]
 layout_mode = 2
-size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "0%"
 horizontal_alignment = 2
 
 [node name="Completion3" type="HBoxContainer" parent="Tabs/Stats/Margin/VBox/Constellations/Valley of Triumph"]
 layout_mode = 2
+alignment = 1
 
 [node name="Label" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Valley of Triumph/Completion3"]
 layout_mode = 2
-size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "Completion by Currency:"
 
 [node name="Need" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Valley of Triumph/Completion3"]
 layout_mode = 2
-size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "0%"
 horizontal_alignment = 2
 
 [node name="Completion2" type="HBoxContainer" parent="Tabs/Stats/Margin/VBox/Constellations/Valley of Triumph"]
 layout_mode = 2
+alignment = 1
 
 [node name="Label" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Valley of Triumph/Completion2"]
 layout_mode = 2
-size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "Completion by Purchases:"
 
 [node name="Need" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Valley of Triumph/Completion2"]
 layout_mode = 2
-size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "0%"
 horizontal_alignment = 2
@@ -1514,48 +1502,45 @@ horizontal_alignment = 1
 
 [node name="Completion" type="HBoxContainer" parent="Tabs/Stats/Margin/VBox/Constellations/Golden Wasteland"]
 layout_mode = 2
+alignment = 1
 
 [node name="Label" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Golden Wasteland/Completion"]
 layout_mode = 2
-size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "Constellation Completion:"
 
 [node name="Need" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Golden Wasteland/Completion"]
 layout_mode = 2
-size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "0%"
 horizontal_alignment = 2
 
 [node name="Completion3" type="HBoxContainer" parent="Tabs/Stats/Margin/VBox/Constellations/Golden Wasteland"]
 layout_mode = 2
+alignment = 1
 
 [node name="Label" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Golden Wasteland/Completion3"]
 layout_mode = 2
-size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "Completion by Currency:"
 
 [node name="Need" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Golden Wasteland/Completion3"]
 layout_mode = 2
-size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "0%"
 horizontal_alignment = 2
 
 [node name="Completion2" type="HBoxContainer" parent="Tabs/Stats/Margin/VBox/Constellations/Golden Wasteland"]
 layout_mode = 2
+alignment = 1
 
 [node name="Label" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Golden Wasteland/Completion2"]
 layout_mode = 2
-size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "Completion by Purchases:"
 
 [node name="Need" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Golden Wasteland/Completion2"]
 layout_mode = 2
-size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "0%"
 horizontal_alignment = 2
@@ -1732,48 +1717,45 @@ horizontal_alignment = 1
 
 [node name="Completion" type="HBoxContainer" parent="Tabs/Stats/Margin/VBox/Constellations/Vault of Knowledge"]
 layout_mode = 2
+alignment = 1
 
 [node name="Label" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Vault of Knowledge/Completion"]
 layout_mode = 2
-size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "Constellation Completion:"
 
 [node name="Need" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Vault of Knowledge/Completion"]
 layout_mode = 2
-size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "0%"
 horizontal_alignment = 2
 
 [node name="Completion3" type="HBoxContainer" parent="Tabs/Stats/Margin/VBox/Constellations/Vault of Knowledge"]
 layout_mode = 2
+alignment = 1
 
 [node name="Label" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Vault of Knowledge/Completion3"]
 layout_mode = 2
-size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "Completion by Currency:"
 
 [node name="Need" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Vault of Knowledge/Completion3"]
 layout_mode = 2
-size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "0%"
 horizontal_alignment = 2
 
 [node name="Completion2" type="HBoxContainer" parent="Tabs/Stats/Margin/VBox/Constellations/Vault of Knowledge"]
 layout_mode = 2
+alignment = 1
 
 [node name="Label" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Vault of Knowledge/Completion2"]
 layout_mode = 2
-size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "Completion by Purchases:"
 
 [node name="Need" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Vault of Knowledge/Completion2"]
 layout_mode = 2
-size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "0%"
 horizontal_alignment = 2
@@ -1950,48 +1932,45 @@ horizontal_alignment = 1
 
 [node name="Completion" type="HBoxContainer" parent="Tabs/Stats/Margin/VBox/Constellations/Total"]
 layout_mode = 2
+alignment = 1
 
 [node name="Label" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Total/Completion"]
 layout_mode = 2
-size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "Constellation Completion:"
 
 [node name="Need" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Total/Completion"]
 layout_mode = 2
-size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "0%"
 horizontal_alignment = 2
 
 [node name="Completion3" type="HBoxContainer" parent="Tabs/Stats/Margin/VBox/Constellations/Total"]
 layout_mode = 2
+alignment = 1
 
 [node name="Label" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Total/Completion3"]
 layout_mode = 2
-size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "Completion by Currency:"
 
 [node name="Need" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Total/Completion3"]
 layout_mode = 2
-size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "0%"
 horizontal_alignment = 2
 
 [node name="Completion2" type="HBoxContainer" parent="Tabs/Stats/Margin/VBox/Constellations/Total"]
 layout_mode = 2
+alignment = 1
 
 [node name="Label" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Total/Completion2"]
 layout_mode = 2
-size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "Completion by Purchases:"
 
 [node name="Need" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Total/Completion2"]
 layout_mode = 2
-size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "0%"
 horizontal_alignment = 2

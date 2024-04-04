@@ -213,12 +213,16 @@ func _on_search_text_changed(new_text):
 	list.append_array(SeasonSpirits.data.keys())
 	list.append_array(Global.yrlyTab.rows.keys())
 	for i in list:
-		if new_text in i.to_lower():
+		if new_text.to_lower() in i.to_lower():
 			var btn = Button.new()
 			btn.flat = true
 			btn.text = i
+			btn.add_theme_color_override("font_color",Color(1,1,1,0.5))
+			btn.focus_mode = Control.FOCUS_NONE
 			btn.connect("pressed",_on_search_pressed.bind(i))
 			$Tabs/Home/Margin/VBox/Items/Items.add_child(btn)
+			if i.to_lower().begins_with(new_text.to_lower()):
+				$Tabs/Home/Margin/VBox/Items/Items.move_child(btn,0)
 
 func _on_search_pressed(text):
 	if text in RegSpirits.data.keys(): # Tab 3
