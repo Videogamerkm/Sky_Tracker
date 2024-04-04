@@ -1,7 +1,5 @@
 extends Node
 
-const util = preload("res://SpiritUtils.gd")
-
 var seasons = ["Season of the Nine-Colored Deer",
 	"Season of Revival",
 	"Season of Moments",
@@ -32,8 +30,8 @@ func collect_seasons() -> Dictionary:
 			d.merge(JSON.parse_string(FileAccess.open("res://data/"+s+".json", FileAccess.READ).get_as_text()))
 	return d
 
-func get_cost(n) -> Dictionary: return util.get_cost(data,n)
-func get_unspent(n,bought) -> Dictionary: return util.get_unspent(data,n,bought)
+func get_cost(n) -> Dictionary: return SpiritUtils.get_cost(data,n)
+func get_unspent(n,bought) -> Dictionary: return SpiritUtils.get_unspent(data,n,bought)
 
 func get_spent(n,bought) -> int:
 	var c = 0
@@ -47,9 +45,9 @@ func get_spent(n,bought) -> int:
 		x += 1
 	return c
 
-func get_completion(n,bought) -> int: return util.get_completion(data,n,bought)
-func get_t2_completion(n,bought) -> int: return util.get_t2_completion(data,n,bought)
-func get_all_wings() -> int: return util.get_all_wings(data)
-func get_wings(bought) -> int: return util.get_wings(data,bought)
-func get_all_t2_wings() -> int: return util.get_all_t2_wings(data)
-func get_t2_wings(bought) -> int: return util.get_t2_wings(data,bought)
+func get_completion(n,bought) -> int: return SpiritUtils.get_completion(data,n,bought)
+func get_t2_completion(n,bought) -> int: return SpiritUtils.get_t2_completion(data,n,bought)
+func get_all_wings() -> int: return SpiritUtils.get_all_wings(data)
+func get_wings(bought) -> int: return SpiritUtils.get_wings(data,bought)
+func get_all_t2_wings() -> int: return SpiritUtils.get_all_t2_wings(data)
+func get_t2_wings(bought) -> int: return SpiritUtils.get_t2_wings(data,bought)
