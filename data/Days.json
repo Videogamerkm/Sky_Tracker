@@ -1,23 +1,28 @@
 {
 	"Days of Bloom": [
 		[
-			"days/bloom/2;20;h",
 			"days/bloom/1;70;c",
-			"days/bloom/3;105;c"
+			"days/bloom/2;20;h",
+			""
 		],
 		[
-			"days/bloom/4;80;c",
-			"base/5C;5;c",
-			"days/bloom/5;110;c"
-		],
-		[
-			"days/bloom/8;25;h",
+			"days/bloom/3;105;c",
 			"base/5C;5;c",
 			""
 		],
 		[
-			"days/bloom/7;24;k",
+			"days/bloom/5;110;c",
 			"base/5C;5;c",
+			"days/bloom/4;80;c"
+		],
+		[
+			"",
+			"base/5C;5;c",
+			"days/bloom/8;25;h"
+		],
+		[
+			"days/bloom/7;24;k",
+			"base/!;0;0",
 			"days/bloom/6;48;k"
 		],
 		[
@@ -131,8 +136,13 @@
 	],
 	"Days of Mischief": [
 		[
-			"days/mischief/2;66;c",
+			"",
 			"days/mischief/1;33;h",
+			""
+		],
+		[
+			"days/mischief/2;66;c",
+			"base/5C;5;c",
 			"days/mischief/3;99;c"
 		],
 		[
@@ -242,17 +252,17 @@
 		],
 		[
 			"days/anni/4;20;c",
-			"base/5C;5;c",
+			"base/5C;4;c",
 			"days/anni/5;46;k"
 		],
 		[
 			"days/anni/1;20;c",
-			"base/5C;5;c",
+			"base/5C;4;c",
 			"days/anni/6;46;k"
 		],
 		[
 			"base/sheet?E2;10;h",
-			"base/5C;5;c",
+			"base/1C;2;c",
 			"days/anni/7;8;k"
 		],
 		[
