@@ -4,6 +4,7 @@ Sky Tracker is a lightweight, downloadable, fully offline application designed w
 
 Current features include:
  - A home page with saving and loading options
+ - A tab to track and calculate plans for spirit purchases
  - Statistics about your progress in spirits and seasons
  - A tracking tab for regular spirits and elders
  - A tab to help keep track of the current season and your progress through it
@@ -18,11 +19,11 @@ You can check the repository issues for known bugs, upcoming or planned features
 
 # Windows SmartScreen
 
-If you get a warning from Windows SmartScreen about the program when you try to open it, that is normal! Unfortunately I don't have the money to buy and maintain certificates for this app, so this is going to be a forever problem. Even if I did get a certificate on the app SmartScreen is likely to continue tagging it as potentially malicious for a long while, though if you have any info about very cheap certs please send it my way as at least then it'll be signed and complain *less*.
+If you get a warning from Windows SmartScreen about the program when you try to open it, that is normal! Unfortunately I don't have the money to buy and maintain certificates for this app, so this is going to be a forever problem. Even if I did get a certificate on the app SmartScreen is likely to continue tagging it as potentially malicious for a long while, though if you have any info about very cheap certs please send it my way as at least then it'll be signed and complain *less*. Everything I've looked at is *very* expensive for an out-of-work developer.
 
 # Notes About Spirits
 
-You may notice that not all spirits have exactly the right tree, particularly spirit guides and some of the Days events. I've done some editing in a few places to help condense information and make it easier to record only the most important info, but the effect of this is that some trees don't look quite right. Please drop me a note here or on Discord if you have concerns or notice an error!
+You may notice that not all spirits have exactly the right tree, particularly some of the Days events. While I mostly copied in spirit trees as closely as possible, I've done some editing in a few places to help condense information. Unfortunately the effect of this is that some trees don't look quite right. Please drop me a note here or on Discord (videogamerkm) if you have concerns or notice an error!
 
 # Credit
 
@@ -32,7 +33,7 @@ I created this in the hopes of having a lightweight, non-web app to help track s
 
 A secondary reason I created this app is I have some major, fundamental issues with the way Fandom manages the wikis hosted by them. There's lots of information out there, notably about why the Pokemon, Minecraft, Terraria, and Hollow Knight communities moved their wikis off of Fandom. On the other hand, I understand why an established wiki community may not want to move off of Fandom, particularly with how aggressive they are about SEO - my problem is with Fandom, not the contributors to the Sky wiki in any way.
 
-With that said, a lot of the information I've included here is derived or pulled from the Sky fandom wiki. Notably, I've used icons for expressions, cosmetics, seasons, and currency created by contributors to the Sky wiki, and have included them with permission from the administrators. A special thank you to Ray and Morybel who helped me word this section properly!
+With that said, a lot of the information I've included here is derived or pulled from the Sky fandom wiki. Notably, I've used icons for expressions, cosmetics, seasons, and currency created by contributors to the Sky wiki, and have included them with permission from the administrators. A special thank you to Ray and Morybel, who helped me word this section properly!
 
 Finally, there's a few graphics that my husband created for this app: the constellation buttons on the regular spirits page, and the banner on the current season page. He's been the source of a lot of the most user-friendly changes I've made since inception.
 
