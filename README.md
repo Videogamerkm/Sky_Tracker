@@ -9,8 +9,6 @@ Current features include:
  - A tracking tab for regular spirits and elders
  - A tab to help keep track of the current season and your progress through it
  - A tracking tab for seasonal spirits
-   - Currently only has travelling and returning spirits since February 15th
-   - I am planning on adding the full roster of spirits, prioritizing ones appearing in events
  - A tracking tab for winged lights, so you can check them off as you go and wonder less about which ones you're missing
  - A helper tab for shards
  - A tracking tab for the reoccuring Days events
