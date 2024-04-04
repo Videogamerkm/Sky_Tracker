@@ -49,7 +49,6 @@ func _area_select(area):
 			if c < 4: $"Spirits 1".add_child(sp)
 			else: $"Spirits 2".add_child(sp)
 			c += 1
-	print(area)
 
 func _spirit_select(spirit):
 	curr_spirit = spirit
