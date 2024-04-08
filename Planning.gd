@@ -73,8 +73,11 @@ func add_plans(data,spirit,plan):
 	var unspent = SpiritUtils.get_unspent(data,spirit,plan)
 	for c in cost.keys():
 		if c.contains("2"): continue
-		ret[c] = cost[c] - unspent[c]
-		$Plans.get_node(c+" "+spirit).text = str(ret[c])
+		if c.contains("s") and data[spirit].has("loc") and data[spirit]["loc"] != Global.currSsnTab.seasonName:
+			$Plans.get_node(c+" "+spirit).text = "0"
+		else:
+			ret[c] = cost[c] - unspent[c]
+			$Plans.get_node(c+" "+spirit).text = str(ret[c])
 	var amnt = 0
 	for r in plan: for b in r: if b: amnt += 1
 	$Plans.get_node("items "+spirit).text = str(amnt)
@@ -116,7 +119,9 @@ func recalculate(_val):
 	elif targCandles > 0:
 		text += "You will NOT be able to get enough candles (%d short).\n"\
 			% [targCandles - (days * cpd + currCandles)]
-	if targSeason > 0 and targSeason <= days * spd + currSeason:
+	if targSeason > 0 and TimeUtils.get_time_until(Global.currSsnTab.end) < 0:
+		text += "The current season is over.\n"
+	elif targSeason > 0 and targSeason <= days * spd + currSeason:
 		text += "You will be able to get enough seasonal candles (%d left over).\nCheck Current Season tab for more info.\n"\
 			% [(days * spd + currSeason) - targSeason]
 	elif targSeason > 0:
