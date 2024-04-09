@@ -159,9 +159,16 @@ func set_values():
 			get_node("Constellations/"+a+"/Grid/"+tCap+" Needed").text = str(costsNeeded[type])
 			overall_spent += costsSpent[type]
 			overall_need += costsNeeded[type]
-			get_node("Constellations/"+a+"/Grid/"+tCap+" Comp").text = str(floor(costsSpent[type]*100.0/(costsSpent[type]+costsNeeded[type])))+"%"
+			var perc = floor(costsSpent[type]*100.0/(costsSpent[type]+costsNeeded[type]))
+			get_node("Constellations/"+a+"/Grid/"+tCap+" Comp").text = str(perc)+"%"
+			var color = Color(0.75,1,0.75) if perc == 100 else Color(1,1,1)
 			if has_node("Constellations/"+a+"/Grid/"+tCap+" T2"):
 				get_node("Constellations/"+a+"/Grid/"+tCap+" T2").text = str(costsNeeded[type+"2"])
+				get_node("Constellations/"+a+"/Grid/"+tCap+" T2").set_modulate(color if costsNeeded[type+"2"] == 0 else Color(1,0.75,0.75))
+			get_node("Constellations/"+a+"/Grid/"+tCap).set_modulate(color)
+			get_node("Constellations/"+a+"/Grid/"+tCap+" Spent").set_modulate(color)
+			get_node("Constellations/"+a+"/Grid/"+tCap+" Needed").set_modulate(color)
+			get_node("Constellations/"+a+"/Grid/"+tCap+" Comp").set_modulate(color)
 		get_node("Constellations/"+a+"/Completion/Need").text = str(floor((compPercent-elderPercent)/(spiritCount-1)))+"%"
 		get_node("Constellations/"+a+"/Completion3/Need").text = str(floor(overall_spent*100.0/(overall_spent+overall_need)))+"%"
 		get_node("Constellations/"+a+"/Completion2/Need").text = str(floor(compPercent/spiritCount))+"%"
