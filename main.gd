@@ -11,7 +11,9 @@ var collHist = true
 
 func _notification(what):
 	if what == NOTIFICATION_WM_CLOSE_REQUEST:
+		$Saving.show()
 		save()
+		await create_tween().tween_interval(1).finished
 		get_tree().quit()
 
 func save(backup = true):
