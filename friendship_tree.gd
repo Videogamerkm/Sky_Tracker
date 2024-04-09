@@ -44,7 +44,9 @@ func set_tree(rows,days=""):
 		%Rows.add_child(lines)
 		x += 1
 	if days != "": custom_minimum_size = Vector2(0,x*100-25)
-	%Rows.remove_child(%Rows.get_child(-1))
+	var del = %Rows.get_child(-1)
+	%Rows.remove_child(del)
+	del.queue_free()
 	%Rows.get_child(-1).get_child(1).set_locked(false)
 
 func icon_pressed(button_pressed,node,row):

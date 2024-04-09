@@ -532,7 +532,7 @@ theme_override_font_sizes/font_size = 16
 text = "% Complete"
 horizontal_alignment = 1
 
-[node name="Label5" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Isle of Dawn/Grid"]
+[node name="C" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Isle of Dawn/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
@@ -559,7 +559,7 @@ theme_override_font_sizes/font_size = 16
 text = "0%"
 horizontal_alignment = 1
 
-[node name="Label6" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Isle of Dawn/Grid"]
+[node name="H" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Isle of Dawn/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
@@ -586,7 +586,7 @@ theme_override_font_sizes/font_size = 16
 text = "0%"
 horizontal_alignment = 1
 
-[node name="Label7" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Isle of Dawn/Grid"]
+[node name="A" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Isle of Dawn/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
@@ -613,7 +613,7 @@ theme_override_font_sizes/font_size = 16
 text = "0%"
 horizontal_alignment = 1
 
-[node name="Label8" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Isle of Dawn/Grid"]
+[node name="U" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Isle of Dawn/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
@@ -726,7 +726,7 @@ theme_override_font_sizes/font_size = 16
 text = "Tier 2"
 horizontal_alignment = 1
 
-[node name="Label5" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Daylight Prairie/Grid"]
+[node name="C" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Daylight Prairie/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
@@ -760,7 +760,7 @@ theme_override_font_sizes/font_size = 16
 text = "0"
 horizontal_alignment = 1
 
-[node name="Label6" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Daylight Prairie/Grid"]
+[node name="H" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Daylight Prairie/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
@@ -794,7 +794,7 @@ theme_override_font_sizes/font_size = 16
 text = "0"
 horizontal_alignment = 1
 
-[node name="Label7" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Daylight Prairie/Grid"]
+[node name="A" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Daylight Prairie/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
@@ -828,7 +828,7 @@ theme_override_font_sizes/font_size = 16
 text = "0"
 horizontal_alignment = 1
 
-[node name="Label9" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Daylight Prairie/Grid"]
+[node name="U" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Daylight Prairie/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
@@ -941,7 +941,7 @@ theme_override_font_sizes/font_size = 16
 text = "Tier 2"
 horizontal_alignment = 1
 
-[node name="Label5" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Hidden Forest/Grid"]
+[node name="C" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Hidden Forest/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
@@ -975,7 +975,7 @@ theme_override_font_sizes/font_size = 16
 text = "0"
 horizontal_alignment = 1
 
-[node name="Label6" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Hidden Forest/Grid"]
+[node name="H" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Hidden Forest/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
@@ -1009,7 +1009,7 @@ theme_override_font_sizes/font_size = 16
 text = "0"
 horizontal_alignment = 1
 
-[node name="Label7" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Hidden Forest/Grid"]
+[node name="A" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Hidden Forest/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
@@ -1043,7 +1043,7 @@ theme_override_font_sizes/font_size = 16
 text = "0"
 horizontal_alignment = 1
 
-[node name="Label9" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Hidden Forest/Grid"]
+[node name="U" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Hidden Forest/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
@@ -1156,7 +1156,7 @@ theme_override_font_sizes/font_size = 16
 text = "Tier 2"
 horizontal_alignment = 1
 
-[node name="Label5" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Valley of Triumph/Grid"]
+[node name="C" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Valley of Triumph/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
@@ -1190,7 +1190,7 @@ theme_override_font_sizes/font_size = 16
 text = "0"
 horizontal_alignment = 1
 
-[node name="Label6" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Valley of Triumph/Grid"]
+[node name="H" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Valley of Triumph/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
@@ -1224,7 +1224,7 @@ theme_override_font_sizes/font_size = 16
 text = "0"
 horizontal_alignment = 1
 
-[node name="Label7" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Valley of Triumph/Grid"]
+[node name="A" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Valley of Triumph/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
@@ -1258,7 +1258,7 @@ theme_override_font_sizes/font_size = 16
 text = "0"
 horizontal_alignment = 1
 
-[node name="Label9" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Valley of Triumph/Grid"]
+[node name="U" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Valley of Triumph/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
@@ -1371,7 +1371,7 @@ theme_override_font_sizes/font_size = 16
 text = "Tier 2"
 horizontal_alignment = 1
 
-[node name="Label5" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Golden Wasteland/Grid"]
+[node name="C" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Golden Wasteland/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
@@ -1405,7 +1405,7 @@ theme_override_font_sizes/font_size = 16
 text = "0"
 horizontal_alignment = 1
 
-[node name="Label6" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Golden Wasteland/Grid"]
+[node name="H" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Golden Wasteland/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
@@ -1439,7 +1439,7 @@ theme_override_font_sizes/font_size = 16
 text = "0"
 horizontal_alignment = 1
 
-[node name="Label7" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Golden Wasteland/Grid"]
+[node name="A" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Golden Wasteland/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
@@ -1473,7 +1473,7 @@ theme_override_font_sizes/font_size = 16
 text = "0"
 horizontal_alignment = 1
 
-[node name="Label9" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Golden Wasteland/Grid"]
+[node name="U" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Golden Wasteland/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
@@ -1586,7 +1586,7 @@ theme_override_font_sizes/font_size = 16
 text = "Tier 2"
 horizontal_alignment = 1
 
-[node name="Label5" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Vault of Knowledge/Grid"]
+[node name="C" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Vault of Knowledge/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
@@ -1620,7 +1620,7 @@ theme_override_font_sizes/font_size = 16
 text = "0"
 horizontal_alignment = 1
 
-[node name="Label6" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Vault of Knowledge/Grid"]
+[node name="H" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Vault of Knowledge/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
@@ -1654,7 +1654,7 @@ theme_override_font_sizes/font_size = 16
 text = "0"
 horizontal_alignment = 1
 
-[node name="Label7" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Vault of Knowledge/Grid"]
+[node name="A" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Vault of Knowledge/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
@@ -1688,7 +1688,7 @@ theme_override_font_sizes/font_size = 16
 text = "0"
 horizontal_alignment = 1
 
-[node name="Label9" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Vault of Knowledge/Grid"]
+[node name="U" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Vault of Knowledge/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
@@ -1801,7 +1801,7 @@ theme_override_font_sizes/font_size = 16
 text = "Tier 2"
 horizontal_alignment = 1
 
-[node name="Label5" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Total/Grid"]
+[node name="C" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Total/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
@@ -1835,7 +1835,7 @@ theme_override_font_sizes/font_size = 16
 text = "0"
 horizontal_alignment = 1
 
-[node name="Label6" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Total/Grid"]
+[node name="H" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Total/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
@@ -1869,7 +1869,7 @@ theme_override_font_sizes/font_size = 16
 text = "0"
 horizontal_alignment = 1
 
-[node name="Label7" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Total/Grid"]
+[node name="A" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Total/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
@@ -1903,7 +1903,7 @@ theme_override_font_sizes/font_size = 16
 text = "0"
 horizontal_alignment = 1
 
-[node name="Label9" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Total/Grid"]
+[node name="U" type="Label" parent="Tabs/Stats/Margin/VBox/Constellations/Total/Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
@@ -5121,667 +5121,34 @@ theme_override_font_sizes/font_size = 16
 text = "Click here to be directed to Sky Planner"
 uri = "https://sky-planner.pages.dev/"
 
-[node name="Candle Tracker" type="ScrollContainer" parent="."]
-visible = false
-layout_mode = 2
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 31.0
-
-[node name="Margin" type="MarginContainer" parent="Candle Tracker"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_constants/margin_left = 24
-theme_override_constants/margin_top = 24
-theme_override_constants/margin_right = 24
-theme_override_constants/margin_bottom = 24
-
-[node name="VBox" type="VBoxContainer" parent="Candle Tracker/Margin"]
-layout_mode = 2
-
-[node name="Main" type="HBoxContainer" parent="Candle Tracker/Margin/VBox"]
-layout_mode = 2
-
-[node name="Expand" type="Button" parent="Candle Tracker/Margin/VBox/Main"]
-layout_mode = 2
-size_flags_horizontal = 3
-focus_mode = 0
-text = "Expand All"
-
-[node name="Collapse" type="Button" parent="Candle Tracker/Margin/VBox/Main"]
-layout_mode = 2
-size_flags_horizontal = 3
-focus_mode = 0
-text = "Collapse All"
-
-[node name="Check" type="Button" parent="Candle Tracker/Margin/VBox/Main"]
-layout_mode = 2
-size_flags_horizontal = 3
-focus_mode = 0
-text = "Check All"
-
-[node name="Uncheck" type="Button" parent="Candle Tracker/Margin/VBox/Main"]
-layout_mode = 2
-size_flags_horizontal = 3
-focus_mode = 0
-text = "Uncheck All"
-
-[node name="Aviary Village (23)" parent="Candle Tracker/Margin/VBox" instance=ExtResource("1_au16a")]
-layout_mode = 2
-
-[node name="Main" type="HBoxContainer" parent="Candle Tracker/Margin/VBox/Aviary Village (23)"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Candle Tracker/Margin/VBox/Aviary Village (23)/Main"]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "Aviary Village (23)"
-
-[node name="CheckBox" type="CheckBox" parent="Candle Tracker/Margin/VBox/Aviary Village (23)/Main"]
-layout_mode = 2
-text = "3"
-
-[node name="CheckBox2" type="CheckBox" parent="Candle Tracker/Margin/VBox/Aviary Village (23)/Main"]
-layout_mode = 2
-text = "4"
-
-[node name="CheckBox3" type="CheckBox" parent="Candle Tracker/Margin/VBox/Aviary Village (23)/Main"]
-layout_mode = 2
-text = "4"
-
-[node name="CheckBox4" type="CheckBox" parent="Candle Tracker/Margin/VBox/Aviary Village (23)/Main"]
-layout_mode = 2
-text = "4"
-
-[node name="CheckBox5" type="CheckBox" parent="Candle Tracker/Margin/VBox/Aviary Village (23)/Main"]
-layout_mode = 2
-text = "4"
-
-[node name="CheckBox6" type="CheckBox" parent="Candle Tracker/Margin/VBox/Aviary Village (23)/Main"]
-layout_mode = 2
-text = "4"
-
-[node name="Check All" type="HBoxContainer" parent="Candle Tracker/Margin/VBox/Aviary Village (23)"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Candle Tracker/Margin/VBox/Aviary Village (23)/Check All"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="Check All" type="Button" parent="Candle Tracker/Margin/VBox/Aviary Village (23)/Check All"]
-layout_mode = 2
-size_flags_horizontal = 3
-focus_mode = 0
-text = "Check All"
-
-[node name="Uncheck All" type="Button" parent="Candle Tracker/Margin/VBox/Aviary Village (23)/Check All"]
-layout_mode = 2
-size_flags_horizontal = 3
-focus_mode = 0
-text = "Uncheck All"
-
-[node name="Label3" type="Label" parent="Candle Tracker/Margin/VBox/Aviary Village (23)/Check All"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="Isle of Dawn (885)" parent="Candle Tracker/Margin/VBox" instance=ExtResource("1_au16a")]
-layout_mode = 2
-
-[node name="Main" type="HBoxContainer" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Main"]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "Sand Dunes (80)"
-
-[node name="CheckBox" type="CheckBox" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Main"]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 0, 1)
-text = "50"
-
-[node name="CheckBox4" type="CheckBox" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Main"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 1, 1)
-text = "5"
-
-[node name="CheckBox2" type="CheckBox" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Main"]
-layout_mode = 2
-text = "10"
-
-[node name="CheckBox3" type="CheckBox" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Main"]
-layout_mode = 2
-text = "15"
-
-[node name="Temple" type="HBoxContainer" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Temple"]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "Temple (37)"
-
-[node name="CheckBox" type="CheckBox" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Temple"]
-layout_mode = 2
-text = "12"
-
-[node name="CheckBox2" type="CheckBox" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Temple"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 1, 1)
-text = "8"
-
-[node name="CheckBox3" type="CheckBox" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Temple"]
-layout_mode = 2
-text = "17"
-
-[node name="Cave" type="HBoxContainer" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Cave"]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "Butterfly Cave (89)"
-
-[node name="CheckBox" type="CheckBox" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Cave"]
-layout_mode = 2
-text = "8"
-
-[node name="CheckBox4" type="CheckBox" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Cave"]
-layout_mode = 2
-text = "21"
-
-[node name="CheckBox5" type="CheckBox" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Cave"]
-layout_mode = 2
-text = "10"
-
-[node name="CheckBox2" type="CheckBox" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Cave"]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 0, 1)
-text = "50"
-
-[node name="Cave2" type="HBoxContainer" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Cave2"]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "Cave of Prophecies (58)"
-
-[node name="CheckBox2" type="CheckBox" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Cave2"]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 0, 1)
-text = "50"
-
-[node name="CheckBox" type="CheckBox" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Cave2"]
-layout_mode = 2
-text = "8"
-
-[node name="Trial1" type="HBoxContainer" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Trial1"]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "Trial of Water (106)"
-
-[node name="CheckBox2" type="CheckBox" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Trial1"]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 0, 1)
-text = "50"
-
-[node name="CheckBox" type="CheckBox" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Trial1"]
-layout_mode = 2
-text = "6"
-
-[node name="CheckBox3" type="CheckBox" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Trial1"]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 0, 1)
-text = "50"
-
-[node name="Trial2" type="HBoxContainer" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Trial2"]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "Trial of Earth (106)"
-
-[node name="CheckBox" type="CheckBox" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Trial2"]
-layout_mode = 2
-text = "2"
-
-[node name="CheckBox4" type="CheckBox" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Trial2"]
-layout_mode = 2
-text = "2"
-
-[node name="CheckBox5" type="CheckBox" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Trial2"]
-layout_mode = 2
-text = "2"
-
-[node name="CheckBox6" type="CheckBox" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Trial2"]
-layout_mode = 2
-text = "4"
-
-[node name="CheckBox7" type="CheckBox" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Trial2"]
-layout_mode = 2
-text = "2"
-
-[node name="CheckBox8" type="CheckBox" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Trial2"]
-layout_mode = 2
-text = "3"
-
-[node name="CheckBox3" type="CheckBox" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Trial2"]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 0, 1)
-text = "100"
-
-[node name="Trial3" type="HBoxContainer" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Trial3"]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "Trial of Air (200)"
-
-[node name="CheckBox3" type="CheckBox" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Trial3"]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 0, 1)
-text = "200"
-
-[node name="Trial4" type="HBoxContainer" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Trial4"]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "Trial of Fire (200)"
-
-[node name="CheckBox3" type="CheckBox" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Trial4"]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 0, 1)
-text = "200"
-
-[node name="Check All" type="HBoxContainer" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Check All"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="Check All" type="Button" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Check All"]
-layout_mode = 2
-size_flags_horizontal = 3
-focus_mode = 0
-text = "Check All"
-
-[node name="Uncheck All" type="Button" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Check All"]
-layout_mode = 2
-size_flags_horizontal = 3
-focus_mode = 0
-text = "Uncheck All"
-
-[node name="Label3" type="Label" parent="Candle Tracker/Margin/VBox/Isle of Dawn (885)/Check All"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="Daylight Prairie (691)" parent="Candle Tracker/Margin/VBox" instance=ExtResource("1_au16a")]
-layout_mode = 2
-
-[node name="Social" type="HBoxContainer" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Social"]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "Social Space (10)"
-
-[node name="CheckBox3" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Social"]
-layout_mode = 2
-text = "4"
-
-[node name="CheckBox4" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Social"]
-layout_mode = 2
-text = "3"
-
-[node name="CheckBox5" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Social"]
-layout_mode = 2
-text = "3"
-
-[node name="Fields" type="HBoxContainer" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Fields"]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "Butterfly Fields (45)"
-
-[node name="CheckBox3" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Fields"]
-layout_mode = 2
-text = "5"
-
-[node name="CheckBox4" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Fields"]
-layout_mode = 2
-text = "20"
-
-[node name="CheckBox5" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Fields"]
-layout_mode = 2
-text = "5"
-
-[node name="CheckBox6" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Fields"]
-layout_mode = 2
-text = "5"
-
-[node name="CheckBox7" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Fields"]
-layout_mode = 2
-text = "5"
-
-[node name="CheckBox8" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Fields"]
-layout_mode = 2
-text = "5"
-
-[node name="Villages" type="HBoxContainer" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Villages"]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "Villages (109)"
-
-[node name="CheckBox3" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Villages"]
-layout_mode = 2
-text = "5"
-
-[node name="CheckBox9" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Villages"]
-layout_mode = 2
-text = "5"
-
-[node name="CheckBox10" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Villages"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 1, 1)
-text = "20"
-
-[node name="CheckBox4" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Villages"]
-layout_mode = 2
-text = "5"
-
-[node name="CheckBox11" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Villages"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 1, 1)
-text = "23"
-
-[node name="CheckBox12" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Villages"]
-layout_mode = 2
-text = "5"
-
-[node name="CheckBox13" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Villages"]
-layout_mode = 2
-text = "5"
-
-[node name="CheckBox14" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Villages"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 1, 1)
-text = "6"
-
-[node name="CheckBox5" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Villages"]
-layout_mode = 2
-text = "5"
-
-[node name="CheckBox6" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Villages"]
-layout_mode = 2
-text = "5"
-
-[node name="CheckBox7" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Villages"]
-layout_mode = 2
-text = "5"
-
-[node name="CheckBox15" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Villages"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 1, 1)
-text = "15"
-
-[node name="CheckBox8" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Villages"]
-layout_mode = 2
-text = "5"
-
-[node name="8-Player" type="HBoxContainer" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/8-Player"]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "8-Player Puzzle Area (99)"
-
-[node name="CheckBox3" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/8-Player"]
-layout_mode = 2
-text = "3"
-
-[node name="CheckBox4" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/8-Player"]
-layout_mode = 2
-text = "3"
-
-[node name="CheckBox5" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/8-Player"]
-layout_mode = 2
-text = "3"
-
-[node name="CheckBox6" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/8-Player"]
-layout_mode = 2
-text = "3"
-
-[node name="CheckBox7" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/8-Player"]
-layout_mode = 2
-text = "80"
-
-[node name="CheckBox8" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/8-Player"]
-layout_mode = 2
-text = "7"
-
-[node name="Temple" type="HBoxContainer" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Temple"]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "Temple (34)"
-
-[node name="CheckBox3" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Temple"]
-layout_mode = 2
-text = "5"
-
-[node name="CheckBox4" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Temple"]
-layout_mode = 2
-text = "5"
-
-[node name="CheckBox5" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Temple"]
-layout_mode = 2
-text = "15"
-
-[node name="CheckBox6" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Temple"]
-layout_mode = 2
-text = "9"
-
-[node name="Caves" type="HBoxContainer" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Caves"]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "Caves (45)"
-
-[node name="CheckBox3" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Caves"]
-layout_mode = 2
-text = "5"
-
-[node name="CheckBox4" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Caves"]
-layout_mode = 2
-text = "5"
-
-[node name="CheckBox5" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Caves"]
-layout_mode = 2
-text = "5"
-
-[node name="CheckBox6" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Caves"]
-layout_mode = 2
-text = "5"
-
-[node name="CheckBox7" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Caves"]
-layout_mode = 2
-text = "5"
-
-[node name="CheckBox8" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Caves"]
-layout_mode = 2
-text = "5"
-
-[node name="CheckBox9" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Caves"]
-layout_mode = 2
-text = "5"
-
-[node name="CheckBox10" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Caves"]
-layout_mode = 2
-text = "5"
-
-[node name="CheckBox11" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Caves"]
-layout_mode = 2
-text = "5"
-
-[node name="Nest" type="HBoxContainer" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Nest"]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "Bird nest (50)"
-
-[node name="CheckBox3" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Nest"]
-layout_mode = 2
-text = "5"
-
-[node name="CheckBox4" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Nest"]
-layout_mode = 2
-text = "5"
-
-[node name="CheckBox5" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Nest"]
-layout_mode = 2
-text = "5"
-
-[node name="CheckBox6" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Nest"]
-layout_mode = 2
-text = "5"
-
-[node name="CheckBox7" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Nest"]
-layout_mode = 2
-text = "5"
-
-[node name="CheckBox8" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Nest"]
-layout_mode = 2
-text = "5"
-
-[node name="CheckBox9" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Nest"]
-layout_mode = 2
-text = "5"
-
-[node name="CheckBox10" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Nest"]
-layout_mode = 2
-text = "5"
-
-[node name="CheckBox11" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Nest"]
-layout_mode = 2
-text = "5"
-
-[node name="CheckBox12" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Nest"]
-layout_mode = 2
-text = "5"
-
-[node name="Sanctuary" type="HBoxContainer" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Sanctuary"]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "Sanctuary Islands (299)"
-
-[node name="CheckBox2" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Sanctuary"]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 0, 1)
-text = "50"
-
-[node name="CheckBox3" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Sanctuary"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 1, 1)
-text = "6"
-
-[node name="CheckBox4" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Sanctuary"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 1, 1)
-text = "6"
-
-[node name="CheckBox6" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Sanctuary"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 1, 1)
-text = "66"
-
-[node name="CheckBox10" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Sanctuary"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 1, 1)
-text = "6"
-
-[node name="CheckBox11" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Sanctuary"]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 0, 1)
-text = "50"
-
-[node name="CheckBox12" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Sanctuary"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 1, 1)
-text = "6"
-
-[node name="CheckBox13" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Sanctuary"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 1, 1)
-text = "12"
-
-[node name="CheckBox14" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Sanctuary"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 1, 1)
-text = "6"
-
-[node name="CheckBox15" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Sanctuary"]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 0, 1)
-text = "50"
-
-[node name="CheckBox16" type="CheckBox" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Sanctuary"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 1, 1)
-text = "41"
-
-[node name="Check All" type="HBoxContainer" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Check All"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="Check All" type="Button" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Check All"]
-layout_mode = 2
-size_flags_horizontal = 3
-focus_mode = 0
-text = "Check All"
-
-[node name="Uncheck All" type="Button" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Check All"]
-layout_mode = 2
-size_flags_horizontal = 3
-focus_mode = 0
-text = "Uncheck All"
-
-[node name="Label3" type="Label" parent="Candle Tracker/Margin/VBox/Daylight Prairie (691)/Check All"]
-layout_mode = 2
-size_flags_horizontal = 3
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_lasoq")
 }
+
+[node name="Saving" type="Window" parent="."]
+title = "Saving..."
+initial_position = 1
+size = Vector2i(600, 450)
+visible = false
+transient = true
+exclusive = true
+borderless = true
+always_on_top = true
+unfocusable = true
+popup_window = true
+
+[node name="Label" type="Label" parent="Saving"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "Saving your data before closing..."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
 
 [connection signal="tree_entered" from="." to="." method="_on_tree_entered"]
 [connection signal="tab_changed" from="Tabs" to="." method="_on_tabs_tab_changed"]
@@ -5821,7 +5188,3 @@ libraries = {
 [connection signal="toggled" from="Tabs/Settings/Margin/VBox/Short" to="Tabs/Settings/Margin/VBox" method="_on_short_toggled"]
 [connection signal="toggled" from="Tabs/Settings/Margin/VBox/Spoilers" to="Tabs/Settings/Margin/VBox" method="_on_spoilers_toggled"]
 [connection signal="toggled" from="Tabs/Settings/Margin/VBox/Time" to="Tabs/Settings/Margin/VBox" method="_on_time_toggled"]
-[connection signal="pressed" from="Candle Tracker/Margin/VBox/Main/Expand" to="Candle Tracker/Margin/VBox" method="_on_expand_pressed"]
-[connection signal="pressed" from="Candle Tracker/Margin/VBox/Main/Collapse" to="Candle Tracker/Margin/VBox" method="_on_collapse_pressed"]
-[connection signal="pressed" from="Candle Tracker/Margin/VBox/Main/Check" to="Candle Tracker/Margin/VBox" method="_on_check_pressed"]
-[connection signal="pressed" from="Candle Tracker/Margin/VBox/Main/Uncheck" to="Candle Tracker/Margin/VBox" method="_on_uncheck_pressed"]
