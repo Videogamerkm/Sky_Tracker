@@ -17,6 +17,12 @@ func _ready():
 		for c in get_children():
 			if c.name != "Banner" and c.name != "Time" and c.name != "Days":
 				c.hide()
+	elif TimeUtils.get_time_until(start) > 0:
+		days = floor(TimeUtils.get_time_until(start)/86400.0)
+		$Days.text = "Season starts in " + str(days) + " day(s). See you soon!"
+		for c in get_children():
+			if c.name != "Banner" and c.name != "Time" and c.name != "Days":
+				c.hide()
 	else: $Days.text = str(days) + left
 	update_candles()
 	var candles = days*(6 if $Pass/Check.button_pressed else 5)

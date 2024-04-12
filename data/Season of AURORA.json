@@ -209,6 +209,11 @@
 				"seas/icons/AURORA;0;0"
 			],
 			[
+				"seas/exp/cure?1;0;0",
+				"base/teleport;0;0",
+				"seas/exp/cure?2;0;0"
+			],
+			[
 				"",
 				"base/teleport;0;0",
 				""

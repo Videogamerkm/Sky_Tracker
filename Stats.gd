@@ -63,7 +63,8 @@ func get_all_acc_btns(in_node, children_acc = []):
 
 func set_values():
 	# Current season values
-	if floor(TimeUtils.get_time_until(Global.currSsnTab.end)/86400.0) < 0: $"Current Season".hide()
+	if floor(TimeUtils.get_time_until(Global.currSsnTab.end)/86400.0) < 0 or\
+		TimeUtils.get_time_until(Global.currSsnTab.start) > 0: $"Current Season".hide()
 	else:
 		if Global.currSsnTab.get_node("Spent/Val").text == "0": Global.currSsnTab._ready()
 		var spent = Global.currSsnTab.get_node("Spent/Val").text

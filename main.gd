@@ -11,9 +11,10 @@ var collHist = true
 
 func _notification(what):
 	if what == NOTIFICATION_WM_CLOSE_REQUEST:
-		$Saving.show()
-		save()
-		await create_tween().tween_interval(1).finished
+		if Global.saveClose:
+			$Saving.show()
+			save()
+			if Global.wait: await create_tween().tween_interval(1).finished
 		get_tree().quit()
 
 func save(backup = true):
@@ -38,6 +39,8 @@ func save(backup = true):
 	config.set_value("Options","short",Global.setsTab.use_short)
 	config.set_value("Options","spoil",Global.spoilers)
 	config.set_value("Options","twelve",Global.useTwelve)
+	config.set_value("Options","wait",Global.wait)
+	config.set_value("Options","saveClose",Global.saveClose)
 	config.save(configFile)
 
 func _on_tree_entered():
@@ -45,12 +48,19 @@ func _on_tree_entered():
 	var err = config.load(configFile)
 	if err == OK:
 		saveFile = config.get_value("Current Save","file")
-		Global.setsTab.use_short = config.get_value("Options","short")
-		Global.spoilers = config.get_value("Options","spoil")
-		Global.useTwelve = config.get_value("Options","twelve")
+		Global.setsTab.use_short = config.get_value("Options","short",false)
+		Global.spoilers = config.get_value("Options","spoil",false)
+		Global.useTwelve = config.get_value("Options","twelve",false)
+		Global.wait = config.get_value("Options","wait",true)
+		Global.saveClose = config.get_value("Options","saveClose",true)
 	else: config.set_value("Current Save","file",saveFile)
 	Global.homeTab.get_node("File").text = "Current Save File: "+saveFile
 	load_save(saveFile)
+	Global.setsTab.set_short()
+	Global.setsTab.get_node("Spoilers").set_pressed_no_signal(Global.spoilers)
+	Global.setsTab.get_node("Time").set_pressed_no_signal(Global.useTwelve)
+	Global.setsTab.get_node("Close").set_pressed_no_signal(Global.saveClose)
+	Global.setsTab.get_node("Save").set_pressed_no_signal(Global.wait)
 
 func load_save(sv):
 	if not FileAccess.file_exists(sv):
@@ -78,9 +88,6 @@ func load_save(sv):
 	Global.yrlyTab.bought = data["Yearly"]["bought"]
 	Global.yrlyTab.planned = data["Yearly"]["planned"]
 	cosmetics = data["Other"]["cosmetics"]
-	Global.setsTab.set_short()
-	Global.setsTab.get_node("Spoilers").set_pressed_no_signal(Global.spoilers)
-	Global.setsTab.get_node("Time").set_pressed_no_signal(Global.useTwelve)
 	if sv.ends_with(".bak"): save(false)
 
 func load_legacy(sv):
@@ -115,9 +122,6 @@ func load_legacy(sv):
 	if cosmetics.has("seas/exp/shrug"): fix_old("Indifferent Alchemist")
 	if cosmetics.has("seas/exp/nod"): fix_old("Nodding Muralist")
 	if cosmetics.has("seas/exp/calm"): fix_old("Ceasing Commodore")
-	Global.setsTab.set_short()
-	Global.setsTab.get_node("Spoilers").set_pressed_no_signal(Global.spoilers)
-	Global.setsTab.get_node("Time").set_pressed_no_signal(Global.useTwelve)
 	if sv.ends_with(".bak"): save(false)
 
 func fix_old(s):
@@ -139,7 +143,6 @@ func _on_tabs_tab_changed(tab):
 	elif tab == 3: Global.regSprtTab._area_select(Global.regSprtTab.get_node("Area").text)
 	if tab == 4: Global.currSsnTab._ready()
 	if tab == 5 && Global.ssnlSprtTab.curr_spirit != "": Global.ssnlSprtTab._on_back_pressed()
-	if tab == 7: Global.shrdTab.set_fields()
 	if collHist:
 		history.resize(histIndex + 1)
 		history.append($Tabs.get_previous_tab())

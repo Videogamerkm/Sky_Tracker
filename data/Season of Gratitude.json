@@ -14,9 +14,9 @@
 				""
 			],
 			[
-				"base/heart;3;c",
+				"seas/cos/sass 1;26;c",
 				"base/wing;2;a",
-				"seas/cos/sass 1;26;c"
+				"base/heart;3;c"
 			],
 			[
 				"",
@@ -96,6 +96,76 @@
 			[
 				"",
 				"seas/exp/kabuki?1;0;0",
+				""
+			]
+		]
+	},
+	"Greeting Shaman": {
+		"loc": "Season of Gratitude",
+		"tree": [
+			[
+				"",
+				"seas/cos/kungfu 2;54;c",
+				""
+			],
+			[
+				"seas/exp/kungfu?4;6;h",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"",
+				"seas/exp/kungfu?3;3;h",
+				""
+			],
+			[
+				"seas/cos/kungfu 1;45;c",
+				"base/wing;2;a",
+				"base/heart;3;c"
+			],
+			[
+				"seas/exp/kungfu?2;4;h",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"",
+				"seas/exp/kungfu?1;0;0",
+				""
+			]
+		]
+	},
+	"Saluting Protector": {
+		"loc": "Season of Gratitude",
+		"tree": [
+			[
+				"seas/cos/ack 1;75;c",
+				"seas/cos/ack 2;42;c",
+				""
+			],
+			[
+				"seas/exp/ack?4;6;h",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"",
+				"seas/exp/ack?3;3;h",
+				""
+			],
+			[
+				"base/sheet?8;15;c",
+				"base/wing;2;a",
+				"base/heart;3;c"
+			],
+			[
+				"seas/exp/ack?2;4;h",
+				"base/5C;5;c",
+				""
+			],
+			[
+				"",
+				"seas/exp/ack?1;0;0",
 				""
 			]
 		]
