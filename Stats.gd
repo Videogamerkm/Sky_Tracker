@@ -47,9 +47,9 @@ func _ready():
 	$"Seasonal Spirits/Season".queue_free()
 	for s in Global.yrlyTab.short.keys():
 		for i in range(0,6):
-			var new_row = $"Yearly Events/Titles".get_child(i).duplicate()
+			var new_row = $Events/Titles.get_child(i).duplicate()
 			new_row.name += " "+s
-			$"Yearly Events/Titles".add_child(new_row)
+			$Events/Titles.add_child(new_row)
 	for b in get_all_acc_btns(self):
 		if b.name == "Expand": b.connect("pressed",accordion.bind(b.get_parent().get_parent(),true))
 		elif b.name == "Collapse": b.connect("pressed",accordion.bind(b.get_parent().get_parent(),false))
@@ -268,27 +268,27 @@ func set_values():
 	# Event info
 	if not Global.yrlyTab.is_node_ready(): await Global.yrlyTab.ready
 	for s in Global.yrlyTab.short.keys():
-		var row = $"Yearly Events/Titles".get_node("Event "+s).get_index()
-		$"Yearly Events/Titles".get_child(row).text = s
+		var row = $Events/Titles.get_node("Event "+s).get_index()
+		$Events/Titles.get_child(row).text = s
 		var cost = SpiritUtils.get_cost(Global.yrlyTab.rows,s)
-		$"Yearly Events/Titles".get_child(row+4).text = "0%"
-		$"Yearly Events/Titles".get_child(row+5).text = "0%"
+		$Events/Titles.get_child(row+4).text = "0%"
+		$Events/Titles.get_child(row+5).text = "0%"
 		var total = cost["c"] + cost["h"] + cost["k"]
 		if Global.yrlyTab.bought.has(s):
-			$"Yearly Events/Titles".get_child(row+5).text = str(SpiritUtils.get_completion(Global.yrlyTab.rows,s,Global.yrlyTab.bought[s]))+"%"
+			$Events/Titles.get_child(row+5).text = str(SpiritUtils.get_completion(Global.yrlyTab.rows,s,Global.yrlyTab.bought[s]))+"%"
 			var unspent = SpiritUtils.get_unspent(Global.yrlyTab.rows,s,Global.yrlyTab.bought[s])
-			$"Yearly Events/Titles".get_child(row+1).text = str(unspent["c"])
-			$"Yearly Events/Titles".get_child(row+2).text = str(unspent["h"])
-			$"Yearly Events/Titles".get_child(row+3).text = str(unspent["k"])
+			$Events/Titles.get_child(row+1).text = str(unspent["c"])
+			$Events/Titles.get_child(row+2).text = str(unspent["h"])
+			$Events/Titles.get_child(row+3).text = str(unspent["k"])
 			var left = total - unspent["c"] - unspent["h"] - unspent["k"]
-			$"Yearly Events/Titles".get_child(row+4).text = str(floor(left*100.0/total))+"%"
+			$Events/Titles.get_child(row+4).text = str(floor(left*100.0/total))+"%"
 		else:
-			$"Yearly Events/Titles".get_child(row+1).text = str(cost["c"])
-			$"Yearly Events/Titles".get_child(row+2).text = str(cost["h"])
-			$"Yearly Events/Titles".get_child(row+3).text = str(cost["k"])
-		var color = Color(0.75,1,0.75) if $"Yearly Events/Titles".get_child(row+4).text == "100%" && $"Yearly Events/Titles".get_child(row+5).text == "100%" else Color(1,1,1)
+			$Events/Titles.get_child(row+1).text = str(cost["c"])
+			$Events/Titles.get_child(row+2).text = str(cost["h"])
+			$Events/Titles.get_child(row+3).text = str(cost["k"])
+		var color = Color(0.75,1,0.75) if $Events/Titles.get_child(row+4).text == "100%" && $Events/Titles.get_child(row+5).text == "100%" else Color(1,1,1)
 		for i in range(row,row+6):
-			$"Yearly Events/Titles".get_child(i).set_modulate(color)
+			$Events/Titles.get_child(i).set_modulate(color)
 	
 	# Winged Light
 	var light_areas = areas.duplicate()
