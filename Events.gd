@@ -19,6 +19,9 @@ func _ready():
 	$Tree/Org1/Controls/Back.hide()
 	for c in $Events1.get_children(): c.connect("pressed", _press_event_button.bind(c))
 	for c in $Events2.get_children(): c.connect("pressed", _press_event_button.bind(c))
+	set_fields()
+
+func set_fields():
 	if TimeUtils.get_time_until(end) < 0 or TimeUtils.get_time_until(start) > 0:
 		$No.show()
 		$Time.hide()
@@ -42,7 +45,7 @@ func _ready():
 
 func _process(_delta):
 	if TimeUtils.get_time_until(end) >= 0 && TimeUtils.get_time_until(start) <= 0 && not $Days.text == str(floor(TimeUtils.get_time_until(end)/86400.0)) + left:
-		_ready()
+		set_fields()
 
 func _press_event_button(node):
 	var event = node.name
