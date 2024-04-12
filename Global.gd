@@ -2,6 +2,8 @@ extends Node
 
 var spoilers = false
 var useTwelve = false
+var wait = true
+var saveClose = true
 
 # Tabs
 var main

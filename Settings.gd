@@ -21,3 +21,9 @@ func _on_spoilers_toggled(button_pressed):
 
 func _on_time_toggled(button_pressed):
 	Global.useTwelve = button_pressed
+
+func _on_save_toggled(button_pressed):
+	Global.wait = button_pressed
+
+func _on_close_toggled(button_pressed):
+	Global.saveClose = button_pressed

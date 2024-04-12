@@ -5070,6 +5070,32 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_7gr2j")
 theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_141fx")
 text = "Use 12h time instead of 24h time"
 
+[node name="Close" type="CheckButton" parent="Tabs/Settings/Margin/VBox"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+focus_mode = 0
+theme_override_constants/h_separation = 10
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5muw6")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ty0t3")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_u7qhy")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7gr2j")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_141fx")
+text = "Save before closing"
+
+[node name="Save" type="CheckButton" parent="Tabs/Settings/Margin/VBox"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+focus_mode = 0
+theme_override_constants/h_separation = 10
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5muw6")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ty0t3")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_u7qhy")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7gr2j")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_141fx")
+text = "Add 1 second delay after saving before closing"
+
 [node name="Credits" type="ScrollContainer" parent="Tabs"]
 visible = false
 layout_mode = 2
@@ -5188,3 +5214,5 @@ autowrap_mode = 3
 [connection signal="toggled" from="Tabs/Settings/Margin/VBox/Short" to="Tabs/Settings/Margin/VBox" method="_on_short_toggled"]
 [connection signal="toggled" from="Tabs/Settings/Margin/VBox/Spoilers" to="Tabs/Settings/Margin/VBox" method="_on_spoilers_toggled"]
 [connection signal="toggled" from="Tabs/Settings/Margin/VBox/Time" to="Tabs/Settings/Margin/VBox" method="_on_time_toggled"]
+[connection signal="toggled" from="Tabs/Settings/Margin/VBox/Close" to="Tabs/Settings/Margin/VBox" method="_on_close_toggled"]
+[connection signal="toggled" from="Tabs/Settings/Margin/VBox/Save" to="Tabs/Settings/Margin/VBox" method="_on_save_toggled"]
