@@ -1,0 +1,73 @@
+{
+	"": {
+		"loc": "Season of Nesting",
+		"tree": [
+			[
+				"base/5C;0;0",
+				"base/season_heart;3;sp",
+				""
+			],
+			[
+				"seas/cos/cradle 3;0;0",
+				"base/sheet?39;32;sp",
+				""
+			],
+			[
+				"base/5C;0;0",
+				"base/5C;26;sp",
+				""
+			],
+			[
+				"seas/cos/cradle 1;0;0",
+				"seas/cos/cradle 2;18;sp",
+				""
+			],
+			[
+				"seas/exp/cradle?2;0;0",
+				"base/5C;6;sp",
+				""
+			],
+			[
+				"",
+				"seas/exp/cradle?1;0;0",
+				""
+			]
+		]
+	},
+	"Nesting Guide": {
+		"isGuide": true,
+		"loc": "Season of Nesting",
+		"tree": [
+			[
+				"base/heart;0;0",
+				"base/!;0;0",
+				""
+			],
+			[
+				"base/heart;0;0",
+				"base/!;0;0",
+				"|seas/cos/nest 2;2;sh"
+			],
+			[
+				"base/heart;0;0",
+				"base/!;0;0",
+				"|seas/cos/nest 1;2;sh"
+			],
+			[
+				"base/heart;0;0",
+				"base/!;0;0",
+				"seas/icons/Nesting;0;0"
+			],
+			[
+				"",
+				"base/!;0;0",
+				""
+			],
+			[
+				"",
+				"base/teleport;0;0",
+				""
+			]
+		]
+	}
+}
