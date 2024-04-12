@@ -16,12 +16,13 @@ func _ready():
 	set_fields()
 
 func _process(_d):
-	if Time.get_unix_time_from_system() - server_reset > 86400:
+	if Time.get_unix_time_from_system() - server_reset > 86_400:
 		set_fields()
 
 func set_fields():
 	#year, month, day, weekday, hour, minute, second, and dst
-	var datetime = Time.get_datetime_dict_from_system()
+	var datetime = Time.get_unix_time_from_system() + TimeUtils.get_game_offset()
+	datetime = Time.get_datetime_dict_from_unix_time(datetime)
 	datetime.merge({"hour":0,"minute":0,"second":0},true)
 	## server_reset + shard time + local offset = local shard drop time
 	## server_reset + times[g][s] + local_offset_secs
@@ -31,7 +32,7 @@ func set_fields():
 	var loc = locs[c][(datetime["day"] - 1) % 5]
 	type = "None" if loc == days.get_location_override() else type
 	var val = 0 if type == "None" else 200 if type == "Regular" else vals[c][(datetime["day"] - 1) % 5]
-	$Date.text = "It is %s, %s %s%s, %d"%[TimeUtils.days[datetime["weekday"]],TimeUtils.months[datetime["month"]],datetime["day"],TimeUtils.get_post(str(datetime["day"])),datetime["year"]]
+	$Date.text = "It is %s, %s %s%s, %d (Server Time)"%[TimeUtils.days[datetime["weekday"]],TimeUtils.months[datetime["month"]],datetime["day"],TimeUtils.get_post(str(datetime["day"])),datetime["year"]]
 	if type != "None":
 		$Current.show()
 		for i in range(1,4):

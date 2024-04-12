@@ -121,6 +121,8 @@ func recalculate(_val):
 			% [targCandles - (days * cpd + currCandles)]
 	if targSeason > 0 and TimeUtils.get_time_until(Global.currSsnTab.end) < 0:
 		text += "The current season is over.\n"
+	elif targSeason > 0 and TimeUtils.get_time_until(Global.currSsnTab.start) > 0:
+		text += "The current season hasn't started yet.\n"
 	elif targSeason > 0 and targSeason <= days * spd + currSeason:
 		text += "You will be able to get enough seasonal candles (%d left over).\nCheck Current Season tab for more info.\n"\
 			% [(days * spd + currSeason) - targSeason]
