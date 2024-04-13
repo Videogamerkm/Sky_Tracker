@@ -41,17 +41,17 @@
 			[
 				"base/heart;0;0",
 				"base/!;0;0",
-				"|seas/cos/nest 2;2;sh"
+				"|seas/cos/nest 2;2;sh;sp"
 			],
 			[
 				"base/heart;0;0",
 				"base/!;0;0",
-				"|seas/cos/nest 1;2;sh"
+				"|seas/cos/nest 1;2;sh;sp"
 			],
 			[
 				"base/heart;0;0",
 				"base/!;0;0",
-				"seas/icons/Nesting;0;0"
+				"seas/icons/Nesting;0;0;sp"
 			],
 			[
 				"",
