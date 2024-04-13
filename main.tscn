@@ -4870,140 +4870,169 @@ theme_override_font_sizes/font_size = 20
 text = "Tickets collectable per day: 5"
 horizontal_alignment = 1
 
+[node name="place3" type="Label" parent="Tabs/Events/Margin/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 6
+horizontal_alignment = 1
+
 [node name="Events" parent="Tabs/Events/Margin/VBox" instance=ExtResource("1_au16a")]
 layout_mode = 2
 
-[node name="Events1" type="HBoxContainer" parent="Tabs/Events/Margin/VBox/Events"]
+[node name="Events" type="GridContainer" parent="Tabs/Events/Margin/VBox/Events"]
+layout_mode = 2
+columns = 6
+
+[node name="fortune" type="Button" parent="Tabs/Events/Margin/VBox/Events/Events"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
-alignment = 1
-
-[node name="fortune" type="Button" parent="Tabs/Events/Margin/VBox/Events/Events1"]
-layout_mode = 2
+size_flags_horizontal = 3
 focus_mode = 0
 toggle_mode = true
-text = "Days of Fortune"
+text = "Days of
+Fortune"
 icon = ExtResource("31_vcuki")
 icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="love" type="Button" parent="Tabs/Events/Margin/VBox/Events/Events1"]
+[node name="love" type="Button" parent="Tabs/Events/Margin/VBox/Events/Events"]
+custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
+size_flags_horizontal = 3
 focus_mode = 0
 toggle_mode = true
-text = "Days of Love"
+text = "Days of
+Love"
 icon = ExtResource("32_wcu0u")
 icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="bloom" type="Button" parent="Tabs/Events/Margin/VBox/Events/Events1"]
+[node name="bloom" type="Button" parent="Tabs/Events/Margin/VBox/Events/Events"]
+custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
+size_flags_horizontal = 3
 focus_mode = 0
 toggle_mode = true
-text = "Days of Bloom"
+text = "Days of
+Bloom"
 icon = ExtResource("37_qrfhd")
 icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="nature" type="Button" parent="Tabs/Events/Margin/VBox/Events/Events1"]
+[node name="nature" type="Button" parent="Tabs/Events/Margin/VBox/Events/Events"]
+custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
+size_flags_horizontal = 3
 focus_mode = 0
 toggle_mode = true
-text = "Days of Nature"
+text = "Days of
+Nature"
 icon = ExtResource("38_skdn8")
 icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="color" type="Button" parent="Tabs/Events/Margin/VBox/Events/Events1"]
+[node name="color" type="Button" parent="Tabs/Events/Margin/VBox/Events/Events"]
+custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
+size_flags_horizontal = 3
 focus_mode = 0
 toggle_mode = true
-text = "Days of Color"
+text = "Days of
+Color"
 icon = ExtResource("35_cfc5u")
 icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="music" type="Button" parent="Tabs/Events/Margin/VBox/Events/Events1"]
+[node name="music" type="Button" parent="Tabs/Events/Margin/VBox/Events/Events"]
+custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
+size_flags_horizontal = 3
 focus_mode = 0
 toggle_mode = true
-text = "Days of Music"
+text = "Days of
+Music"
 icon = ExtResource("36_1y5ba")
 icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="Events2" type="HBoxContainer" parent="Tabs/Events/Margin/VBox/Events"]
+[node name="anni" type="Button" parent="Tabs/Events/Margin/VBox/Events/Events"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
-alignment = 1
-
-[node name="anni" type="Button" parent="Tabs/Events/Margin/VBox/Events/Events2"]
-layout_mode = 2
+size_flags_horizontal = 3
 focus_mode = 0
 toggle_mode = true
-text = "Sky Anniversary"
+text = "Sky
+Anniversary"
 icon = ExtResource("37_ed684")
 icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="sun" type="Button" parent="Tabs/Events/Margin/VBox/Events/Events2"]
+[node name="sun" type="Button" parent="Tabs/Events/Margin/VBox/Events/Events"]
+custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
+size_flags_horizontal = 3
 focus_mode = 0
 toggle_mode = true
-text = "Days of Sunlight
+text = "Days of
+Sunlight
 "
 icon = ExtResource("38_vr5fi")
 icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="style" type="Button" parent="Tabs/Events/Margin/VBox/Events/Events2"]
+[node name="style" type="Button" parent="Tabs/Events/Margin/VBox/Events/Events"]
+custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
+size_flags_horizontal = 3
 focus_mode = 0
 toggle_mode = true
-text = "Days of Style
+text = "Days of
+Style
 "
 icon = ExtResource("39_tqryg")
 icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="mischief" type="Button" parent="Tabs/Events/Margin/VBox/Events/Events2"]
+[node name="mischief" type="Button" parent="Tabs/Events/Margin/VBox/Events/Events"]
+custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
+size_flags_horizontal = 3
 focus_mode = 0
 toggle_mode = true
-text = "Days of Mischief
+text = "Days of
+Mischief
 "
 icon = ExtResource("40_kgaw0")
 icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="feast" type="Button" parent="Tabs/Events/Margin/VBox/Events/Events2"]
+[node name="feast" type="Button" parent="Tabs/Events/Margin/VBox/Events/Events"]
+custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
+size_flags_horizontal = 3
 focus_mode = 0
 toggle_mode = true
-text = "Days of Feast
+text = "Days of
+Feast
 "
 icon = ExtResource("41_g5vtc")
 icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="Events3" type="HBoxContainer" parent="Tabs/Events/Margin/VBox/Events"]
+[node name="cinna" type="Button" parent="Tabs/Events/Margin/VBox/Events/Events"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
-alignment = 1
-
-[node name="cinna" type="Button" parent="Tabs/Events/Margin/VBox/Events/Events3"]
-layout_mode = 2
+size_flags_horizontal = 3
 focus_mode = 0
 toggle_mode = true
 text = "Sky x
@@ -5016,7 +5045,7 @@ expand_icon = true
 
 [node name="place2" type="Label" parent="Tabs/Events/Margin/VBox"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 6
 horizontal_alignment = 1
 
 [node name="Tree" parent="Tabs/Events/Margin/VBox" instance=ExtResource("4_t1mtd")]

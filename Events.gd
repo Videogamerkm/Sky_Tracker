@@ -14,12 +14,11 @@ var bought = {}
 var planned = {}
 @onready var rows = JSON.parse_string(FileAccess.open("res://data/Days.json", FileAccess.READ).get_as_text())
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	$Tree/Org1/Controls/Back.hide()
-	for c in $Events/Events1.get_children(): c.connect("pressed", _press_event_button.bind(c))
-	for c in $Events/Events2.get_children(): c.connect("pressed", _press_event_button.bind(c))
-	for c in $Events/Events3.get_children(): c.connect("pressed", _press_event_button.bind(c))
+	for c in $Events/Events.get_children():
+		if not c is Button: continue
+		c.connect("pressed", _press_event_button.bind(c))
 	set_fields()
 
 func set_fields():
@@ -52,9 +51,9 @@ func _press_event_button(node):
 	var event = node.name
 	var d = short.find_key(str(event))
 	selected = d
-	for c in $Events/Events1.get_children(): c.set_pressed_no_signal(false)
-	for c in $Events/Events2.get_children(): c.set_pressed_no_signal(false)
-	for c in $Events/Events3.get_children(): c.set_pressed_no_signal(false)
+	for c in $Events/Events.get_children():
+		if not c is Button: continue
+		c.set_pressed_no_signal(false)
 	node.set_pressed_no_signal(true)
 	$Tree.set_tree(rows[d],event)
 	if bought.has(d): $Tree.import_bought(bought[d])
