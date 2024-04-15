@@ -40,12 +40,12 @@
 [ext_resource type="Texture2D" uid="uid://bmqhlm8yrqp50" path="res://icons/days/music/ticket.bmp" id="36_1y5ba"]
 [ext_resource type="Texture2D" uid="uid://lfy6cc5fa5oq" path="res://icons/days/anni/ticket.bmp" id="37_ed684"]
 [ext_resource type="Texture2D" uid="uid://gxaapv7s27rb" path="res://icons/days/bloom/ticket.bmp" id="37_qrfhd"]
-[ext_resource type="Texture2D" uid="uid://cmldknpb4srud" path="res://icons/days/nature/ticket.bmp" id="38_skdn8"]
+[ext_resource type="Texture2D" uid="uid://2lpc3vlgxdof" path="res://icons/days/nature/ticket.bmp" id="38_skdn8"]
 [ext_resource type="Texture2D" uid="uid://b1djesdabyowf" path="res://icons/days/sun/ticket.bmp" id="38_vr5fi"]
 [ext_resource type="Texture2D" uid="uid://vwvmnewmw88u" path="res://icons/days/style/ticket.bmp" id="39_tqryg"]
 [ext_resource type="Texture2D" uid="uid://hpw58k7uldig" path="res://icons/days/mischief/ticket.bmp" id="40_kgaw0"]
 [ext_resource type="Texture2D" uid="uid://b8pu7d5lhcslv" path="res://icons/days/feast/ticket.bmp" id="41_g5vtc"]
-[ext_resource type="Texture2D" uid="uid://bu5m36emm1pts" path="res://icons/days/cinna/ticket.bmp" id="45_o2joq"]
+[ext_resource type="Texture2D" uid="uid://dm0yhg7b6nan3" path="res://icons/days/cinna/ticket.bmp" id="45_o2joq"]
 [ext_resource type="Script" path="res://Challenges.gd" id="45_pwys4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dqtfa"]
@@ -2915,9 +2915,17 @@ size_flags_horizontal = 3
 script = ExtResource("2_6cr1o")
 
 [node name="Banner" type="TextureRect" parent="Tabs/Current Season/Margin/VBox"]
+visible = false
 layout_mode = 2
 texture = ExtResource("8_npf6d")
 expand_mode = 5
+
+[node name="Banner2" type="Label" parent="Tabs/Current Season/Margin/VBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 42
+text = "Season of Nesting"
+horizontal_alignment = 1
 
 [node name="Time" type="HBoxContainer" parent="Tabs/Current Season/Margin/VBox"]
 layout_mode = 2

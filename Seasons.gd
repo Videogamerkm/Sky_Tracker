@@ -41,6 +41,14 @@ func _area_select(area):
 					sp.set_button_icon(load("icons/"+SeasonSpirits.data[s]["tree"][1][0].split(";")[0].split("?")[0]+".bmp"))
 				elif s.begins_with("Remnant"):
 					sp.set_button_icon(load("icons/"+SeasonSpirits.data[s]["tree"][2][1].split(";")[0].split("?")[0]+".bmp"))
+			elif s.contains("Nesting"):
+				sp.text = s
+				if s.ends_with("Loft"):
+					sp.set_button_icon(load("icons/"+SeasonSpirits.data[s]["tree"][-2][0].split(";")[0].split("?")[0]+".bmp"))
+				elif s.ends_with("Solarium"):
+					sp.set_button_icon(load("icons/"+SeasonSpirits.data[s]["tree"][1][0].split(";")[0].split("?")[0]+".bmp"))
+				else:
+					sp.set_button_icon(load("icons/"+SeasonSpirits.data[s]["tree"][-1][1].split(";")[0].split("?")[0]+".bmp"))
 			else:
 				sp.set_button_icon(load("icons/"+SeasonSpirits.data[s]["tree"][-1][1].split(";")[0].split("?")[0]+".bmp"))
 				sp.text = s.replace(" ","\n").replace("Spirit\nof\n","Spirit of ").replace("\nof\n"," of ")\

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dm0yhg7b6nan3"
-path="res://.godot/imported/ticket.bmp-bb7961cc48f8ad56033b30c78313ad7f.ctex"
+uid="uid://dwqg0yxi6yq8a"
+path="res://.godot/imported/atrium 3.bmp-880b0f55cdc343e53594b539bc099a52.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://icons/days/cinna/ticket.bmp"
-dest_files=["res://.godot/imported/ticket.bmp-bb7961cc48f8ad56033b30c78313ad7f.ctex"]
+source_file="res://icons/seas/cos/atrium 3.bmp"
+dest_files=["res://.godot/imported/atrium 3.bmp-880b0f55cdc343e53594b539bc099a52.ctex"]
 
 [params]
 

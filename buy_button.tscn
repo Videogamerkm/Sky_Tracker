@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://comkmo1edc6w5"]
 
 [ext_resource type="Script" path="res://buy_button.gd" id="2_nrh32"]
-[ext_resource type="Texture2D" uid="uid://c3g73281lhkrb" path="res://icons/seas/icons/Nesting.bmp" id="2_ywm7b"]
+[ext_resource type="Texture2D" uid="uid://y3g67xyk53bw" path="res://icons/seas/icons/Nesting.bmp" id="2_ywm7b"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rf45p"]
 bg_color = Color(0, 0, 0, 0.25098)

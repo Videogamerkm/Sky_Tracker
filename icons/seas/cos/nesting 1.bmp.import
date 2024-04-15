@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dm0yhg7b6nan3"
-path="res://.godot/imported/ticket.bmp-bb7961cc48f8ad56033b30c78313ad7f.ctex"
+uid="uid://dguprwcnmklh7"
+path="res://.godot/imported/nesting 1.bmp-655f7dce0ae94c5aadbae666068c8653.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://icons/days/cinna/ticket.bmp"
-dest_files=["res://.godot/imported/ticket.bmp-bb7961cc48f8ad56033b30c78313ad7f.ctex"]
+source_file="res://icons/seas/cos/nesting 1.bmp"
+dest_files=["res://.godot/imported/nesting 1.bmp-655f7dce0ae94c5aadbae666068c8653.ctex"]
 
 [params]
 
