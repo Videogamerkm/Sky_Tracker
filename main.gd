@@ -25,7 +25,7 @@ func save(backup = true):
 		old.close()
 		back.close()
 	var file = FileAccess.open(saveFile, FileAccess.WRITE)
-	file.store_var({"V":1.1,
+	file.store_var({"V":1.0,
 		"Plan":{"days":Global.planTab.days,"cpd":Global.planTab.cpd,"hpd":Global.planTab.hpd,
 			"currC":Global.planTab.currCandles,"currH":Global.planTab.currHearts,"currT":Global.planTab.currTicks},
 		"Reg":{"bought":Global.regSprtTab.bought,"planned":Global.regSprtTab.planned},
@@ -34,7 +34,7 @@ func save(backup = true):
 		"Seas":{"bought":Global.ssnlSprtTab.bought,"planned":Global.ssnlSprtTab.planned},
 		"WL":{"check":Global.wlTab.export_checked()},
 		"Yearly":{"bought":Global.yrlyTab.bought,"planned":Global.yrlyTab.planned},
-		"Challs":{"bought":Global.chlngTab.bought,"planned":Global.chlngTab.planned},
+#		"Challs":{"bought":Global.chlngTab.bought,"planned":Global.chlngTab.planned},
 		"Other":{"cosmetics": cosmetics}})
 	file.close()
 	config.set_value("Options","short",Global.setsTab.use_short)

@@ -5,10 +5,10 @@ var use_short = false
 func set_short():
 	var tabNames = []
 	if use_short:
-		tabNames = ["Plan","Reg","C.S.","Ssnl","WL","Shrd","Evnt","NCs","IAPs","Sets","Creds"]
+		tabNames = ["Plan","Reg","C.S.","Ssnl","WL","Shrd","Evnt","Sets","Creds"]#,"NCs","IAPs"
 	else:
 		tabNames = ["Planning","Regular Spirits","Current Season","Seasonal Spirits",
-			"Winged Light Tracker","Shard Eruptions","Events","Nesting Challenges","In-App Puchases",
+			"Winged Light Tracker","Shard Eruptions","Events",#"Nesting Challenges","In-App Puchases",
 			"Settings","Credits"]
 	for i in range(2,$"../../..".get_tab_count()): $"../../..".set_tab_title(i,tabNames[i-2])
 	$Short.set_pressed_no_signal(use_short)

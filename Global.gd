@@ -30,5 +30,5 @@ func load_tabs():
 	wlTab = get_tree().root.get_node("Main/Tabs/Winged Light Tracker/Margin/VBox")
 	shrdTab = get_tree().root.get_node("Main/Tabs/Shard Eruptions/Margin/VBox")
 	yrlyTab = get_tree().root.get_node("Main/Tabs/Events/Margin/VBox")
-	chlngTab = get_tree().root.get_node("Main/Tabs/Nesting Challenges/Margin/VBox")
+	chlngTab = get_tree().root.get_node("Main/Nesting Challenges/Margin/VBox")
 	setsTab = get_tree().root.get_node("Main/Tabs/Settings/Margin/VBox")
