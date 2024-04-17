@@ -41,6 +41,9 @@ func _ready():
 	elif type == "0":
 		$Curr.set_texture(preload("res://icons/base/dot.png"))
 		$Cost.hide()
+	if iconValue.contains("exp") and iconValue.contains("?"):
+		$Lvl.show()
+		$Lvl.set_text(iconValue.split("?")[1])
 	$Cost.text = str(cost)
 	if isSP: $SP.show()
 

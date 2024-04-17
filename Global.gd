@@ -16,6 +16,8 @@ var ssnlSprtTab
 var wlTab
 var shrdTab
 var yrlyTab
+var chlngTab
+var shopTab
 var setsTab
 
 func load_tabs():
@@ -28,5 +30,7 @@ func load_tabs():
 	ssnlSprtTab = get_tree().root.get_node("Main/Tabs/Seasonal Spirits/Margin/VBox")
 	wlTab = get_tree().root.get_node("Main/Tabs/Winged Light Tracker/Margin/VBox")
 	shrdTab = get_tree().root.get_node("Main/Tabs/Shard Eruptions/Margin/VBox")
-	yrlyTab = get_tree().root.get_node("Main/Tabs/Yearly Events/Margin/VBox")
+	yrlyTab = get_tree().root.get_node("Main/Tabs/Events/Margin/VBox")
+	chlngTab = get_tree().root.get_node("Main/Nesting Challenges/Margin/VBox")
+	shopTab = get_tree().root.get_node("Main/Tabs/Shop Purchases/Margin/VBox")
 	setsTab = get_tree().root.get_node("Main/Tabs/Settings/Margin/VBox")

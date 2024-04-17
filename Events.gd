@@ -7,18 +7,18 @@ const start = {"day":25,"month":3,"year":2024,"hour":0}
 const end = {"day":14,"month":4,"year":2024,"hour":23,"minute":59}
 const short = {"Days of Fortune":"fortune","Days of Love":"love","Days of Bloom":"bloom","Days of Nature":"nature",
 	"Days of Color":"color","Days of Music":"music","Sky Anniversary":"anni","Days of Sunlight":"sun","Days of Style":"style",
-	"Days of Mischief":"mischief","Days of Feast":"feast"}
-const left = " day(s) left in the season"
+	"Days of Mischief":"mischief","Days of Feast":"feast","Sky x Cinnamoroll":"cinna"}
+const left = " day(s) left in the event"
 var selected = ""
 var bought = {}
 var planned = {}
 @onready var rows = JSON.parse_string(FileAccess.open("res://data/Days.json", FileAccess.READ).get_as_text())
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	$Tree/Org1/Controls/Back.hide()
-	for c in $Events1.get_children(): c.connect("pressed", _press_event_button.bind(c))
-	for c in $Events2.get_children(): c.connect("pressed", _press_event_button.bind(c))
+	for c in $Events/Events.get_children():
+		if not c is Button: continue
+		c.connect("pressed", _press_event_button.bind(c))
 	set_fields()
 
 func set_fields():
@@ -51,8 +51,9 @@ func _press_event_button(node):
 	var event = node.name
 	var d = short.find_key(str(event))
 	selected = d
-	for c in $Events1.get_children(): c.set_pressed_no_signal(false)
-	for c in $Events2.get_children(): c.set_pressed_no_signal(false)
+	for c in $Events/Events.get_children():
+		if not c is Button: continue
+		c.set_pressed_no_signal(false)
 	node.set_pressed_no_signal(true)
 	$Tree.set_tree(rows[d],event)
 	if bought.has(d): $Tree.import_bought(bought[d])
@@ -63,9 +64,6 @@ func _on_tree_bought(iconValue,press):
 	bought[selected] = $Tree.export_bought()
 	# Pass to DB
 	Global.main.update_cos(iconValue,press)
-
-func _on_all_pressed():
-	$Tree.buy_all()
 
 static func get_location_override() -> String:
 	if TimeUtils.get_time_until(end) < 0 or TimeUtils.get_time_until(start) > 0: return ""

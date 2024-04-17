@@ -1,6 +1,7 @@
 extends Node
 
-var seasons = ["Season of the Nine-Colored Deer",
+var seasons = ["Season of Nesting",
+	"Season of the Nine-Colored Deer",
 	"Season of Revival",
 	"Season of Moments",
 	"Season of Passage",

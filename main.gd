@@ -25,7 +25,7 @@ func save(backup = true):
 		old.close()
 		back.close()
 	var file = FileAccess.open(saveFile, FileAccess.WRITE)
-	file.store_var({"V":1.0,
+	file.store_var({"V":1.1,
 		"Plan":{"days":Global.planTab.days,"cpd":Global.planTab.cpd,"hpd":Global.planTab.hpd,
 			"currC":Global.planTab.currCandles,"currH":Global.planTab.currHearts,"currT":Global.planTab.currTicks},
 		"Reg":{"bought":Global.regSprtTab.bought,"planned":Global.regSprtTab.planned},
@@ -34,6 +34,8 @@ func save(backup = true):
 		"Seas":{"bought":Global.ssnlSprtTab.bought,"planned":Global.ssnlSprtTab.planned},
 		"WL":{"check":Global.wlTab.export_checked()},
 		"Yearly":{"bought":Global.yrlyTab.bought,"planned":Global.yrlyTab.planned},
+#		"Challs":{"bought":Global.chlngTab.bought,"planned":Global.chlngTab.planned},
+		"Shops":{"bought":Global.shopTab.bought},
 		"Other":{"cosmetics": cosmetics}})
 	file.close()
 	config.set_value("Options","short",Global.setsTab.use_short)
@@ -72,6 +74,7 @@ func load_save(sv):
 	if not data.has("V"):
 		load_legacy(sv)
 		return
+	var V = data["V"]
 	Global.planTab.days = data["Plan"]["days"]
 	Global.planTab.cpd = data["Plan"]["cpd"]
 	Global.planTab.hpd = data["Plan"]["hpd"]
@@ -87,6 +90,12 @@ func load_save(sv):
 	Global.wlTab.import_checked(data["WL"]["check"])
 	Global.yrlyTab.bought = data["Yearly"]["bought"]
 	Global.yrlyTab.planned = data["Yearly"]["planned"]
+	if V > 1.0:
+		Global.shopTab.bought = data["Shops"]["bought"]
+		Global.shopTab.set_bought()
+	if V > 1.1:
+		Global.chlngTab.bought = data["Challs"]["bought"]
+		Global.chlngTab.planned = data["Challs"]["planned"]
 	cosmetics = data["Other"]["cosmetics"]
 	if sv.ends_with(".bak"): save(false)
 
@@ -202,12 +211,6 @@ func _on_load_dialog_file_selected(path):
 	saveFile = path
 	Global.homeTab.get_node("File").text = "Current Save File: "+path
 	load_save(path)
-
-func _on_search_focus_entered():
-	for s in RegSpirits.data: search.get_node("Popup").add_item(s)
-	for s in SeasonSpirits.data: search.get_node("Popup").add_item(s)
-	for s in Global.yrlyTab.rows: search.get_node("Popup").add_item(s)
-	search.get_node("Popup").show()
 
 func _on_search_text_changed(new_text):
 	var list = []

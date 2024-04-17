@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://comkmo1edc6w5"]
 
 [ext_resource type="Script" path="res://buy_button.gd" id="2_nrh32"]
-[ext_resource type="Texture2D" uid="uid://mq2yyf2nob6j" path="res://icons/seas/icons/the Nine-Colored Deer.bmp" id="4_a4ln6"]
+[ext_resource type="Texture2D" uid="uid://y3g67xyk53bw" path="res://icons/seas/icons/Nesting.bmp" id="2_ywm7b"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rf45p"]
 bg_color = Color(0, 0, 0, 0.25098)
@@ -60,8 +60,8 @@ script = ExtResource("2_nrh32")
 [node name="Curr" type="TextureRect" parent="."]
 layout_mode = 0
 offset_left = 30.0
-offset_top = 20.0
-offset_right = 60.0
+offset_top = 25.0
+offset_right = 55.0
 offset_bottom = 50.0
 mouse_filter = 2
 expand_mode = 1
@@ -73,18 +73,32 @@ layout_mode = 0
 offset_right = 20.0
 offset_bottom = 20.0
 mouse_filter = 2
-texture = ExtResource("4_a4ln6")
+texture = ExtResource("2_ywm7b")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Cost" type="Label" parent="."]
+[node name="Lvl" type="Label" parent="."]
+visible = false
 layout_mode = 0
-offset_left = 54.0
 offset_top = 18.0
-offset_right = 125.0
+offset_right = 71.0
 offset_bottom = 56.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = SubResource("SystemFont_85ybg")
+theme_override_font_sizes/font_size = 16
+text = "10"
+vertical_alignment = 1
+
+[node name="Cost" type="Label" parent="."]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 20.0
+offset_right = 119.0
+offset_bottom = 58.0
+theme_override_colors/font_color = Color(1, 1, 1, 0.878431)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 2
 theme_override_fonts/font = SubResource("SystemFont_85ybg")
 theme_override_font_sizes/font_size = 25

@@ -1,0 +1,32 @@
+{
+	"Tree 1": {
+		"loc": "Season of Nesting",
+		"tree": [
+			[
+				"",
+				"seas/icons/Nesting;1;c",
+				""
+			]
+		]
+	},
+	"Tree 2": {
+		"loc": "Season of Nesting",
+		"tree": [
+			[
+				"",
+				"seas/icons/Nesting;2;c",
+				""
+			]
+		]
+	},
+	"Tree 3": {
+		"loc": "Season of Nesting",
+		"tree": [
+			[
+				"",
+				"seas/icons/Nesting;3;c",
+				""
+			]
+		]
+	}
+}

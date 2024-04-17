@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=3 uid="uid://b04gr0a605mxh"]
+[gd_scene load_steps=69 format=3 uid="uid://b04gr0a605mxh"]
 
 [ext_resource type="PackedScene" uid="uid://bap3aptv3y1dw" path="res://collapsible.tscn" id="1_au16a"]
 [ext_resource type="Theme" uid="uid://cqobwtkqodo0r" path="res://white.tres" id="1_q23n0"]
@@ -36,15 +36,19 @@
 [ext_resource type="Texture2D" uid="uid://c5eblgnrna6cu" path="res://icons/seas/icons/Dreams.bmp" id="31_yldyr"]
 [ext_resource type="Texture2D" uid="uid://d3c1jcvc67ar" path="res://icons/days/love/ticket.bmp" id="32_wcu0u"]
 [ext_resource type="Script" path="res://Settings.gd" id="33_lxqsm"]
-[ext_resource type="Texture2D" uid="uid://bbt82offu7h1y" path="res://icons/days/nature/2.bmp" id="34_s5eab"]
 [ext_resource type="Texture2D" uid="uid://bail2enqosi6a" path="res://icons/days/color/ticket.bmp" id="35_cfc5u"]
 [ext_resource type="Texture2D" uid="uid://bmqhlm8yrqp50" path="res://icons/days/music/ticket.bmp" id="36_1y5ba"]
 [ext_resource type="Texture2D" uid="uid://lfy6cc5fa5oq" path="res://icons/days/anni/ticket.bmp" id="37_ed684"]
 [ext_resource type="Texture2D" uid="uid://gxaapv7s27rb" path="res://icons/days/bloom/ticket.bmp" id="37_qrfhd"]
+[ext_resource type="Texture2D" uid="uid://2lpc3vlgxdof" path="res://icons/days/nature/ticket.bmp" id="38_skdn8"]
 [ext_resource type="Texture2D" uid="uid://b1djesdabyowf" path="res://icons/days/sun/ticket.bmp" id="38_vr5fi"]
 [ext_resource type="Texture2D" uid="uid://vwvmnewmw88u" path="res://icons/days/style/ticket.bmp" id="39_tqryg"]
 [ext_resource type="Texture2D" uid="uid://hpw58k7uldig" path="res://icons/days/mischief/ticket.bmp" id="40_kgaw0"]
 [ext_resource type="Texture2D" uid="uid://b8pu7d5lhcslv" path="res://icons/days/feast/ticket.bmp" id="41_g5vtc"]
+[ext_resource type="Texture2D" uid="uid://lg2iq3wnkjjc" path="res://icons/days/cinna/ticket.bmp" id="45_o2joq"]
+[ext_resource type="Script" path="res://Challenges.gd" id="45_pwys4"]
+[ext_resource type="Script" path="res://Shops.gd" id="48_w7h55"]
+[ext_resource type="PackedScene" uid="uid://by0a01v0nq2t0" path="res://shop_button.tscn" id="49_eg0qa"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dqtfa"]
 content_margin_left = 4.0
@@ -186,6 +190,8 @@ _data = {
 "RESET": SubResource("Animation_h7fm0"),
 "rainbow": SubResource("Animation_6hqhi")
 }
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_buw5i"]
 
 [node name="Main" type="Control"]
 self_modulate = Color(1, 0, 0, 1)
@@ -2148,41 +2154,41 @@ text = "% by
 Purchase"
 horizontal_alignment = 1
 
-[node name="Yearly Events" parent="Tabs/Stats/Margin/VBox" instance=ExtResource("1_au16a")]
+[node name="Events" parent="Tabs/Stats/Margin/VBox" instance=ExtResource("1_au16a")]
 layout_mode = 2
 
-[node name="Titles" type="GridContainer" parent="Tabs/Stats/Margin/VBox/Yearly Events"]
+[node name="Titles" type="GridContainer" parent="Tabs/Stats/Margin/VBox/Events"]
 layout_mode = 2
 columns = 6
 
-[node name="Event" type="Label" parent="Tabs/Stats/Margin/VBox/Yearly Events/Titles"]
+[node name="Event" type="Label" parent="Tabs/Stats/Margin/VBox/Events/Titles"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.0
 theme_override_font_sizes/font_size = 16
 
-[node name="c" type="Label" parent="Tabs/Stats/Margin/VBox/Yearly Events/Titles"]
+[node name="c" type="Label" parent="Tabs/Stats/Margin/VBox/Events/Titles"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "Candles"
 horizontal_alignment = 1
 
-[node name="h" type="Label" parent="Tabs/Stats/Margin/VBox/Yearly Events/Titles"]
+[node name="h" type="Label" parent="Tabs/Stats/Margin/VBox/Events/Titles"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "Hearts"
 horizontal_alignment = 1
 
-[node name="k" type="Label" parent="Tabs/Stats/Margin/VBox/Yearly Events/Titles"]
+[node name="k" type="Label" parent="Tabs/Stats/Margin/VBox/Events/Titles"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "Tickets"
 horizontal_alignment = 1
 
-[node name="By Currency" type="Label" parent="Tabs/Stats/Margin/VBox/Yearly Events/Titles"]
+[node name="By Currency" type="Label" parent="Tabs/Stats/Margin/VBox/Events/Titles"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
@@ -2190,7 +2196,7 @@ text = "% by
 Currency"
 horizontal_alignment = 1
 
-[node name="By Purchase" type="Label" parent="Tabs/Stats/Margin/VBox/Yearly Events/Titles"]
+[node name="By Purchase" type="Label" parent="Tabs/Stats/Margin/VBox/Events/Titles"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
@@ -2539,6 +2545,83 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "0"
+horizontal_alignment = 1
+
+[node name="IGC Shops" parent="Tabs/Stats/Margin/VBox" instance=ExtResource("1_au16a")]
+layout_mode = 2
+
+[node name="Titles" type="GridContainer" parent="Tabs/Stats/Margin/VBox/IGC Shops"]
+layout_mode = 2
+columns = 6
+
+[node name="Shop" type="Label" parent="Tabs/Stats/Margin/VBox/IGC Shops/Titles"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+theme_override_font_sizes/font_size = 16
+
+[node name="c" type="Label" parent="Tabs/Stats/Margin/VBox/IGC Shops/Titles"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Candles"
+horizontal_alignment = 1
+
+[node name="h" type="Label" parent="Tabs/Stats/Margin/VBox/IGC Shops/Titles"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Hearts"
+horizontal_alignment = 1
+
+[node name="a" type="Label" parent="Tabs/Stats/Margin/VBox/IGC Shops/Titles"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Ascended"
+horizontal_alignment = 1
+
+[node name="By Currency" type="Label" parent="Tabs/Stats/Margin/VBox/IGC Shops/Titles"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "% by
+Currency"
+horizontal_alignment = 1
+
+[node name="By Purchase" type="Label" parent="Tabs/Stats/Margin/VBox/IGC Shops/Titles"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "% by
+Purchase"
+horizontal_alignment = 1
+
+[node name="IAP Shops" parent="Tabs/Stats/Margin/VBox" instance=ExtResource("1_au16a")]
+layout_mode = 2
+
+[node name="Titles" type="GridContainer" parent="Tabs/Stats/Margin/VBox/IAP Shops"]
+layout_mode = 2
+columns = 3
+
+[node name="Section" type="Label" parent="Tabs/Stats/Margin/VBox/IAP Shops/Titles"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+theme_override_font_sizes/font_size = 16
+
+[node name="Bought" type="Label" parent="Tabs/Stats/Margin/VBox/IAP Shops/Titles"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "# Bought"
+horizontal_alignment = 1
+
+[node name="Spent" type="Label" parent="Tabs/Stats/Margin/VBox/IAP Shops/Titles"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "$ Spent"
 horizontal_alignment = 1
 
 [node name="Planning" type="ScrollContainer" parent="Tabs"]
@@ -2894,6 +2977,7 @@ dialog_autowrap = true
 visible = false
 layout_mode = 2
 size_flags_vertical = 3
+focus_mode = 2
 horizontal_scroll_mode = 0
 
 [node name="Margin" type="MarginContainer" parent="Tabs/Current Season"]
@@ -2911,9 +2995,17 @@ size_flags_horizontal = 3
 script = ExtResource("2_6cr1o")
 
 [node name="Banner" type="TextureRect" parent="Tabs/Current Season/Margin/VBox"]
+visible = false
 layout_mode = 2
 texture = ExtResource("8_npf6d")
 expand_mode = 5
+
+[node name="Banner2" type="Label" parent="Tabs/Current Season/Margin/VBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 42
+text = "Season of Nesting"
+horizontal_alignment = 1
 
 [node name="Time" type="HBoxContainer" parent="Tabs/Current Season/Margin/VBox"]
 layout_mode = 2
@@ -4788,11 +4880,11 @@ theme_override_font_sizes/font_size = 16
 text = "Check out this Sky Shards App by Plutoy for more."
 uri = "https://sky-shards.pages.dev/"
 
-[node name="Yearly Events" type="ScrollContainer" parent="Tabs"]
+[node name="Events" type="ScrollContainer" parent="Tabs"]
 visible = false
 layout_mode = 2
 
-[node name="Margin" type="MarginContainer" parent="Tabs/Yearly Events"]
+[node name="Margin" type="MarginContainer" parent="Tabs/Events"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -4801,11 +4893,11 @@ theme_override_constants/margin_top = 24
 theme_override_constants/margin_right = 24
 theme_override_constants/margin_bottom = 24
 
-[node name="VBox" type="VBoxContainer" parent="Tabs/Yearly Events/Margin"]
+[node name="VBox" type="VBoxContainer" parent="Tabs/Events/Margin"]
 layout_mode = 2
 script = ExtResource("30_j03mp")
 
-[node name="active" type="Button" parent="Tabs/Yearly Events/Margin/VBox"]
+[node name="active" type="Button" parent="Tabs/Events/Margin/VBox"]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
@@ -4820,199 +4912,295 @@ icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="No" type="Label" parent="Tabs/Yearly Events/Margin/VBox"]
+[node name="No" type="Label" parent="Tabs/Events/Margin/VBox"]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 24
-text = "There isn't a Days of-event currently going on."
+text = "There isn't an event currently going on."
 horizontal_alignment = 1
 autowrap_mode = 3
 
-[node name="Time" type="HBoxContainer" parent="Tabs/Yearly Events/Margin/VBox"]
+[node name="Time" type="HBoxContainer" parent="Tabs/Events/Margin/VBox"]
 layout_mode = 2
 
-[node name="Start" type="Label" parent="Tabs/Yearly Events/Margin/VBox/Time"]
+[node name="Start" type="Label" parent="Tabs/Events/Margin/VBox/Time"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 20
 text = "January 1st, 2024"
 horizontal_alignment = 2
 
-[node name="Label" type="Label" parent="Tabs/Yearly Events/Margin/VBox/Time"]
+[node name="Label" type="Label" parent="Tabs/Events/Margin/VBox/Time"]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 20
 text = " - "
 horizontal_alignment = 1
 
-[node name="End" type="Label" parent="Tabs/Yearly Events/Margin/VBox/Time"]
+[node name="End" type="Label" parent="Tabs/Events/Margin/VBox/Time"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 20
 text = "January 15th, 2024"
 
-[node name="Days" type="Label" parent="Tabs/Yearly Events/Margin/VBox"]
+[node name="Days" type="Label" parent="Tabs/Events/Margin/VBox"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 20
 text = "43"
 horizontal_alignment = 1
 
-[node name="Per Day" type="Label" parent="Tabs/Yearly Events/Margin/VBox"]
+[node name="Per Day" type="Label" parent="Tabs/Events/Margin/VBox"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 20
 text = "Tickets collectable per day: 5"
 horizontal_alignment = 1
 
-[node name="place3" type="Label" parent="Tabs/Yearly Events/Margin/VBox"]
+[node name="place3" type="Label" parent="Tabs/Events/Margin/VBox"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 6
 horizontal_alignment = 1
 
-[node name="Events1" type="HBoxContainer" parent="Tabs/Yearly Events/Margin/VBox"]
-custom_minimum_size = Vector2(0, 100)
+[node name="Events" parent="Tabs/Events/Margin/VBox" instance=ExtResource("1_au16a")]
 layout_mode = 2
 
-[node name="fortune" type="Button" parent="Tabs/Yearly Events/Margin/VBox/Events1"]
+[node name="Events" type="GridContainer" parent="Tabs/Events/Margin/VBox/Events"]
+layout_mode = 2
+columns = 6
+
+[node name="fortune" type="Button" parent="Tabs/Events/Margin/VBox/Events/Events"]
+custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
 toggle_mode = true
-text = "Days of Fortune"
+text = "Days of
+Fortune"
 icon = ExtResource("31_vcuki")
 icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="love" type="Button" parent="Tabs/Yearly Events/Margin/VBox/Events1"]
+[node name="love" type="Button" parent="Tabs/Events/Margin/VBox/Events/Events"]
+custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
 toggle_mode = true
-text = "Days of Love"
+text = "Days of
+Love"
 icon = ExtResource("32_wcu0u")
 icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="bloom" type="Button" parent="Tabs/Yearly Events/Margin/VBox/Events1"]
+[node name="bloom" type="Button" parent="Tabs/Events/Margin/VBox/Events/Events"]
+custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
 toggle_mode = true
-text = "Days of Bloom"
+text = "Days of
+Bloom"
 icon = ExtResource("37_qrfhd")
 icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="nature" type="Button" parent="Tabs/Yearly Events/Margin/VBox/Events1"]
+[node name="nature" type="Button" parent="Tabs/Events/Margin/VBox/Events/Events"]
+custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
 toggle_mode = true
-text = "Days of Nature"
-icon = ExtResource("34_s5eab")
+text = "Days of
+Nature"
+icon = ExtResource("38_skdn8")
 icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="color" type="Button" parent="Tabs/Yearly Events/Margin/VBox/Events1"]
+[node name="color" type="Button" parent="Tabs/Events/Margin/VBox/Events/Events"]
+custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
 toggle_mode = true
-text = "Days of Color"
+text = "Days of
+Color"
 icon = ExtResource("35_cfc5u")
 icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="music" type="Button" parent="Tabs/Yearly Events/Margin/VBox/Events1"]
+[node name="music" type="Button" parent="Tabs/Events/Margin/VBox/Events/Events"]
+custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
 toggle_mode = true
-text = "Days of Music"
+text = "Days of
+Music"
 icon = ExtResource("36_1y5ba")
 icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="Events2" type="HBoxContainer" parent="Tabs/Yearly Events/Margin/VBox"]
+[node name="anni" type="Button" parent="Tabs/Events/Margin/VBox/Events/Events"]
 custom_minimum_size = Vector2(0, 100)
-layout_mode = 2
-
-[node name="anni" type="Button" parent="Tabs/Yearly Events/Margin/VBox/Events2"]
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
 toggle_mode = true
-text = "Sky Anniversary"
+text = "Sky
+Anniversary"
 icon = ExtResource("37_ed684")
 icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="sun" type="Button" parent="Tabs/Yearly Events/Margin/VBox/Events2"]
+[node name="sun" type="Button" parent="Tabs/Events/Margin/VBox/Events/Events"]
+custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
 toggle_mode = true
-text = "Days of Sunlight
+text = "Days of
+Sunlight
 "
 icon = ExtResource("38_vr5fi")
 icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="style" type="Button" parent="Tabs/Yearly Events/Margin/VBox/Events2"]
+[node name="style" type="Button" parent="Tabs/Events/Margin/VBox/Events/Events"]
+custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
 toggle_mode = true
-text = "Days of Style
+text = "Days of
+Style
 "
 icon = ExtResource("39_tqryg")
 icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="mischief" type="Button" parent="Tabs/Yearly Events/Margin/VBox/Events2"]
+[node name="mischief" type="Button" parent="Tabs/Events/Margin/VBox/Events/Events"]
+custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
 toggle_mode = true
-text = "Days of Mischief
+text = "Days of
+Mischief
 "
 icon = ExtResource("40_kgaw0")
 icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="feast" type="Button" parent="Tabs/Yearly Events/Margin/VBox/Events2"]
+[node name="feast" type="Button" parent="Tabs/Events/Margin/VBox/Events/Events"]
+custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
 toggle_mode = true
-text = "Days of Feast
+text = "Days of
+Feast
 "
 icon = ExtResource("41_g5vtc")
 icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="place2" type="Label" parent="Tabs/Yearly Events/Margin/VBox"]
+[node name="cinna" type="Button" parent="Tabs/Events/Margin/VBox/Events/Events"]
+visible = false
+custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
-theme_override_font_sizes/font_size = 20
+size_flags_horizontal = 3
+focus_mode = 0
+toggle_mode = true
+text = "Sky x
+Cinnamoroll
+"
+icon = ExtResource("45_o2joq")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
+[node name="place2" type="Label" parent="Tabs/Events/Margin/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 6
 horizontal_alignment = 1
 
-[node name="Tree" parent="Tabs/Yearly Events/Margin/VBox" instance=ExtResource("4_t1mtd")]
+[node name="Tree" parent="Tabs/Events/Margin/VBox" instance=ExtResource("4_t1mtd")]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 1
+
+[node name="Shop Purchases" type="ScrollContainer" parent="Tabs"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="Margin" type="MarginContainer" parent="Tabs/Shop Purchases"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBox" type="VBoxContainer" parent="Tabs/Shop Purchases/Margin"]
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("48_w7h55")
+
+[node name="Main" type="HBoxContainer" parent="Tabs/Shop Purchases/Margin/VBox"]
+layout_mode = 2
+
+[node name="Collapse" type="Button" parent="Tabs/Shop Purchases/Margin/VBox/Main"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Collapse All"
+
+[node name="Expand" type="Button" parent="Tabs/Shop Purchases/Margin/VBox/Main"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Expand All"
+
+[node name="Shop" parent="Tabs/Shop Purchases/Margin/VBox" instance=ExtResource("1_au16a")]
+layout_mode = 2
+
+[node name="Desc" type="Label" parent="Tabs/Shop Purchases/Margin/VBox/Shop"]
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Purchases" type="HFlowContainer" parent="Tabs/Shop Purchases/Margin/VBox/Shop"]
+layout_mode = 2
+theme_override_constants/h_separation = 1
+theme_override_constants/v_separation = 1
+alignment = 1
+
+[node name="Join" type="HBoxContainer" parent="Tabs/Shop Purchases/Margin/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Btn" parent="Tabs/Shop Purchases/Margin/VBox" instance=ExtResource("49_eg0qa")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+iconValue = "base/Q"
+type = "$"
 
 [node name="Settings" type="ScrollContainer" parent="Tabs"]
 visible = false
@@ -5176,6 +5364,59 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
+[node name="Nesting Challenges" type="ScrollContainer" parent="."]
+visible = false
+layout_mode = 2
+offset_right = 472.0
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="Margin" type="MarginContainer" parent="Nesting Challenges"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBox" type="VBoxContainer" parent="Nesting Challenges/Margin"]
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("45_pwys4")
+
+[node name="Nav" type="HBoxContainer" parent="Nesting Challenges/Margin/VBox"]
+layout_mode = 2
+
+[node name="1" type="Button" parent="Nesting Challenges/Margin/VBox/Nav"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+toggle_mode = true
+button_pressed = true
+button_group = SubResource("ButtonGroup_buw5i")
+text = "Tree 1"
+
+[node name="2" type="Button" parent="Nesting Challenges/Margin/VBox/Nav"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+toggle_mode = true
+button_group = SubResource("ButtonGroup_buw5i")
+text = "Tree 2"
+
+[node name="3" type="Button" parent="Nesting Challenges/Margin/VBox/Nav"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+toggle_mode = true
+button_group = SubResource("ButtonGroup_buw5i")
+text = "Tree 3"
+
+[node name="Tree" parent="Nesting Challenges/Margin/VBox" instance=ExtResource("4_t1mtd")]
+layout_mode = 2
+size_flags_horizontal = 1
+
 [connection signal="tree_entered" from="." to="." method="_on_tree_entered"]
 [connection signal="tab_changed" from="Tabs" to="." method="_on_tabs_tab_changed"]
 [connection signal="pressed" from="Tabs/Home/Margin/VBox/SaveLoad/Save" to="." method="_on_save_pressed"]
@@ -5206,13 +5447,18 @@ autowrap_mode = 3
 [connection signal="pressed" from="Tabs/Winged Light Tracker/Margin/VBox/Main/Expand" to="Tabs/Winged Light Tracker/Margin/VBox" method="_on_expand_pressed"]
 [connection signal="pressed" from="Tabs/Winged Light Tracker/Margin/VBox/Main/Check" to="Tabs/Winged Light Tracker/Margin/VBox" method="_on_check_pressed"]
 [connection signal="pressed" from="Tabs/Winged Light Tracker/Margin/VBox/Main/Uncheck" to="Tabs/Winged Light Tracker/Margin/VBox" method="_on_uncheck_pressed"]
-[connection signal="bought" from="Tabs/Yearly Events/Margin/VBox/Tree" to="Tabs/Yearly Events/Margin/VBox" method="_on_tree_bought"]
-[connection signal="planClear" from="Tabs/Yearly Events/Margin/VBox/Tree" to="Tabs/Yearly Events/Margin/VBox" method="_on_tree_plan_clear"]
-[connection signal="planned" from="Tabs/Yearly Events/Margin/VBox/Tree" to="Tabs/Yearly Events/Margin/VBox" method="_on_tree_planned"]
-[connection signal="reject" from="Tabs/Yearly Events/Margin/VBox/Tree" to="Tabs/Yearly Events/Margin/VBox" method="_on_tree_reject"]
-[connection signal="treeClear" from="Tabs/Yearly Events/Margin/VBox/Tree" to="Tabs/Yearly Events/Margin/VBox" method="_on_clear"]
+[connection signal="bought" from="Tabs/Events/Margin/VBox/Tree" to="Tabs/Events/Margin/VBox" method="_on_tree_bought"]
+[connection signal="planClear" from="Tabs/Events/Margin/VBox/Tree" to="Tabs/Events/Margin/VBox" method="_on_tree_plan_clear"]
+[connection signal="planned" from="Tabs/Events/Margin/VBox/Tree" to="Tabs/Events/Margin/VBox" method="_on_tree_planned"]
+[connection signal="reject" from="Tabs/Events/Margin/VBox/Tree" to="Tabs/Events/Margin/VBox" method="_on_tree_reject"]
+[connection signal="treeClear" from="Tabs/Events/Margin/VBox/Tree" to="Tabs/Events/Margin/VBox" method="_on_clear"]
 [connection signal="toggled" from="Tabs/Settings/Margin/VBox/Short" to="Tabs/Settings/Margin/VBox" method="_on_short_toggled"]
 [connection signal="toggled" from="Tabs/Settings/Margin/VBox/Spoilers" to="Tabs/Settings/Margin/VBox" method="_on_spoilers_toggled"]
 [connection signal="toggled" from="Tabs/Settings/Margin/VBox/Time" to="Tabs/Settings/Margin/VBox" method="_on_time_toggled"]
 [connection signal="toggled" from="Tabs/Settings/Margin/VBox/Close" to="Tabs/Settings/Margin/VBox" method="_on_close_toggled"]
 [connection signal="toggled" from="Tabs/Settings/Margin/VBox/Save" to="Tabs/Settings/Margin/VBox" method="_on_save_toggled"]
+[connection signal="bought" from="Nesting Challenges/Margin/VBox/Tree" to="Nesting Challenges/Margin/VBox" method="_on_tree_bought"]
+[connection signal="planClear" from="Nesting Challenges/Margin/VBox/Tree" to="Nesting Challenges/Margin/VBox" method="_on_tree_plan_clear"]
+[connection signal="planned" from="Nesting Challenges/Margin/VBox/Tree" to="Nesting Challenges/Margin/VBox" method="_on_tree_planned"]
+[connection signal="reject" from="Nesting Challenges/Margin/VBox/Tree" to="Nesting Challenges/Margin/VBox" method="_on_tree_reject"]
+[connection signal="treeClear" from="Nesting Challenges/Margin/VBox/Tree" to="Nesting Challenges/Margin/VBox" method="_on_clear"]
