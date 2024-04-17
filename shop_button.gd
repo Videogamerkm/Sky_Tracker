@@ -6,6 +6,7 @@ extends Panel
 @export var cost = "10"
 @export var hideL = false
 @export var hideR = false
+var hideCost = false
 signal pressed(press)
 
 func _ready():
@@ -36,7 +37,7 @@ func _on_btn_toggled(press):
 	if press:
 		$Curr.hide()
 		$Cost.hide()
-	elif type != "0":
+	elif type != "0" and not hideCost:
 		$Curr.show()
 		$Cost.show()
 	pressed.emit(press)
@@ -46,3 +47,8 @@ func is_pressed():
 
 func set_pressed(press):
 	$Btn.set_pressed(press)
+
+func toggle_cost(toggle):
+	hideCost = toggle
+	if hideCost: $Cost.hide()
+	elif type != "0": $Cost.show()

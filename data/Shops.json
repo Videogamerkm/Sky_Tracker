@@ -185,7 +185,11 @@
 			"shops/event/aurora 8;6.99;$",
 			["shops/event/9cd 1;14.99;$",
 			"shops/event/9cd 2;0;0"],
-			"shops/event/9cd 3;19.99;$"
+			"shops/event/9cd 3;19.99;$",
+			"shops/event/anni 1;0;0",
+			"shops/event/anni 2;0;0",
+			"shops/event/anni 3;0;0",
+			"shops/event/anni 4;0;0"
 		]
 	}
 }
