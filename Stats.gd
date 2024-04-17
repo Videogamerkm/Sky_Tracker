@@ -50,6 +50,30 @@ func _ready():
 			var new_row = $Events/Titles.get_child(i).duplicate()
 			new_row.name += " "+s
 			$Events/Titles.add_child(new_row)
+	if not Global.shopTab.is_node_ready(): await Global.shopTab.ready
+	for s in Global.shopTab.rows:
+		if s.contains("IAP"):
+			for i in range(0,3):
+				var cell = $"IAP Shops/Titles".get_child(i).duplicate()
+				cell.name += " "+s
+				$"IAP Shops/Titles".add_child(cell)
+		else:
+			for i in range(0,6):
+				var cell = $"IGC Shops/Titles".get_child(i).duplicate()
+				cell.name += " "+s
+				$"IGC Shops/Titles".add_child(cell)
+	for i in range(0,3): $"IAP Shops/Titles".add_child(HSeparator.new())
+	for i in range(0,3):
+		var cell = $"IAP Shops/Titles".get_child(i).duplicate()
+		cell.name += " Total"
+		cell.add_theme_font_size_override("font_size",20)
+		$"IAP Shops/Titles".add_child(cell)
+	for i in range(0,6):$"IGC Shops/Titles".add_child(HSeparator.new())
+	for i in range(0,6):
+		var cell = $"IGC Shops/Titles".get_child(i).duplicate()
+		cell.name += " Total"
+		cell.add_theme_font_size_override("font_size",20)
+		$"IGC Shops/Titles".add_child(cell)
 	for b in get_all_acc_btns(self):
 		if b.name == "Expand": b.connect("pressed",accordion.bind(b.get_parent().get_parent(),true))
 		elif b.name == "Collapse": b.connect("pressed",accordion.bind(b.get_parent().get_parent(),false))
@@ -325,6 +349,60 @@ func set_values():
 	var w = 0
 	while light_coll + reg_coll + seas_coll >= wedges[w]: w += 1
 	$"Winged Light/Wings".text = "You should have "+str(w)+" cape wedges."
+	
+	# Shops
+	var totals = {"c":0,"h":0,"a":0,"curr":0,"n":0,"b":0,"iapB":0,"iapN":0,"$":0.0,"$Tot":0.0}
+	for s in Global.shopTab.rows:
+		var count = {"c":0,"h":0,"a":0,"curr":0,"n":0,"b":0,"$":0,"0":0}
+		for i in Global.shopTab.rows[s]["items"]:
+			if i is String:
+				count["n"] += 1
+				var split = i.split(";")
+				count["curr"] += float(split[1])
+				if not Global.shopTab.bought.has(s) or not Global.shopTab.bought[s].has(split[0]):
+					count[split[2]] += float(split[1])
+					count["b"] += 1
+			else:
+				for sub in i:
+					var split = sub.split(";")
+					if split[1] == "0": continue
+					count["n"] += 1
+					count["curr"] += float(split[1])
+					if not Global.shopTab.bought.has(s) or not Global.shopTab.bought[s].has(split[0]):
+						count[split[2]] += float(split[1])
+						count["b"] += 1
+		for k in count:
+			if k == "0": continue
+			elif s.contains("IAP") and k == "curr": totals["$Tot"] += count[k]
+			elif s.contains("IAP") and k == "n": totals["iapN"] += count[k]
+			elif s.contains("IAP") and k == "b": totals["iapB"] += count[k]
+			else: totals[k] += count[k]
+		if s.contains("IAP"):
+			$"IAP Shops/Titles".get_node("Section "+s).text = s
+			$"IAP Shops/Titles".get_node("Bought "+s).text = str(count["n"]-count["b"])
+			var strng = "%.2f" % [count["curr"]-count["$"]]
+			if strng.length() > 6: strng = strng.substr(0,strng.length()-6)+","+strng.substr(1)
+			$"IAP Shops/Titles".get_node("Spent "+s).text = strng
+		else:
+			$"IGC Shops/Titles".get_node("Shop "+s).text = s
+			$"IGC Shops/Titles".get_node("c "+s).text = str(count["c"])
+			$"IGC Shops/Titles".get_node("h "+s).text = str(count["h"])
+			$"IGC Shops/Titles".get_node("a "+s).text = str(count["a"])
+			var add = count["curr"] - (count["c"] + count["h"] + count["a"])
+			$"IGC Shops/Titles".get_node("By Currency "+s).text = str(floor(add*100.0/count["curr"]))
+			$"IGC Shops/Titles".get_node("By Purchase "+s).text = str(floor((count["n"]-count["b"])*100.0/count["n"]))
+	$"IGC Shops/Titles".get_node("Shop Total").text = "Total"
+	$"IGC Shops/Titles".get_node("c Total").text = str(totals["c"])
+	$"IGC Shops/Titles".get_node("h Total").text = str(totals["h"])
+	$"IGC Shops/Titles".get_node("a Total").text = str(totals["a"])
+	var add = totals["curr"] - (totals["c"] + totals["h"] + totals["a"])
+	$"IGC Shops/Titles".get_node("By Currency Total").text = str(floor(add*100.0/totals["curr"]))
+	$"IGC Shops/Titles".get_node("By Purchase Total").text = str(floor((totals["n"]-totals["b"])*100.0/totals["n"]))
+	$"IAP Shops/Titles".get_node("Section Total").text = "Total"
+	$"IAP Shops/Titles".get_node("Bought Total").text = str(totals["iapN"]-totals["iapB"])
+	var strng = "%.2f" % [totals["$Tot"]-totals["$"]]
+	if strng.length() > 6: strng = strng.substr(0,strng.length()-6)+","+strng.substr(1)
+	$"IAP Shops/Titles".get_node("Spent Total").text = strng
 
 func accordion(parent,expand):
 	for c in parent.get_children():

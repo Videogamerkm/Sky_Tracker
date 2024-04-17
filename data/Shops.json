@@ -1,0 +1,191 @@
+{
+	"Pile of Companion Cubes": {
+		"desc": "Find the pile in the Aviary Event Store while on PC.",
+		"items": [
+			"shops/cube;50;c"
+		]
+	},
+	"Nesting Workshop": {
+		"desc": "These items rotate every week and are displayed on either side of the main door to the shop.",
+		"items": [
+			"shops/nest/stone 1;0;0",
+			"shops/nest/stone 2;32;c",
+			"shops/nest/stone 3;35;a",
+			"shops/nest/stone 4;88;c",
+			"shops/nest/stone 5;24;h"
+		]
+	},
+	"Days of Fortune IAPs": {
+		"desc": "Available every year during Days of Fortune.",
+		"items": [
+			"shops/days/fortune 1;0.99;$",
+			"shops/days/fortune 2;9.99;$",
+			["shops/days/fortune 3;24.99;$",
+			"shops/days/fortune 4;0;0",
+			"shops/days/fortune 5;0;0"],
+			"shops/days/fortune 6;1.99;$",
+			["shops/days/fortune 7;19.99;$",
+			"shops/days/fortune 8;0;0"],
+			"shops/days/fortune 9;9.99;$",
+			"shops/days/fortune 10;14.99;$",
+			"shops/days/fortune 11;1.99;$",
+			"shops/days/fortune 12;14.99;$",
+			"shops/days/fortune 13;9.99;$"
+		]
+	},
+	"Days of Love IAPs": {
+		"desc": "Available every year during Days of Love.",
+		"items": [
+			"shops/days/love 1;19.99;$",
+			"shops/days/love 2;19.99;$",
+			"shops/days/love 3;19.99;$",
+			"shops/days/love 4;14.99;$",
+			"shops/days/love 5;4.99;$",
+			"shops/days/love 6;17.99;$"
+		]
+	},
+	"Days of Bloom IAPs": {
+		"desc": "Available every year during Days of Bloom.",
+		"items": [
+			"shops/days/bloom 1;19.99;$",
+			"shops/days/bloom 2;19.99;$",
+			"shops/days/bloom 3;9.99;$",
+			"shops/days/bloom 4;19.99;$",
+			"shops/days/bloom 5;14.99;$"
+		]
+	},
+	"Days of Nature IAPs": {
+		"desc": "Available every year during Days of Nature.",
+		"items": [
+			"shops/days/nature 1;4.99;$",
+			"shops/days/nature 2;1.99;$",
+			"shops/days/nature 3;14.99;$",
+			"shops/days/nature 4;19.99;$",
+			"shops/days/nature 5;14.99;$",
+			"shops/days/nature 6;19.99;$",
+			"shops/days/nature 7;4.99;$"
+		]
+	},
+	"Days of Color IAPs": {
+		"desc": "Available every year during Days of Color.",
+		"items": [
+			"shops/days/color 1;19.99;$",
+			"shops/days/color 2;9.99;$",
+			"shops/days/color 3;9.99;$",
+			"shops/days/color 4;2.99;$",
+			"shops/days/color 5;9.99;$",
+			"shops/days/color 6;9.99;$",
+			"shops/days/color 7;14.99;$"
+		]
+	},
+	"Sky Anniversary IAPs": {
+		"desc": "Available every year during the Sky Anniversary event.",
+		"items": [
+			"shops/days/anni 1;9.99;$",
+		]
+	},
+	"Days of Sunlight IAPs": {
+		"desc": "Available every year during Days of Sunlight.",
+		"items": [
+			"shops/days/sun 1;19.99;$",
+			"shops/days/sun 2;2.99;$",
+			"shops/days/sun 3;0.99;$",
+			"shops/days/sun 4;19.99;$",
+			"shops/days/sun 5;19.99;$",
+			"shops/days/sun 6;2.99;$",
+			"shops/days/sun 7;9.99;$",
+			"shops/days/sun 8;14.99;$"
+		]
+	},
+	"Days of Style IAPs": {
+		"desc": "Available every year during Days of Style.",
+		"items": [
+			"shops/days/style 1;2.99;$",
+			"shops/days/style 2;4.99;$",
+			"shops/days/style 3;6.99;$",
+			"shops/days/style 4;9.99;$"
+		]
+	},
+	"Days of Mischief IAPs": {
+		"desc": "Available every year during Days of Mischief.",
+		"items": [
+			"shops/days/mischief 1;11.99;$",
+			"shops/days/mischief 2;17.99;$",
+			"shops/days/mischief 3;14.99;$",
+			"shops/days/mischief 4;9.99;$",
+			"shops/days/mischief 5;1.99;$",
+			"shops/days/mischief 6;4.99;$",
+			["shops/days/mischief 7;9.99;$",
+			"shops/days/mischief 8;0;0"],
+			"shops/days/mischief 9;9.99;$",
+			["shops/days/mischief 10;19.99;$",
+			"shops/days/mischief 11;0;0"],
+			"shops/days/mischief 12;9.99;$",
+			"shops/days/mischief 13;2.99;$",
+			"shops/days/mischief 14;14.99;$",
+			"shops/days/mischief 15;14.99;$",
+		]
+	},
+	"Days of Feast IAPs": {
+		"desc": "Available every year during Days of Feast.",
+		"items": [
+			"shops/days/feast 1;6.99;$",
+			"shops/days/feast 2;14.99;$",
+			"shops/days/feast 3;14.99;$",
+			"shops/days/feast 4;1.99;$",
+			"shops/days/feast 5;9.99;$",
+			"shops/days/feast 6;9.99;$",
+			"shops/days/feast 7;14.99;$",
+			"shops/days/feast 8;14.99;$",
+			"shops/days/feast 9;6.99;$",
+			"shops/days/feast 10;14.99;$",
+		]
+	},
+	"Permanent IAPs": {
+		"desc": "You can buy these at any time, and they usually come with bonus candles.",
+		"items": [
+			"shops/perm/start;4.99;$",
+			"shops/perm/founder;29.99;$",
+			"shops/perm/tgc guitar;29.99;$",
+			["shops/perm/journey 1;24.99;$",
+			"shops/perm/journey 2;0;0",
+			"shops/perm/journey 3;0;0"],
+			["shops/perm/nintendo 1;29.99;$",
+			"shops/perm/nintendo 2;0;0",
+			"shops/perm/nintendo 3;0;0",
+			"shops/perm/nintendo 4;0;0"],
+			"shops/perm/beta;0;0",
+			["shops/perm/moth 1;9.99;$",
+			"shops/perm/moth 2;0;0"],
+			["shops/perm/sparrow 1;9.99;$",
+			"shops/perm/sparrow 2;0;0"],
+			"shops/perm/harp;4.99;$",
+			"shops/perm/guitar;14.99;$",
+			"shops/perm/handpan;19.99;$",
+			"shops/perm/violin;19.99;$"
+		]
+	},
+	"One-Time Events or Seasonal IAPs": {
+		"desc": "These are IAPs that used to be available in the past, but aren't any more.",
+		"items": [
+			"shops/event/heal 1;19.99;$",
+			"shops/event/fox 1;14.99;$",
+			"shops/event/fox 2;9.99;$",
+			"shops/event/fox 3;24.99;$",
+			["shops/event/kizuna 1;19.99;$",
+			"shops/event/kizuna 2;0;0",
+			"shops/event/kizuna 3;0;0"],
+			"shops/event/aurora 1;4.99;$",
+			"shops/event/aurora 2;2.99;$",
+			"shops/event/aurora 3;9.99;$",
+			"shops/event/aurora 4;14.99;$",
+			"shops/event/aurora 5;9.99;$",
+			"shops/event/aurora 6;14.99;$",
+			"shops/event/aurora 7;24.99;$",
+			"shops/event/aurora 8;6.99;$",
+			["shops/event/9cd 1;14.99;$",
+			"shops/event/9cd 2;0;0"],
+			"shops/event/9cd 3;19.99;$"
+		]
+	}
+}

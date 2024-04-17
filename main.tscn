@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=3 uid="uid://b04gr0a605mxh"]
+[gd_scene load_steps=69 format=3 uid="uid://b04gr0a605mxh"]
 
 [ext_resource type="PackedScene" uid="uid://bap3aptv3y1dw" path="res://collapsible.tscn" id="1_au16a"]
 [ext_resource type="Theme" uid="uid://cqobwtkqodo0r" path="res://white.tres" id="1_q23n0"]
@@ -45,8 +45,10 @@
 [ext_resource type="Texture2D" uid="uid://vwvmnewmw88u" path="res://icons/days/style/ticket.bmp" id="39_tqryg"]
 [ext_resource type="Texture2D" uid="uid://hpw58k7uldig" path="res://icons/days/mischief/ticket.bmp" id="40_kgaw0"]
 [ext_resource type="Texture2D" uid="uid://b8pu7d5lhcslv" path="res://icons/days/feast/ticket.bmp" id="41_g5vtc"]
-[ext_resource type="Texture2D" uid="uid://dm0yhg7b6nan3" path="res://icons/days/cinna/ticket.bmp" id="45_o2joq"]
+[ext_resource type="Texture2D" uid="uid://lg2iq3wnkjjc" path="res://icons/days/cinna/ticket.bmp" id="45_o2joq"]
 [ext_resource type="Script" path="res://Challenges.gd" id="45_pwys4"]
+[ext_resource type="Script" path="res://Shops.gd" id="48_w7h55"]
+[ext_resource type="PackedScene" uid="uid://by0a01v0nq2t0" path="res://shop_button.tscn" id="49_eg0qa"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dqtfa"]
 content_margin_left = 4.0
@@ -2545,6 +2547,83 @@ theme_override_font_sizes/font_size = 16
 text = "0"
 horizontal_alignment = 1
 
+[node name="IGC Shops" parent="Tabs/Stats/Margin/VBox" instance=ExtResource("1_au16a")]
+layout_mode = 2
+
+[node name="Titles" type="GridContainer" parent="Tabs/Stats/Margin/VBox/IGC Shops"]
+layout_mode = 2
+columns = 6
+
+[node name="Shop" type="Label" parent="Tabs/Stats/Margin/VBox/IGC Shops/Titles"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+theme_override_font_sizes/font_size = 16
+
+[node name="c" type="Label" parent="Tabs/Stats/Margin/VBox/IGC Shops/Titles"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Candles"
+horizontal_alignment = 1
+
+[node name="h" type="Label" parent="Tabs/Stats/Margin/VBox/IGC Shops/Titles"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Hearts"
+horizontal_alignment = 1
+
+[node name="a" type="Label" parent="Tabs/Stats/Margin/VBox/IGC Shops/Titles"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Ascended"
+horizontal_alignment = 1
+
+[node name="By Currency" type="Label" parent="Tabs/Stats/Margin/VBox/IGC Shops/Titles"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "% by
+Currency"
+horizontal_alignment = 1
+
+[node name="By Purchase" type="Label" parent="Tabs/Stats/Margin/VBox/IGC Shops/Titles"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "% by
+Purchase"
+horizontal_alignment = 1
+
+[node name="IAP Shops" parent="Tabs/Stats/Margin/VBox" instance=ExtResource("1_au16a")]
+layout_mode = 2
+
+[node name="Titles" type="GridContainer" parent="Tabs/Stats/Margin/VBox/IAP Shops"]
+layout_mode = 2
+columns = 3
+
+[node name="Section" type="Label" parent="Tabs/Stats/Margin/VBox/IAP Shops/Titles"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+theme_override_font_sizes/font_size = 16
+
+[node name="Bought" type="Label" parent="Tabs/Stats/Margin/VBox/IAP Shops/Titles"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "# Bought"
+horizontal_alignment = 1
+
+[node name="Spent" type="Label" parent="Tabs/Stats/Margin/VBox/IAP Shops/Titles"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "$ Spent"
+horizontal_alignment = 1
+
 [node name="Planning" type="ScrollContainer" parent="Tabs"]
 visible = false
 layout_mode = 2
@@ -2898,6 +2977,7 @@ dialog_autowrap = true
 visible = false
 layout_mode = 2
 size_flags_vertical = 3
+focus_mode = 2
 horizontal_scroll_mode = 0
 
 [node name="Margin" type="MarginContainer" parent="Tabs/Current Season"]
@@ -5062,6 +5142,66 @@ visible = false
 layout_mode = 2
 size_flags_horizontal = 1
 
+[node name="Shop Purchases" type="ScrollContainer" parent="Tabs"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="Margin" type="MarginContainer" parent="Tabs/Shop Purchases"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBox" type="VBoxContainer" parent="Tabs/Shop Purchases/Margin"]
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("48_w7h55")
+
+[node name="Main" type="HBoxContainer" parent="Tabs/Shop Purchases/Margin/VBox"]
+layout_mode = 2
+
+[node name="Collapse" type="Button" parent="Tabs/Shop Purchases/Margin/VBox/Main"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Collapse All"
+
+[node name="Expand" type="Button" parent="Tabs/Shop Purchases/Margin/VBox/Main"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Expand All"
+
+[node name="Shop" parent="Tabs/Shop Purchases/Margin/VBox" instance=ExtResource("1_au16a")]
+layout_mode = 2
+
+[node name="Desc" type="Label" parent="Tabs/Shop Purchases/Margin/VBox/Shop"]
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Purchases" type="HFlowContainer" parent="Tabs/Shop Purchases/Margin/VBox/Shop"]
+layout_mode = 2
+theme_override_constants/h_separation = 1
+theme_override_constants/v_separation = 1
+alignment = 1
+
+[node name="Join" type="HBoxContainer" parent="Tabs/Shop Purchases/Margin/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Btn" parent="Tabs/Shop Purchases/Margin/VBox" instance=ExtResource("49_eg0qa")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+iconValue = "base/Q"
+type = "$"
+
 [node name="Settings" type="ScrollContainer" parent="Tabs"]
 visible = false
 layout_mode = 2
@@ -5276,26 +5416,6 @@ text = "Tree 3"
 [node name="Tree" parent="Nesting Challenges/Margin/VBox" instance=ExtResource("4_t1mtd")]
 layout_mode = 2
 size_flags_horizontal = 1
-
-[node name="In-App Puchases" type="ScrollContainer" parent="."]
-visible = false
-layout_mode = 2
-offset_right = 56.0
-size_flags_vertical = 3
-horizontal_scroll_mode = 0
-
-[node name="Margin" type="MarginContainer" parent="In-App Puchases"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_constants/margin_left = 24
-theme_override_constants/margin_top = 24
-theme_override_constants/margin_right = 24
-theme_override_constants/margin_bottom = 24
-
-[node name="VBox" type="VBoxContainer" parent="In-App Puchases/Margin"]
-layout_mode = 2
-size_flags_horizontal = 3
 
 [connection signal="tree_entered" from="." to="." method="_on_tree_entered"]
 [connection signal="tab_changed" from="Tabs" to="." method="_on_tabs_tab_changed"]

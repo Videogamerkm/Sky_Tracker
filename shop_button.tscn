@@ -1,0 +1,101 @@
+[gd_scene load_steps=8 format=3 uid="uid://by0a01v0nq2t0"]
+
+[ext_resource type="Script" path="res://shop_button.gd" id="1_fiylf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_demmi"]
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lp4yh"]
+bg_color = Color(0, 0, 0, 0.25098)
+border_color = Color(0.8, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t0p4p"]
+bg_color = Color(0.376471, 0.376471, 0.376471, 0.25098)
+border_color = Color(0.8, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y4l0e"]
+bg_color = Color(0, 0, 0, 0.376471)
+border_color = Color(0.8, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wsyai"]
+bg_color = Color(0, 0, 0, 0.25098)
+border_color = Color(0.8, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+
+[sub_resource type="SystemFont" id="SystemFont_85ybg"]
+subpixel_positioning = 0
+
+[node name="Left" type="Panel"]
+custom_minimum_size = Vector2(100, 100)
+offset_right = 100.0
+offset_bottom = 100.0
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_demmi")
+script = ExtResource("1_fiylf")
+
+[node name="Btn" type="Button" parent="."]
+show_behind_parent = true
+layout_mode = 2
+offset_left = 25.0
+offset_top = 25.0
+offset_right = 75.0
+offset_bottom = 75.0
+focus_mode = 0
+theme_override_colors/icon_normal_color = Color(0.666667, 0.666667, 0.666667, 1)
+theme_override_colors/icon_hover_color = Color(0.678431, 1, 0.678431, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_lp4yh")
+theme_override_styles/hover = SubResource("StyleBoxFlat_t0p4p")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_y4l0e")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_wsyai")
+toggle_mode = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Curr" type="TextureRect" parent="."]
+layout_mode = 2
+offset_left = 3.0
+offset_top = 72.0
+offset_right = 28.0
+offset_bottom = 97.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Cost" type="Label" parent="."]
+layout_mode = 2
+offset_left = 25.0
+offset_top = 62.0
+offset_right = 100.0
+offset_bottom = 100.0
+theme_override_colors/font_color = Color(1, 1, 1, 0.878431)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = SubResource("SystemFont_85ybg")
+theme_override_font_sizes/font_size = 21
+text = "100"
+vertical_alignment = 2
+
+[connection signal="toggled" from="Btn" to="." method="_on_btn_toggled"]
