@@ -36,6 +36,8 @@ func _ready():
 	shop.queue_free()
 	$Main/Collapse.connect("pressed",accordion.bind(self,false))
 	$Main/Expand.connect("pressed",accordion.bind(self,true))
+	set_bought()
+	toggle_money(Global.noMoney)
 
 func gen_item(section, item) -> Panel:
 	var newBtn = btn.duplicate()
@@ -56,7 +58,6 @@ func item_bought(press, section, item, node):
 				c.set_pressed(press)
 
 func set_bought():
-	if has_node("Btn"): await self.ready
 	for s in bought:
 		for c in get_node(s+"/Purchases").get_children():
 			if c is Panel:
@@ -64,6 +65,16 @@ func set_bought():
 			elif c is HBoxContainer:
 				for i in c.get_children():
 					if bought[s].has(i.iconValue): i.set_pressed(true)
+
+func toggle_money(toggle):
+	for s in rows:
+		for c in get_node(s+"/Purchases").get_children():
+			if c is Panel and c.type == "$":
+				c.toggle_cost(toggle)
+			elif c is HBoxContainer:
+				for i in c.get_children():
+					if i.type == "$":
+						i.toggle_cost(toggle)
 
 func accordion(parent,expand):
 	for c in parent.get_children():

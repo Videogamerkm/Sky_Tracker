@@ -43,6 +43,7 @@ func save(backup = true):
 	config.set_value("Options","twelve",Global.useTwelve)
 	config.set_value("Options","wait",Global.wait)
 	config.set_value("Options","saveClose",Global.saveClose)
+	config.set_value("Options","noMoney",Global.noMoney)
 	config.save(configFile)
 
 func _on_tree_entered():
@@ -55,6 +56,7 @@ func _on_tree_entered():
 		Global.useTwelve = config.get_value("Options","twelve",false)
 		Global.wait = config.get_value("Options","wait",true)
 		Global.saveClose = config.get_value("Options","saveClose",true)
+		Global.noMoney = config.get_value("Options","noMoney",false)
 	else: config.set_value("Current Save","file",saveFile)
 	Global.homeTab.get_node("File").text = "Current Save File: "+saveFile
 	load_save(saveFile)
@@ -63,6 +65,7 @@ func _on_tree_entered():
 	Global.setsTab.get_node("Time").set_pressed_no_signal(Global.useTwelve)
 	Global.setsTab.get_node("Close").set_pressed_no_signal(Global.saveClose)
 	Global.setsTab.get_node("Save").set_pressed_no_signal(Global.wait)
+	Global.setsTab.get_node("NoMoney").set_pressed_no_signal(Global.noMoney)
 
 func load_save(sv):
 	if not FileAccess.file_exists(sv):
@@ -92,7 +95,6 @@ func load_save(sv):
 	Global.yrlyTab.planned = data["Yearly"]["planned"]
 	if V > 1.0:
 		Global.shopTab.bought = data["Shops"]["bought"]
-		Global.shopTab.set_bought()
 	if V > 1.1:
 		Global.chlngTab.bought = data["Challs"]["bought"]
 		Global.chlngTab.planned = data["Challs"]["planned"]

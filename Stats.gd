@@ -403,6 +403,8 @@ func set_values():
 	var strng = "%.2f" % [totals["$Tot"]-totals["$"]]
 	if strng.length() > 6: strng = strng.substr(0,strng.length()-6)+","+strng.substr(1)
 	$"IAP Shops/Titles".get_node("Spent Total").text = strng
+	if Global.noMoney: $"IAP Shops".hide()
+	else: $"IAP Shops".show()
 
 func accordion(parent,expand):
 	for c in parent.get_children():

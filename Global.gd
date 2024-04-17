@@ -4,6 +4,7 @@ var spoilers = false
 var useTwelve = false
 var wait = true
 var saveClose = true
+var noMoney = false
 
 # Tabs
 var main
