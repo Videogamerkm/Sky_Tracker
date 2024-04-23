@@ -50,5 +50,5 @@ func set_pressed(press):
 
 func toggle_cost(toggle):
 	hideCost = toggle
-	if hideCost: $Cost.hide()
+	if hideCost or $Btn.is_pressed(): $Cost.hide()
 	elif type != "0": $Cost.show()
