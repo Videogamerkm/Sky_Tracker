@@ -33,28 +33,28 @@
 		"loc": "Season of Dreams",
 		"tree": [
 			[
-				"seas/cos/show 4;0;0",
-				"base/heart;3;sp",
-				""
-			],
-			[
-				"seas/cos/show 2;0;0",
-				"seas/cos/show 3;27;sp",
+				"seas/cos/show 4;70;c",
+				"seas/cos/show 3;75;c",
 				""
 			],
 			[
 				"seas/exp/show?4;0;0",
-				"base/5C;21;sp",
+				"base/5C;5;c",
+				"seas/cos/show 2;48;c"
+			],
+			[
+				"",
+				"seas/exp/show?3;3;h",
 				""
 			],
 			[
-				"seas/cos/show 1;0;0",
-				"seas/exp/show?3;16;sp",
-				""
+				"seas/cos/show 1;45;c",
+				"base/wing;2;a",
+				"base/heart;3;c"
 			],
 			[
-				"seas/exp/show?2;0;0",
-				"base/5C;12;sp",
+				"seas/exp/show?2;4;h",
+				"base/5C;5;c",
 				""
 			],
 			[
