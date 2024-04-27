@@ -5121,7 +5121,6 @@ vertical_icon_alignment = 0
 expand_icon = true
 
 [node name="cinna" type="Button" parent="Tabs/Events/Margin/VBox/Events/Events"]
-visible = false
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 size_flags_horizontal = 3
