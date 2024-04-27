@@ -170,7 +170,7 @@
 		]
 	},
 	"One-Time Events or Seasonal IAPs": {
-		"desc": "These are IAPs that used to be available in the past, but aren't any more.",
+		"desc": "These are IAPs that are available for a limited time, and may no longer be purchasable.",
 		"items": [
 			"shops/event/heal 1;19.99;$",
 			"shops/event/fox 1;14.99;$",
@@ -193,7 +193,12 @@
 			"shops/event/anni 1;0;0",
 			"shops/event/anni 2;0;0",
 			"shops/event/anni 3;0;0",
-			"shops/event/anni 4;0;0"
+			"shops/event/cinna 1;6.99;$",
+			["shops/event/cinna 2;14.99;$",
+			"shops/event/cinna 3;0;0"],
+			["shops/event/cinna 4;14.99;$",
+			"shops/event/cinna 5;0;0"],
+			"shops/event/cinna 6;14.99;$"
 		]
 	}
 }

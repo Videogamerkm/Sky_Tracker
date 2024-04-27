@@ -273,6 +273,11 @@
 	],
 	"Sky x Cinnamoroll": [
 		[
+			"days/cinna/1;22;k",
+			"",
+			"days/cinna/2;52;k"
+		],
+		[
 			"",
 			"base/teleport;0;0",
 			""
