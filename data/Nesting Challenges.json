@@ -1,30 +1,75 @@
 {
-	"Tree 1": {
+	"Workshop": {
 		"loc": "Season of Nesting",
 		"tree": [
 			[
+				"base/Q;0;0",
+				"chall/workshop 1;0;0",
+				"base/Q;0;0"
+			],
+			[
+				"base/Q;0;0",
+				"base/Q;0;0",
+				"base/Q;0;0"
+			],
+			[
+				"base/Q;0;0",
+				"base/Q;0;0",
+				"base/Q;0;0"
+			],
+			[
 				"",
-				"seas/icons/Nesting;1;c",
+				"base/!;0;0",
 				""
 			]
 		]
 	},
-	"Tree 2": {
+	"Nest": {
 		"loc": "Season of Nesting",
 		"tree": [
 			[
+				"base/Q;0;0",
+				"chall/nest 1;0;0",
+				"base/Q;0;0"
+			],
+			[
+				"base/Q;0;0",
+				"base/Q;0;0",
+				""
+			],
+			[
+				"base/heart;0;0",
+				"base/Q;0;0",
+				""
+			],
+			[
 				"",
-				"seas/icons/Nesting;2;c",
+				"base/!;0;0",
 				""
 			]
 		]
 	},
-	"Tree 3": {
+	"Friends": {
 		"loc": "Season of Nesting",
 		"tree": [
 			[
+				"base/Q;0;0",
+				"chall/friend 1;0;0",
+				"base/Q;0;0"
+			],
+			[
+				"base/Q;0;0",
+				"base/Q;0;0",
+				""
+			],
+			[
+				"base/heart;0;0",
+				"base/Q;0;0",
+				""
+			],
+			[
 				"",
-				"seas/icons/Nesting;3;c",
+				"base/!;0;0",
 				""
 			]
 		]

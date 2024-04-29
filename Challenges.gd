@@ -10,12 +10,15 @@ func _ready():
 		c.connect("toggled",fill_tree.bind(c.text))
 	$Tree/Org1/Controls/Back.hide()
 	selected = $Nav.get_child(0).text
+
+func load_tree():
 	$Tree.set_tree(rows[selected]["tree"])
-	
+	if bought.has(selected): $Tree.import_bought(bought[selected])
 
 func fill_tree(button_pressed,chlngName):
 	if not button_pressed: return
-	$Tree.set_tree(rows[chlngName]["tree"])
+	selected = chlngName
+	load_tree()
 
 func _on_tree_bought(iconValue,press):
 	bought[selected] = $Tree.export_bought()
@@ -24,23 +27,11 @@ func _on_tree_bought(iconValue,press):
 
 func _on_clear():
 	bought.erase(selected)
-	if planned.has(selected): planned.erase(selected)
-	$Tree.set_tree(rows[selected])
-
-func _on_tree_reject():
-	var newBought = []
-	for r in rows[selected]:
-		var row = []
-		for i in r:
-			if i != "": row.append(Global.main.cosmetics.has(i.split(";")[0]))
-			else: row.append(null)
-		newBought.append(row)
-	bought[selected] = newBought
-	if planned.has(selected): planned.erase(selected)
-	$Tree.import_bought(bought[selected])
+	planned.erase(selected)
+	$Tree.set_tree(rows[selected]["tree"])
 
 func _on_tree_planned():
 	planned[selected] = $Tree.get_planned()
 
 func _on_tree_plan_clear():
-	if planned.has(selected): planned.erase(selected)
+	planned.erase(selected)

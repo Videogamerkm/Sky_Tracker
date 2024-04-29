@@ -142,6 +142,8 @@ corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
 corner_detail = 5
 
+[sub_resource type="ButtonGroup" id="ButtonGroup_buw5i"]
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5muw6"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ty0t3"]
@@ -190,8 +192,6 @@ _data = {
 "RESET": SubResource("Animation_h7fm0"),
 "rainbow": SubResource("Animation_6hqhi")
 }
-
-[sub_resource type="ButtonGroup" id="ButtonGroup_buw5i"]
 
 [node name="Main" type="Control"]
 self_modulate = Color(1, 0, 0, 1)
@@ -5144,6 +5144,58 @@ visible = false
 layout_mode = 2
 size_flags_horizontal = 1
 
+[node name="Nesting Challenges" type="ScrollContainer" parent="Tabs"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="Margin" type="MarginContainer" parent="Tabs/Nesting Challenges"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBox" type="VBoxContainer" parent="Tabs/Nesting Challenges/Margin"]
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("45_pwys4")
+
+[node name="Nav" type="HBoxContainer" parent="Tabs/Nesting Challenges/Margin/VBox"]
+layout_mode = 2
+
+[node name="Workshop" type="Button" parent="Tabs/Nesting Challenges/Margin/VBox/Nav"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+toggle_mode = true
+button_pressed = true
+button_group = SubResource("ButtonGroup_buw5i")
+text = "Workshop"
+
+[node name="Nest" type="Button" parent="Tabs/Nesting Challenges/Margin/VBox/Nav"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+toggle_mode = true
+button_group = SubResource("ButtonGroup_buw5i")
+text = "Nest"
+
+[node name="Friends" type="Button" parent="Tabs/Nesting Challenges/Margin/VBox/Nav"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+toggle_mode = true
+button_group = SubResource("ButtonGroup_buw5i")
+text = "Friends"
+
+[node name="Tree" parent="Tabs/Nesting Challenges/Margin/VBox" instance=ExtResource("4_t1mtd")]
+layout_mode = 2
+size_flags_horizontal = 1
+
 [node name="Shop Purchases" type="ScrollContainer" parent="Tabs"]
 visible = false
 layout_mode = 2
@@ -5380,59 +5432,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="Nesting Challenges" type="ScrollContainer" parent="."]
-visible = false
-layout_mode = 2
-offset_right = 472.0
-size_flags_vertical = 3
-horizontal_scroll_mode = 0
-
-[node name="Margin" type="MarginContainer" parent="Nesting Challenges"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_constants/margin_left = 24
-theme_override_constants/margin_top = 24
-theme_override_constants/margin_right = 24
-theme_override_constants/margin_bottom = 24
-
-[node name="VBox" type="VBoxContainer" parent="Nesting Challenges/Margin"]
-layout_mode = 2
-size_flags_horizontal = 3
-script = ExtResource("45_pwys4")
-
-[node name="Nav" type="HBoxContainer" parent="Nesting Challenges/Margin/VBox"]
-layout_mode = 2
-
-[node name="1" type="Button" parent="Nesting Challenges/Margin/VBox/Nav"]
-layout_mode = 2
-size_flags_horizontal = 3
-focus_mode = 0
-toggle_mode = true
-button_pressed = true
-button_group = SubResource("ButtonGroup_buw5i")
-text = "Tree 1"
-
-[node name="2" type="Button" parent="Nesting Challenges/Margin/VBox/Nav"]
-layout_mode = 2
-size_flags_horizontal = 3
-focus_mode = 0
-toggle_mode = true
-button_group = SubResource("ButtonGroup_buw5i")
-text = "Tree 2"
-
-[node name="3" type="Button" parent="Nesting Challenges/Margin/VBox/Nav"]
-layout_mode = 2
-size_flags_horizontal = 3
-focus_mode = 0
-toggle_mode = true
-button_group = SubResource("ButtonGroup_buw5i")
-text = "Tree 3"
-
-[node name="Tree" parent="Nesting Challenges/Margin/VBox" instance=ExtResource("4_t1mtd")]
-layout_mode = 2
-size_flags_horizontal = 1
-
 [connection signal="tree_entered" from="." to="." method="_on_tree_entered"]
 [connection signal="tab_changed" from="Tabs" to="." method="_on_tabs_tab_changed"]
 [connection signal="pressed" from="Tabs/Home/Margin/VBox/SaveLoad/Save" to="." method="_on_save_pressed"]
@@ -5468,14 +5467,13 @@ size_flags_horizontal = 1
 [connection signal="planned" from="Tabs/Events/Margin/VBox/Tree" to="Tabs/Events/Margin/VBox" method="_on_tree_planned"]
 [connection signal="reject" from="Tabs/Events/Margin/VBox/Tree" to="Tabs/Events/Margin/VBox" method="_on_tree_reject"]
 [connection signal="treeClear" from="Tabs/Events/Margin/VBox/Tree" to="Tabs/Events/Margin/VBox" method="_on_clear"]
+[connection signal="bought" from="Tabs/Nesting Challenges/Margin/VBox/Tree" to="Tabs/Nesting Challenges/Margin/VBox" method="_on_tree_bought"]
+[connection signal="planClear" from="Tabs/Nesting Challenges/Margin/VBox/Tree" to="Tabs/Nesting Challenges/Margin/VBox" method="_on_tree_plan_clear"]
+[connection signal="planned" from="Tabs/Nesting Challenges/Margin/VBox/Tree" to="Tabs/Nesting Challenges/Margin/VBox" method="_on_tree_planned"]
+[connection signal="treeClear" from="Tabs/Nesting Challenges/Margin/VBox/Tree" to="Tabs/Nesting Challenges/Margin/VBox" method="_on_clear"]
 [connection signal="toggled" from="Tabs/Settings/Margin/VBox/Short" to="Tabs/Settings/Margin/VBox" method="_on_short_toggled"]
 [connection signal="toggled" from="Tabs/Settings/Margin/VBox/Spoilers" to="Tabs/Settings/Margin/VBox" method="_on_spoilers_toggled"]
 [connection signal="toggled" from="Tabs/Settings/Margin/VBox/Time" to="Tabs/Settings/Margin/VBox" method="_on_time_toggled"]
 [connection signal="toggled" from="Tabs/Settings/Margin/VBox/Close" to="Tabs/Settings/Margin/VBox" method="_on_close_toggled"]
 [connection signal="toggled" from="Tabs/Settings/Margin/VBox/Save" to="Tabs/Settings/Margin/VBox" method="_on_save_toggled"]
 [connection signal="toggled" from="Tabs/Settings/Margin/VBox/NoMoney" to="Tabs/Settings/Margin/VBox" method="_on_no_money_toggled"]
-[connection signal="bought" from="Nesting Challenges/Margin/VBox/Tree" to="Nesting Challenges/Margin/VBox" method="_on_tree_bought"]
-[connection signal="planClear" from="Nesting Challenges/Margin/VBox/Tree" to="Nesting Challenges/Margin/VBox" method="_on_tree_plan_clear"]
-[connection signal="planned" from="Nesting Challenges/Margin/VBox/Tree" to="Nesting Challenges/Margin/VBox" method="_on_tree_planned"]
-[connection signal="reject" from="Nesting Challenges/Margin/VBox/Tree" to="Nesting Challenges/Margin/VBox" method="_on_tree_reject"]
-[connection signal="treeClear" from="Nesting Challenges/Margin/VBox/Tree" to="Nesting Challenges/Margin/VBox" method="_on_clear"]
