@@ -3,19 +3,19 @@
 		"loc": "Season of Nesting",
 		"tree": [
 			[
-				"base/Q;0;0",
+				"base/heart;0;0",
 				"chall/workshop 1;0;0",
-				"base/Q;0;0"
+				"base/memory;0;0"
 			],
 			[
+				"base/heart;0;0",
 				"base/Q;0;0",
-				"base/Q;0;0",
-				"base/Q;0;0"
+				"base/memory;0;0"
 			],
 			[
+				"base/heart;0;0",
 				"base/Q;0;0",
-				"base/Q;0;0",
-				"base/Q;0;0"
+				"base/memory;0;0"
 			],
 			[
 				"",
@@ -28,12 +28,12 @@
 		"loc": "Season of Nesting",
 		"tree": [
 			[
-				"base/Q;0;0",
+				"base/heart;0;0",
 				"chall/nest 1;0;0",
-				"base/Q;0;0"
+				"base/memory;0;0"
 			],
 			[
-				"base/Q;0;0",
+				"base/heart;0;0",
 				"base/Q;0;0",
 				""
 			],
@@ -53,12 +53,12 @@
 		"loc": "Season of Nesting",
 		"tree": [
 			[
-				"base/Q;0;0",
+				"base/heart;0;0",
 				"chall/friend 1;0;0",
-				"base/Q;0;0"
+				"base/memory;0;0"
 			],
 			[
-				"base/Q;0;0",
+				"base/heart;0;0",
 				"base/Q;0;0",
 				""
 			],
