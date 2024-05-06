@@ -154,6 +154,7 @@ func _on_tabs_tab_changed(tab):
 	elif tab == 3: Global.regSprtTab._area_select(Global.regSprtTab.get_node("Area").text)
 	if tab == 4: Global.currSsnTab._ready()
 	if tab == 5 && Global.ssnlSprtTab.curr_spirit != "": Global.ssnlSprtTab._on_back_pressed()
+	if tab == 7: Global.shrdTab.set_fields()
 	if tab == 9: Global.chlngTab.load_tree()
 	if collHist:
 		history.resize(histIndex + 1)
