@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c6sc8701lr1u8"
-path="res://.godot/imported/0n38bkhn.bmp-09e136f4532f9be5ff76aae058da14f8.ctex"
+path="res://.godot/imported/stone 25.bmp-435bd7c043ef3526a4130ec5fe8f5276.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://icons/shops/nest/future/0n38bkhn.bmp"
-dest_files=["res://.godot/imported/0n38bkhn.bmp-09e136f4532f9be5ff76aae058da14f8.ctex"]
+source_file="res://icons/shops/nest/stone 25.bmp"
+dest_files=["res://.godot/imported/stone 25.bmp-435bd7c043ef3526a4130ec5fe8f5276.ctex"]
 
 [params]
 
