@@ -32,7 +32,11 @@
 			"shops/nest/stone 22;25;c",
 			"shops/nest/stone 23;23;h",
 			"shops/nest/stone 24;32;a",
-			"shops/nest/stone 25;45;c"
+			"shops/nest/stone 25;45;c",
+			"shops/nest/stone 26;80;c",
+			"shops/nest/stone 27;33;h",
+			"shops/nest/stone 28;25;h",
+			"shops/nest/stone 29;40;c"
 		]
 	},
 	"Days of Fortune IAPs": {
@@ -78,12 +82,14 @@
 		"desc": "Available every year during Days of Nature.",
 		"items": [
 			"shops/days/nature 1;4.99;$",
-			"shops/days/nature 2;1.99;$",
-			"shops/days/nature 3;14.99;$",
+			"shops/days/nature 2;14.99;$",
+			"shops/days/nature 3;1.99;$",
 			"shops/days/nature 4;19.99;$",
 			"shops/days/nature 5;14.99;$",
-			"shops/days/nature 6;19.99;$",
-			"shops/days/nature 7;4.99;$"
+			"shops/days/nature 6;4.99;$",
+			"shops/days/nature 7;19.99;$",
+			"shops/days/nature 8;6.99;$",
+			"shops/days/nature 9;19.99;$"
 		]
 	},
 	"Days of Color IAPs": {
