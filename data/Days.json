@@ -190,18 +190,18 @@
 	],
 	"Days of Nature": [
 		[
-			"days/nature/1;20;h",
 			"days/nature/2;180;c",
+			"days/nature/1;20;h",
 			""
+		],
+		[
+			"days/nature/3;16;k",
+			"base/5C;5;c",
+			"days/nature/4;40;k"
 		],
 		[
 			"",
 			"base/5C;5;c",
-			""
-		],
-		[
-			"",
-			"base/teleport;0;0",
 			""
 		]
 	],
