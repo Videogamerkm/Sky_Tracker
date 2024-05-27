@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bikh30cgj4t7f"
-path="res://.godot/imported/ticket.bmp-151bda1e0db62432066eb245f67d2c92.ctex"
+uid="uid://cua2vw8a6wmdc"
+path="res://.godot/imported/nature 8.bmp-386a53a5d3fee4a8b150d8c756b574bd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://icons/days/nature/ticket.bmp"
-dest_files=["res://.godot/imported/ticket.bmp-151bda1e0db62432066eb245f67d2c92.ctex"]
+source_file="res://icons/shops/days/nature 8.bmp"
+dest_files=["res://.godot/imported/nature 8.bmp-386a53a5d3fee4a8b150d8c756b574bd.ctex"]
 
 [params]
 

@@ -40,7 +40,7 @@
 [ext_resource type="Texture2D" uid="uid://bmqhlm8yrqp50" path="res://icons/days/music/ticket.bmp" id="36_1y5ba"]
 [ext_resource type="Texture2D" uid="uid://lfy6cc5fa5oq" path="res://icons/days/anni/ticket.bmp" id="37_ed684"]
 [ext_resource type="Texture2D" uid="uid://gxaapv7s27rb" path="res://icons/days/bloom/ticket.bmp" id="37_qrfhd"]
-[ext_resource type="Texture2D" uid="uid://2lpc3vlgxdof" path="res://icons/days/nature/ticket.bmp" id="38_skdn8"]
+[ext_resource type="Texture2D" uid="uid://bikh30cgj4t7f" path="res://icons/days/nature/ticket.bmp" id="38_skdn8"]
 [ext_resource type="Texture2D" uid="uid://b1djesdabyowf" path="res://icons/days/sun/ticket.bmp" id="38_vr5fi"]
 [ext_resource type="Texture2D" uid="uid://vwvmnewmw88u" path="res://icons/days/style/ticket.bmp" id="39_tqryg"]
 [ext_resource type="Texture2D" uid="uid://hpw58k7uldig" path="res://icons/days/mischief/ticket.bmp" id="40_kgaw0"]
