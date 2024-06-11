@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8cj7e6ihyu5g"
-path="res://.godot/imported/pvorp1nh.bmp-8b642e36a2722031014a8e73bf8e134d.ctex"
+uid="uid://c2wdwbuqp8yl0"
+path="res://.godot/imported/stone 36.bmp-491e4b4bf87c4bda5f7be5a45227fef1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://icons/shops/nest/future/pvorp1nh.bmp"
-dest_files=["res://.godot/imported/pvorp1nh.bmp-8b642e36a2722031014a8e73bf8e134d.ctex"]
+source_file="res://icons/shops/nest/stone 36.bmp"
+dest_files=["res://.godot/imported/stone 36.bmp-491e4b4bf87c4bda5f7be5a45227fef1.ctex"]
 
 [params]
 
