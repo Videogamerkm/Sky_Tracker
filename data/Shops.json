@@ -106,8 +106,8 @@
 	"Days of Color IAPs": {
 		"desc": "Available every year during Days of Color.",
 		"items": [
-			"shops/days/color 1;19.99;$",
-			"shops/days/color 2;9.99;$",
+			"shops/days/color 1;9.99;$",
+			"shops/days/color 2;19.99;$",
 			"shops/days/color 3;9.99;$",
 			"shops/days/color 4;2.99;$",
 			"shops/days/color 5;9.99;$",
