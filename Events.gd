@@ -1,10 +1,10 @@
 extends VBoxContainer
 
-const day = "Days of Nature"
+const day = "Days of Color"
 const location = "Aviary Village"
 const tpd = 4
-const start = {"day":27,"month":5,"year":2024,"hour":0}
-const end = {"day":16,"month":6,"year":2024,"hour":23,"minute":59}
+const start = {"day":24,"month":6,"year":2024,"hour":0}
+const end = {"day":7,"month":7,"year":2024,"hour":23,"minute":59}
 const short = {"Days of Fortune":"fortune","Days of Love":"love","Days of Bloom":"bloom","Days of Nature":"nature",
 	"Days of Color":"color","Days of Music":"music","Sky Anniversary":"anni","Days of Sunlight":"sun","Days of Style":"style",
 	"Days of Mischief":"mischief","Days of Feast":"feast","Sky x Cinnamoroll":"cinna"}
