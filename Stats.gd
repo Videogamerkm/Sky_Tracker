@@ -117,6 +117,8 @@ func set_values():
 	var spiritTotal = 0
 	var compTotal = 0.0
 	var elderTotal = 0
+	var overall_spent = 0
+	var overall_need = 0
 	for a in areas:
 		var costsSpent = {"c":0,"h":0,"a":0,"c2":0,"h2":0,"a2":0,"u":0}
 		var costsNeeded = {"c":0,"h":0,"a":0,"c2":0,"h2":0,"a2":0,"u":0}
@@ -169,15 +171,13 @@ func set_values():
 						get_node("Regular Spirits/"+a+"/Titles").get_child(i).set_modulate(Color(0.75,1,0.75))
 				else:
 					for i in range(start,start+6):
-						get_node("Regular Spirits/"+a+"/Titles").get_child(i).set_modulate(Color(1,1,1))
+						get_node("Regular Spirits/"+a+"/Titles").get_child(i).set_modulate(Color.WHITE)
 				if RegSpirits.data[s].has("t2"):
 					start = get_node("Regular Spirits/"+a+"/Titles/Spirit "+s+" T2").get_index()
 					get_node("Regular Spirits/"+a+"/Titles/By Currency "+s+" T2").text = str(floor(asc_spent*100.0/asc))+"%"
 					var color = Color(0.75,1,0.75) if get_node("Regular Spirits/"+a+"/Titles/By Currency "+s+" T2").text == "100%" else Color(1,0.75,0.75)
 					for i in range(start,start+6):
 						get_node("Regular Spirits/"+a+"/Titles").get_child(i).set_modulate(color)
-		var overall_spent = 0
-		var overall_need = 0
 		for type in ["c","h","a","u"]:
 			var tCap = type.capitalize()
 			get_node("Constellations/"+a+"/Grid/"+tCap+" Spent").text = str(costsSpent[type])
@@ -186,7 +186,7 @@ func set_values():
 			overall_need += costsNeeded[type]
 			var perc = floor(costsSpent[type]*100.0/(costsSpent[type]+costsNeeded[type]))
 			get_node("Constellations/"+a+"/Grid/"+tCap+" Comp").text = str(perc)+"%"
-			var color = Color(0.75,1,0.75) if perc == 100 else Color(1,1,1)
+			var color = Color(0.75,1,0.75) if perc == 100 else Color.WHITE
 			if has_node("Constellations/"+a+"/Grid/"+tCap+" T2"):
 				get_node("Constellations/"+a+"/Grid/"+tCap+" T2").text = str(costsNeeded[type+"2"])
 				get_node("Constellations/"+a+"/Grid/"+tCap+" T2").set_modulate(color if costsNeeded[type+"2"] == 0 else Color(1,0.75,0.75))
@@ -203,8 +203,8 @@ func set_values():
 		spiritTotal += spiritCount
 		compTotal += compPercent
 		elderTotal += elderPercent
-	var overall_spent = 0
-	var overall_need = 0
+	overall_spent = 0
+	overall_need = 0
 	for type in ["c","h","a","u"]:
 		var tCap = type.capitalize()
 		get_node("Constellations/Total/Grid/"+tCap+" Spent").text = str(spentTotal[type])
@@ -281,7 +281,7 @@ func set_values():
 				get_node("Seasonal Spirits/"+a+"/Titles").get_child(i).set_modulate(Color(0.75,1,0.75))
 		else:
 			for i in range(start,start+6):
-				get_node("Seasonal Spirits/"+a+"/Titles").get_child(i).set_modulate(Color(1,1,1))
+				get_node("Seasonal Spirits/"+a+"/Titles").get_child(i).set_modulate(Color.WHITE)
 		if SeasonSpirits.data[s].has("t2"):
 			start = get_node("Seasonal Spirits/"+a+"/Titles/Spirit "+s+" T2").get_index()
 			get_node("Seasonal Spirits/"+a+"/Titles/By Currency "+s+" T2").text = str(floor(asc_spent*100.0/asc))+"%"
@@ -352,6 +352,8 @@ func set_values():
 	
 	# Shops
 	var totals = {"c":0,"h":0,"a":0,"curr":0,"n":0,"b":0,"iapB":0,"iapN":0,"$":0.0,"$Tot":0.0}
+	var strng
+	var add
 	for s in Global.shopTab.rows:
 		var count = {"c":0,"h":0,"a":0,"curr":0,"n":0,"b":0,"$":0,"0":0}
 		for i in Global.shopTab.rows[s]["items"]:
@@ -380,7 +382,7 @@ func set_values():
 		if s.contains("IAP"):
 			$"IAP Shops/Titles".get_node("Section "+s).text = s
 			$"IAP Shops/Titles".get_node("Bought "+s).text = str(count["n"]-count["b"])
-			var strng = "%.2f" % [count["curr"]-count["$"]]
+			strng = "%.2f" % [count["curr"]-count["$"]]
 			if strng.length() > 6: strng = strng.substr(0,strng.length()-6)+","+strng.substr(1)
 			$"IAP Shops/Titles".get_node("Spent "+s).text = strng
 		else:
@@ -388,19 +390,19 @@ func set_values():
 			$"IGC Shops/Titles".get_node("c "+s).text = str(count["c"])
 			$"IGC Shops/Titles".get_node("h "+s).text = str(count["h"])
 			$"IGC Shops/Titles".get_node("a "+s).text = str(count["a"])
-			var add = count["curr"] - (count["c"] + count["h"] + count["a"])
+			add = count["curr"] - (count["c"] + count["h"] + count["a"])
 			$"IGC Shops/Titles".get_node("By Currency "+s).text = str(floor(add*100.0/count["curr"]))
 			$"IGC Shops/Titles".get_node("By Purchase "+s).text = str(floor((count["n"]-count["b"])*100.0/count["n"]))
 	$"IGC Shops/Titles".get_node("Shop Total").text = "Total"
 	$"IGC Shops/Titles".get_node("c Total").text = str(totals["c"])
 	$"IGC Shops/Titles".get_node("h Total").text = str(totals["h"])
 	$"IGC Shops/Titles".get_node("a Total").text = str(totals["a"])
-	var add = totals["curr"] - (totals["c"] + totals["h"] + totals["a"])
+	add = totals["curr"] - (totals["c"] + totals["h"] + totals["a"])
 	$"IGC Shops/Titles".get_node("By Currency Total").text = str(floor(add*100.0/totals["curr"]))
 	$"IGC Shops/Titles".get_node("By Purchase Total").text = str(floor((totals["n"]-totals["b"])*100.0/totals["n"]))
 	$"IAP Shops/Titles".get_node("Section Total").text = "Total"
 	$"IAP Shops/Titles".get_node("Bought Total").text = str(totals["iapN"]-totals["iapB"])
-	var strng = "%.2f" % [totals["$Tot"]-totals["$"]]
+	strng = "%.2f" % [totals["$Tot"]-totals["$"]]
 	if strng.length() > 6: strng = strng.substr(0,strng.length()-6)+","+strng.substr(1)
 	$"IAP Shops/Titles".get_node("Spent Total").text = strng
 	if Global.noMoney: $"IAP Shops".hide()

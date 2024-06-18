@@ -10,16 +10,16 @@ var planned = false:
 		planned = val
 		for p in panels: panels[p].set_border_width_all(2 if planned else 0)
 var locked = true
-const normal = Color(0.67,0.67,1.00)
-const spoiler = Color(0.5,0.5,0.5)
-const hide = Color(0,0,0)
+const normalClr = Color(0.67,0.67,1.00)
+const spoilerClr = Color.WEB_GRAY
+const hideClr = Color.BLACK
 @onready var panels = {}
 signal planAdded(isPlanned)
 
 func _ready():
 	set_locked(locked)
-	if Global.spoilers: add_theme_color_override("icon_disabled_color",Color(0.5,0.5,0.5))
-	else: add_theme_color_override("icon_disabled_color",Color(0,0,0))
+	if Global.spoilers: add_theme_color_override("icon_disabled_color",spoilerClr)
+	else: add_theme_color_override("icon_disabled_color",hideClr)
 	for p in ["normal","hover","pressed","disabled"]:
 		panels[p] = get_theme_stylebox(p).duplicate()
 		remove_theme_stylebox_override(p)
@@ -62,9 +62,9 @@ func _on_toggled(press):
 func set_locked(state):
 	locked = state
 	if locked: set_pressed(false)
-	if state && Global.spoilers: add_theme_color_override("icon_normal_color",spoiler)
-	elif state: add_theme_color_override("icon_normal_color",hide)
-	else: add_theme_color_override("icon_normal_color",normal)
+	if state && Global.spoilers: add_theme_color_override("icon_normal_color",spoilerClr)
+	elif state: add_theme_color_override("icon_normal_color",hideClr)
+	else: add_theme_color_override("icon_normal_color",normalClr)
 
 func _gui_input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:

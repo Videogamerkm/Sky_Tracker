@@ -194,7 +194,7 @@ func update_cos(value,add):
 func _on_save_pressed():
 	save()
 	var tween = create_tween()
-	tween.tween_property(Global.homeTab.get_node("SaveLoad/Save"),"modulate",Color(1,1,1),2.0).from(Color(0,1,0)).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
+	tween.tween_property(Global.homeTab.get_node("SaveLoad/Save"),"modulate",Color.WHITE,2.0).from(Color.GREEN).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
 
 func _on_save_as_pressed():
 	Global.homeTab.get_node("SaveLoad/SaveDialog").show()
