@@ -47,7 +47,10 @@
 			"shops/nest/stone 37;18;h",
 			"shops/nest/stone 38;30;c",
 			"shops/nest/stone 39;60;c",
-			"shops/nest/stone 40;20;h"
+			"shops/nest/stone 40;20;h",
+			"shops/nest/stone 41;40;c",
+			"shops/nest/stone 42;30;c",
+			"shops/nest/stone 43;70;c"
 		]
 	},
 	"Days of Fortune IAPs": {
@@ -112,7 +115,9 @@
 			"shops/days/color 4;2.99;$",
 			"shops/days/color 5;9.99;$",
 			"shops/days/color 6;9.99;$",
-			"shops/days/color 7;14.99;$"
+			"shops/days/color 7;14.99;$",
+			"shops/days/color 8;14.99;$",
+			"shops/days/color 9;19.99;$"
 		]
 	},
 	"Sky Anniversary IAPs": {
