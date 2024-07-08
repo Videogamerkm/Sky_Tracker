@@ -1,0 +1,38 @@
+{
+	"Duets Guide": {
+		"isGuide": true,
+		"loc": "Season of Duets",
+		"tree": [
+			[
+				"",
+				"base/heart;0;0",
+				""
+			],
+			[
+				"base/heart;0;0",
+				"base/!;0;0",
+				"|base/Q;1;sh;sp"
+			],
+			[
+				"base/heart;0;0",
+				"base/!;0;0",
+				"|base/Q;2;sh;sp"
+			],
+			[
+				"base/heart;0;0",
+				"base/!;0;0",
+				"|base/Q;1;sh;sp"
+			],
+			[
+				"base/heart;0;0",
+				"base/!;0;0",
+				"seas/icons/Duets;0;0;sp"
+			],
+			[
+				"",
+				"base/!;0;0",
+				""
+			]
+		]
+	}
+}

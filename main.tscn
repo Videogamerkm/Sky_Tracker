@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=3 uid="uid://b04gr0a605mxh"]
+[gd_scene load_steps=70 format=3 uid="uid://b04gr0a605mxh"]
 
 [ext_resource type="PackedScene" uid="uid://bap3aptv3y1dw" path="res://collapsible.tscn" id="1_au16a"]
 [ext_resource type="Theme" uid="uid://cqobwtkqodo0r" path="res://white.tres" id="1_q23n0"]
@@ -38,13 +38,14 @@
 [ext_resource type="Script" path="res://Settings.gd" id="33_lxqsm"]
 [ext_resource type="Texture2D" uid="uid://bail2enqosi6a" path="res://icons/days/color/ticket.bmp" id="35_cfc5u"]
 [ext_resource type="Texture2D" uid="uid://bmqhlm8yrqp50" path="res://icons/days/music/ticket.bmp" id="36_1y5ba"]
-[ext_resource type="Texture2D" uid="uid://lfy6cc5fa5oq" path="res://icons/days/anni/ticket.bmp" id="37_ed684"]
+[ext_resource type="Texture2D" uid="uid://lfy6cc5fa5oq" path="res://icons/days/ticket.bmp" id="37_ed684"]
 [ext_resource type="Texture2D" uid="uid://gxaapv7s27rb" path="res://icons/days/bloom/ticket.bmp" id="37_qrfhd"]
 [ext_resource type="Texture2D" uid="uid://bikh30cgj4t7f" path="res://icons/days/nature/ticket.bmp" id="38_skdn8"]
 [ext_resource type="Texture2D" uid="uid://b1djesdabyowf" path="res://icons/days/sun/ticket.bmp" id="38_vr5fi"]
 [ext_resource type="Texture2D" uid="uid://vwvmnewmw88u" path="res://icons/days/style/ticket.bmp" id="39_tqryg"]
 [ext_resource type="Texture2D" uid="uid://hpw58k7uldig" path="res://icons/days/mischief/ticket.bmp" id="40_kgaw0"]
 [ext_resource type="Texture2D" uid="uid://b8pu7d5lhcslv" path="res://icons/days/feast/ticket.bmp" id="41_g5vtc"]
+[ext_resource type="Texture2D" uid="uid://b3uikfihjigyi" path="res://icons/days/anni/ticket.bmp" id="45_6blqw"]
 [ext_resource type="Texture2D" uid="uid://lg2iq3wnkjjc" path="res://icons/days/cinna/ticket.bmp" id="45_o2joq"]
 [ext_resource type="Script" path="res://Challenges.gd" id="45_pwys4"]
 [ext_resource type="Script" path="res://Shops.gd" id="48_w7h55"]
@@ -3003,11 +3004,11 @@ expand_mode = 5
 [node name="Banner2" type="Label" parent="Tabs/Current Season/Margin/VBox"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_colors/font_color = Color(0.501961, 1, 1, 1)
+theme_override_colors/font_color = Color(0.956863, 0.815686, 0.129412, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 32
 theme_override_font_sizes/font_size = 42
-text = "Season of Nesting"
+text = "Season of Duets"
 horizontal_alignment = 1
 
 [node name="Time" type="HBoxContainer" parent="Tabs/Current Season/Margin/VBox"]
@@ -4917,6 +4918,7 @@ expand_icon = true
 
 [node name="No" type="Label" parent="Tabs/Events/Margin/VBox"]
 visible = false
+custom_minimum_size = Vector2(1, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 24
@@ -5116,6 +5118,20 @@ text = "Days of
 Feast
 "
 icon = ExtResource("41_g5vtc")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
+[node name="triumph" type="Button" parent="Tabs/Events/Margin/VBox/Events/Events"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+toggle_mode = true
+text = "Tournament
+of Triumph
+"
+icon = ExtResource("45_6blqw")
 icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
