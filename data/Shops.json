@@ -19,11 +19,11 @@
 			"shops/nest/stone 9;30;a",
 			"shops/nest/stone 10;60;c",
 			"shops/nest/stone 11;50;c",
-			"shops/nest/stone 12;48;h",
+			"shops/nest/stone 12;48;c",
 			"shops/nest/stone 13;25;c",
 			"shops/nest/stone 14;20;h",
 			"shops/nest/stone 15;45;c",
-			"shops/nest/stone 16;40;h",
+			"shops/nest/stone 16;40;c",
 			"shops/nest/stone 17;35;c",
 			"shops/nest/stone 18;33;h",
 			"shops/nest/stone 19;18;h",
@@ -50,7 +50,14 @@
 			"shops/nest/stone 40;20;h",
 			"shops/nest/stone 41;40;c",
 			"shops/nest/stone 42;30;c",
-			"shops/nest/stone 43;70;c"
+			"shops/nest/stone 43;70;c",
+			"shops/nest/stone 44;40;c",
+			"shops/nest/stone 45;30;c",
+			"shops/nest/stone 46;80;c",
+			"shops/nest/stone 47;25;a",
+			"shops/nest/stone 48;80;c",
+			"shops/nest/stone 49;45;h",
+			"shops/nest/stone 50;90;c"
 		]
 	},
 	"Days of Fortune IAPs": {
@@ -124,6 +131,7 @@
 		"desc": "Available every year during the Sky Anniversary event.",
 		"items": [
 			"shops/days/anni 1;9.99;$",
+			"base/Q;4.99;$"
 		]
 	},
 	"Days of Sunlight IAPs": {
@@ -231,12 +239,14 @@
 			"shops/event/anni 1;0;0",
 			"shops/event/anni 2;0;0",
 			"shops/event/anni 3;0;0",
+			"shops/event/anni 4;0;0",
 			"shops/event/cinna 1;6.99;$",
 			["shops/event/cinna 2;14.99;$",
 			"shops/event/cinna 3;0;0"],
 			["shops/event/cinna 4;14.99;$",
 			"shops/event/cinna 5;0;0"],
-			"shops/event/cinna 6;14.99;$"
+			"shops/event/cinna 6;14.99;$",
+			"base/Q;19.99;$"
 		]
 	}
 }

@@ -1,13 +1,13 @@
 extends VBoxContainer
 
-const day = "Days of Color"
+const day = "Sky Anniversary"
 const location = "Aviary Village"
 const tpd = 5
 const start = {"day":24,"month":6,"year":2024,"hour":0}
 const end = {"day":7,"month":7,"year":2024,"hour":23,"minute":59}
 const short = {"Days of Fortune":"fortune","Days of Love":"love","Days of Bloom":"bloom","Days of Nature":"nature",
 	"Days of Color":"color","Days of Music":"music","Sky Anniversary":"anni","Days of Sunlight":"sun","Days of Style":"style",
-	"Days of Mischief":"mischief","Days of Feast":"feast","Sky x Cinnamoroll":"cinna"}
+	"Days of Mischief":"mischief","Days of Feast":"feast","Tournament of Triumph":"triumph","Sky x Cinnamoroll":"cinna"}
 const left = " day(s) left in the event"
 var selected = ""
 var bought = {}

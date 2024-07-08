@@ -163,14 +163,19 @@
 	],
 	"Days of Music": [
 		[
-			"days/music/2;43;k",
+			"",
 			"base/sheet?HH5;5;c",
 			""
 		],
 		[
-			"days/music/1;50;c",
+			"days/music/2;43;k",
 			"base/5C;5;c",
 			"days/music/3;102;k"
+		],
+		[
+			"days/music/1;50;c",
+			"base/5C;5;c",
+			""
 		],
 		[
 			"base/sheet?HH3;5;c",
@@ -247,27 +252,32 @@
 	"Sky Anniversary": [
 		[
 			"days/anni/3;30;c",
-			"days/anni/2;20;h",
-			""
+			"days/anni/medium;4;c",
+			"days/anni/2;20;h"
 		],
 		[
 			"days/anni/4;20;c",
-			"base/5C;4;c",
+			"days/anni/medium;4;c",
 			"days/anni/5;46;k"
 		],
 		[
 			"days/anni/1;20;c",
-			"base/5C;4;c",
+			"days/anni/medium;4;c",
 			"days/anni/6;46;k"
 		],
 		[
-			"base/sheet?E2;10;h",
-			"base/1C;2;c",
-			"days/anni/7;8;k"
+			"base/Q;8;k",
+			"days/anni/small;2;c",
+			"base/sheet?E2;10;h"
+		],
+		[
+			"base/Q;16;k",
+			"base/Q;4;k",
+			"base/Q;12;k"
 		],
 		[
 			"",
-			"base/teleport;0;0",
+			"days/anni/small;0;0",
 			""
 		]
 	],
@@ -276,6 +286,18 @@
 			"days/cinna/1;22;k",
 			"",
 			"days/cinna/2;52;k"
+		],
+		[
+			"",
+			"base/teleport;0;0",
+			""
+		]
+	],
+	"Tournament of Triumph": [
+		[
+			"",
+			"",
+			""
 		],
 		[
 			"",

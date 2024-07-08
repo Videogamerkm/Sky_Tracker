@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjygflohplea0"
-path="res://.godot/imported/7.bmp-86cea65ac9c9dface36903a9fc61fc0b.ctex"
+uid="uid://c8ohpyhpiegpd"
+path="res://.godot/imported/Duets.bmp-dc8c6de70a208c8bbdbf4bfd7218050b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://icons/days/anni/7.bmp"
-dest_files=["res://.godot/imported/7.bmp-86cea65ac9c9dface36903a9fc61fc0b.ctex"]
+source_file="res://icons/seas/icons/Duets.bmp"
+dest_files=["res://.godot/imported/Duets.bmp-dc8c6de70a208c8bbdbf4bfd7218050b.ctex"]
 
 [params]
 
