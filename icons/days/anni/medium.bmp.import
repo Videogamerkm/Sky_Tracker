@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3uikfihjigyi"
-path="res://.godot/imported/ticket.bmp-5b0ec03fcd41ff133d37b02f31a2f988.ctex"
+uid="uid://pw7t8d87flmg"
+path="res://.godot/imported/medium.bmp-a9608a45607ca9050a572c0165b71799.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://icons/days/anni/ticket.bmp"
-dest_files=["res://.godot/imported/ticket.bmp-5b0ec03fcd41ff133d37b02f31a2f988.ctex"]
+source_file="res://icons/days/anni/medium.bmp"
+dest_files=["res://.godot/imported/medium.bmp-a9608a45607ca9050a572c0165b71799.ctex"]
 
 [params]
 
