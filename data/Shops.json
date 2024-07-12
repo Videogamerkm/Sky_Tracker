@@ -131,7 +131,7 @@
 		"desc": "Available every year during the Sky Anniversary event.",
 		"items": [
 			"shops/days/anni 1;9.99;$",
-			"base/Q;4.99;$"
+			"shops/days/anni 2;4.99;$"
 		]
 	},
 	"Days of Sunlight IAPs": {
@@ -246,7 +246,7 @@
 			["shops/event/cinna 4;14.99;$",
 			"shops/event/cinna 5;0;0"],
 			"shops/event/cinna 6;14.99;$",
-			"base/Q;19.99;$"
+			"shops/event/anni 5;19.99;$"
 		]
 	}
 }

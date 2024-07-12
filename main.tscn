@@ -5061,7 +5061,7 @@ focus_mode = 0
 toggle_mode = true
 text = "Sky
 Anniversary"
-icon = ExtResource("37_ed684")
+icon = ExtResource("45_6blqw")
 icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
