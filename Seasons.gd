@@ -49,6 +49,16 @@ func _area_select(area):
 					sp.set_button_icon(load("icons/"+SeasonSpirits.data[s]["tree"][1][0].split(";")[0].split("?")[0]+".bmp"))
 				else:
 					sp.set_button_icon(load("icons/"+SeasonSpirits.data[s]["tree"][-1][1].split(";")[0].split("?")[0]+".bmp"))
+			elif s.begins_with("The "):
+				sp.text = s
+				if s.ends_with("list's Beginnings"):
+					sp.set_button_icon(load("icons/"+SeasonSpirits.data[s]["tree"][1][1].split(";")[0].split("?")[0]+".bmp"))
+				elif s.ends_with("nist's Beginnings") or s.ends_with("Legacy"):
+					sp.set_button_icon(load("icons/"+SeasonSpirits.data[s]["tree"][1][0].split(";")[0].split("?")[0]+".bmp"))
+				elif s.ends_with("list's Flourishing"):
+					sp.set_button_icon(load("icons/"+SeasonSpirits.data[s]["tree"][2][1].split(";")[0].split("?")[0]+".bmp"))
+				elif s.ends_with("nist's Flourishing"):
+					sp.set_button_icon(load("icons/"+SeasonSpirits.data[s]["tree"][0][0].split(";")[0].split("?")[0]+".bmp"))
 			else:
 				sp.set_button_icon(load("icons/"+SeasonSpirits.data[s]["tree"][-1][1].split(";")[0].split("?")[0]+".bmp"))
 				sp.text = s.replace(" ","\n").replace("Spirit\nof\n","Spirit of ").replace("\nof\n"," of ")\

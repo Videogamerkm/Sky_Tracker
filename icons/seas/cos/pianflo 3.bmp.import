@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://beqlfory85men"
-path="res://.godot/imported/duets 1.bmp-c045279db481c1a31808527f9f65cbd2.ctex"
+uid="uid://b58vbdvuobeft"
+path="res://.godot/imported/pianflo 3.bmp-20779620440b5f0a43f2d5597ff5a341.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://icons/seas/cos/duets 1.bmp"
-dest_files=["res://.godot/imported/duets 1.bmp-c045279db481c1a31808527f9f65cbd2.ctex"]
+source_file="res://icons/seas/cos/pianflo 3.bmp"
+dest_files=["res://.godot/imported/pianflo 3.bmp-20779620440b5f0a43f2d5597ff5a341.ctex"]
 
 [params]
 

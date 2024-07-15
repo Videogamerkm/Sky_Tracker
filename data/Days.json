@@ -252,8 +252,8 @@
 	"Sky Anniversary": [
 		[
 			"days/anni/3;30;c",
-			"days/anni/medium;4;c",
-			"days/anni/2;20;h"
+			"days/anni/2;20;h",
+			""
 		],
 		[
 			"days/anni/4;20;c",
@@ -266,14 +266,14 @@
 			"days/anni/6;33;a"
 		],
 		[
-			"days/anni/9;8;k",
-			"days/anni/small;2;c",
+			"days/anni/9;7;k",
+			"days/anni/medium;4;c",
 			"base/sheet?E2;10;h"
 		],
 		[
-			"days/anni/7;16;k",
-			"days/anni/10;4;k",
-			"days/anni/8;12;k"
+			"days/anni/7;15;k",
+			"days/anni/10;3;k",
+			"days/anni/8;10;k"
 		],
 		[
 			"",

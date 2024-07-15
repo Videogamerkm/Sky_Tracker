@@ -3,8 +3,8 @@ extends VBoxContainer
 const seasonName = "Season of Duets"
 const start = {"day":15,"month":7,"year":2024,"hour":0} #1705305600
 const end = {"day":29,"month":9,"year":2024,"hour":23,"minute":59} #1711954799
-const needNoPass = 318
-const needPass = 388
+const needNoPass = 328
+const needPass = 393
 const left = " day(s) left in the season"
 
 # Called when the node enters the scene tree for the first time.

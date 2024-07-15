@@ -1,36 +1,176 @@
 {
+	"The Cellist's Beginnings": {
+		"loc": "Season of Duets",
+		"tree": [
+			[
+				"base/5C;0;0;sp",
+				"base/season_heart;3;sp",
+				""
+			],
+			[
+				"seas/cos/cellbeg 3;0;0;sp",
+				"seas/cos/cellbeg 2;32;sp",
+				""
+			],
+			[
+				"base/5C;0;0;sp",
+				"base/5C;26;sp",
+				""
+			],
+			[
+				"",
+				"seas/cos/cellbeg 1;20;sp",
+				""
+			]
+		]
+	},
+	"The Pianist's Beginnings": {
+		"loc": "Season of Duets",
+		"tree": [
+			[
+				"base/5C;0;0;sp",
+				"base/season_heart;3;sp",
+				""
+			],
+			[
+				"seas/cos/pianbeg 4;0;0;sp",
+				"seas/cos/pianbeg 2;30;sp",
+				""
+			],
+			[
+				"base/5C;0;0;sp",
+				"base/5C;24;sp",
+				""
+			],
+			[
+				"seas/cos/pianbeg 3;0;0;sp",
+				"seas/cos/pianbeg 1;20;sp",
+				""
+			],
+			[
+				"",
+				"base/5C;14;sp",
+				""
+			]
+		]
+	},
+	"The Musicians' Legacy": {
+		"loc": "Season of Duets",
+		"tree": [
+			[
+				"base/5C;0;0;sp",
+				"base/season_heart;3;sp",
+				""
+			],
+			[
+				"seas/cos/legacy 2;0;0;sp",
+				"seas/cos/legacy 1;34;sp",
+				""
+			],
+			[
+				"base/5C;0;0;sp",
+				"base/5C;24;sp",
+				""
+			],
+			[
+				"",
+				"base/sheet?40;14;sp",
+				""
+			]
+		]
+	},
+	"The Cellist's Flourishing": {
+		"loc": "Season of Duets",
+		"tree": [
+			[
+				"seas/cos/cellflo 4;0;0;sp",
+				"base/season_heart;3;sp",
+				""
+			],
+			[
+				"base/5C;0;0;sp",
+				"base/5C;24;sp",
+				""
+			],
+			[
+				"seas/cos/cellflo 3;0;0;sp",
+				"seas/cos/cellflo 2;22;sp",
+				""
+			],
+			[
+				"base/5C;0;0;sp",
+				"base/5C;18;sp",
+				""
+			],
+			[
+				"",
+				"seas/cos/cellflo 1;16;sp",
+				""
+			]
+		]
+	},
+	"The Pianist's Flourishing": {
+		"loc": "Season of Duets",
+		"tree": [
+			[
+				"seas/cos/pianflo 3;0;0;sp",
+				"base/season_heart;3;sp",
+				""
+			],
+			[
+				"base/5C;0;0;sp",
+				"base/5C;26;sp",
+				""
+			],
+			[
+				"seas/cos/pianflo 2;0;0;sp",
+				"seas/cos/pianflo 1;22;sp",
+				""
+			],
+			[
+				"",
+				"base/5C;12;sp",
+				""
+			]
+		]
+	},
 	"Duets Guide": {
 		"isGuide": true,
 		"loc": "Season of Duets",
 		"tree": [
 			[
+				"",
 				"base/heart;0;0",
-				"base/Q;0;c",
 				""
 			],
 			[
 				"base/heart;0;0",
 				"base/!;0;0",
-				"|base/Q;1;sh;sp"
+				"|seas/cos/duets 3;1;sh;sp"
 			],
 			[
 				"base/heart;0;0",
 				"base/!;0;0",
-				"|base/Q;2;sh;sp"
+				"|seas/cos/duets 2;2;sh;sp"
 			],
 			[
 				"base/heart;0;0",
 				"base/!;0;0",
-				"|base/Q;1;sh;sp"
+				"|seas/cos/duets 1;1;sh;sp"
 			],
 			[
-				"base/heart;0;0",
+				"seas/cos/duets 4;65;c",
 				"base/!;0;0",
 				"seas/icons/Duets;0;0;sp"
 			],
 			[
 				"",
 				"base/!;0;0",
+				""
+			],
+			[
+				"",
+				"base/teleport;0;0",
 				""
 			]
 		]
