@@ -12,6 +12,7 @@ func _ready():
 	for s in SeasonSpirits.seasons:
 		var season = seasonIcon.duplicate()
 		season.name = s
+		season.set_tooltip_text(s)
 		season.set_button_icon(load("icons/seas/icons/"+s.replace("Season of ","")+".bmp"))
 		season.connect("pressed",_area_select.bind(s))
 		$"Season Selection".add_child(season)
@@ -107,7 +108,7 @@ func _on_clear():
 	else:
 		bought.erase(curr_spirit)
 		if planned.has(curr_spirit): planned.erase(curr_spirit)
-	$Tree.set_tree(SeasonSpirits.data[curr_spirit]["tree"])
+		$Tree.set_tree(SeasonSpirits.data[curr_spirit]["tree"])
 
 func _on_tree_reject():
 	var newBought = []

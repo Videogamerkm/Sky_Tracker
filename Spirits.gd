@@ -72,7 +72,7 @@ func _on_clear():
 	else:
 		bought.erase(curr_spirit)
 		if planned.has(curr_spirit): planned.erase(curr_spirit)
-	$Tree.set_tree(RegSpirits.data[curr_spirit]["tree"])
+		$Tree.set_tree(RegSpirits.data[curr_spirit]["tree"])
 
 func _input(event):
 	if event.is_action_pressed("Back") && curr_spirit != "":
