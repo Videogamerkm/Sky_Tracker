@@ -20,6 +20,7 @@ func _ready():
 	shop.queue_free()
 	$Main/Collapse.connect("pressed",accordion.bind(self,false))
 	$Main/Expand.connect("pressed",accordion.bind(self,true))
+	if Global.collapse: accordion(self,false)
 	set_bought()
 	toggle_money(Global.noMoney)
 

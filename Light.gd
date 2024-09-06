@@ -8,6 +8,7 @@ func _ready():
 		for a in c.get_children():
 			for b in get_all_chk_btns(a):
 				b.connect("toggled",check.bind(b.get_index(),c.name+"/"+a.name))
+		if Global.collapse: _on_collapse_pressed()
 
 func check(button_pressed,num,sect):
 	if button_pressed:

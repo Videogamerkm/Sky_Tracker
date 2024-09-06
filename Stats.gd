@@ -76,7 +76,9 @@ func _ready():
 		$"IGC Shops/Titles".add_child(cell)
 	for b in get_all_acc_btns(self):
 		if b.name == "Expand": b.connect("pressed",accordion.bind(b.get_parent().get_parent(),true))
-		elif b.name == "Collapse": b.connect("pressed",accordion.bind(b.get_parent().get_parent(),false))
+		elif b.name == "Collapse":
+			b.connect("pressed",accordion.bind(b.get_parent().get_parent(),false))
+			if Global.collapse: accordion(b.get_parent().get_parent(),false)
 
 func get_all_acc_btns(in_node, children_acc = []):
 	if in_node is Button and (in_node.name == "Expand" or in_node.name == "Collapse"):
