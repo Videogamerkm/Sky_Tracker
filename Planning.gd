@@ -92,7 +92,8 @@ func add_plans(data,spirit,plan):
 
 func clear_row(spirit):
 	delSpirit = spirit
-	$Confirm.show()
+	if Global.noWarn: _on_confirm_confirmed()
+	else: $Confirm.show()
 
 func _on_confirm_confirmed():
 	if Global.regSprtTab.planned.has(delSpirit):

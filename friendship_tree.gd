@@ -148,7 +148,8 @@ func _on_back_pressed():
 	treeBack.emit()
 
 func _on_clear_pressed():
-	$Confirm.show()
+	if Global.noWarn: _on_confirm_confirmed()
+	else: $Confirm.show()
 
 func _on_confirm_confirmed():
 	treeClear.emit()

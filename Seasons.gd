@@ -97,7 +97,8 @@ func _on_tree_bought(iconValue,press):
 	Global.main.update_cos(iconValue,press)
 
 func _on_clear_pressed():
-	$Confirm.show()
+	if Global.noWarn: _on_clear()
+	else: $Confirm.show()
 
 func _on_clear():
 	if curr_spirit == "":
