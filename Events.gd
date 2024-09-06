@@ -6,13 +6,13 @@ const tpd = 5
 const start = {"day":12,"month":7,"year":2024,"hour":17}
 const end = {"day":26,"month":7,"year":2024,"hour":23,"minute":59}
 const short = {"Days of Fortune":"fortune","Days of Love":"love","Days of Bloom":"bloom","Days of Nature":"nature",
-	"Days of Color":"color","Days of Music":"music","Sky Anniversary":"anni","Days of Sunlight":"sun","Days of Style":"style",
-	"Days of Mischief":"mischief","Days of Feast":"feast","Tournament of Triumph":"triumph","Sky x Cinnamoroll":"cinna"}
+	"Days of Color":"color","Days of Music":"music","Sky Anniversary":"anni","Days of Sunlight":"sun",
+	"Days of Moonlight":"moon","Days of Style":"style","Days of Mischief":"mischief","Days of Feast":"feast",
+	"Tournament of Triumph":"triumph","Sky x Cinnamoroll":"cinna"}
 const left = " day(s) left in the event"
 var selected = ""
 var bought = {}
 var planned = {}
-@onready var shop = $"../../../Shop Purchases/Margin/VBox"
 @onready var iap = $"In-App Purchases"
 @onready var rows = JSON.parse_string(FileAccess.open("res://data/Days.json", FileAccess.READ).get_as_text())
 @onready var shopRows = JSON.parse_string(FileAccess.open("res://data/EventIAPs.json", FileAccess.READ).get_as_text())
@@ -62,13 +62,13 @@ func _press_event_button(node):
 	if shopRows.has(d):
 		iap.get_node("Desc").text = "Available every year during "+d+"."
 		for i in shopRows[d]["items"]:
-			var c = shop.shop_item(i,d+" IAPs")
+			var c = Global.shopTab.shop_item(i,d+" IAPs")
 			iap.get_node("Purchases").add_child(c)
 			if c is Panel:
-				if shop.bought.has(d+" IAPs") and shop.bought[d+" IAPs"].has(c.iconValue): c.set_pressed(true)
+				if Global.shopTab.bought.has(d+" IAPs") and Global.shopTab.bought[d+" IAPs"].has(c.iconValue): c.set_pressed(true)
 			elif c is HBoxContainer:
 				for x in c.get_children():
-					if shop.bought.has(d+" IAPs") and shop.bought[d+" IAPs"].has(x.iconValue): x.set_pressed(true)
+					if Global.shopTab.bought.has(d+" IAPs") and Global.shopTab.bought[d+" IAPs"].has(x.iconValue): x.set_pressed(true)
 		iap.show()
 	$Tree.show()
 	$Events.hide()
