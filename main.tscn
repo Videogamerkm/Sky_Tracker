@@ -2720,6 +2720,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_aau57")
 text = "X"
 
 [node name="place2" type="Label" parent="Tabs/Planning/Margin/VBox"]
+custom_minimum_size = Vector2(1, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 8
@@ -4971,19 +4972,15 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 6
 horizontal_alignment = 1
 
-[node name="Events" parent="Tabs/Events/Margin/VBox" instance=ExtResource("1_au16a")]
+[node name="Events" type="GridContainer" parent="Tabs/Events/Margin/VBox"]
 layout_mode = 2
+columns = 5
 
-[node name="Events" type="GridContainer" parent="Tabs/Events/Margin/VBox/Events"]
-layout_mode = 2
-columns = 6
-
-[node name="fortune" type="Button" parent="Tabs/Events/Margin/VBox/Events/Events"]
+[node name="fortune" type="Button" parent="Tabs/Events/Margin/VBox/Events"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
-toggle_mode = true
 text = "Days of
 Fortune"
 icon = ExtResource("31_vcuki")
@@ -4991,12 +4988,11 @@ icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="love" type="Button" parent="Tabs/Events/Margin/VBox/Events/Events"]
+[node name="love" type="Button" parent="Tabs/Events/Margin/VBox/Events"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
-toggle_mode = true
 text = "Days of
 Love"
 icon = ExtResource("32_wcu0u")
@@ -5004,12 +5000,11 @@ icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="bloom" type="Button" parent="Tabs/Events/Margin/VBox/Events/Events"]
+[node name="bloom" type="Button" parent="Tabs/Events/Margin/VBox/Events"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
-toggle_mode = true
 text = "Days of
 Bloom"
 icon = ExtResource("37_qrfhd")
@@ -5017,12 +5012,11 @@ icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="nature" type="Button" parent="Tabs/Events/Margin/VBox/Events/Events"]
+[node name="nature" type="Button" parent="Tabs/Events/Margin/VBox/Events"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
-toggle_mode = true
 text = "Days of
 Nature"
 icon = ExtResource("38_skdn8")
@@ -5030,12 +5024,11 @@ icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="color" type="Button" parent="Tabs/Events/Margin/VBox/Events/Events"]
+[node name="color" type="Button" parent="Tabs/Events/Margin/VBox/Events"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
-toggle_mode = true
 text = "Days of
 Color"
 icon = ExtResource("35_cfc5u")
@@ -5043,12 +5036,11 @@ icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="music" type="Button" parent="Tabs/Events/Margin/VBox/Events/Events"]
+[node name="music" type="Button" parent="Tabs/Events/Margin/VBox/Events"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
-toggle_mode = true
 text = "Days of
 Music"
 icon = ExtResource("36_1y5ba")
@@ -5056,12 +5048,11 @@ icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="anni" type="Button" parent="Tabs/Events/Margin/VBox/Events/Events"]
+[node name="anni" type="Button" parent="Tabs/Events/Margin/VBox/Events"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
-toggle_mode = true
 text = "Sky
 Anniversary"
 icon = ExtResource("45_6blqw")
@@ -5069,12 +5060,11 @@ icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="sun" type="Button" parent="Tabs/Events/Margin/VBox/Events/Events"]
+[node name="sun" type="Button" parent="Tabs/Events/Margin/VBox/Events"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
-toggle_mode = true
 text = "Days of
 Sunlight
 "
@@ -5083,12 +5073,11 @@ icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="style" type="Button" parent="Tabs/Events/Margin/VBox/Events/Events"]
+[node name="style" type="Button" parent="Tabs/Events/Margin/VBox/Events"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
-toggle_mode = true
 text = "Days of
 Style
 "
@@ -5097,12 +5086,11 @@ icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="mischief" type="Button" parent="Tabs/Events/Margin/VBox/Events/Events"]
+[node name="mischief" type="Button" parent="Tabs/Events/Margin/VBox/Events"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
-toggle_mode = true
 text = "Days of
 Mischief
 "
@@ -5111,12 +5099,11 @@ icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="feast" type="Button" parent="Tabs/Events/Margin/VBox/Events/Events"]
+[node name="feast" type="Button" parent="Tabs/Events/Margin/VBox/Events"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
-toggle_mode = true
 text = "Days of
 Feast
 "
@@ -5125,12 +5112,11 @@ icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="triumph" type="Button" parent="Tabs/Events/Margin/VBox/Events/Events"]
+[node name="triumph" type="Button" parent="Tabs/Events/Margin/VBox/Events"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
-toggle_mode = true
 text = "Tournament
 of Triumph
 "
@@ -5139,12 +5125,11 @@ icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="cinna" type="Button" parent="Tabs/Events/Margin/VBox/Events/Events"]
+[node name="cinna" type="Button" parent="Tabs/Events/Margin/VBox/Events"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
-toggle_mode = true
 text = "Sky x
 Cinnamoroll
 "
@@ -5162,6 +5147,21 @@ horizontal_alignment = 1
 visible = false
 layout_mode = 2
 size_flags_horizontal = 1
+
+[node name="In-App Purchases" parent="Tabs/Events/Margin/VBox" instance=ExtResource("1_au16a")]
+visible = false
+layout_mode = 2
+
+[node name="Desc" type="Label" parent="Tabs/Events/Margin/VBox/In-App Purchases"]
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Purchases" type="HFlowContainer" parent="Tabs/Events/Margin/VBox/In-App Purchases"]
+layout_mode = 2
+theme_override_constants/h_separation = 1
+theme_override_constants/v_separation = 1
+alignment = 1
 
 [node name="Nesting Challenges" type="ScrollContainer" parent="Tabs"]
 visible = false
@@ -5485,6 +5485,7 @@ autowrap_mode = 3
 [connection signal="planClear" from="Tabs/Events/Margin/VBox/Tree" to="Tabs/Events/Margin/VBox" method="_on_tree_plan_clear"]
 [connection signal="planned" from="Tabs/Events/Margin/VBox/Tree" to="Tabs/Events/Margin/VBox" method="_on_tree_planned"]
 [connection signal="reject" from="Tabs/Events/Margin/VBox/Tree" to="Tabs/Events/Margin/VBox" method="_on_tree_reject"]
+[connection signal="treeBack" from="Tabs/Events/Margin/VBox/Tree" to="Tabs/Events/Margin/VBox" method="_on_tree_tree_back"]
 [connection signal="treeClear" from="Tabs/Events/Margin/VBox/Tree" to="Tabs/Events/Margin/VBox" method="_on_clear"]
 [connection signal="bought" from="Tabs/Nesting Challenges/Margin/VBox/Tree" to="Tabs/Nesting Challenges/Margin/VBox" method="_on_tree_bought"]
 [connection signal="planClear" from="Tabs/Nesting Challenges/Margin/VBox/Tree" to="Tabs/Nesting Challenges/Margin/VBox" method="_on_tree_plan_clear"]

@@ -12,32 +12,33 @@ func _ready():
 		var newShop = shop.duplicate()
 		newShop.name = s
 		newShop.get_node("Desc").text = rows[s]["desc"]
-		for i in rows[s]["items"]:
-			if i is String:
-				newShop.get_node("Purchases").add_child(gen_item(s, i))
-			elif i is Array:
-				var newJoin = join.duplicate()
-				var x = 0
-				for sub in i:
-					var newBtn = gen_item(s, sub)
-					newBtn.hideR = true
-					newBtn.hideL = true
-					if x == 0: newBtn.hideL = false
-					elif x == i.size() - 1: newBtn.hideR = false
-					x += 1
-					newJoin.add_child(newBtn)
-				newShop.get_node("Purchases").add_child(newJoin)
+		for i in rows[s]["items"]: newShop.get_node("Purchases").add_child(shop_item(i, s))
 		add_child(newShop)
 	remove_child(join)
 	remove_child(btn)
 	remove_child(shop)
-	join.queue_free()
-	btn.queue_free()
 	shop.queue_free()
 	$Main/Collapse.connect("pressed",accordion.bind(self,false))
 	$Main/Expand.connect("pressed",accordion.bind(self,true))
 	set_bought()
 	toggle_money(Global.noMoney)
+
+func shop_item(i,s) -> Node:
+	if i is String:
+		return gen_item(s, i)
+	elif i is Array:
+		var newJoin = join.duplicate()
+		var x = 0
+		for sub in i:
+			var newBtn = gen_item(s, sub)
+			newBtn.hideR = true
+			newBtn.hideL = true
+			if x == 0: newBtn.hideL = false
+			elif x == i.size() - 1: newBtn.hideR = false
+			x += 1
+			newJoin.add_child(newBtn)
+		return newJoin
+	return null
 
 func gen_item(section, item) -> Panel:
 	var newBtn = btn.duplicate()
@@ -49,9 +50,11 @@ func gen_item(section, item) -> Panel:
 	return newBtn
 
 func item_bought(press, section, item, node):
+	print("Bought: "+item)
 	if bought.has(section) and press and not bought[section].has(item): bought[section].append(item)
 	elif bought.has(section) and not press and bought[section].has(item): bought[section].erase(item)
 	elif not bought.has(section) and press: bought[section] = [item]
+	print(bought)
 	if node.get_parent() is HBoxContainer:
 		for c in node.get_parent().get_children():
 			if press != c.is_pressed():
@@ -59,6 +62,7 @@ func item_bought(press, section, item, node):
 
 func set_bought():
 	for s in bought:
+		if not has_node(s): return
 		for c in get_node(s+"/Purchases").get_children():
 			if c is Panel:
 				if bought[s].has(c.iconValue): c.set_pressed(true)

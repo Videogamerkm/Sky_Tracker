@@ -12,11 +12,13 @@ const left = " day(s) left in the event"
 var selected = ""
 var bought = {}
 var planned = {}
+@onready var shop = $"../../../Shop Purchases/Margin/VBox"
+@onready var iap = $"In-App Purchases"
 @onready var rows = JSON.parse_string(FileAccess.open("res://data/Days.json", FileAccess.READ).get_as_text())
+@onready var shopRows = JSON.parse_string(FileAccess.open("res://data/EventIAPs.json", FileAccess.READ).get_as_text())
 
 func _ready():
-	$Tree/Org1/Controls/Back.hide()
-	for c in $Events/Events.get_children():
+	for c in $Events.get_children():
 		if not c is Button: continue
 		c.connect("pressed", _press_event_button.bind(c))
 	set_fields()
@@ -51,14 +53,25 @@ func _press_event_button(node):
 	var event = node.name
 	var d = short.find_key(str(event))
 	selected = d
-	for c in $Events/Events.get_children():
-		if not c is Button: continue
-		c.set_pressed_no_signal(false)
-	node.set_pressed_no_signal(true)
 	$Tree.set_tree(rows[d],event)
 	if bought.has(d): $Tree.import_bought(bought[d])
 	if planned.has(d): $Tree.set_planned(planned[d])
-	if not $Tree.is_visible_in_tree(): $Tree.show()
+	for c in iap.get_node("Purchases").get_children():
+		iap.get_node("Purchases").remove_child(c)
+		c.queue_free()
+	if shopRows.has(d):
+		iap.get_node("Desc").text = "Available every year during "+d+"."
+		for i in shopRows[d]["items"]:
+			var c = shop.shop_item(i,d+" IAPs")
+			iap.get_node("Purchases").add_child(c)
+			if c is Panel:
+				if shop.bought.has(d+" IAPs") and shop.bought[d+" IAPs"].has(c.iconValue): c.set_pressed(true)
+			elif c is HBoxContainer:
+				for x in c.get_children():
+					if shop.bought.has(d+" IAPs") and shop.bought[d+" IAPs"].has(x.iconValue): x.set_pressed(true)
+		iap.show()
+	$Tree.show()
+	$Events.hide()
 
 func _on_tree_bought(iconValue,press):
 	bought[selected] = $Tree.export_bought()
@@ -91,3 +104,8 @@ func _on_tree_planned():
 
 func _on_tree_plan_clear():
 	if planned.has(selected): planned.erase(selected)
+
+func _on_tree_tree_back():
+	$Tree.hide()
+	iap.hide()
+	$Events.show()
