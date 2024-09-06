@@ -76,7 +76,9 @@
 			"shops/days/sun 5;19.99;$",
 			"shops/days/sun 6;2.99;$",
 			"shops/days/sun 7;9.99;$",
-			"shops/days/sun 8;14.99;$"
+			"shops/days/sun 8;14.99;$",
+			"shops/days/sun 9;14.99;$",
+			"shops/days/sun 10;2.99;$"
 		]
 	},
 	"Days of Style": {
