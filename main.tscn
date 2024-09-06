@@ -1,4 +1,4 @@
-[gd_scene load_steps=70 format=3 uid="uid://b04gr0a605mxh"]
+[gd_scene load_steps=71 format=3 uid="uid://b04gr0a605mxh"]
 
 [ext_resource type="PackedScene" uid="uid://bap3aptv3y1dw" path="res://collapsible.tscn" id="1_au16a"]
 [ext_resource type="Theme" uid="uid://cqobwtkqodo0r" path="res://white.tres" id="1_q23n0"]
@@ -48,6 +48,7 @@
 [ext_resource type="Texture2D" uid="uid://b3uikfihjigyi" path="res://icons/days/anni/ticket.bmp" id="45_6blqw"]
 [ext_resource type="Texture2D" uid="uid://lg2iq3wnkjjc" path="res://icons/days/cinna/ticket.bmp" id="45_o2joq"]
 [ext_resource type="Script" path="res://Challenges.gd" id="45_pwys4"]
+[ext_resource type="Texture2D" uid="uid://cmop3qg5wqx4e" path="res://icons/days/triumph/ticket.bmp" id="46_d0wdx"]
 [ext_resource type="Script" path="res://Shops.gd" id="48_w7h55"]
 [ext_resource type="PackedScene" uid="uid://by0a01v0nq2t0" path="res://shop_button.tscn" id="49_eg0qa"]
 
@@ -5133,7 +5134,7 @@ focus_mode = 0
 text = "Tournament
 of Triumph
 "
-icon = ExtResource("45_6blqw")
+icon = ExtResource("46_d0wdx")
 icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true

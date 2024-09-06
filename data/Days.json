@@ -295,13 +295,13 @@
 	],
 	"Tournament of Triumph": [
 		[
-			"",
-			"",
+			"days/triumph/2;25;k",
+			"days/triumph/1;37;k",
 			""
 		],
 		[
 			"",
-			"base/teleport;0;0",
+			"base/5C;5;c",
 			""
 		]
 	]

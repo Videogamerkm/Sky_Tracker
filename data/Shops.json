@@ -115,7 +115,9 @@
 			["shops/event/cinna 4;14.99;$",
 			"shops/event/cinna 5;0;0"],
 			"shops/event/cinna 6;14.99;$",
-			"shops/event/anni 5;19.99;$"
+			"shops/event/anni 5;19.99;$",
+			"shops/event/tot 1;4.99;$",
+			"shops/event/tot 2;9.99;$"
 		]
 	}
 }
