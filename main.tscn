@@ -93,6 +93,16 @@ content_margin_bottom = 4.0
 bg_color = Color(0.486275, 0.329412, 0.329412, 0.6)
 corner_detail = 5
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5muw6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ty0t3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u7qhy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7gr2j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_141fx"]
+
 [sub_resource type="ButtonGroup" id="ButtonGroup_jk0gv"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d7tig"]
@@ -144,16 +154,6 @@ corner_radius_bottom_left = 12
 corner_detail = 5
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_buw5i"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5muw6"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ty0t3"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u7qhy"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7gr2j"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_141fx"]
 
 [sub_resource type="Animation" id="Animation_h7fm0"]
 resource_name = "RESET"
@@ -3095,6 +3095,19 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 20
 
+[node name="Dailies" type="CheckButton" parent="Tabs/Current Season/Margin/VBox"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+focus_mode = 0
+theme_override_constants/h_separation = 10
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5muw6")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ty0t3")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_u7qhy")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7gr2j")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_141fx")
+text = "I've done the daily quests today"
+
 [node name="place3" type="Label" parent="Tabs/Current Season/Margin/VBox"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -5371,6 +5384,34 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_7gr2j")
 theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_141fx")
 text = "Hide all monetary amounts"
 
+[node name="NoWarn" type="CheckButton" parent="Tabs/Settings/Margin/VBox"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+tooltip_text = "This WILL clear data without warning!"
+focus_mode = 0
+theme_override_constants/h_separation = 10
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5muw6")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ty0t3")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_u7qhy")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7gr2j")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_141fx")
+text = "Don't warn about clearing spirit trees"
+
+[node name="Collapse" type="CheckButton" parent="Tabs/Settings/Margin/VBox"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+tooltip_text = "Takes effect next time you open the app."
+focus_mode = 0
+theme_override_constants/h_separation = 10
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5muw6")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ty0t3")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_u7qhy")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7gr2j")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_141fx")
+text = "Collapse all sections on load"
+
 [node name="Credits" type="ScrollContainer" parent="Tabs"]
 visible = false
 layout_mode = 2
@@ -5469,6 +5510,7 @@ autowrap_mode = 3
 [connection signal="confirmed" from="Tabs/Regular Spirits/Margin/VBox/Confirm" to="Tabs/Regular Spirits/Margin/VBox" method="_on_clear"]
 [connection signal="value_changed" from="Tabs/Current Season/Margin/VBox/Have/Candles" to="Tabs/Current Season/Margin/VBox" method="_on_check_toggled"]
 [connection signal="toggled" from="Tabs/Current Season/Margin/VBox/Pass/Check" to="Tabs/Current Season/Margin/VBox" method="_on_check_toggled"]
+[connection signal="toggled" from="Tabs/Current Season/Margin/VBox/Dailies" to="Tabs/Current Season/Margin/VBox" method="_on_dailies_toggled"]
 [connection signal="bought" from="Tabs/Seasonal Spirits/Margin/VBox/Tree" to="Tabs/Seasonal Spirits/Margin/VBox" method="_on_tree_bought"]
 [connection signal="planClear" from="Tabs/Seasonal Spirits/Margin/VBox/Tree" to="Tabs/Seasonal Spirits/Margin/VBox" method="_on_tree_plan_clear"]
 [connection signal="planned" from="Tabs/Seasonal Spirits/Margin/VBox/Tree" to="Tabs/Seasonal Spirits/Margin/VBox" method="_on_tree_planned"]
@@ -5497,3 +5539,5 @@ autowrap_mode = 3
 [connection signal="toggled" from="Tabs/Settings/Margin/VBox/Close" to="Tabs/Settings/Margin/VBox" method="_on_close_toggled"]
 [connection signal="toggled" from="Tabs/Settings/Margin/VBox/Save" to="Tabs/Settings/Margin/VBox" method="_on_save_toggled"]
 [connection signal="toggled" from="Tabs/Settings/Margin/VBox/NoMoney" to="Tabs/Settings/Margin/VBox" method="_on_no_money_toggled"]
+[connection signal="toggled" from="Tabs/Settings/Margin/VBox/NoWarn" to="Tabs/Settings/Margin/VBox" method="_on_no_warn_toggled"]
+[connection signal="toggled" from="Tabs/Settings/Margin/VBox/Collapse" to="Tabs/Settings/Margin/VBox" method="_on_collapse_toggled"]
