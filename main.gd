@@ -162,7 +162,6 @@ func _on_tabs_tab_changed(tab):
 		histIndex += 1
 
 func _input(event):
-	if not get_tree().root.has_focus(): return
 	if event.is_action_pressed("Rainbow") && not $AnimationPlayer.is_playing():
 		$AnimationPlayer.play("rainbow")
 		get_tree().root.set_input_as_handled()
