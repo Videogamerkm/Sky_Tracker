@@ -55,6 +55,9 @@ func _on_toggled(press):
 	if press:
 		$Curr.hide()
 		$Cost.hide()
+		if planned:
+			planned = false
+			planAdded.emit()
 	elif type != "0":
 		$Curr.show()
 		$Cost.show()
@@ -67,6 +70,6 @@ func set_locked(state):
 	else: add_theme_color_override("icon_normal_color",normalClr)
 
 func _gui_input(event):
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_RIGHT and event.pressed and not button_pressed:
 		planned = not planned
 		planAdded.emit()
