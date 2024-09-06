@@ -25,12 +25,12 @@ func save(backup = true):
 		old.close()
 		back.close()
 	var file = FileAccess.open(saveFile, FileAccess.WRITE)
-	file.store_var({"V":1.2,
+	file.store_var({"V":1.3,
 		"Plan":{"days":Global.planTab.days,"cpd":Global.planTab.cpd,"hpd":Global.planTab.hpd,
 			"currC":Global.planTab.currCandles,"currH":Global.planTab.currHearts,"currT":Global.planTab.currTicks},
 		"Reg":{"bought":Global.regSprtTab.bought,"planned":Global.regSprtTab.planned},
 		"Curr":{"pass":Global.currSsnTab.get_node("Pass/Check").is_pressed(),
-			"have":Global.currSsnTab.get_node("Have/Candles").value},
+			"have":Global.currSsnTab.get_node("Have/Candles").value,"daily":Global.currSsnTab.daily},
 		"Seas":{"bought":Global.ssnlSprtTab.bought,"planned":Global.ssnlSprtTab.planned},
 		"WL":{"check":Global.wlTab.export_checked()},
 		"Yearly":{"bought":Global.yrlyTab.bought,"planned":Global.yrlyTab.planned},
@@ -44,6 +44,8 @@ func save(backup = true):
 	config.set_value("Options","wait",Global.wait)
 	config.set_value("Options","saveClose",Global.saveClose)
 	config.set_value("Options","noMoney",Global.noMoney)
+	config.set_value("Options","noWarn",Global.noWarn)
+	config.set_value("Options","collapse",Global.collapse)
 	config.save(configFile)
 
 func _on_tree_entered():
@@ -57,6 +59,8 @@ func _on_tree_entered():
 		Global.wait = config.get_value("Options","wait",true)
 		Global.saveClose = config.get_value("Options","saveClose",true)
 		Global.noMoney = config.get_value("Options","noMoney",false)
+		Global.noWarn = config.get_value("Options","noWarn",false)
+		Global.collapse = config.get_value("Options","collapse",false)
 	else: config.set_value("Current Save","file",saveFile)
 	Global.homeTab.get_node("File").text = "Current Save File: "+saveFile
 	load_save(saveFile)
@@ -66,6 +70,8 @@ func _on_tree_entered():
 	Global.setsTab.get_node("Close").set_pressed_no_signal(Global.saveClose)
 	Global.setsTab.get_node("Save").set_pressed_no_signal(Global.wait)
 	Global.setsTab.get_node("NoMoney").set_pressed_no_signal(Global.noMoney)
+	Global.setsTab.get_node("NoWarn").set_pressed_no_signal(Global.noWarn)
+	Global.setsTab.get_node("Collapse").set_pressed_no_signal(Global.collapse)
 
 func load_save(sv):
 	if not FileAccess.file_exists(sv):
@@ -98,6 +104,9 @@ func load_save(sv):
 	if V > 1.1:
 		Global.chlngTab.bought = data["Challs"]["bought"]
 		Global.chlngTab.planned = data["Challs"]["planned"]
+	if V > 1.2:
+		Global.currSsnTab.daily = data["Curr"]["daily"]
+		if Global.currSsnTab.daily != "": Global.currSsnTab.get_node("Dailies").set_pressed_no_signal(true)
 	cosmetics = data["Other"]["cosmetics"]
 	if sv.ends_with(".bak"): save(false)
 
