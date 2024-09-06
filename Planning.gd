@@ -68,6 +68,8 @@ func add_plans(data,spirit,plan):
 		$Plans.add_child(row)
 	var ret = {"c":0,"h":0,"a":0,"sp":0,"sh":0,"k":0}
 	$Plans.get_node("Spirit "+spirit).text = spirit
+	$Plans.get_node("Spirit "+spirit).tooltip_text = "Click to go to\nthis spirit's tree"
+	$Plans.get_node("Spirit "+spirit).connect("pressed",$"../../../.."._on_search_pressed.bind(spirit))
 	$Plans.get_node("X "+spirit).connect("pressed",clear_row.bind(spirit))
 	var cost = SpiritUtils.get_cost(data,spirit)
 	var unspent = SpiritUtils.get_unspent(data,spirit,plan)

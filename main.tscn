@@ -2650,11 +2650,13 @@ script = ExtResource("5_ulb31")
 layout_mode = 2
 columns = 9
 
-[node name="Spirit" type="Label" parent="Tabs/Planning/Margin/VBox/Plans"]
+[node name="Spirit" type="Button" parent="Tabs/Planning/Margin/VBox/Plans"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.0
+focus_mode = 0
 theme_override_font_sizes/font_size = 16
+flat = true
 
 [node name="c" type="Label" parent="Tabs/Planning/Margin/VBox/Plans"]
 layout_mode = 2
