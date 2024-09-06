@@ -84,6 +84,10 @@ func add_plans(data,spirit,plan):
 	for r in plan: for b in r: if b: amnt += 1
 	$Plans.get_node("items "+spirit).text = str(amnt)
 	ret["n"] = amnt
+	if amnt == 0:
+		for i in range(0,9):
+			var row = $Plans.get_node($Plans.get_child(i).name+" "+spirit)
+			$Plans.remove_child(row)
 	return ret
 
 func clear_row(spirit):
