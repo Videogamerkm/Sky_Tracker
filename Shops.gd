@@ -50,11 +50,9 @@ func gen_item(section, item) -> Panel:
 	return newBtn
 
 func item_bought(press, section, item, node):
-	print("Bought: "+item)
 	if bought.has(section) and press and not bought[section].has(item): bought[section].append(item)
 	elif bought.has(section) and not press and bought[section].has(item): bought[section].erase(item)
 	elif not bought.has(section) and press: bought[section] = [item]
-	print(bought)
 	if node.get_parent() is HBoxContainer:
 		for c in node.get_parent().get_children():
 			if press != c.is_pressed():
