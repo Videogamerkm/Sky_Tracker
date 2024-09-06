@@ -51,7 +51,7 @@ func _area_select(area):
 				else:
 					sp.set_button_icon(load("icons/"+SeasonSpirits.data[s]["tree"][-1][1].split(";")[0].split("?")[0]+".bmp"))
 			elif s.begins_with("The "):
-				sp.text = s
+				sp.text = s.replace(" Begin","\nBegin").replace(" Flour","\nFlour")
 				if s.ends_with("list's Beginnings"):
 					sp.set_button_icon(load("icons/"+SeasonSpirits.data[s]["tree"][1][1].split(";")[0].split("?")[0]+".bmp"))
 				elif s.ends_with("nist's Beginnings") or s.ends_with("Legacy"):
