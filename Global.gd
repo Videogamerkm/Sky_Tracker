@@ -5,6 +5,8 @@ var useTwelve = false
 var wait = true
 var saveClose = true
 var noMoney = false
+var noWarn = false
+var collapse = false
 
 # Tabs
 var main

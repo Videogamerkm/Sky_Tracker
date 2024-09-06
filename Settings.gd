@@ -32,3 +32,9 @@ func _on_close_toggled(button_pressed):
 func _on_no_money_toggled(button_pressed):
 	Global.noMoney = button_pressed
 	Global.shopTab.toggle_money(button_pressed)
+
+func _on_no_warn_toggled(button_pressed):
+	Global.noWarn = button_pressed
+
+func _on_collapse_toggled(button_pressed):
+	Global.collapse = button_pressed
