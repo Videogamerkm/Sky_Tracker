@@ -4,32 +4,32 @@
 		"tree": [
 			[
 				"base/5C;0;0",
-				"base/heart;3;sp",
+				"base/heart;0;0",
 				""
 			],
 			[
 				"base/sheet?36;0;0",
-				"seas/cos/wavelight 3;30;sp",
+				"seas/cos/wavelight 3;0;0",
 				""
 			],
 			[
 				"seas/exp/wavelight?4;0;0",
-				"base/5C;24;sp",
+				"base/5C;0;0",
 				""
 			],
 			[
 				"seas/cos/wavelight 2;0;0",
-				"seas/exp/wavelight?3;20;sp",
+				"seas/exp/wavelight?3;0;0",
 				""
 			],
 			[
 				"base/5C;0;0",
-				"base/5C;16;sp",
+				"base/5C;0;0",
 				""
 			],
 			[
 				"seas/exp/wavelight?2;0;0",
-				"seas/cos/wavelight 1;12;sp",
+				"seas/cos/wavelight 1;0;0",
 				""
 			],
 			[
@@ -44,32 +44,32 @@
 		"tree": [
 			[
 				"base/5C;0;0",
-				"base/heart;3;sp",
+				"base/heart;0;0",
 				""
 			],
 			[
 				"seas/cos/raise 3;0;0",
-				"seas/cos/raise 4;32;sp",
+				"seas/cos/raise 4;0;0",
 				""
 			],
 			[
 				"base/5C;0;0",
-				"base/5C;28;sp",
+				"base/5C;0;0",
 				""
 			],
 			[
 				"seas/exp/raise?4;0;0",
-				"seas/cos/raise 2;24;sp",
+				"seas/cos/raise 2;0;0",
 				""
 			],
 			[
 				"seas/cos/raise 1;0;0",
-				"seas/exp/raise?3;18;sp",
+				"seas/exp/raise?3;0;0",
 				""
 			],
 			[
 				"seas/exp/raise?2;0;0",
-				"base/5C;10;sp",
+				"base/5C;0;0",
 				""
 			],
 			[
@@ -84,32 +84,32 @@
 		"tree": [
 			[
 				"seas/cos/twirl 3;0;0",
-				"base/heart;3;sp",
+				"base/heart;0;0",
 				""
 			],
 			[
 				"base/5C;0;0",
-				"base/5C;30;sp",
+				"base/5C;0;0",
 				""
 			],
 			[
 				"seas/exp/twirl?4;0;0",
-				"base/sheet?35;24;sp",
+				"base/sheet?35;0;0",
 				""
 			],
 			[
 				"seas/cos/twirl 2;0;0",
-				"seas/exp/twirl?3;20;sp",
+				"seas/exp/twirl?3;0;0",
 				""
 			],
 			[
 				"base/5C;0;0",
-				"base/5C;12;sp",
+				"base/5C;0;0",
 				""
 			],
 			[
 				"seas/exp/twirl?2;0;0",
-				"seas/cos/twirl 1;6;sp",
+				"seas/cos/twirl 1;0;0",
 				""
 			],
 			[
@@ -124,32 +124,32 @@
 		"tree": [
 			[
 				"seas/cos/rhythclap 3;0;0",
-				"base/heart;3;sp",
+				"base/heart;0;0",
 				""
 			],
 			[
 				"base/5C;0;0",
-				"base/5C;26;sp",
+				"base/5C;0;0",
 				""
 			],
 			[
 				"seas/exp/rhythclap?4;0;0",
-				"seas/cos/rhythclap 2;20;sp",
+				"seas/cos/rhythclap 2;0;0",
 				""
 			],
 			[
 				"base/5C;0;0",
-				"seas/exp/rhythclap?3;16;sp",
+				"seas/exp/rhythclap?3;0;0",
 				""
 			],
 			[
 				"seas/cos/rhythclap 1;0;0",
-				"base/sheet?33;12;sp",
+				"base/sheet?33;0;0",
 				""
 			],
 			[
 				"seas/exp/rhythclap?2;0;0",
-				"base/5C;8;sp",
+				"base/5C;0;0",
 				""
 			],
 			[
@@ -191,17 +191,17 @@
 			[
 				"|seas/exp/silentclap?4;5;h",
 				"seas/exp/conduct?1;0;0",
-				"|seas/cos/aurora 3;1;sh"
+				"|seas/cos/aurora 3;0;0"
 			],
 			[
 				"seas/exp/silentclap?3;5;c",
 				"base/!;0;0",
-				"|seas/cos/aurora 2;2;sh"
+				"|seas/cos/aurora 2;0;0"
 			],
 			[
 				"seas/exp/silentclap?2;3;h",
 				"seas/exp/silentclap?1;0;0",
-				"|seas/cos/aurora 1;1;sh"
+				"|seas/cos/aurora 1;0;0"
 			],
 			[
 				"",

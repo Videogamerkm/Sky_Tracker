@@ -34,32 +34,32 @@
 		"tree": [
 			[
 				"base/5C;0;0",
-				"base/heart;3;sp",
+				"base/heart;0;0",
 				""
 			],
 			[
 				"seas/cos/awww 3;0;0",
-				"seas/cos/awww 4;34;sp",
+				"seas/cos/awww 4;0;0",
 				""
 			],
 			[
 				"seas/exp/awww?4;0;0",
-				"base/5C;26;sp",
+				"base/5C;0;0",
 				""
 			],
 			[
 				"base/5C;0;0",
-				"seas/exp/awww?3;20;sp",
+				"seas/exp/awww?3;0;0",
 				""
 			],
 			[
 				"seas/cos/awww 1;0;0",
-				"seas/cos/awww 2;16;sp",
+				"seas/cos/awww 2;0;0",
 				""
 			],
 			[
 				"seas/exp/awww?2;0;0",
-				"base/5C;12;sp",
+				"base/5C;0;0",
 				""
 			],
 			[
@@ -74,32 +74,32 @@
 		"tree": [
 			[
 				"base/5C;0;0",
-				"base/heart;3;sp",
+				"base/heart;0;0",
 				""
 			],
 			[
 				"seas/cos/groove 3;0;0",
-				"seas/cos/groove 4;36;sp",
+				"seas/cos/groove 4;0;0",
 				""
 			],
 			[
 				"seas/exp/groove?4;0;0",
-				"base/5C;22;sp",
+				"base/5C;0;0",
 				""
 			],
 			[
 				"seas/cos/groove 2;0;0",
-				"seas/exp/groove?3;18;sp",
+				"seas/exp/groove?3;0;0",
 				""
 			],
 			[
 				"base/5C;0;0",
-				"base/5C;14;sp",
+				"base/5C;0;0",
 				""
 			],
 			[
 				"seas/exp/groove?2;0;0",
-				"seas/cos/groove 1;12;sp",
+				"seas/cos/groove 1;0;0",
 				""
 			],
 			[
@@ -114,27 +114,27 @@
 		"tree": [
 			[
 				"seas/cos/duet 3;0;0",
-				"base/heart;3;sp",
+				"base/heart;0;0",
 				""
 			],
 			[
 				"seas/exp/duet?2;0;0",
-				"seas/cos/duet 2;30;sp",
+				"seas/cos/duet 2;0;0",
 				""
 			],
 			[
 				"base/5C;0;0",
-				"base/5C;26;sp",
+				"base/5C;0;0",
 				""
 			],
 			[
 				"base/sheet?28;0;0",
-				"seas/cos/duet 1;14;sp",
+				"seas/cos/duet 1;0;0",
 				""
 			],
 			[
 				"",
-				"base/5C;8;sp",
+				"base/5C;0;0",
 				""
 			],
 			[
@@ -181,17 +181,17 @@
 			[
 				"seas/cos/performance 4;42;c",
 				"base/!;0;0",
-				"|seas/cos/performance 3;1;sh"
+				"|seas/cos/performance 3;0;0"
 			],
 			[
 				"base/heart;3;c",
 				"base/!;0;0",
-				"|seas/cos/performance 2;2;sh"
+				"|seas/cos/performance 2;0;0"
 			],
 			[
 				"base/memory;0;0",
 				"base/five;0;0",
-				"|seas/cos/performance 1;1;sh"
+				"|seas/cos/performance 1;0;0"
 			],
 			[
 				"",
