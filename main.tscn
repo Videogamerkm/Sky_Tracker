@@ -214,9 +214,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 tab_alignment = 1
+current_tab = 8
 tab_focus_mode = 0
 
 [node name="Home" type="ScrollContainer" parent="Tabs"]
+visible = false
 layout_mode = 2
 horizontal_scroll_mode = 0
 
@@ -4903,7 +4905,6 @@ text = "Check out this Sky Shards App by Plutoy for more."
 uri = "https://sky-shards.pages.dev/"
 
 [node name="Events" type="ScrollContainer" parent="Tabs"]
-visible = false
 layout_mode = 2
 
 [node name="Margin" type="MarginContainer" parent="Tabs/Events"]
@@ -4941,6 +4942,15 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 24
 text = "There isn't an event currently going on."
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Name" type="Label" parent="Tabs/Events/Margin/VBox"]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 24
+text = "Days of Placeholder"
 horizontal_alignment = 1
 autowrap_mode = 3
 

@@ -1,10 +1,10 @@
 extends VBoxContainer
 
-const day = "Sky Anniversary"
-const location = "Aviary Village"
-const tpd = 5
-const start = {"day":12,"month":7,"year":2024,"hour":17}
-const end = {"day":26,"month":7,"year":2024,"hour":23,"minute":59}
+const day = "Days of Sunlight"
+const location = "Grandma"
+const tpd = 6
+const start = {"day":26,"month":8,"year":2024,"hour":0}
+const end = {"day":12,"month":9,"year":2024,"hour":23,"minute":59}
 const short = {"Days of Fortune":"fortune","Days of Love":"love","Days of Bloom":"bloom","Days of Nature":"nature",
 	"Days of Color":"color","Days of Music":"music","Sky Anniversary":"anni","Days of Sunlight":"sun",
 	"Days of Moonlight":"moon","Days of Style":"style","Days of Mischief":"mischief","Days of Feast":"feast",
@@ -26,6 +26,7 @@ func _ready():
 func set_fields():
 	if TimeUtils.get_time_until(end) < 0 or TimeUtils.get_time_until(start) > 0:
 		$No.show()
+		$Name.hide()
 		$Time.hide()
 		$Days.hide()
 		$"Per Day".hide()
@@ -36,6 +37,8 @@ func set_fields():
 		find_child(short[day]).add_theme_stylebox_override("hover",$active.get_theme_stylebox("hover"))
 		find_child(short[day]).add_theme_stylebox_override("pressed",$active.get_theme_stylebox("pressed"))
 		$No.hide()
+		$Name.text = day
+		$Name.show()
 		$Time.show()
 		$Days.show()
 		$"Per Day".text = "Tickets collectable per day: "+str(tpd)
@@ -70,6 +73,13 @@ func _press_event_button(node):
 				for x in c.get_children():
 					if Global.shopTab.bought.has(d+" IAPs") and Global.shopTab.bought[d+" IAPs"].has(x.iconValue): x.set_pressed(true)
 		iap.show()
+	$Name.text = d
+	$Name.show()
+	$No.hide()
+	if d != day:
+		$Time.hide()
+		$Days.hide()
+		$"Per Day".hide()
 	$Tree.show()
 	$Events.hide()
 
@@ -108,4 +118,12 @@ func _on_tree_plan_clear():
 func _on_tree_tree_back():
 	$Tree.hide()
 	iap.hide()
+	if TimeUtils.get_time_until(end) < 0 or TimeUtils.get_time_until(start) > 0:
+		$Name.hide()
+		$No.show()
+	else:
+		$Name.text = day
+		$Time.show()
+		$Days.show()
+		$"Per Day".show()
 	$Events.show()
