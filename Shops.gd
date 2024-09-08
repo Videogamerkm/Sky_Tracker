@@ -61,7 +61,7 @@ func item_bought(press, section, item, node):
 
 func set_bought():
 	for s in bought:
-		if not has_node(s): return
+		if not has_node(s): continue
 		for c in get_node(s+"/Purchases").get_children():
 			if c is Panel:
 				if bought[s].has(c.iconValue): c.set_pressed(true)
