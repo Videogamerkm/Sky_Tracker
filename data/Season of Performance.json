@@ -73,33 +73,28 @@
 		"loc": "Season of Performance",
 		"tree": [
 			[
-				"base/5C;0;0",
-				"base/heart;0;0",
+				"seas/cos/groove 4;42;c",
+				"seas/cos/groove 3;80;c",
 				""
 			],
 			[
-				"seas/cos/groove 3;0;0",
-				"seas/cos/groove 4;0;0",
+				"seas/exp/groove?4;6;h",
+				"base/5C;5;c",
+				"seas/cos/groove 2;70;c"
+			],
+			[
+				"",
+				"seas/exp/groove?3;3;h",
 				""
 			],
 			[
-				"seas/exp/groove?4;0;0",
-				"base/5C;0;0",
-				""
+				"seas/cos/groove 1;32;c",
+				"base/wing;2;a",
+				"base/heart;3;c"
 			],
 			[
-				"seas/cos/groove 2;0;0",
-				"seas/exp/groove?3;0;0",
-				""
-			],
-			[
-				"base/5C;0;0",
-				"base/5C;0;0",
-				""
-			],
-			[
-				"seas/exp/groove?2;0;0",
-				"seas/cos/groove 1;0;0",
+				"seas/exp/groove?2;4;h",
+				"base/5C;5;c",
 				""
 			],
 			[
