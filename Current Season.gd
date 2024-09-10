@@ -6,6 +6,7 @@ const end = {"day":29,"month":9,"year":2024,"hour":23,"minute":59} #1711954799
 const needNoPass = 328
 const needPass = 393
 const left = " day(s) left in the season"
+var daily = ""
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -40,8 +41,8 @@ func _ready():
 		if not $Pass/Check.button_pressed: $Complete.text += "(Note: This does not include season pass items.)"
 
 func _process(_delta):
-	if not $Days.text == str(floor(TimeUtils.get_time_until(end)/86400.0)) + left:
-		_ready()
+	if not $Days.text == str(floor(TimeUtils.get_time_until(end)/86400.0)) + left: _ready()
+	if daily != "" and daily != $Days.text: $Dailies.set_pressed_no_signal(false)
 
 func _on_check_toggled(_button_pressed):
 	_ready()
@@ -54,3 +55,8 @@ func update_candles():
 		if SeasonSpirits.data[s]["loc"] == seasonName && bought.has(s):
 			candles += SeasonSpirits.get_spent(s,bought[s])
 	$Spent/Val.text = str(candles)
+
+func _on_dailies_toggled(toggled_on):
+	$Have/Candles.value += (6 if $Pass/Check.button_pressed else 5) * (1 if toggled_on else -1)
+	if toggled_on: daily = $Days.text
+	else: daily = ""

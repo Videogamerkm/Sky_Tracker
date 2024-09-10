@@ -12,6 +12,7 @@ func _ready():
 	for s in SeasonSpirits.seasons:
 		var season = seasonIcon.duplicate()
 		season.name = s
+		season.set_tooltip_text(s)
 		season.set_button_icon(load("icons/seas/icons/"+s.replace("Season of ","")+".bmp"))
 		season.connect("pressed",_area_select.bind(s))
 		$"Season Selection".add_child(season)
@@ -50,15 +51,16 @@ func _area_select(area):
 				else:
 					sp.set_button_icon(load("icons/"+SeasonSpirits.data[s]["tree"][-1][1].split(";")[0].split("?")[0]+".bmp"))
 			elif s.begins_with("The "):
-				sp.text = s
+				sp.text = s.replace(" Begin","\nBegin").replace(" Flour","\nFlour")
 				if s.ends_with("list's Beginnings"):
 					sp.set_button_icon(load("icons/"+SeasonSpirits.data[s]["tree"][1][1].split(";")[0].split("?")[0]+".bmp"))
 				elif s.ends_with("nist's Beginnings") or s.ends_with("Legacy"):
 					sp.set_button_icon(load("icons/"+SeasonSpirits.data[s]["tree"][1][0].split(";")[0].split("?")[0]+".bmp"))
-				elif s.ends_with("list's Flourishing"):
-					sp.set_button_icon(load("icons/"+SeasonSpirits.data[s]["tree"][2][1].split(";")[0].split("?")[0]+".bmp"))
-				elif s.ends_with("nist's Flourishing"):
+				elif s.ends_with("Flourishing"):
 					sp.set_button_icon(load("icons/"+SeasonSpirits.data[s]["tree"][0][0].split(";")[0].split("?")[0]+".bmp"))
+			elif s.contains("Cellist"):
+				sp.text = s
+				sp.set_button_icon(load("icons/"+SeasonSpirits.data[s]["tree"][0][1].split(";")[0].split("?")[0]+".bmp"))
 			else:
 				sp.set_button_icon(load("icons/"+SeasonSpirits.data[s]["tree"][-1][1].split(";")[0].split("?")[0]+".bmp"))
 				sp.text = s.replace(" ","\n").replace("Spirit\nof\n","Spirit of ").replace("\nof\n"," of ")\
@@ -96,7 +98,8 @@ func _on_tree_bought(iconValue,press):
 	Global.main.update_cos(iconValue,press)
 
 func _on_clear_pressed():
-	$Confirm.show()
+	if Global.noWarn: _on_clear()
+	else: $Confirm.show()
 
 func _on_clear():
 	if curr_spirit == "":
@@ -107,7 +110,7 @@ func _on_clear():
 	else:
 		bought.erase(curr_spirit)
 		if planned.has(curr_spirit): planned.erase(curr_spirit)
-	$Tree.set_tree(SeasonSpirits.data[curr_spirit]["tree"])
+		$Tree.set_tree(SeasonSpirits.data[curr_spirit]["tree"])
 
 func _on_tree_reject():
 	var newBought = []

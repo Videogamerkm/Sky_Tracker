@@ -4,27 +4,27 @@
 		"tree": [
 			[
 				"base/5C;0;0",
-				"base/season_heart;3;sp",
+				"base/season_heart;0;0",
 				""
 			],
 			[
 				"seas/cos/cradle 3;0;0",
-				"base/sheet?39;32;sp",
+				"base/sheet?39;0;0",
 				""
 			],
 			[
 				"base/5C;0;0",
-				"base/5C;26;sp",
+				"base/5C;0;0",
 				""
 			],
 			[
 				"seas/cos/cradle 1;0;0",
-				"seas/cos/cradle 2;18;sp",
+				"seas/cos/cradle 2;0;0",
 				""
 			],
 			[
 				"seas/exp/cradle?2;0;0",
-				"base/5C;6;sp",
+				"base/5C;0;0",
 				""
 			],
 			[
@@ -39,27 +39,27 @@
 		"tree": [
 			[
 				"base/5C;0;0",
-				"base/season_heart;3;sp",
+				"base/season_heart;0;0",
 				""
 			],
 			[
 				"seas/exp/whistle?4;0;0",
-				"seas/cos/whistle 3;36;sp",
+				"seas/cos/whistle 3;0;0",
 				""
 			],
 			[
 				"base/5C;0;0",
-				"seas/exp/whistle?3;30;sp",
+				"seas/exp/whistle?3;0;0",
 				""
 			],
 			[
 				"seas/cos/whistle 1;0;0",
-				"seas/cos/whistle 2;26;sp",
+				"seas/cos/whistle 2;0;0",
 				""
 			],
 			[
 				"seas/exp/whistle?2;0;0",
-				"base/5C;16;sp",
+				"base/5C;0;0",
 				""
 			],
 			[
@@ -74,27 +74,27 @@
 		"tree": [
 			[
 				"base/5C;0;0",
-				"base/season_heart;3;sp",
+				"base/season_heart;0;0",
 				""
 			],
 			[
 				"seas/cos/flex 2;0;0",
-				"seas/cos/flex 3;34;sp",
+				"seas/cos/flex 3;0;0",
 				""
 			],
 			[
 				"seas/exp/flex?4;0;0",
-				"base/5C;28;sp",
+				"base/5C;0;0",
 				""
 			],
 			[
 				"base/5C;0;0",
-				"seas/exp/flex?3;20;sp",
+				"seas/exp/flex?3;0;0",
 				""
 			],
 			[
 				"seas/exp/flex?2;0;0",
-				"seas/cos/flex 1;8;sp",
+				"seas/cos/flex 1;0;0",
 				""
 			],
 			[
@@ -109,32 +109,32 @@
 		"tree": [
 			[
 				"seas/cos/princess 4;0;0",
-				"base/season_heart;3;sp",
+				"base/season_heart;0;0",
 				""
 			],
 			[
 				"base/5C;0;0",
-				"base/5C;32;sp",
+				"base/5C;0;0",
 				""
 			],
 			[
 				"seas/exp/princess?4;0;0",
-				"seas/cos/princess 3;26;sp",
+				"seas/cos/princess 3;0;0",
 				""
 			],
 			[
 				"seas/cos/princess 2;0;0",
-				"seas/exp/princess?3;22;sp",
+				"seas/exp/princess?3;0;0",
 				""
 			],
 			[
 				"base/5C;0;0",
-				"base/5C;18;sp",
+				"base/5C;0;0",
 				""
 			],
 			[
 				"seas/exp/princess?2;0;0",
-				"seas/cos/princess 1;8;sp",
+				"seas/cos/princess 1;0;0",
 				""
 			],
 			[
@@ -150,23 +150,23 @@
 		"tree": [
 			[
 				"",
-				"seas/cos/mural 2;120;c",
+				"seas/cos/mural 2;0;0",
 				""
 			],
 			[
 				"base/heart;0;0",
 				"base/!;0;0",
-				"|seas/cos/mural 5;2;sh"
+				"|seas/cos/mural 5;0;0"
 			],
 			[
 				"seas/cos/mural 1;50;c",
 				"base/!;0;0",
-				"|seas/cos/mural 4;1;sh"
+				"|seas/cos/mural 4;0;0"
 			],
 			[
 				"base/heart;0;0",
 				"base/!;0;0",
-				"|seas/cos/mural 3;1;sh"
+				"|seas/cos/mural 3;0;0"
 			],
 			[
 				"base/heart;0;0",

@@ -68,6 +68,8 @@ func add_plans(data,spirit,plan):
 		$Plans.add_child(row)
 	var ret = {"c":0,"h":0,"a":0,"sp":0,"sh":0,"k":0}
 	$Plans.get_node("Spirit "+spirit).text = spirit
+	$Plans.get_node("Spirit "+spirit).tooltip_text = "Click to go to\nthis spirit's tree"
+	$Plans.get_node("Spirit "+spirit).connect("pressed",$"../../../.."._on_search_pressed.bind(spirit))
 	$Plans.get_node("X "+spirit).connect("pressed",clear_row.bind(spirit))
 	var cost = SpiritUtils.get_cost(data,spirit)
 	var unspent = SpiritUtils.get_unspent(data,spirit,plan)
@@ -82,11 +84,16 @@ func add_plans(data,spirit,plan):
 	for r in plan: for b in r: if b: amnt += 1
 	$Plans.get_node("items "+spirit).text = str(amnt)
 	ret["n"] = amnt
+	if amnt == 0:
+		for i in range(0,9):
+			var row = $Plans.get_node($Plans.get_child(i).name+" "+spirit)
+			$Plans.remove_child(row)
 	return ret
 
 func clear_row(spirit):
 	delSpirit = spirit
-	$Confirm.show()
+	if Global.noWarn: _on_confirm_confirmed()
+	else: $Confirm.show()
 
 func _on_confirm_confirmed():
 	if Global.regSprtTab.planned.has(delSpirit):

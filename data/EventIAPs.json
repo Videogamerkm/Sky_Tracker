@@ -1,0 +1,125 @@
+{
+	"Days of Fortune": {
+		"items": [
+			"shops/days/fortune 1;0.99;$",
+			"shops/days/fortune 2;9.99;$",
+			["shops/days/fortune 3;24.99;$",
+			"shops/days/fortune 4;0;0",
+			"shops/days/fortune 5;0;0"],
+			"shops/days/fortune 6;1.99;$",
+			["shops/days/fortune 7;19.99;$",
+			"shops/days/fortune 8;0;0"],
+			"shops/days/fortune 9;9.99;$",
+			"shops/days/fortune 10;14.99;$",
+			"shops/days/fortune 11;1.99;$",
+			"shops/days/fortune 12;14.99;$",
+			"shops/days/fortune 13;9.99;$"
+		]
+	},
+	"Days of Love": {
+		"items": [
+			"shops/days/love 1;19.99;$",
+			"shops/days/love 2;19.99;$",
+			"shops/days/love 3;19.99;$",
+			"shops/days/love 4;14.99;$",
+			"shops/days/love 5;4.99;$",
+			"shops/days/love 6;17.99;$"
+		]
+	},
+	"Days of Bloom": {
+		"items": [
+			"shops/days/bloom 1;19.99;$",
+			"shops/days/bloom 2;19.99;$",
+			"shops/days/bloom 3;9.99;$",
+			"shops/days/bloom 4;19.99;$",
+			"shops/days/bloom 5;14.99;$"
+		]
+	},
+	"Days of Nature": {
+		"items": [
+			"shops/days/nature 1;4.99;$",
+			"shops/days/nature 2;14.99;$",
+			"shops/days/nature 3;1.99;$",
+			"shops/days/nature 4;19.99;$",
+			"shops/days/nature 5;14.99;$",
+			"shops/days/nature 6;4.99;$",
+			"shops/days/nature 7;19.99;$",
+			"shops/days/nature 8;6.99;$",
+			"shops/days/nature 9;19.99;$"
+		]
+	},
+	"Days of Color": {
+		"items": [
+			"shops/days/color 1;9.99;$",
+			"shops/days/color 2;19.99;$",
+			"shops/days/color 3;9.99;$",
+			"shops/days/color 4;2.99;$",
+			"shops/days/color 5;9.99;$",
+			"shops/days/color 6;9.99;$",
+			"shops/days/color 7;14.99;$",
+			"shops/days/color 8;14.99;$",
+			"shops/days/color 9;19.99;$"
+		]
+	},
+	"Sky Anniversary": {
+		"items": [
+			"shops/days/anni 1;9.99;$",
+			"shops/days/anni 2;4.99;$"
+		]
+	},
+	"Days of Sunlight": {
+		"items": [
+			"shops/days/sun 1;19.99;$",
+			"shops/days/sun 2;2.99;$",
+			"shops/days/sun 3;0.99;$",
+			"shops/days/sun 4;19.99;$",
+			"shops/days/sun 5;19.99;$",
+			"shops/days/sun 6;2.99;$",
+			"shops/days/sun 7;9.99;$",
+			"shops/days/sun 8;14.99;$",
+			"shops/days/sun 9;14.99;$",
+			"shops/days/sun 10;2.99;$"
+		]
+	},
+	"Days of Style": {
+		"items": [
+			"shops/days/style 1;2.99;$",
+			"shops/days/style 2;4.99;$",
+			"shops/days/style 3;6.99;$",
+			"shops/days/style 4;9.99;$"
+		]
+	},
+	"Days of Mischief": {
+		"items": [
+			"shops/days/mischief 1;11.99;$",
+			"shops/days/mischief 2;17.99;$",
+			"shops/days/mischief 3;14.99;$",
+			"shops/days/mischief 4;9.99;$",
+			"shops/days/mischief 5;1.99;$",
+			"shops/days/mischief 6;4.99;$",
+			["shops/days/mischief 7;9.99;$",
+			"shops/days/mischief 8;0;0"],
+			"shops/days/mischief 9;9.99;$",
+			["shops/days/mischief 10;19.99;$",
+			"shops/days/mischief 11;0;0"],
+			"shops/days/mischief 12;9.99;$",
+			"shops/days/mischief 13;2.99;$",
+			"shops/days/mischief 14;14.99;$",
+			"shops/days/mischief 15;14.99;$",
+		]
+	},
+	"Days of Feast": {
+		"items": [
+			"shops/days/feast 1;6.99;$",
+			"shops/days/feast 2;14.99;$",
+			"shops/days/feast 3;14.99;$",
+			"shops/days/feast 4;1.99;$",
+			"shops/days/feast 5;9.99;$",
+			"shops/days/feast 6;9.99;$",
+			"shops/days/feast 7;14.99;$",
+			"shops/days/feast 8;14.99;$",
+			"shops/days/feast 9;6.99;$",
+			"shops/days/feast 10;14.99;$",
+		]
+	}
+}

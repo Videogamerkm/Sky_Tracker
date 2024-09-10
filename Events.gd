@@ -1,22 +1,24 @@
 extends VBoxContainer
 
-const day = "Sky Anniversary"
-const location = "Aviary Village"
-const tpd = 5
-const start = {"day":12,"month":7,"year":2024,"hour":17}
-const end = {"day":26,"month":7,"year":2024,"hour":23,"minute":59}
+const day = "Days of Sunlight"
+const location = "Grandma"
+const tpd = 6
+const start = {"day":26,"month":8,"year":2024,"hour":0}
+const end = {"day":12,"month":9,"year":2024,"hour":23,"minute":59}
 const short = {"Days of Fortune":"fortune","Days of Love":"love","Days of Bloom":"bloom","Days of Nature":"nature",
-	"Days of Color":"color","Days of Music":"music","Sky Anniversary":"anni","Days of Sunlight":"sun","Days of Style":"style",
-	"Days of Mischief":"mischief","Days of Feast":"feast","Tournament of Triumph":"triumph","Sky x Cinnamoroll":"cinna"}
+	"Days of Color":"color","Days of Music":"music","Sky Anniversary":"anni","Days of Sunlight":"sun",
+	"Days of Moonlight":"moon","Days of Style":"style","Days of Mischief":"mischief","Days of Feast":"feast",
+	"Tournament of Triumph":"triumph","Sky x Cinnamoroll":"cinna"}
 const left = " day(s) left in the event"
 var selected = ""
 var bought = {}
 var planned = {}
+@onready var iap = $"In-App Purchases"
 @onready var rows = JSON.parse_string(FileAccess.open("res://data/Days.json", FileAccess.READ).get_as_text())
+@onready var shopRows = JSON.parse_string(FileAccess.open("res://data/EventIAPs.json", FileAccess.READ).get_as_text())
 
 func _ready():
-	$Tree/Org1/Controls/Back.hide()
-	for c in $Events/Events.get_children():
+	for c in $Events.get_children():
 		if not c is Button: continue
 		c.connect("pressed", _press_event_button.bind(c))
 	set_fields()
@@ -24,6 +26,7 @@ func _ready():
 func set_fields():
 	if TimeUtils.get_time_until(end) < 0 or TimeUtils.get_time_until(start) > 0:
 		$No.show()
+		$Name.hide()
 		$Time.hide()
 		$Days.hide()
 		$"Per Day".hide()
@@ -34,6 +37,8 @@ func set_fields():
 		find_child(short[day]).add_theme_stylebox_override("hover",$active.get_theme_stylebox("hover"))
 		find_child(short[day]).add_theme_stylebox_override("pressed",$active.get_theme_stylebox("pressed"))
 		$No.hide()
+		$Name.text = day
+		$Name.show()
 		$Time.show()
 		$Days.show()
 		$"Per Day".text = "Tickets collectable per day: "+str(tpd)
@@ -51,14 +56,32 @@ func _press_event_button(node):
 	var event = node.name
 	var d = short.find_key(str(event))
 	selected = d
-	for c in $Events/Events.get_children():
-		if not c is Button: continue
-		c.set_pressed_no_signal(false)
-	node.set_pressed_no_signal(true)
 	$Tree.set_tree(rows[d],event)
 	if bought.has(d): $Tree.import_bought(bought[d])
 	if planned.has(d): $Tree.set_planned(planned[d])
-	if not $Tree.is_visible_in_tree(): $Tree.show()
+	for c in iap.get_node("Purchases").get_children():
+		iap.get_node("Purchases").remove_child(c)
+		c.queue_free()
+	if shopRows.has(d):
+		iap.get_node("Desc").text = "Available every year during "+d+"."
+		for i in shopRows[d]["items"]:
+			var c = Global.shopTab.shop_item(i,d+" IAPs")
+			iap.get_node("Purchases").add_child(c)
+			if c is Panel:
+				if Global.shopTab.bought.has(d+" IAPs") and Global.shopTab.bought[d+" IAPs"].has(c.iconValue): c.set_pressed(true)
+			elif c is HBoxContainer:
+				for x in c.get_children():
+					if Global.shopTab.bought.has(d+" IAPs") and Global.shopTab.bought[d+" IAPs"].has(x.iconValue): x.set_pressed(true)
+		iap.show()
+	$Name.text = d
+	$Name.show()
+	$No.hide()
+	if d != day:
+		$Time.hide()
+		$Days.hide()
+		$"Per Day".hide()
+	$Tree.show()
+	$Events.hide()
 
 func _on_tree_bought(iconValue,press):
 	bought[selected] = $Tree.export_bought()
@@ -91,3 +114,16 @@ func _on_tree_planned():
 
 func _on_tree_plan_clear():
 	if planned.has(selected): planned.erase(selected)
+
+func _on_tree_tree_back():
+	$Tree.hide()
+	iap.hide()
+	if TimeUtils.get_time_until(end) < 0 or TimeUtils.get_time_until(start) > 0:
+		$Name.hide()
+		$No.show()
+	else:
+		$Name.text = day
+		$Time.show()
+		$Days.show()
+		$"Per Day".show()
+	$Events.show()

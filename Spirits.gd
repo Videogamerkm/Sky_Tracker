@@ -29,7 +29,7 @@ func _area_select(area):
 			var sp = spiritIcon.duplicate()
 			sp.text = s.replace(" ","\n").replace("Elder\nof\nthe\n","Elder of\nthe ")
 			sp.connect("pressed",_spirit_select.bind(s))
-			var icon = "icons/"+RegSpirits.data[s]["tree"][-1][1].split(";")[0]+".bmp"
+			var icon = "icons/"+RegSpirits.data[s]["tree"][-1][1].split(";")[0].split("?")[0]+".bmp"
 			sp.set_button_icon(load(icon))
 			if c < 5: $"Spirits 1".add_child(sp)
 			else: $"Spirits 2".add_child(sp)
@@ -61,7 +61,8 @@ func _on_tree_bought(_iconValue,_press):
 	# No need to pass on value, these trees are static
 
 func _on_clear_pressed():
-	$Confirm.show()
+	if Global.noWarn: _on_clear()
+	else: $Confirm.show()
 
 func _on_clear():
 	if curr_spirit == "":
@@ -72,7 +73,7 @@ func _on_clear():
 	else:
 		bought.erase(curr_spirit)
 		if planned.has(curr_spirit): planned.erase(curr_spirit)
-	$Tree.set_tree(RegSpirits.data[curr_spirit]["tree"])
+		$Tree.set_tree(RegSpirits.data[curr_spirit]["tree"])
 
 func _input(event):
 	if event.is_action_pressed("Back") && curr_spirit != "":

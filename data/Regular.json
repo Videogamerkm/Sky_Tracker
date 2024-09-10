@@ -3,13 +3,13 @@
 		"loc": "Isle of Dawn",
 		"tree": [
 			[
-				"reg/exp/point;2;c",
+				"reg/exp/point?4;2;c",
 				"base/5C;5;c",
 				"reg/cos/point 2;4;h"
 			],
 			[
 				"",
-				"reg/exp/point;2;c",
+				"reg/exp/point?3;2;c",
 				""
 			],
 			[
@@ -18,13 +18,13 @@
 				""
 			],
 			[
-				"reg/exp/point;1;c",
+				"reg/exp/point?2;1;c",
 				"base/1C;1;c",
 				"reg/cos/point 1;0;0"
 			],
 			[
 				"",
-				"reg/exp/point;0;0",
+				"reg/exp/point?1;0;0",
 				""
 			]
 		]
@@ -33,13 +33,13 @@
 		"loc": "Isle of Dawn",
 		"tree": [
 			[
-				"reg/exp/usher;2;c",
+				"reg/exp/usher?4;2;c",
 				"base/5C;5;c",
 				"reg/cos/usher 2;4;h"
 			],
 			[
 				"",
-				"reg/exp/usher;2;c",
+				"reg/exp/usher?3;2;c",
 				""
 			],
 			[
@@ -48,13 +48,13 @@
 				""
 			],
 			[
-				"reg/exp/usher;1;c",
+				"reg/exp/usher?2;1;c",
 				"base/1C;1;c",
 				"reg/cos/usher 1;0;0"
 			],
 			[
 				"",
-				"reg/exp/usher;0;0",
+				"reg/exp/usher?1;0;0",
 				""
 			]
 		]
@@ -63,13 +63,13 @@
 		"loc": "Isle of Dawn",
 		"tree": [
 			[
-				"reg/exp/reject;2;c",
+				"reg/exp/reject?4;2;c",
 				"base/5C;5;c",
 				"reg/cos/reject 2;3;h"
 			],
 			[
 				"",
-				"reg/exp/reject;2;c",
+				"reg/exp/reject?3;2;c",
 				""
 			],
 			[
@@ -78,13 +78,13 @@
 				"base/heart;3;c"
 			],
 			[
-				"reg/exp/reject;1;c",
+				"reg/exp/reject?2;1;c",
 				"base/1C;1;c",
 				""
 			],
 			[
 				"",
-				"reg/exp/reject;0;0",
+				"reg/exp/reject?1;0;0",
 				""
 			]
 		]
@@ -104,13 +104,13 @@
 				""
 			],
 			[
-				"reg/exp/charm;2;c",
+				"reg/exp/charm?4;2;c",
 				"base/5C;5;c",
 				"reg/cos/charm 2;4;h"
 			],
 			[
 				"",
-				"reg/exp/charm;2;c",
+				"reg/exp/charm?3;2;c",
 				""
 			],
 			[
@@ -119,13 +119,13 @@
 				"base/heart;3;c"
 			],
 			[
-				"reg/exp/charm;1;c",
+				"reg/exp/charm?2;1;c",
 				"base/1C;1;c",
 				""
 			],
 			[
 				"",
-				"reg/exp/charm;0;0",
+				"reg/exp/charm?1;0;0",
 				""
 			]
 		]
@@ -134,13 +134,13 @@
 		"loc": "Daylight Prairie",
 		"tree": [
 			[
-				"reg/exp/clap;3;c",
+				"reg/exp/clap?4;3;c",
 				"base/5C;5;c",
 				""
 			],
 			[
 				"",
-				"reg/exp/clap;3;c",
+				"reg/exp/clap?3;3;c",
 				""
 			],
 			[
@@ -149,13 +149,13 @@
 				""
 			],
 			[
-				"reg/exp/clap;1;c",
+				"reg/exp/clap?2;1;c",
 				"base/1C;1;c",
 				"base/heart;3;c"
 			],
 			[
 				"",
-				"reg/exp/clap;0;0",
+				"reg/exp/clap?1;0;0",
 				""
 			]
 		]
@@ -166,12 +166,12 @@
 		"tree": [
 			[
 				"",
-				"reg/exp/wave;3;c;t",
+				"reg/exp/wave?6;3;c;t",
 				""
 			],
 			[
 				"",
-				"reg/exp/wave;3;c;t",
+				"reg/exp/wave?5;3;c;t",
 				""
 			],
 			[
@@ -180,13 +180,13 @@
 				""
 			],
 			[
-				"reg/exp/wave;2;c",
+				"reg/exp/wave?4;2;c",
 				"base/5C;5;c",
 				""
 			],
 			[
 				"",
-				"reg/exp/wave;2;c",
+				"reg/exp/wave?3;2;c",
 				""
 			],
 			[
@@ -195,13 +195,13 @@
 				"base/heart;3;c"
 			],
 			[
-				"reg/exp/wave;1;c",
+				"reg/exp/wave?2;1;c",
 				"base/1C;1;c",
 				""
 			],
 			[
 				"",
-				"reg/exp/wave;0;0",
+				"reg/exp/wave?1;0;0",
 				""
 			]
 		]
@@ -210,13 +210,13 @@
 		"loc": "Daylight Prairie",
 		"tree": [
 			[
-				"reg/exp/yawn;2;c",
+				"reg/exp/yawn?4;2;c",
 				"base/5C;5;c",
 				""
 			],
 			[
 				"",
-				"reg/exp/yawn;2;c",
+				"reg/exp/yawn?3;2;c",
 				""
 			],
 			[
@@ -225,13 +225,13 @@
 				"base/heart;3;c"
 			],
 			[
-				"reg/exp/yawn;1;c",
+				"reg/exp/yawn?2;1;c",
 				"base/1C;1;c",
 				""
 			],
 			[
 				"",
-				"reg/exp/yawn;0;0",
+				"reg/exp/yawn?1;0;0",
 				""
 			]
 		]
@@ -240,13 +240,13 @@
 		"loc": "Daylight Prairie",
 		"tree": [
 			[
-				"reg/exp/laugh;5;c",
+				"reg/exp/laugh?4;5;c",
 				"base/5C;5;c",
 				"reg/cos/laugh 2;5;h"
 			],
 			[
 				"",
-				"reg/exp/laugh;5;c",
+				"reg/exp/laugh?3;5;c",
 				""
 			],
 			[
@@ -255,13 +255,13 @@
 				"base/heart;3;c"
 			],
 			[
-				"reg/exp/laugh;1;c",
+				"reg/exp/laugh?2;1;c",
 				"base/1C;1;c",
 				""
 			],
 			[
 				"",
-				"reg/exp/laugh;0;0",
+				"reg/exp/laugh?1;0;0",
 				""
 			]
 		]
@@ -305,13 +305,13 @@
 				""
 			],
 			[
-				"reg/exp/sweat;5;c",
+				"reg/exp/sweat?4;5;c",
 				"base/5C;5;c",
 				""
 			],
 			[
 				"",
-				"reg/exp/sweat;5;c",
+				"reg/exp/sweat?3;5;c",
 				""
 			],
 			[
@@ -320,13 +320,13 @@
 				""
 			],
 			[
-				"reg/exp/sweat;1;c",
+				"reg/exp/sweat?2;1;c",
 				"base/1C;1;c",
 				""
 			],
 			[
 				"",
-				"reg/exp/sweat;0;0",
+				"reg/exp/sweat?1;0;0",
 				""
 			]
 		]
@@ -365,13 +365,13 @@
 				""
 			],
 			[
-				"reg/exp/shiver;3;c",
+				"reg/exp/shiver?4;3;c",
 				"base/5C;5;c",
 				""
 			],
 			[
 				"",
-				"reg/exp/shiver;3;c",
+				"reg/exp/shiver?3;3;c",
 				""
 			],
 			[
@@ -380,13 +380,13 @@
 				"base/heart;3;c"
 			],
 			[
-				"reg/exp/shiver;2;c",
+				"reg/exp/shiver?2;2;c",
 				"base/1C;1;c",
 				""
 			],
 			[
 				"",
-				"reg/exp/shiver;0;0",
+				"reg/exp/shiver?1;0;0",
 				""
 			]
 		]
@@ -400,13 +400,13 @@
 				""
 			],
 			[
-				"reg/exp/blush;4;c",
+				"reg/exp/blush?4;4;c",
 				"base/5C;5;c",
 				""
 			],
 			[
 				"",
-				"reg/exp/blush;4;c",
+				"reg/exp/blush?3;4;c",
 				""
 			],
 			[
@@ -415,13 +415,13 @@
 				"base/heart;3;c"
 			],
 			[
-				"reg/exp/blush;3;c",
+				"reg/exp/blush?2;3;c",
 				"base/1C;1;c",
 				""
 			],
 			[
 				"",
-				"reg/exp/blush;0;0",
+				"reg/exp/blush?1;0;0",
 				""
 			]
 		]
@@ -487,13 +487,13 @@
 				""
 			],
 			[
-				"reg/exp/pout;4;c",
+				"reg/exp/pout?4;4;c",
 				"base/5C;5;c",
 				""
 			],
 			[
 				"",
-				"reg/exp/pout;4;c",
+				"reg/exp/pout?3;4;c",
 				""
 			],
 			[
@@ -502,13 +502,13 @@
 				"base/heart;3;c"
 			],
 			[
-				"reg/exp/pout;3;c",
+				"reg/exp/pout?2;3;c",
 				"base/1C;1;c",
 				""
 			],
 			[
 				"",
-				"reg/exp/pout;0;0",
+				"reg/exp/pout?1;0;0",
 				""
 			]
 		]
@@ -533,13 +533,13 @@
 				""
 			],
 			[
-				"reg/exp/dismay;5;c",
+				"reg/exp/dismay?4;5;c",
 				"base/5C;5;c",
 				""
 			],
 			[
 				"",
-				"reg/exp/dismay;5;c",
+				"reg/exp/dismay?3;5;c",
 				""
 			],
 			[
@@ -548,13 +548,13 @@
 				"base/heart;3;c"
 			],
 			[
-				"reg/exp/dismay;3;c",
+				"reg/exp/dismay?2;3;c",
 				"base/1C;1;c",
 				""
 			],
 			[
 				"",
-				"reg/exp/dismay;0;0",
+				"reg/exp/dismay?1;0;0",
 				""
 			]
 		]
@@ -568,13 +568,13 @@
 				""
 			],
 			[
-				"reg/exp/sorry;3;c",
+				"reg/exp/sorry?4;3;c",
 				"base/5C;5;c",
 				""
 			],
 			[
 				"",
-				"reg/exp/sorry;3;c",
+				"reg/exp/sorry?3;3;c",
 				""
 			],
 			[
@@ -583,13 +583,13 @@
 				"base/heart;3;c"
 			],
 			[
-				"reg/exp/sorry;3;c",
+				"reg/exp/sorry?2;3;c",
 				"base/1C;1;c",
 				""
 			],
 			[
 				"",
-				"reg/exp/sorry;0;0",
+				"reg/exp/sorry?1;0;0",
 				""
 			]
 		]
@@ -600,12 +600,12 @@
 		"tree": [
 			[
 				"",
-				"reg/exp/cry;5;c;t",
+				"reg/exp/cry?6;5;c;t",
 				""
 			],
 			[
 				"",
-				"reg/exp/cry;5;c;t",
+				"reg/exp/cry?5;5;c;t",
 				""
 			],
 			[
@@ -614,13 +614,13 @@
 				""
 			],
 			[
-				"reg/exp/cry;4;c",
+				"reg/exp/cry?4;4;c",
 				"base/5C;5;c",
 				""
 			],
 			[
 				"",
-				"reg/exp/cry;4;c",
+				"reg/exp/cry?3;4;c",
 				""
 			],
 			[
@@ -629,13 +629,13 @@
 				"base/heart;3;c"
 			],
 			[
-				"reg/exp/cry;3;c",
+				"reg/exp/cry?2;3;c",
 				"base/1C;1;c",
 				""
 			],
 			[
 				"",
-				"reg/exp/cry;0;0",
+				"reg/exp/cry?1;0;0",
 				""
 			]
 		]
@@ -720,13 +720,13 @@
 				""
 			],
 			[
-				"reg/exp/handstand;4;c",
+				"reg/exp/handstand?4;4;c",
 				"base/5C;5;c",
 				""
 			],
 			[
 				"",
-				"reg/exp/handstand;4;c",
+				"reg/exp/handstand?3;4;c",
 				""
 			],
 			[
@@ -735,13 +735,13 @@
 				""
 			],
 			[
-				"reg/exp/handstand;3;c",
+				"reg/exp/handstand?2;3;c",
 				"base/1C;1;c",
 				""
 			],
 			[
 				"",
-				"reg/exp/handstand;0;0",
+				"reg/exp/handstand?1;0;0",
 				""
 			]
 		]
@@ -785,13 +785,13 @@
 				""
 			],
 			[
-				"reg/exp/backflip;4;c",
+				"reg/exp/backflip?4;4;c",
 				"base/5C;5;c",
 				""
 			],
 			[
 				"",
-				"reg/exp/backflip;4;c",
+				"reg/exp/backflip?3;4;c",
 				""
 			],
 			[
@@ -800,13 +800,13 @@
 				"base/heart;3;c"
 			],
 			[
-				"reg/exp/backflip;3;c",
+				"reg/exp/backflip?2;3;c",
 				"base/1C;1;c",
 				""
 			],
 			[
 				"",
-				"reg/exp/backflip;0;0",
+				"reg/exp/backflip?1;0;0",
 				""
 			]
 		]
@@ -820,13 +820,13 @@
 				""
 			],
 			[
-				"reg/exp/cheer;4;c",
+				"reg/exp/cheer?4;4;c",
 				"base/5C;5;c",
 				""
 			],
 			[
 				"",
-				"reg/exp/cheer;4;c",
+				"reg/exp/cheer?3;4;c",
 				""
 			],
 			[
@@ -835,13 +835,13 @@
 				"base/heart;3;c"
 			],
 			[
-				"reg/exp/cheer;3;c",
+				"reg/exp/cheer?2;3;c",
 				"base/1C;1;c",
 				""
 			],
 			[
 				"",
-				"reg/exp/cheer;0;0",
+				"reg/exp/cheer?1;0;0",
 				""
 			]
 		]
@@ -855,13 +855,13 @@
 				""
 			],
 			[
-				"reg/exp/bow;4;c",
+				"reg/exp/bow?4;4;c",
 				"base/5C;5;c",
 				""
 			],
 			[
 				"",
-				"reg/exp/bow;4;c",
+				"reg/exp/bow?3;4;c",
 				""
 			],
 			[
@@ -870,13 +870,13 @@
 				"base/heart;3;c"
 			],
 			[
-				"reg/exp/bow;3;c",
+				"reg/exp/bow?2;3;c",
 				"base/1C;1;c",
 				""
 			],
 			[
 				"",
-				"reg/exp/bow;0;0",
+				"reg/exp/bow?1;0;0",
 				""
 			]
 		]
@@ -931,13 +931,13 @@
 				""
 			],
 			[
-				"reg/exp/fright;5;c",
+				"reg/exp/fright?4;5;c",
 				"base/5C;5;c",
 				""
 			],
 			[
 				"",
-				"reg/exp/fright;5;c",
+				"reg/exp/fright?3;5;c",
 				""
 			],
 			[
@@ -946,13 +946,13 @@
 				"base/heart;3;c"
 			],
 			[
-				"reg/exp/fright;4;c",
+				"reg/exp/fright?2;4;c",
 				"base/1C;1;c",
 				""
 			],
 			[
 				"",
-				"reg/exp/fright;0;0",
+				"reg/exp/fright?1;0;0",
 				""
 			]
 		]
@@ -966,13 +966,13 @@
 				""
 			],
 			[
-				"reg/exp/faint;5;c",
+				"reg/exp/faint?4;5;c",
 				"base/5C;5;c",
 				""
 			],
 			[
 				"",
-				"reg/exp/faint;5;c",
+				"reg/exp/faint?3;5;c",
 				""
 			],
 			[
@@ -981,13 +981,13 @@
 				"base/heart;3;c"
 			],
 			[
-				"reg/exp/faint;4;c",
+				"reg/exp/faint?2;4;c",
 				"base/1C;1;c",
 				""
 			],
 			[
 				"",
-				"reg/exp/faint;0;0",
+				"reg/exp/faint?1;0;0",
 				""
 			]
 		]
@@ -1083,13 +1083,13 @@
 				""
 			],
 			[
-				"reg/exp/salute;5;c",
+				"reg/exp/salute?4;5;c",
 				"base/5C;5;c",
 				""
 			],
 			[
 				"",
-				"reg/exp/salute;5;c",
+				"reg/exp/salute?3;5;c",
 				""
 			],
 			[
@@ -1098,13 +1098,13 @@
 				"base/heart;3;c"
 			],
 			[
-				"reg/exp/salute;4;c",
+				"reg/exp/salute?2;4;c",
 				"base/1C;1;c",
 				""
 			],
 			[
 				"",
-				"reg/exp/salute;0;0",
+				"reg/exp/salute?1;0;0",
 				""
 			]
 		]
@@ -1118,13 +1118,13 @@
 				""
 			],
 			[
-				"reg/exp/lookout;5;c",
+				"reg/exp/lookout?4;5;c",
 				"base/5C;5;c",
 				""
 			],
 			[
 				"",
-				"reg/exp/lookout;5;c",
+				"reg/exp/lookout?3;5;c",
 				""
 			],
 			[
@@ -1133,13 +1133,13 @@
 				"base/heart;3;c"
 			],
 			[
-				"reg/exp/lookout;5;c",
+				"reg/exp/lookout?2;5;c",
 				"base/1C;1;c",
 				""
 			],
 			[
 				"",
-				"reg/exp/lookout;0;0",
+				"reg/exp/lookout?1;0;0",
 				""
 			]
 		]
@@ -1164,13 +1164,13 @@
 				""
 			],
 			[
-				"reg/exp/pray;7;c",
+				"reg/exp/pray?4;7;c",
 				"base/5C;5;c",
 				""
 			],
 			[
 				"",
-				"reg/exp/pray;5;c",
+				"reg/exp/pray?3;5;c",
 				""
 			],
 			[
@@ -1179,13 +1179,13 @@
 				"base/heart;3;c"
 			],
 			[
-				"reg/exp/pray;3;c",
+				"reg/exp/pray?2;3;c",
 				"base/1C;1;c",
 				""
 			],
 			[
 				"",
-				"reg/exp/pray;0;0",
+				"reg/exp/pray?1;0;0",
 				""
 			]
 		]
@@ -1199,13 +1199,13 @@
 				""
 			],
 			[
-				"reg/exp/levitate;7;c",
+				"reg/exp/levitate?4;7;c",
 				"base/5C;5;c",
 				""
 			],
 			[
 				"",
-				"reg/exp/levitate;5;c",
+				"reg/exp/levitate?3;5;c",
 				""
 			],
 			[
@@ -1214,13 +1214,13 @@
 				"base/heart;3;c"
 			],
 			[
-				"reg/exp/levitate;5;c",
+				"reg/exp/levitate?2;5;c",
 				"base/1C;1;c",
 				""
 			],
 			[
 				"",
-				"reg/exp/levitate;0;0",
+				"reg/exp/levitate?1;0;0",
 				""
 			]
 		]
@@ -1305,13 +1305,13 @@
 				""
 			],
 			[
-				"reg/exp/meditate;10;c",
+				"reg/exp/meditate?4;10;c",
 				"base/5C;5;c",
 				""
 			],
 			[
 				"",
-				"reg/exp/meditate;7;c",
+				"reg/exp/meditate?3;7;c",
 				""
 			],
 			[
@@ -1320,13 +1320,13 @@
 				"base/heart;3;c"
 			],
 			[
-				"reg/exp/meditate;10;c",
+				"reg/exp/meditate?2;10;c",
 				"base/1C;1;c",
 				""
 			],
 			[
 				"",
-				"reg/exp/meditate;0;0",
+				"reg/exp/meditate?1;0;0",
 				""
 			]
 		]

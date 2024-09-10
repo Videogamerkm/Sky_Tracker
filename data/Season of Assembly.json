@@ -241,17 +241,17 @@
 			[
 				"base/heart;3;c",
 				"base/hug;0;0",
-				"|seas/cos/assembly 3;2;sh"
+				"|seas/cos/assembly 3;0;0"
 			],
 			[
 				"seas/cos/assembly 5;5;c",
 				"base/!;0;0",
-				"|seas/cos/assembly 2;1;sh"
+				"|seas/cos/assembly 2;0;0"
 			],
 			[
 				"",
 				"base/!;0;0",
-				"|seas/cos/assembly 1;1;sh"
+				"|seas/cos/assembly 1;0;0"
 			],
 			[
 				"base/heart;3;c",
