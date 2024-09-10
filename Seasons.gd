@@ -56,9 +56,7 @@ func _area_select(area):
 					sp.set_button_icon(load("icons/"+SeasonSpirits.data[s]["tree"][1][1].split(";")[0].split("?")[0]+".bmp"))
 				elif s.ends_with("nist's Beginnings") or s.ends_with("Legacy"):
 					sp.set_button_icon(load("icons/"+SeasonSpirits.data[s]["tree"][1][0].split(";")[0].split("?")[0]+".bmp"))
-				elif s.ends_with("list's Flourishing"):
-					sp.set_button_icon(load("icons/"+SeasonSpirits.data[s]["tree"][2][1].split(";")[0].split("?")[0]+".bmp"))
-				elif s.ends_with("nist's Flourishing"):
+				elif s.ends_with("Flourishing"):
 					sp.set_button_icon(load("icons/"+SeasonSpirits.data[s]["tree"][0][0].split(";")[0].split("?")[0]+".bmp"))
 			elif s.contains("Cellist"):
 				sp.text = s
