@@ -229,9 +229,9 @@
 	],
 	"Days of Sunlight": [
 		[
-			"days/sun/3;16;k",
-			"days/sun/5;18;k",
-			"days/sun/4;23;k"
+			"days/sun/3;30;h",
+			"days/sun/5;110;c",
+			"days/sun/4;140;c"
 		],
 		[
 			"days/sun/2;90;c",
