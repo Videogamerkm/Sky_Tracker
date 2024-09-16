@@ -105,7 +105,7 @@
 			"shops/days/mischief 12;9.99;$",
 			"shops/days/mischief 13;2.99;$",
 			"shops/days/mischief 14;14.99;$",
-			"shops/days/mischief 15;14.99;$",
+			"shops/days/mischief 15;14.99;$"
 		]
 	},
 	"Days of Feast": {
@@ -119,7 +119,14 @@
 			"shops/days/feast 7;14.99;$",
 			"shops/days/feast 8;14.99;$",
 			"shops/days/feast 9;6.99;$",
-			"shops/days/feast 10;14.99;$",
+			"shops/days/feast 10;14.99;$"
+		]
+	},
+	"Days of Moonlight": {
+		"items": [
+			"shops/days/moon 1;2.99;$",
+			["shops/days/moon 2;14.99;$",
+			"shops/days/moon 3;0;0"]
 		]
 	}
 }

@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=3 uid="uid://b04gr0a605mxh"]
+[gd_scene load_steps=72 format=3 uid="uid://b04gr0a605mxh"]
 
 [ext_resource type="PackedScene" uid="uid://bap3aptv3y1dw" path="res://collapsible.tscn" id="1_au16a"]
 [ext_resource type="Theme" uid="uid://cqobwtkqodo0r" path="res://white.tres" id="1_q23n0"]
@@ -45,6 +45,7 @@
 [ext_resource type="Texture2D" uid="uid://vwvmnewmw88u" path="res://icons/days/style/ticket.bmp" id="39_tqryg"]
 [ext_resource type="Texture2D" uid="uid://hpw58k7uldig" path="res://icons/days/mischief/ticket.bmp" id="40_kgaw0"]
 [ext_resource type="Texture2D" uid="uid://b8pu7d5lhcslv" path="res://icons/days/feast/ticket.bmp" id="41_g5vtc"]
+[ext_resource type="Texture2D" uid="uid://dhbsckvc5ddmw" path="res://icons/days/moon/ticket.bmp" id="43_rserc"]
 [ext_resource type="Texture2D" uid="uid://b3uikfihjigyi" path="res://icons/days/anni/ticket.bmp" id="45_6blqw"]
 [ext_resource type="Texture2D" uid="uid://lg2iq3wnkjjc" path="res://icons/days/cinna/ticket.bmp" id="45_o2joq"]
 [ext_resource type="Script" path="res://Challenges.gd" id="45_pwys4"]
@@ -5104,7 +5105,7 @@ focus_mode = 0
 text = "Days of
 Moonlight
 "
-icon = ExtResource("45_6blqw")
+icon = ExtResource("43_rserc")
 icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
