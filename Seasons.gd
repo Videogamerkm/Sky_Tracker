@@ -58,14 +58,13 @@ func _area_select(area):
 					sp.set_button_icon(load("icons/"+SeasonSpirits.data[s]["tree"][1][0].split(";")[0].split("?")[0]+".bmp"))
 				elif s.ends_with("Flourishing"):
 					sp.set_button_icon(load("icons/"+SeasonSpirits.data[s]["tree"][0][0].split(";")[0].split("?")[0]+".bmp"))
-			elif s.contains("Cellist"):
-				sp.text = s
+			elif s.contains("Cellist") or s.begins_with("Ancient "):
+				sp.text = s.replace(" (","\n(")
 				sp.set_button_icon(load("icons/"+SeasonSpirits.data[s]["tree"][0][1].split(";")[0].split("?")[0]+".bmp"))
 			else:
 				sp.set_button_icon(load("icons/"+SeasonSpirits.data[s]["tree"][-1][1].split(";")[0].split("?")[0]+".bmp"))
 				sp.text = s.replace(" ","\n").replace("Spirit\nof\n","Spirit of ").replace("\nof\n"," of ")\
-					.replace("Ancient\n","Ancient ").replace("Shell\n","Shell ").replace("Spin\n","Spin ")\
-					.replace("\nLight\n","\nLight ")
+					.replace("Shell\n","Shell ").replace("Spin\n","Spin ").replace("\nLight\n","\nLight ")
 			if c < 4: $"Spirits 1".add_child(sp)
 			else: $"Spirits 2".add_child(sp)
 			c += 1
