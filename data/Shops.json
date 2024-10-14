@@ -117,7 +117,13 @@
 			"shops/event/cinna 6;14.99;$",
 			"shops/event/anni 5;19.99;$",
 			"shops/event/tot 1;4.99;$",
-			"shops/event/tot 2;9.99;$"
+			"shops/event/tot 2;9.99;$",
+			"shops/event/moomin 1;2.99;$",
+			["shops/event/moomin 2;11.99;$",
+			"shops/event/moomin 3;0;0"],
+			["shops/event/moomin 4;9.99;$",
+			"shops/event/moomin 5;0;0"],
+			"shops/event/moomin 6;4.99;$"
 		]
 	}
 }

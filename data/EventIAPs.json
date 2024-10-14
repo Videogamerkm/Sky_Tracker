@@ -83,10 +83,13 @@
 	},
 	"Days of Style": {
 		"items": [
-			"shops/days/style 1;2.99;$",
-			"shops/days/style 2;4.99;$",
-			"shops/days/style 3;6.99;$",
-			"shops/days/style 4;9.99;$"
+			"shops/days/style 1;6.99;$",
+			"shops/days/style 2;9.99;$",
+			"shops/days/style 3;2.99;$",
+			"shops/days/style 4;4.99;$",
+			["shops/days/style 5;14.99;$",
+			"shops/days/style 6;0;0",
+			"shops/days/style 7;0;0"]
 		]
 	},
 	"Days of Mischief": {

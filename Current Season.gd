@@ -1,10 +1,10 @@
 extends VBoxContainer
 
-const seasonName = "Season of Duets"
-const start = {"day":15,"month":7,"year":2024,"hour":0} #1705305600
-const end = {"day":29,"month":9,"year":2024,"hour":23,"minute":59} #1711954799
-const needNoPass = 328
-const needPass = 393
+const seasonName = "Season of Moomin"
+const start = {"day":14,"month":10,"year":2024,"hour":0} #1705305600
+const end = {"day":29,"month":12,"year":2024,"hour":23,"minute":59} #1711954799
+const needNoPass = 322
+const needPass = 394
 const left = " day(s) left in the season"
 var daily = ""
 
