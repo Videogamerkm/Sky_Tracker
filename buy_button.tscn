@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bigc5w0q6m4gd" path="res://icons/seas/icons/Moomin.bmp" id="2_cjjy2"]
 [ext_resource type="Script" path="res://buy_button.gd" id="2_nrh32"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rf45p"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e42xk"]
 bg_color = Color(0, 0, 0, 0.25098)
 border_color = Color(0.8, 0, 0, 1)
 border_blend = true
@@ -30,7 +30,7 @@ corner_radius_top_right = 24
 corner_radius_bottom_right = 24
 corner_radius_bottom_left = 24
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e42xk"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rf45p"]
 bg_color = Color(0, 0, 0, 0.25098)
 border_color = Color(0.8, 0, 0, 1)
 border_blend = true
@@ -40,6 +40,7 @@ corner_radius_bottom_right = 24
 corner_radius_bottom_left = 24
 
 [sub_resource type="SystemFont" id="SystemFont_85ybg"]
+subpixel_positioning = 0
 
 [node name="Left" type="Button"]
 custom_minimum_size = Vector2(32, 32)
@@ -48,10 +49,10 @@ offset_bottom = 50.0
 size_flags_horizontal = 3
 focus_mode = 0
 theme_override_colors/icon_hover_color = Color(0.678431, 1, 0.678431, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_rf45p")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_e42xk")
 theme_override_styles/hover = SubResource("StyleBoxFlat_uyqjm")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_3hqv2")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_e42xk")
+theme_override_styles/normal = SubResource("StyleBoxFlat_rf45p")
 toggle_mode = true
 icon_alignment = 1
 expand_icon = true
