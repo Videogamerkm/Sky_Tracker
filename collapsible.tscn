@@ -15,14 +15,14 @@ layout_mode = 2
 [node name="Title" type="Button" parent="Margin"]
 layout_mode = 2
 focus_mode = 0
-theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
-theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 24
-theme_override_styles/normal = ExtResource("2_yj2x6")
 theme_override_styles/hover = ExtResource("2_yj2x6")
 theme_override_styles/pressed = ExtResource("2_yj2x6")
+theme_override_styles/normal = ExtResource("2_yj2x6")
 toggle_mode = true
 text = "Title"
 
