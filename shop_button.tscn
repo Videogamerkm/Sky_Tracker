@@ -9,7 +9,7 @@ border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lp4yh"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wsyai"]
 bg_color = Color(0, 0, 0, 0.25098)
 border_color = Color(0.8, 0, 0, 1)
 border_blend = true
@@ -36,7 +36,7 @@ corner_radius_top_right = 24
 corner_radius_bottom_right = 24
 corner_radius_bottom_left = 24
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wsyai"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lp4yh"]
 bg_color = Color(0, 0, 0, 0.25098)
 border_color = Color(0.8, 0, 0, 1)
 border_blend = true
@@ -66,10 +66,10 @@ offset_bottom = 75.0
 focus_mode = 0
 theme_override_colors/icon_normal_color = Color(0.666667, 0.666667, 0.666667, 1)
 theme_override_colors/icon_hover_color = Color(0.678431, 1, 0.678431, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_lp4yh")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_wsyai")
 theme_override_styles/hover = SubResource("StyleBoxFlat_t0p4p")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_y4l0e")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_wsyai")
+theme_override_styles/normal = SubResource("StyleBoxFlat_lp4yh")
 toggle_mode = true
 icon_alignment = 1
 expand_icon = true
