@@ -96,8 +96,8 @@
 		"items": [
 			"shops/days/mischief 1;11.99;$",
 			"shops/days/mischief 2;17.99;$",
-			"shops/days/mischief 3;14.99;$",
-			"shops/days/mischief 4;9.99;$",
+			"shops/days/mischief 3;9.99;$",
+			"shops/days/mischief 4;14.99;$",
 			"shops/days/mischief 5;1.99;$",
 			"shops/days/mischief 6;4.99;$",
 			["shops/days/mischief 7;9.99;$",
@@ -108,7 +108,9 @@
 			"shops/days/mischief 12;9.99;$",
 			"shops/days/mischief 13;2.99;$",
 			"shops/days/mischief 14;14.99;$",
-			"shops/days/mischief 15;14.99;$"
+			"shops/days/mischief 15;14.99;$",
+			"shops/days/mischief 16;19.99;$",
+			"shops/days/mischief 17;17.99;$"
 		]
 	},
 	"Days of Feast": {

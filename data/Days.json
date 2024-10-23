@@ -136,24 +136,29 @@
 	],
 	"Days of Mischief": [
 		[
-			"",
+			"days/mischief/3;99;c",
 			"days/mischief/1;33;h",
 			""
 		],
 		[
-			"days/mischief/2;66;c",
+			"days/mischief/7;58;c",
 			"base/5C;5;c",
-			"days/mischief/3;99;c"
+			"days/mischief/2;66;c"
 		],
 		[
-			"days/mischief/5;16;k",
+			"days/mischief/6;36;c",
 			"base/5C;5;c",
-			"days/mischief/7;41;k"
+			"days/mischief/5;38;c"
 		],
 		[
-			"days/mischief/4;44;c",
+			"days/mischief/10;36;k",
 			"base/5C;5;c",
-			"days/mischief/6;24;k"
+			"days/mischief/4;44;c"
+		],
+		[
+			"days/mischief/8;16;k",
+			"base/5C;5;c",
+			"days/mischief/9;22;k"
 		],
 		[
 			"",
