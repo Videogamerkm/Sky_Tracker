@@ -6,18 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://b05ldfps7sbfl" path="res://icons/base/conn_vert.png" id="4_j55f8"]
 [ext_resource type="Texture2D" uid="uid://d305d8x7v7py8" path="res://icons/base/conn_right.png" id="5_8fjsg"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2wihv"]
-content_margin_left = 4.0
-content_margin_top = 4.0
-content_margin_right = 4.0
-content_margin_bottom = 4.0
-bg_color = Color(0.4, 0.4, 0.588235, 0.294118)
-corner_radius_top_left = 12
-corner_radius_top_right = 12
-corner_radius_bottom_right = 12
-corner_radius_bottom_left = 12
-corner_detail = 5
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_63e34"]
 content_margin_left = 4.0
 content_margin_top = 4.0
@@ -30,12 +18,12 @@ corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
 corner_detail = 5
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_akjr0"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2wihv"]
 content_margin_left = 4.0
 content_margin_top = 4.0
 content_margin_right = 4.0
 content_margin_bottom = 4.0
-bg_color = Color(0.588235, 0.4, 0.4, 0.294118)
+bg_color = Color(0.4, 0.4, 0.588235, 0.294118)
 corner_radius_top_left = 12
 corner_radius_top_right = 12
 corner_radius_bottom_right = 12
@@ -48,6 +36,18 @@ content_margin_top = 4.0
 content_margin_right = 4.0
 content_margin_bottom = 4.0
 bg_color = Color(0.486275, 0.329412, 0.329412, 0.6)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_akjr0"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.588235, 0.4, 0.4, 0.294118)
 corner_radius_top_left = 12
 corner_radius_top_right = 12
 corner_radius_bottom_right = 12
@@ -82,16 +82,16 @@ text = "Back"
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 focus_mode = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_2wihv")
 theme_override_styles/hover = SubResource("StyleBoxFlat_63e34")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2wihv")
 text = "Buy All"
 
 [node name="Clear" type="Button" parent="Org1/Controls"]
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 focus_mode = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_akjr0")
 theme_override_styles/hover = SubResource("StyleBoxFlat_25t5q")
+theme_override_styles/normal = SubResource("StyleBoxFlat_akjr0")
 text = "Clear"
 
 [node name="Clear2" type="Button" parent="Org1/Controls"]
