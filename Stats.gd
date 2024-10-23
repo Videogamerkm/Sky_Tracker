@@ -45,11 +45,17 @@ func _ready():
 				new_row.set_modulate(Color(1,0.75,0.75))
 				get_node("Seasonal Spirits/"+SeasonSpirits.data[s]["loc"]+"/Titles").add_child(new_row)
 	$"Seasonal Spirits/Season".queue_free()
+	if not Global.yrlyTab.is_node_ready(): await Global.yrlyTab.ready
 	for s in Global.yrlyTab.short.keys():
 		for i in range(0,6):
 			var new_row = $Events/Titles.get_child(i).duplicate()
 			new_row.name += " "+s
 			$Events/Titles.add_child(new_row)
+		if Global.yrlyTab.shopRows.has(s):
+			for i in range(0,3):
+				var cell = $"IAP Shops/Titles".get_child(i).duplicate()
+				cell.name += " "+s
+				$"IAP Shops/Titles".add_child(cell)
 	if not Global.shopTab.is_node_ready(): await Global.shopTab.ready
 	for s in Global.shopTab.rows:
 		if s.contains("IAP"):
@@ -356,6 +362,36 @@ func set_values():
 	var totals = {"c":0,"h":0,"a":0,"curr":0,"n":0,"b":0,"iapB":0,"iapN":0,"$":0.0,"$Tot":0.0}
 	var strng
 	var add
+	for s in Global.yrlyTab.shopRows:
+		var count = {"c":0,"h":0,"a":0,"curr":0,"n":0,"b":0,"$":0,"0":0}
+		for i in Global.yrlyTab.shopRows[s]["items"]:
+			if i is String:
+				count["n"] += 1
+				var split = i.split(";")
+				count["curr"] += float(split[1])
+				if not Global.shopTab.bought.has(s+" IAPs") or not Global.shopTab.bought[s+" IAPs"].has(split[0]):
+					count[split[2]] += float(split[1])
+					count["b"] += 1
+			else:
+				for sub in i:
+					var split = sub.split(";")
+					if split[1] == "0": continue
+					count["n"] += 1
+					count["curr"] += float(split[1])
+					if not Global.shopTab.bought.has(s+" IAPs") or not Global.shopTab.bought[s+" IAPs"].has(split[0]):
+						count[split[2]] += float(split[1])
+						count["b"] += 1
+		for k in count:
+			if k == "0": continue
+			elif k == "curr": totals["$Tot"] += count[k]
+			elif k == "n": totals["iapN"] += count[k]
+			elif k == "b": totals["iapB"] += count[k]
+			else: totals[k] += count[k]
+		$"IAP Shops/Titles".get_node("Section "+s).text = s
+		$"IAP Shops/Titles".get_node("Bought "+s).text = str(count["n"]-count["b"])
+		strng = "%.2f" % [count["curr"]-count["$"]]
+		if strng.length() > 6: strng = strng.substr(0,strng.length()-6)+","+strng.substr(1)
+		$"IAP Shops/Titles".get_node("Spent "+s).text = strng
 	for s in Global.shopTab.rows:
 		var count = {"c":0,"h":0,"a":0,"curr":0,"n":0,"b":0,"$":0,"0":0}
 		for i in Global.shopTab.rows[s]["items"]:

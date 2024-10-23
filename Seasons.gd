@@ -61,6 +61,17 @@ func _area_select(area):
 			elif s.contains("Cellist") or s.begins_with("Ancient "):
 				sp.text = s.replace(" (","\n(")
 				sp.set_button_icon(load("icons/"+SeasonSpirits.data[s]["tree"][0][1].split(";")[0].split("?")[0]+".bmp"))
+			elif s.contains(" of "):
+				sp.text = s
+				if s.ends_with("Kindness"):
+					sp.set_button_icon(load("icons/"+SeasonSpirits.data[s]["tree"][0][0].split(";")[0].split("?")[0]+".bmp"))
+				elif s.ends_with("Self"):
+					sp.set_button_icon(load("icons/"+SeasonSpirits.data[s]["tree"][2][1].split(";")[0].split("?")[0]+".bmp"))
+				elif s.ends_with("Adventure"):
+					sp.set_button_icon(load("icons/"+SeasonSpirits.data[s]["tree"][1][1].split(";")[0].split("?")[0]+".bmp"))
+				elif s.ends_with("Inclusion"):
+					sp.text = s.replace(" of "," of\n")
+					sp.set_button_icon(load("icons/"+SeasonSpirits.data[s]["tree"][1][0].split(";")[0].split("?")[0]+".bmp"))
 			else:
 				sp.set_button_icon(load("icons/"+SeasonSpirits.data[s]["tree"][-1][1].split(";")[0].split("?")[0]+".bmp"))
 				sp.text = s.replace(" ","\n").replace("Spirit\nof\n","Spirit of ").replace("\nof\n"," of ")\

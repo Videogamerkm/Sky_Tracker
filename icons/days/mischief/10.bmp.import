@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cl8t685p07lyr"
-path="res://.godot/imported/bt4a1jvw.bmp-5b8fa11b81c52df2911680639dea4a66.ctex"
+uid="uid://csqmkuj645ha7"
+path="res://.godot/imported/10.bmp-7d4d331c455c7905e80660b45e2dc0fc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://icons/shops/nest/future/bt4a1jvw.bmp"
-dest_files=["res://.godot/imported/bt4a1jvw.bmp-5b8fa11b81c52df2911680639dea4a66.ctex"]
+source_file="res://icons/days/mischief/10.bmp"
+dest_files=["res://.godot/imported/10.bmp-7d4d331c455c7905e80660b45e2dc0fc.ctex"]
 
 [params]
 
